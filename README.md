@@ -69,7 +69,7 @@ Questa sezione costituisce il focus dell’edizione critica, con particolare att
 
 Il lavoro si articola in due fasi principali:
 
-1. **Trascrizione diplomatica** del manoscritto
+1. **Trascrizione interpretativo-semantica** del manoscritto
 2. **Codifica digitale in XML-TEI (P5)**
 
 La trascrizione conserverà le caratteristiche originali del testo (grafia, varianti, correzioni), mentre la codifica permetterà una rappresentazione strutturata e interrogabile.
@@ -159,10 +159,9 @@ Particolare attenzione sarà data ai fascicoli aggiunti (es. cc. 197r, 217v–21
 
 ## **4. Pubblicazione open access**
 
-L’edizione sarà pubblicata su **Zenodo**, con i seguenti formati:
+L’edizione sarà **open access**, con i seguenti formati:
 
 * XML/TEI
-* PDF
 * HTML (interfaccia web)
 
 ### **Metadata**
@@ -173,7 +172,7 @@ L’edizione sarà pubblicata su **Zenodo**, con i seguenti formati:
 * fonte manoscritta
 * data
 * DOI
-* licenza (es. CC-BY 4.0)
+* licenza
 
 ---
 
@@ -230,14 +229,10 @@ Esempio:
 ## **Fase 6: Pubblicazione**
 
 * esportazione dei formati
-* caricamento su Zenodo
+* caricamento open source
 * documentazione metodologica
 
----
 
-# **Conclusione**
-
-Il progetto di edizione critica digitale del terzo libro del *Castello dell’anima* mira a valorizzare un testo significativo della spiritualità carmelitana del XVII secolo.
 
 L’integrazione tra filologia tradizionale e tecnologie digitali consente:
 
