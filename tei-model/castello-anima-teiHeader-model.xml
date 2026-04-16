@@ -1,0 +1,197 @@
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+        <author>
+          <name type="religious"/>
+          <name type="secular"/>
+        </author>
+        <respStmt>
+          <resp/>
+          <name/>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher/>
+        <date/>
+        <idno/>
+        <availability>
+          <p/>
+          <licence/>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <noteGrp type="critical">
+          <note type="material"><p/></note>
+          <note type="prudential"><p/></note>
+          <note type="linguistic"><p/></note>
+          <note type="theological-risk"><p/></note>
+          <note type="transmission"><p/></note>
+          <note type="stylistic"><p/></note>
+        </noteGrp>
+        <noteGrp type="biographical">
+          <note type="biography-early"><p/></note>
+          <note type="biography-late"><p/></note>
+        </noteGrp>
+        <noteGrp type="contextual">
+          <note type="contextual-biographical"><p/></note>
+          <note type="contextual-historical"><p/></note>
+        </noteGrp>
+      </notesStmt>
+      <sourceDesc>
+        <listPlace>
+          <place>
+            <placeName/>
+            <note/>
+          </place>
+        </listPlace>
+        <bibl type="ms">
+          <settlement/>
+          <affiliation/>
+          <idno/>
+          <date/>
+          <title/>
+        </bibl>
+        <msDesc>
+          <msIdentifier>
+            <country><name/></country>
+            <region><name/></region>
+            <settlement><name/></settlement>
+            <institution/>
+            <repository/>
+            <altIdentifier><idno/></altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <msItem n="I">
+              <author/>
+              <title/>
+              <incipit><locus/><seg/></incipit>
+              <explicit><locus/><seg/></explicit>
+              <textLang/>
+            </msItem>
+            <!-- msItem II e III con stessa struttura -->
+          </msContents>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support><p><material/><date/></p></support>
+                <extent><dimensions><height/><width/></dimensions></extent>
+                <condition><p/></condition>
+              </supportDesc>
+              <layoutDesc>
+                <layout><p/></layout>
+              </layoutDesc>
+            </objectDesc>
+            <handDesc>
+              <handNote xml:id="ink_1"><p/></handNote>
+              <handNote xml:id="ink_2"><p/></handNote>
+              <handNote xml:id="ink_3-dark"><p/></handNote>
+              <handNote xml:id="ink_4-external"><p/></handNote>
+            </handDesc>
+          </physDesc>
+          <history>
+            <origin>
+              <p>
+                <origPlace><placeName/></origPlace>
+                <origDate/>
+                <note/>
+              </p>
+            </origin>
+          </history>
+          <additional>
+            <surrogates><p/></surrogates>
+          </additional>
+        </msDesc>
+        <listBibl>
+          <bibl/>
+        </listBibl>
+        <listWit>
+          <witness/>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <ab xml:base="abstract">
+        <seg/>
+      </ab>
+      <projectDesc>
+        <p ana="#validazione"/>
+        <p ana="#workflow"/>
+        <!-- altri paragrafi -->
+      </projectDesc>
+      <refsDecl>
+        <p/>
+      </refsDecl>
+      <editorialDecl>
+        <p/>
+        <correction><p/></correction>
+        <hyphenation><p/></hyphenation>
+        <normalization><p/></normalization>
+        <interpretation>
+          <ab>
+            <hi/>
+            <list><item><label/><p/></item></list>
+          </ab>
+        </interpretation>
+      </editorialDecl>
+      <tagsDecl>
+        <namespace>
+          <tagUsage gi="TEI"/>
+          <!-- altri tagUsage -->
+        </namespace>
+      </tagsDecl>
+      <variantEncoding/>
+      <classDecl>
+        <taxonomy xml:id="func">
+          <category><desc/></category>
+          <!-- categorie annidate -->
+        </taxonomy>
+        <!-- altre tassonomie: impact, risk, mystic_state, operation, ecc. -->
+      </classDecl>
+      <schemaRef/>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="it-reg-sic"/>
+        <language ident="la"/>
+      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="Anna-La-Longa">
+            <persName><forename/><surname/></persName>
+            <birth/>
+            <death/>
+            <sex/>
+            <occupation/>
+            <trait><note/></trait>
+            <note/>
+          </person>
+          <!-- altre persone -->
+        </listPerson>
+        <listOrg>
+          <org xml:id="AI_controllata">
+            <name/>
+            <trait><note/></trait>
+          </org>
+          <!-- altre organizzazioni -->
+        </listOrg>
+      </particDesc>
+    </profileDesc>
+    <xenoData>
+      <![CDATA[ ... JSON metadata ... ]]>
+    </xenoData>
+    <xenoData type="mets">
+      <!--  -->
+    </xenoData>
+    <revisionDesc status="consolidated">
+      <change when="" who="" ana="">
+        <!-- descrizione del cambiamento -->
+      </change>
+      <!-- altri change -->
+    </revisionDesc>
+  </teiHeader>
+  <sourceDoc>
+    <note/>
+  </sourceDoc>
+</TEI>
