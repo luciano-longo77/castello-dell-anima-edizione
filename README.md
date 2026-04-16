@@ -1,5 +1,6 @@
 # Edizione Critica Digitale del Terzo Libro del *Castello dell’anima* 
 ## di suor Teresa di San Geronimo (Anna La Longa)
+![Revision](https://img.shields.io/badge/revision-4-blue)
 
 ## Indice
 
