@@ -3,20 +3,20 @@
 
 ## Indice
 
-- #obiettivo-principale
-- #fase-1-edizione-critica-del-terzo-libro
-  - #1-introduzione-al-progetto
-    - #contesto-storico-e-teologico
-    - #struttura-del-trattato
-  - #2-edizione-digitale-del-terzo-libro
-    - #trascrizione-e-digitalizzazione
-    - #criteri-editoriali
-    - #strutturazione-del-testo
-    - #note-filologiche
-  - #3-analisi-delle-correzioni-e-aggiunte
-  - #4-pubblicazione-open-access
-- #workflow-tei
-- #conclusione
+- [Obiettivo principale](#obiettivo-principale)
+- [Fase 1: Edizione critica del terzo libro](#fase-1-edizione-critica-del-terzo-libro)
+  - [1. Introduzione al progetto](#1-introduzione-al-progetto)
+    - [Contesto storico e teologico](#contesto-storico-e-teologico)
+    - [Struttura del trattato](#struttura-del-trattato)
+  - [2. Edizione digitale del terzo libro](#2-edizione-digitale-del-terzo-libro)
+    - [Trascrizione e digitalizzazione](#trascrizione-e-digitalizzazione)
+    - [Criteri editoriali](#criteri-editoriali)
+    - [Strutturazione del testo](#strutturazione-del-testo)
+    - [Note filologiche](#note-filologiche)
+  - [3. Analisi delle correzioni e aggiunte](#3-analisi-delle-correzioni-e-aggiunte)
+  - [4. Pubblicazione open access](#4-pubblicazione-open-access)
+- [Workflow TEI](#workflow-tei)
+- [Conclusione](#conclusione)
 
 ---
 
