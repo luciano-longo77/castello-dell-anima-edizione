@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+   <text>
+      <front>
+         <div rend="/">
+            <listWit>
+               <witness resp="/" ana="/"/>
+               <!-- ripeti per ciascun testimone (Tb0, Tb1, T1, T2, T3, T4, Tc) -->
+            </listWit>
+         </div>
+         <div rend="/">
+            <listPerson>
+               <person/>
+            </listPerson>
+         </div>
+         <div rend="/">
+            <listBibl>
+               <bibl ref="/">
+                  <title level="/"/>
+               </bibl>
+               <bibl ref="/">
+                  <author/>
+                  <title/>
+                  <date when="/"/>
+                  <note/>
+               </bibl>
+               <!-- ripeti per ciascuna fonte bibliografica -->
+            </listBibl>
+         </div>
+         <titlePage>
+            <docTitle>
+               <titlePart type="/"/>
+               <titlePart type="/"/>
+            </docTitle>
+            <docAuthor resp="/"/>
+         </titlePage>
+      </front>
+      
+      <body>
+         <!-- LIBRO I -->
+         <div type="/" n="/" xml:id="/">
+            <fw type="/" place="/" xml:id="/"/>
+            <pb n="/" facs="/" xml:id="/"/>
+            <head/>
+         </div>
+         
+         <!-- LIBRO II -->
+         <div type="/" n="/" xml:id="/">
+            <fw type="/" place="/" xml:id="/"/>
+            <pb n="/" facs="/" xml:id="/"/>
+            <head/>
+         </div>
+         
+         <!-- LIBRO III -->
+         <div type="/" n="/" xml:id="/">
+            <fw type="/" place="/" xml:id="/"/>
+            <pb n="/" facs="/" xml:id="/"/>
+            <head/>
+            
+            <!-- PREFAZIONE -->
+            <div type="/">
+               <head>
+                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                     <ref target="/" xml:lang="/" type="/" subtype="/" ana="/"/>
+                     <ref target="/" type="/" subtype="/" ana="/"/>
+                     <val n="/" cert="/" ana="/"/>
+                  </seg>
+               </head>
+               <argument>
+                  <p n="/">
+                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                        <rs type="/" ana="/"/>
+                        <term ana="/"/>
+                        <ptr target="/" ana="/"/>
+                        <spanGrp type="/" ana="/">
+                           <span xml:id="/" from="/" to="/" ana="/"/>
+                        </spanGrp>
+                        <figure type="/" ana="/"/>
+                        <cit type="/" xml:id="/" ana="/">
+                           <quote xml:lang="/">
+                              <foreign xml:lang="/" ana="/"/>
+                           </quote>
+                           <ref type="/" target="/"/>
+                        </cit>
+                        <val n="/" cert="/" ana="/"/>
+                     </seg>
+                     <!-- ripeti per ciascun <seg> del paragrafo -->
+                  </p>
+                  <p n="/">
+                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                        <rs type="/" ana="/"/>
+                        <figure type="/" ana="/"/>
+                        <spanGrp type="/" ana="/">
+                           <span ana="/"/>
+                        </spanGrp>
+                        <cit type="/" xml:id="/" ana="/">
+                           <quote xml:lang="/">
+                              <foreign xml:lang="/" ana="/"/>
+                           </quote>
+                           <ref type="/" target="/"/>
+                        </cit>
+                        <val n="/" cert="/" ana="/"/>
+                     </seg>
+                     <!-- ripeti per ciascun <seg> del paragrafo -->
+                  </p>
+               </argument>
+            </div>
+            
+            <!-- CAPITOLO PRIMO -->
+            <div type="/" n="/" xml:id="/">
+               <head/>
+               <argument>
+                  <p>
+                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                        <term ana="/"/>
+                        <rs type="/" ana="/"/>
+                        <figure type="/" ana="/"/>
+                        <ptr target="/" ana="/"/>
+                        <spanGrp type="/" ana="/">
+                           <span ana="/"/>
+                        </spanGrp>
+                        <val n="/" cert="/" ana="/"/>
+                     </seg>
+                  </p>
+               </argument>
+               <p n="/">
+                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                     <rs type="/" ana="/"/>
+                     <term ana="/"/>
+                     <figure type="/" ana="/"/>
+                     <spanGrp type="/" ana="/">
+                        <span ana="/"/>
+                     </spanGrp>
+                     <val n="/" cert="/" ana="/"/>
+                  </seg>
+                  <!-- ripeti per ciascun <seg> del paragrafo -->
+               </p>
+               <!-- ripeti <p n="/"> ... </p> per ciascun paragrafo del capitolo -->
+               
+               <!-- COLLEGAMENTI SEMANTICI (linkGrp) -->
+               <linkGrp type="/" subtype="/" xml:id="/" ana="/">
+                  <link xml:id="/" type="/" subtype="/" ana="/" target="/"/>
+               </linkGrp>
+               <!-- ripeti per ciascun gruppo di collegamenti -->
+            </div>
+            
+            <!-- CAPITOLO TERZO -->
+            <div type="/" n="/" xml:id="/">
+               <fw type="/" place="/" xml:id="/"/>
+               <pb n="/" facs="/" xml:id="/"/>
+               <head/>
+               <argument>
+                  <p n="/">
+                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                        <term ana="/"/>
+                        <figure type="/" ana="/"/>
+                        <spanGrp type="/" ana="/">
+                           <span ana="/"/>
+                        </spanGrp>
+                        <val n="/" cert="/" ana="/"/>
+                     </seg>
+                  </p>
+               </argument>
+               <p n="/">
+                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
+                     <term ana="/"/>
+                     <rs type="/" ana="/"/>
+                     <figure type="/" ana="/"/>
+                     <spanGrp type="/" ana="/">
+                        <span ana="/"/>
+                     </spanGrp>
+                     <spanGrp type="/" ana="/">
+                        <span ana="/"/>
+                     </spanGrp>
+                     <val n="/" cert="/" ana="/"/>
+                  </seg>
+                  <!-- ripeti per ciascun <seg> del paragrafo -->
+               </p>
+               <!-- ripeti <p n="/"> ... </p> per ciascun paragrafo del capitolo -->
+               
+               <!-- COLLEGAMENTI SEMANTICI (linkGrp) -->
+               <linkGrp type="/" subtype="/" xml:id="/" ana="/">
+                  <link xml:id="/" type="/" subtype="/" ana="/" target="/"/>
+               </linkGrp>
+               <!-- ripeti per ciascun gruppo di collegamenti -->
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
