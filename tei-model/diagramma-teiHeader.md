@@ -1,68 +1,62 @@
 ```mermaid
-graph TD
-  TEI --> teiHeader
-  teiHeader --> fileDesc
-  teiHeader --> encodingDesc
-  teiHeader --> profileDesc
-  teiHeader --> xenoData1["xenoData"]
-  teiHeader --> xenoData2["xenoData type=mets"]
-  teiHeader --> revisionDesc["revisionDesc status=consolidated"]
+graph LR
 
-  fileDesc --> titleStmt
-  fileDesc --> publicationStmt
-  fileDesc --> notesStmt
-  fileDesc --> sourceDesc
+  %% ===== ROOT =====
+  TEI --> H[teiHeader]
 
-  notesStmt --> ng1["noteGrp type=critical"]
-  notesStmt --> ng2["noteGrp type=biographical"]
-  notesStmt --> ng3["noteGrp type=contextual"]
+  %% ===== HEADER BLOCS =====
+  H --> FD[fileDesc]
+  H --> ED[encodingDesc]
+  H --> PD[profileDesc]
 
-  sourceDesc --> listPlace
-  sourceDesc --> biblMs["bibl type=ms"]
-  sourceDesc --> msDesc
-  sourceDesc --> lb1["listBibl type=fontes"]
-  sourceDesc --> lb2["listBibl"]
-  sourceDesc --> listWit
+  %% =====================================================
+  %% FILEDESC
+  %% =====================================================
+  FD --> TS[titleStmt]
+  FD --> PS[publicationStmt]
+  FD --> NS[notesStmt]
+  FD --> SD[sourceDesc]
 
-  msDesc --> msIdentifier
-  msDesc --> msContents
-  msDesc --> physDesc
-  msDesc --> history
-  msDesc --> additional
+  NS --> CRIT[critical notes]
+  NS --> BIO[biographical notes]
+  NS --> CTX[contextual notes]
 
-  msContents --> mi1["msItem n=I"]
-  msContents --> mi2["msItem n=II"]
-  msContents --> mi3["msItem n=III"]
+  %% =====================================================
+  %% SOURCEDESC / MSDESC
+  %% =====================================================
+  SD --> MSD[msDesc]
 
-  physDesc --> objDesc["objectDesc form=autografo"]
-  physDesc --> handDesc
+  MSD --> ID[msIdentifier]
+  MSD --> MC[msContents]
+  MSD --> PHY[physDesc]
+  MSD --> HIS[history]
 
-  objDesc --> supDesc["supportDesc material=paper"]
-  objDesc --> layoutDesc
+  MC --> I1[msItem I]
+  MC --> I2[msItem II]
+  MC --> I3[msItem III]
 
-  handDesc --> hn1["handNote id=ink_1"]
-  handDesc --> hn2["handNote id=ink_2"]
-  handDesc --> hn3["handNote id=ink_3-dark"]
-  handDesc --> hn4["handNote id=ink_4-external"]
+  PHY --> OBJ[objectDesc autografo]
+  PHY --> HD[handDesc]
 
-  history --> origin
-  additional --> surrogates
+  HD --> H1[ink_1]
+  HD --> H2[ink_2]
+  HD --> H3[ink_3_dark]
 
-  encodingDesc --> ab["ab xml:base=abstract"]
-  encodingDesc --> projectDesc
-  encodingDesc --> refsDecl
-  encodingDesc --> editorialDecl
-  encodingDesc --> tagsDecl
-  encodingDesc --> varEnc["variantEncoding method=parallel-segmentation"]
-  encodingDesc --> classDecl
-  encodingDesc --> schemaRef["schemaRef type=odd"]
+  %% =====================================================
+  %% ENCODINGDESC
+  %% =====================================================
+  ED --> VAR[variantEncoding parallel]
+  ED --> CLS[classDecl]
+  ED --> SCH[schemaRef ODD]
 
-  classDecl --> tax["12 taxonomy: func, impact, risk, mystic_state, operation, exposition, phase, relation, certainty, position, fase, workflow"]
+  CLS --> TAX[taxonomy 12 dimensions]
 
-  profileDesc --> langUsage["langUsage x2"]
-  profileDesc --> particDesc
-  particDesc --> listPerson
-  particDesc --> listOrg
+  %% =====================================================
+  %% PROFILEDESC
+  %% =====================================================
+  PD --> LANG[langUsage]
+  PD --> PART[particDesc]
 
-  sourceDoc --> note
+  PART --> PER[listPerson]
+  PART --> ORG[listOrg]
 ```
