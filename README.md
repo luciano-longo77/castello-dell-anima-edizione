@@ -53,6 +53,5 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 .
 ├── README.md               # Orientamento generale del repository
 ├── project-readme.md       # Documento scientifico del progetto
-├── documentation.pdf       # Documentazione strutturata
 ├── tei-model/              # Modello TEI/XML dell’edizione
 └── (materiali di lavoro)
