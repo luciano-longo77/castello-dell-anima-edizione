@@ -1,72 +1,77 @@
 # MC1 — Libro III, Capitoli I–V
-**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **A cura di Luciano Longo**
+**Edizione critica digitale del *Castello dell’anima***  
+ms. Palermo, Biblioteca Comunale, 2 Qq E 29  
+A cura di Luciano Longo  
 
 ---
 
 ## 1. Descrizione del micro‑commit
 
-[cite_start]Il Micro‑Commit 1 (MC1) comprende i primi cinque capitoli del Libro III del *Castello dell’anima*, trasmessi nel manoscritto autografo 2 Qq E 29 alle carte 158r–168r[cite: 194, 195].
+Il Micro‑Commit 1 (MC1) comprende i primi cinque capitoli del Libro III del *Castello dell’anima*, trasmessi nel manoscritto autografo 2 Qq E 29 alle carte 158r–168r.
 
-Questa sezione descrive i primi stati dell’unione mistica:
-* [cite_start]Disposizione dell’anima dopo la “notte”[cite: 196].
-* [cite_start]*Silentio* (primo stato d’unione)[cite: 196].
-* [cite_start]Oblivione o sonno spirituale[cite: 197].
-* [cite_start]Scordanza[cite: 197].
-* [cite_start]Indifferenza (unione delle volontà)[cite: 197].
+Questa sezione rappresenta la soglia iniziale dell’unione mistica e descrive:
 
-Il MC1 contiene:
-* [cite_start]Introduzione editoriale[cite: 197].
-* [cite_start]Struttura capitolare e cartulazione completa[cite: 198].
-* [cite_start]Mappa TEI delle carte[cite: 198].
-* Trascrizione interpretativa dei capp. [cite_start]I–V[cite: 198].
+- la disposizione dell’anima dopo la “notte”;
+- il *silentio* (primo stato d’unione);
+- l’oblivione o sonno spirituale;
+- la scordanza;
+- l’indifferenza (unione delle volontà).
+
+Il micro‑commit include:
+
+- introduzione editoriale;
+- struttura capitolare e cartulazione completa;
+- mappa TEI delle carte;
+- trascrizione interpretativa dei capitoli I–V.
 
 ---
 
 ## 2. Fascia materiale
 
-Il micro‑commit comprende integralmente le carte:  
-[cite_start]**158r – 168r** [cite: 199]
+Il micro‑commit comprende integralmente le carte:
+
+**158r – 168r**
 
 ---
 
-## 3. Struttura dei capitoli (con carte)
+## 3. Struttura dei capitoli
 
 ### Frontespizio del Libro III
-* [cite_start]**Carte:** 158r [cite: 199]
-* [cite_start]**Contenuto:** Titolo del libro e paragrafi introduttivi[cite: 199].
+- **Carte:** 158r  
+- **Contenuto:** titolo del libro e paragrafi introduttivi  
 
 ### Capitolo I — Disposizione lasciata dalla notte dello spirito
-* [cite_start]**Carte:** 158r–159r [cite: 200]
-* [cite_start]**Paragrafi:** 1–10 [cite: 200]
+- **Carte:** 158r–159r  
+- **Paragrafi:** 1–10  
 
 ### Capitolo II — Silentio
-* [cite_start]**Carte:** 159v–162r [cite: 200]
-* [cite_start]**Paragrafi:** 1–21 [cite: 200]
+- **Carte:** 159v–162r  
+- **Paragrafi:** 1–21  
 
 ### Capitolo III — Oblivione / Sonno
-* [cite_start]**Carte:** 162r–164v [cite: 200]
-* [cite_start]**Paragrafi:** 1–14 [cite: 200]
+- **Carte:** 162r–164v  
+- **Paragrafi:** 1–14  
 
 ### Capitolo IV — Scordanza
-* [cite_start]**Carte:** 165r–165v [cite: 200]
-* [cite_start]**Paragrafi:** 1–8 [cite: 200]
+- **Carte:** 165r–165v  
+- **Paragrafi:** 1–8  
 
 ### Capitolo V — Indifferenza
-* [cite_start]**Carte:** 166r–168r [cite: 200]
-* [cite_start]**Paragrafi:** 1–17 [cite: 200]
+- **Carte:** 166r–168r  
+- **Paragrafi:** 1–17  
 
 ---
 
-## 4. Tabella topografica completa
+## 4. Tabella topografica
 
-| Capitolo | Stato mistico / Tema | Carte | Paragrafi | Note strutturali |
-| :--- | :--- | :--- | :--- | :--- |
-| **Proemio** | Introduzione al Libro III | 158r | §§ 1–2 | [cite_start]Incipit: “Incomincio mio Dio…”[cite: 204, 205]. |
-| **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | [cite_start]Explicit: “adesso è di bene passare al seguente capitolo”[cite: 207, 208]. |
-| **II** | Silentio | 159v–162r | §§ 1–21 | [cite_start]Comperazioni: pioggia, giardino, acqua che nasce dal fondo[cite: 209, 210]. |
-| **III** | Oblivione / Sonno | 162r–164v | §§ 1–14 | Explicit: “mirabilia magna”. [cite_start]Statuette di cera fuse[cite: 211, 212]. |
-| **IV** | Scordanza | 165r–165v | §§ 1–8 | “Quasi continuo estasi”. [cite_start]Oceano d’amore[cite: 213, 214]. |
-| **V** | Indifferenza | 166r–168r | §§ 1–17 | Unione delle volontà. [cite_start]Luce dal centro dell’anima[cite: 215, 216]. |
+| Capitolo | Tema | Carte | Paragrafi | Note |
+|----------|------|-------|----------|------|
+| Proemio | Introduzione | 158r | §§ 1–2 | Incipit |
+| I | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit di passaggio |
+| II | Silentio | 159v–162r | §§ 1–21 | Comparazioni idriche |
+| III | Oblivione / Sonno | 162r–164v | §§ 1–14 | “mirabilia magna” |
+| IV | Scordanza | 165r–165v | §§ 1–8 | Estasi permanente |
+| V | Indifferenza | 166r–168r | §§ 1–17 | Unione delle volontà |
 
 ---
 
@@ -84,13 +89,3 @@ Il micro‑commit comprende integralmente le carte:
 <milestone unit="folio" n="162r"/>
 <milestone unit="folio" n="162v"/>
 <milestone unit="folio" n="163r"/>
-<milestone unit="folio" n="163v"/>
-<milestone unit="folio" n="164r"/>
-<milestone unit="folio" n="164v"/>
-<milestone unit="folio" n="165r"/>
-<milestone unit="folio" n="165v"/>
-<milestone unit="folio" n="166r"/>
-<milestone unit="folio" n="166v"/>
-<milestone unit="folio" n="167r"/>
-<milestone unit="folio" n="167v"/>
-<milestone unit="folio" n="168r"/>
