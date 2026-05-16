@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro III — Struttura del Manoscritto</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-ornament">
+            <span class="ornament-line"></span>
+            <span class="ornament-diamond"></span>
+            <span class="ornament-line"></span>
+        </div>
+        <p class="header-label">Struttura del Manoscritto</p>
+        <h1 class="header-title">Libro III</h1>
+        <p class="header-folio">Da <span>c. 158r</span> a <span>c. 168r</span> — 11 fogli</p>
+    </header>
+
+    <!-- <div class="proemio-banner">
+        <p class="proemio-label">Proemio</p>
+        <p class="proemio-text">«Proemio del libro» — c. 158r</p>
+    </div> -->
+
+    <nav class="nav-bar" id="navbar">
+        <a href="#proemio" class="nav-btn" data-target="proemio">Proemio</a>
+        <a href="#cap1" class="nav-btn" data-target="cap1">Cap. I</a>
+        <a href="#cap2" class="nav-btn" data-target="cap2">Cap. II</a>
+        <a href="#cap3" class="nav-btn" data-target="cap3">Cap. III</a>
+        <a href="#cap4" class="nav-btn" data-target="cap4">Cap. IV</a>
+        <a href="#cap5" class="nav-btn" data-target="cap5">Cap. V</a>
+    </nav>
+
+    <div class="timeline-container" id="timeline">
+        <div class="timeline-progress">
+            <div class="timeline-progress-fill" id="progressFill"></div>
+        </div>
+
+        <button class="expand-all-btn" id="expandAllBtn" onclick="toggleAll()">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            Espandi tutto
+        </button>
+
+        <div class="view-toggle">
+            <button class="view-btn active" id="viewDetail" onclick="setView('detail')" title="Vista dettagliata">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+            </button>
+            <button class="view-btn" id="viewCompact" onclick="setView('compact')" title="Vista compatta">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+            </button>
+        </div>
+
+        <!--prefazione-->
+        <div class="chapter-block" id="proemio" data-start="0" data-end="14.3">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Proemio</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Proemio</em>»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">158r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio Proemio</span>
+                            <span class="folio-desc">Apertura Proemio</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">158v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">159r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine Proemio</span>
+                            <span class="folio-desc">Conclusione</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">158r</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="20"></div>
+                </div>
+                <span class="folio-range-label">159r</span>
+            </div>
+        </div>
+
+        <div class="chapter-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- CAPITOLO I -->
+        <div class="chapter-block" id="cap1" data-start="0" data-end="14.3">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Capitolo I</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Dispositione che lascia la notte dello spirito</em>»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">158r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio capitolo</span>
+                            <span class="folio-desc">Apertura del primo capitolo del Libro III</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">158v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">159r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine capitolo</span>
+                            <span class="folio-desc">Conclusione della dispositione</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">158r</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="20"></div>
+                </div>
+                <span class="folio-range-label">159r</span>
+            </div>
+        </div>
+
+        <div class="chapter-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- CAPITOLO II -->
+        <div class="chapter-block" id="cap2" data-start="14.3" data-end="50">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Capitolo II</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Silentio</em> (primo stato)»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">159v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio</span>
+                            <span class="folio-desc">Inizio del capitolo sul Silentio</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">160r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">160v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">161r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">161v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">162r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine capitolo</span>
+                            <div class="transition-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                Transizione al Cap. III
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">159v</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="42.9"></div>
+                </div>
+                <span class="folio-range-label">162r</span>
+            </div>
+        </div>
+
+        <div class="chapter-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- CAPITOLO III -->
+        <div class="chapter-block" id="cap3" data-start="50" data-end="78.6">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Capitolo III</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Oblivione</em> / Sonno spirituale»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">162r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio</span>
+                            <span class="folio-desc">Inizio dell'Oblivione e del sonno spirituale</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">162v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">163r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">163v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">164r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">164v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine capitolo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">162r</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="42.9"></div>
+                </div>
+                <span class="folio-range-label">164v</span>
+            </div>
+        </div>
+
+        <div class="chapter-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- CAPITOLO IV -->
+        <div class="chapter-block" id="cap4" data-start="78.6" data-end="92.9">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Capitolo IV</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Scordanza</em>»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">165r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio</span>
+                            <span class="folio-desc">Inizio della Scordanza</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">165v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine capitolo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">165r</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="14.3"></div>
+                </div>
+                <span class="folio-range-label">165v</span>
+            </div>
+        </div>
+
+        <div class="chapter-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- CAPITOLO V -->
+        <div class="chapter-block" id="cap5" data-start="92.9" data-end="100">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <span class="chapter-number">Capitolo V</span>
+                <div class="chapter-title-group">
+                    <h2 class="chapter-title">«<em>Indifferenza</em>»</h2>
+                </div>
+                <div class="chapter-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="folio-cards">
+                <div class="folio-grid">
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">166r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status start">Inizio</span>
+                            <span class="folio-desc">Inizio dell'Indifferenza</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">166v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">167r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">167v</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status mid">Sviluppo</span>
+                        </div>
+                    </div>
+                    <div class="folio-card">
+                        <div class="folio-marker">
+                            <span class="folio-marker-text">168r</span>
+                        </div>
+                        <div class="folio-body">
+                            <span class="folio-status end">Fine capitolo</span>
+                            <span class="folio-desc">Conclusione del Libro III</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="folio-range">
+                <span class="folio-range-label">166r</span>
+                <div class="folio-range-bar">
+                    <div class="folio-range-fill" style="width: 0%" data-target="35.7"></div>
+                </div>
+                <span class="folio-range-label">168r</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-ornament">
+            <span class="ornament-line"></span>
+            <span class="ornament-diamond"></span>
+            <span class="ornament-line"></span>
+        </div>
+        <p class="footer-text">Struttura del Manoscritto — Libro III</p>
+        <p class="footer-folio-summary">Da <span>c. 158r</span> a <span>c. 168r</span> · 5 capitoli · 11 fogli</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"> </script>
+</body>
+</html>
+

@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="it">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Castello dell’anima</title>
+                <author ref="http://viaf.org/viaf/39222032">
+                    <name type="religious" ref="#s-teresa" sameAs="#Anna-La-Longa">Teresa di San
+                        Geronimo</name>
+                    <name type="secular">Anna La Longa</name>
+                </author>
+                <respStmt>
+                    <resp>Modellazione TEI, annotazione intertestuale</resp>
+                    <name ref="#editor">Luciano Longo</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Prototipo DH. Proof-of-concept</publisher>
+                <date when="2026-01-28"/>
+                <idno type="METS">mets.xml</idno>
+                <idno type="digital_edition">Edizione digitale con annotazione semantica</idno>
+                <availability status="restricted">
+                    <p>Le immagini degli autografi possono essere consultati in modalità
+                        off-line.</p>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/"> Questa
+                        edizione TEI e la documentazione associata sono rilasciate con licenza
+                        Creative Commons BY-NC 4.0: uso consentito con attribuzione, senza fini
+                        commerciali. </licence>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt xml:id="notes-for-castello-anima" corresp="#castello-anima">
+                <noteGrp type="critical">
+                    <note type="material">
+                        <p>Il manoscritto autografo del Castello dell’anima, conservato presso la
+                            Biblioteca Comunale di Palermo (ms. 2 Qq E 29), presenta una struttura
+                            grafica e materiale che rispecchia in modo trasparente la dinamica
+                            compositiva di Teresa di San Geronimo. La scrittura principale,
+                            inchiostro bruno, relativamente uniforme nei primi due libri, è
+                            attribuibile senza esitazioni all’autrice, mentre nel terzo libro si
+                            registra un uso più frequente della matita, segno di interventi
+                            correttivi o meditativi successivi. </p>
+                    </note>
+                    <note type="prudential">
+                        <p> La superficie delle carte, spesso sfruttata sino ai margini estremi,
+                            testimonia un processo redazionale stratificato: il testo corrente
+                            procede con andamento relativamente controllato, mentre nei margini
+                            interni ed esterni si accumulano glosse, precisazioni, dichiarazioni di
+                            ortodossia e, non raramente, lunghe riscritture che intervengono su
+                            singoli nuclei dottrinali percepiti come esposti al rischio di equivoco.
+                            Tale fenomeno si intensifica nel Libro III, dove il lessico della
+                            teologia mistica, unione, trasformazione, quiete, otio delle potenze —
+                            richiede per la scrivente continue strategie prudenziali (attenuationes,
+                            precisiones, declarationes) che si concretizzano in aggiunte marginali,
+                            spesso introdotte dal performativo “io mi dichiaro”. </p>
+                    </note>
+                    <note type="linguistic">
+                        <p> Sul piano grafico, il manoscritto presenta numerose oscillazioni nella
+                            gestione dell’interpunzione, delle maiuscole, delle separazioni/agganci
+                            di parola e di tutte le vocali toniche e atone soggette all’influsso
+                            dell’italiano regionale siciliano. Queste instabilità non derivano da
+                            ripensamenti autoriali, ma costituiscono il tratto coerente di una
+                            scrittura semicolta che tenta di adeguarsi al registro
+                            mistico-dottrinale, senza abbandonare la matrice linguistica originaria.
+                            Ugualmente coerente è l’alternanza fra un tessuto espressivo a tratti
+                            semplice e sincopato e improvvise impennate retoriche, spesso sorrette
+                            da immagini ricorrenti (acqua, fuoco, mare, notte). </p>
+                    </note>
+                    <note type="theological-risk">
+                        <p> Le glosse marginali costituiscono l’elemento più delicato per la
+                            definizione dell’archetipo testuale. In diversi casi esse non si
+                            limitano a chiarire un termine o un sintagma: spostano il peso
+                            dottrinale di interi luoghi, attenuando o correggendo passaggi
+                            potenzialmente imputabili di quietismo (panteismo, impeccabilità,
+                            passività assoluta dell’anima). A differenza dei primi due libri — dove
+                            gli interventi sono sporadici e solo raramente comportano riscritture,
+                            nel terzo libro le aggiunte presentano caratteri ricorrenti: inchiostro
+                            più scuro, grafia più nervosa, struttura sintattica più frammentata.
+                            L’impressione complessiva è che Teresa, consapevole della pericolosità
+                            delle proprie formulazioni, abbia effettuato una sorta di
+                            auto-monitoraggio retrospettivo, aggiungendo strati esegetici
+                            successivi. </p>
+                    </note>
+                    <note type="transmission">
+                        <p> La presenza di foglietti intercalati, di diversa dimensione e talvolta
+                            di mano non attribuibile con certezza alla scrivente, accentua la
+                            complessità del dossier. Questi materiali, che sembrano inserirsi in
+                            corrispondenza dei nodi mistici più esposti (unione sostanziale, sicurtà
+                            mistica, matrimonio spirituale, otio delle potenze), sono stati
+                            considerati parte integrante della tradizione autoriale nella presente
+                            edizione, ma distinguendoli diplomaticamente dal testo corrente e
+                            registrando tutte le varianti nel relativo apparato. Per quanto riguarda
+                            la trasmissione, il Castello è opera unica e non dispone di una
+                            tradizione plurima: ciò rende necessario considerare tutti i fenomeni
+                            grafici, morfosintattici e lessicali come elementi rappresentativi
+                            dell’autografia, salvo casi di guasto meccanico o compromissione
+                            materiale (lacune, abrasioni, cancellature profonde). </p>
+                    </note>
+                    <note type="stylistic">
+                        <p> La scrittura a volte contraddittoria — alternanze tra “ha/hà/a”, tra
+                            “ne/né”, tra “si/sì”, dittongamenti incoerenti, forme verbali spurie —
+                            non va normalizzata oltre la soglia minima richiesta alla leggibilità,
+                            poiché costituisce la cifra stilistica della scrivente e l’unico indizio
+                            disponibile per ricostruire le sue competenze linguistiche e la sua
+                            relazione conflittuale con il registro trattatistico. Nel complesso, il
+                            manoscritto del Castello dell’anima non è un supporto inerte, ma un
+                            dispositivo di scrittura in movimento: luogo in cui l’esperienza mistica
+                            cerca un linguaggio e, nel tentativo di formularlo, genera riverberi,
+                            ripensamenti, glosse salvifiche e una straordinaria densità di “testo in
+                            tensione”. </p>
+                    </note>
+                </noteGrp>
+                <noteGrp type="biographical">
+                    <note type="biography-early">
+                        <p>Anna La Longa nacque a Palermo, nel quartiere dell’Albergheria, la notte
+                            di Natale del 1670. Proveniente da una famiglia artigiana profondamente
+                            segnata dalla religiosità — la madre e la nonna erano terziarie
+                            carmelitane, così come un fratello e lo zio materno — assunse nel 1688
+                            l’abito di terziaria del Carmelo con il nome di Teresa di San Geronimo.
+                            Convinta di una particolare predestinazione spirituale, svolse intensa
+                            attività di direzione delle anime e tentò, senza successo, la fondazione
+                            di un piccolo monastero insieme ad altre terziarie. </p>
+                    </note>
+                    <note type="biography-late">
+                        <p>Tra il 1691 e il 1693 visse a Caltanissetta, dove attorno ai suoi scritti
+                            si formò un primo circolo di lettura e di discussione spirituale. Le sue
+                            relazioni con religiosi agostiniani, unita alle tensioni dottrinali e al
+                            suo ruolo di guida carismatica, la condussero all’attenzione del
+                            Sant’Officio. Inquisita a partire dal 1695, incarcerata nel 1697, fu
+                            accusata di diffondere una “nueva mistica” e di aver composto i suoi
+                            scritti con l’assistenza del demonio. Il processo si concluse nel 1701 e
+                            nel 1703 Teresa fu penitenziata nell’autodafè di Palermo: condannata a
+                            tre anni di galera e cinque di clausura. Il <title>Castello
+                                dell’anima</title> è l’unica opera a noi pervenuta.</p>
+                    </note>
+                </noteGrp>
+                <noteGrp type="contextual">
+                    <note type="contextual-biographical">
+                        <p> Il <title level="m" ref="#castello-anima">Castello dell’anima</title> si
+                            colloca nel vivace ma problematico panorama della spiritualità mistica
+                            siciliana tra la fine del Seicento e i primi anni del Settecento, un
+                            contesto segnato dalla compresenza di pratiche devozionali popolari,
+                            predicazione in lingua materna e forte arretratezza del basso clero. In
+                            questo clima il trattato di Teresa di San Geronimo si inserisce nella
+                            diffusa circolazione di scritture mistiche femminili e nella fortuna,
+                            anche in Sicilia, di modelli teresiani e giovannisti, spesso mediati da
+                            cenni di lettura o da trasmissione orale attraverso i religiosi che la
+                            terziaria frequentava. </p>
+                    </note>
+                    <note type="contextual-historical">
+                        <p>Il testo riflette inoltre il peso culturale e disciplinare dei processi
+                            per quietismo che, dalla condanna di Molinos in poi, investivano non
+                            solo la dottrina mistica ma anche la direzione delle anime; è in questo
+                            scenario che le pagine del <title level="m" ref="#castello-anima"
+                                >Castello dell’anima</title>, rivolte alle <term type="mystic_state"
+                                >incipienti</term>, <term type="mystic_state">proficienti</term> e
+                                <term type="mystic_state">perfette</term>, furono percepite come
+                            sospette, soprattutto laddove Teresa affronta i temi dell’otio delle
+                            potenze, dell’unione mistica e della <term type="mystic_state"
+                                >sicurtà</term>, punti nevralgici della controversia quietista.
+                            Accanto a queste coordinate dottrinali, il manoscritto restituisce la
+                            trama sociale entro cui l’autrice agiva: un piccolo circolo
+                            laico-religioso in cui circolavano libri devoti in italiano, e nel quale
+                            la terziaria palermitana esercitò un ruolo di guida spirituale che si
+                            colloca pienamente nelle dinamiche carismatiche e para-monastiche
+                            proprie della <term type="contextual-concept">nueva mística</term> del
+                            tempo. </p></note>
+                </noteGrp>
+            </notesStmt>
+
+            <sourceDesc>
+                <listPlace>
+                    <place xml:id="Palermo">
+                        <placeName ref="https://www.geonames.org/2523920">Palermo</placeName>
+                        <note>Luogo di origine e produzione del manoscritto; utilizzato come punto
+                            di riferimento geografico</note>
+                    </place>
+                    <place xml:id="Caltanissetta">
+                        <placeName ref="https://www.geonames.org/2525448/caltanissetta.html"
+                            >Caltanissetta</placeName>
+                        <note>Presunto luogo di permanenza di Suor Teresa</note>
+                    </place>
+                    <place xml:id="Sicilia">
+                        <placeName ref="https://www.geonames.org/2523118/sicily.html"
+                            >Sicilia</placeName>
+                        <note>Regione di appartenenza del luogo di origine e produzione del
+                            manoscritto</note>
+                    </place>
+                </listPlace>
+
+
+                <bibl type="ms" xml:id="ms-Palermo-2QqE29">
+                    <settlement ref="#Palermo">Palermo</settlement>
+                    <affiliation ref="#BCP">Biblioteca Comunale</affiliation>
+                    <idno ana="#ms-Palermo-2QqE29">ms. 2 Qq E 29</idno>
+                    <date notBefore="1670" notAfter="1700">sec. XVII ex.</date>
+                    <title level="m" ref="#castello-anima">Il Castello dell’anima</title>
+                </bibl>
+
+                <!-- Origine dei loci e delle citazioni: edizione e introduzione -->
+                <msDesc xml:lang="ita" corresp="#castello-anima">
+                    <msIdentifier>
+                        <country>
+                            <name type="place" ref="https://www.geonames.org/3175395">Italia</name>
+                        </country>
+                        <region>
+                            <name type="place" ref="https://www.geonames.org/2523118/sicily.html"
+                                >Sicilia</name>
+                        </region>
+                        <settlement>
+                            <name type="place" ref="https://www.geonames.org/2523920">Palermo</name>
+                        </settlement>
+                        <institution ref="http://viaf.org/viaf/133691077">Biblioteca
+                            Comunale</institution>
+                        <repository ref="#BCP">Casa Professa</repository>
+                        <altIdentifier>
+                            <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+
+                    <msContents ana="#diario-mistico">
+                        <msItem n="I" xml:id="msItem-I" ana="#diario-mistico-I">
+                            <author cert="high" ref="http://viaf.org/viaf/39222032"
+                                corresp="#s-teresa"> Teresa di San Geronimo </author>
+                            <title>Libro primo del Castello dell’anima per l’anime
+                                principianti</title>
+                            <incipit>
+                                <locus>c. 1r</locus>
+                                <seg>Essendo io stimulata dalla sua obedienza padre mio prendo alle
+                                    mani la penna per dar principio hoggi, che sono 10 di settembre
+                                    l’anno 1692 a questo primo libro del Castello dell’anima.</seg>
+                            </incipit>
+                            <explicit>
+                                <locus>c. 62r</locus>
+                                <seg> Hor havendo io fornito questo primo libro dove s’ha trattato,
+                                    sì come havete inteso, dell’anime principianti, e di vita
+                                    attiva, me ne passerò al secondo libro per trattare di vita
+                                    contemplativa, che sono l’anime proficienti. Iddio sia quello,
+                                    che la conceda per sola sua gloria, et honore, amen. </seg>
+                            </explicit>
+                            <textLang mainLang="ita"/>
+                            <textLang otherLangs="la"/>
+                        </msItem>
+                        <msItem n="II" xml:id="msItem-II" ana="#diario-mistico-II">
+
+                            <author cert="high" ref="http://viaf.org/viaf/39222032"
+                                corresp="#s-teresa"> Teresa di San Geronimo </author>
+                            <title>Libro secondo del Castello dell’anima per l’a- nime proficienti,
+                                nel quale si tratta della contemplatio- ne propria di queste
+                                anime</title>
+                            <incipit>
+                                <locus>c. 63r</locus>
+                                <seg>Incomincio mio Dio, come sapete, per santa obedienza, e perché
+                                    l’obe- dienza è tanto grata alla Maestà vostra, vi prego per ciò
+                                    a darmi il vostro santo agiuto, senza il quale non posso regger
+                                    la penna, nemmeno concepir un pensiero ed innanzi che
+                                    incomincio, mi protesto di non dir cosa, che contra- dichi alla
+                                    vostra santa Chiesa Catolica Romana, e se ciò accaderà, non sarà
+                                    per molinia, ma per ignoranza e perciò vi prego Dio mio di nuovo
+                                    a darmi la vostra infinita sapienza, che mai potrà errare questa
+                                    vostra sì miserabile crea- tura, la quale prende la penna
+                                    confidata nella bontà vostra.</seg>
+                            </incipit>
+                            <explicit>
+                                <locus>c. 157v</locus>
+                                <seg>Al contrario poi, quando Dio vuole, vede sboccar la foriosa
+                                    torrente della sapienza divina, vedendo con chiarezza venir
+                                    nella mia penna, quanto egli vuole si dichi per suo honore, e
+                                    gloria, non essendo altro io che un piccolo istromento di sua
+                                    Divina Maestà; e, padre, altro io non desidero che esser molto
+                                    conosciuta al mondo la Maestà Divina, per honor della quale
+                                    perderi la mia vita, ed altro modo non ho di perderla, che d’im-
+                                    piegarla tutta in suo servitio, cossì doverei fare, però faccio
+                                    meno assai di quanto devo, ma vedendo voi mio Dio quanto è la
+                                    mia dapocaggine, e non potendo questa vil creatura sodisfare
+                                    alla Maestà Vostra, accettate, quel che bassamente per voi, o
+                                    bontà divina, faccio, non potendo più con le mie debo- le forze,
+                                    e finisco. </seg>
+                            </explicit>
+                            <textLang mainLang="ita"/>
+                            <textLang otherLangs="la"/>
+                        </msItem>
+                        <msItem n="III" xml:id="msItem-III" ana="#diario-mistico-III">
+
+                            <author cert="high" ref="http://viaf.org/viaf/39222032"
+                                corresp="#s-teresa"> Teresa di San Geronimo </author>
+                            <title>Libro terzo Del castello dell’anima per l’anime perfette, nel
+                                quale si tratta dell’unione, che ponno arrivare queste anime con Dio
+                                anche in questa vita</title>
+                            <incipit>
+                                <locus>c. 158r</locus>
+                                <seg n="1"> Incomincio mio Dio, come sapete, questo terzo ed ultimo
+                                    libro per santa obedienza, e per narrar l’opere nostre, questa
+                                    sì miserabile creatura, e se nel secondo libro domandano a noi
+                                    mio Dio il nostro santo agiuto, più vi soplico adesso a darmi la
+                                    vostra infinita sapienza, poiché havendo io da trattare di
+                                    materia più alta di che trattavo nel trascorso libro, mi vedo
+                                    perciò più bisognosa della vostra sapienza, senza la quale mi
+                                    confesso al tutto inabile, ed indegna per manegiar la penna, la
+                                    quale la prendo tutta fidata in voi mio Dio.</seg>
+                                <seg n="2"> Anche padre mi protesto, che se dirò qualche cosa che
+                                    contradichi la santa fede, non sarà per mia malitia, ma per
+                                    ignoranza, e cossì quanto dirò non intendo contradire quel che
+                                    dice la nostra santa Chiesa Catolica Romana, confessandomi sua
+                                    figlia, e seguace, tutto che indegna.</seg>
+                            </incipit>
+                            <explicit>
+                                <locus>c. 263r</locus>
+                                <seg>E doppo s’adormenta di nuovo, vuolendo cossì Dio, e resta in un
+                                    sonno, in una indiffirenza assai grande, né può vuoler cosa che
+                                    Dio non la vuole, né desiderar cosa, che Dio non la muova a quel
+                                    desiderio, onde viene a vivere nella medesima vita di Dio.
+                                    Fornisco questo ultimo libro con dire che quanto ho detto in
+                                    questi libri ho inteso dire secondo il senso della Santa Chiesa,
+                                    e se vi fosse qualche cosa malamente spiegata è stata la mia
+                                    ignoran- za, e non per malitia, rendo a Dio infinite gratie
+                                    d’haver fatto quanto l’obe- dienza m’ha comandato. Soli Deo
+                                    honor, et gloria </seg>
+                            </explicit>
+                            <textLang mainLang="ita"/>
+                            <textLang otherLangs="la"/>
+                        </msItem>
+                    </msContents>
+
+                    <physDesc>
+                        <objectDesc form="autografo">
+                            <supportDesc material="paper">
+                                <support>
+                                    <p>
+                                        <material>carta</material>, manoscritto autografo su
+                                        supporto cartaceo del tardo <date notBefore="1670"
+                                            notAfter="1700">secolo XVII</date>. La scrittura
+                                        principale è a inchiostro bruno; nel terzo libro sono
+                                        presenti interventi correttivi e glosse a matita,
+                                        attribuibili alla stessa mano. </p>
+                                </support>
+                                <extent>
+                                    <dimensions scope="all" type="foglio" unit="cm">
+                                        <height>20.5</height>
+                                        <width>19</width>
+                                    </dimensions> Fascicolo di piccolo formato, con specchio di
+                                    scrittura regolare. </extent>
+                                <condition>
+                                    <p> Stato non uniforme: il manoscritto presenta abrasioni,
+                                        scolorimenti, guasti meccanici marginali e cancellature. I
+                                        margini sono ampiamente sfruttati per glosse, note e
+                                        ripensamenti autoriali. </p>
+                                </condition>
+                            </supportDesc>
+
+                            <layoutDesc>
+                                <layout columns="1" ruledLines="40">
+                                    <p> Layout a colonna unica, con 40 righe tracciate; testo
+                                        disposto entro uno specchio di scrittura regolare. Ampio uso
+                                        di margini e interlinee per aggiunte, precisazioni e glosse
+                                        di natura dottrinale. </p>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+
+                        <handDesc>
+                            <!-- mano originale #1-->
+                            <handNote xml:id="ink_1" scribe="s-teresa" script="cursive"
+                                medium="ink_1" scope="major" scribeRef="#s-teresa">
+                                <p> La mano principale del manoscritto è quella autografa di
+                                        <persName>Teresa di San Geronimo</persName>, eseguita con
+                                    inchiostro bruno ormai parzialmente ossidato. La grafia,
+                                    regolare ma semicolta, costituisce la stesura originaria del
+                                    testo (<ref target="#txt-b0">Tb0</ref>), cui si affiancano
+                                    interventi immediati e minimi ripensamenti (<ref
+                                        target="#txt-b1">Tb1</ref>). L’andamento della scrittura è
+                                    generalmente controllato nei primi due libri, con rigatura ben
+                                    rispettata e poche variazioni <term type="critical"
+                                        >ductus</term>. </p>
+                            </handNote>
+
+                            <!-- mano originale #2 -->
+                            <handNote xml:id="ink_2" scribe="s-teresa" script="cursive"
+                                medium="ink_2" scope="minor" scribeRef="#s-teresa" ana="#impact-low">
+                                <p> Nel terzo libro è attestata una seconda fase di intervento,
+                                    ancora autografa, realizzata a inchiostro. Tali aggiunte (<ref
+                                        target="#txt-1">T1</ref>, <ref target="#txt-2">T2</ref>)
+                                    consistono in glosse marginali, precisazioni dottrinali,
+                                    chiarimenti su nodi mistici esposti al rischio di equivoco
+                                    (unione, trasformazione, otio delle potenze, sicurtà), oltre a
+                                    riscritture e ampliamenti di senso. La grafia risulta in questi
+                                    casi più rapida, nervosa e meno posata rispetto alla stesura a
+                                    inchiostro, con un tratto visibilmente più scuro o discontinuo.
+                                </p>
+                            </handNote>
+
+                            <!-- mano originale #3  -->
+                            <handNote xml:id="ink_3-dark" scribe="s-teresa" script="cursive"
+                                medium="ink_3-dark" scope="medium" scribeRef="#s-teresa"
+                                ana="#impact-medium">
+                                <p> Una ulteriore tipologia di intervento autografo tardivo (<ref
+                                        target="#txt-3">T3</ref>) è riconoscibile in un inchiostro
+                                    più scuro, spesso collocato nei margini o nelle righe bianche.
+                                    Si tratta di aggiunte di natura prudenziale, volte ad attenuare,
+                                    precisare o dichiarare l’ortodossia dei passaggi dottrinalmente
+                                    più delicati. La grafia appare più compressa e talvolta
+                                    affrettata, con cancellature e sovrascritture. </p>
+                            </handNote>
+
+                            <!-- mano esterna (?) #4 -->
+                            <handNote xml:id="ink_4-external" scribe="uncertain" script="cursive"
+                                medium="ink_4-external" scope="major" scribeRef="#esterno"
+                                ana="#impact-high">
+                                <p> In alcune carte, soprattutto nel terzo libro, compaiono note
+                                    marginali o foglietti intercalati attribuibili a mano non
+                                    riconducibile con certezza a Teresa (<ref target="#txt-4">
+                                        interventi esterni</ref>). Tali annotazioni, seppure
+                                    marginali, partecipano al processo di chiarificazione dottrinale
+                                    e presentano un ductus più regolare e disteso, con differenze
+                                    sensibili rispetto alla scrittura autografa. </p>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <p>
+                                <origPlace cert="high">
+                                    <placeName ref="#Palermo">Palermo</placeName>, <placeName
+                                        ref="#Sicilia">Sicilia</placeName>
+                                </origPlace>
+                                <origDate notBefore="1692-09-10" notAfter="1703-06-04" cert="high"/>
+                                Il <title level="m" xml:lang="it">Castello dell’anima</title> venne
+                                composto da <persName ref="#Anna-La-Longa" role="author" cert="high"
+                                    >Suor Teresa di San Geronimo</persName> (nata <persName>Anna La
+                                    Longa</persName>, 1670–post 1703), terziaria carmelitana
+                                palermitana. L’autrice iniziò la stesura <quote xml:lang="it">per
+                                    santa obedienza</quote> nel giorno indicato esplicitamente in
+                                apertura del manoscritto <ref target="#ms-Palermo-2QqE29">(<bibl
+                                        type="ms">ms. 2 Qq E 29, Biblioteca Comunale di
+                                        Palermo</bibl>)</ref>. <note type="context"> La produzione
+                                    avviene in un contesto di forte arretratezza religiosa e
+                                    linguistica nella Sicilia tardo-seicentesca, con prevalenza
+                                    della predicazione in volgare locale e diffusione limitata di
+                                    testi ascetici in lingua italiana. </note> L’opera nasce entro
+                                la traiettoria biografica dell’autrice, segnata da una vocazione
+                                precoce, dall’ingresso nel Terz’Ordine del Carmelo nel <date
+                                    when="1688">1688</date>, e da una crescente attività di
+                                direzione spirituale rivolta a laici e religiosi, soprattutto
+                                appartenenti all’Ordine agostiniano (sotto la guida di <persName
+                                    ref="#CelestinoSanNicolo" role="director">Fra Celestino di San
+                                    Nicolò</persName>). <note type="biographical"> Tra il 1695 e il
+                                    1701 Teresa fu oggetto di indagine inquisitoriale con accuse di
+                                    quietismo, nuova mistica e indebita direzione di coscienze;
+                                    venne condannata nell’autodafé del <date when="1703-06-04">4
+                                        giugno 1703</date>. </note> Dal punto di vista dottrinale,
+                                l’opera si inserisce nella tradizione della <term xml:lang="la"
+                                    >theologia mystica</term>, con riferimenti espliciti a <persName
+                                    ref="#p-avila" role="source">Santa Teresa d’Ávila</persName> e
+                                    <persName ref="#p-john" role="source">San Juan de la
+                                    Cruz</persName>, ma mostra una più profonda consonanza
+                                strutturale e concettuale con la <bibl type="model">
+                                    <title xml:lang="es">Guía espiritual</title> di <persName
+                                        ref="#p-molinos" role="influence">Miguel de
+                                        Molinos</persName>
+                                </bibl>, in particolare nella tripartizione, nella funzione dei
+                                direttori spirituali e nella concezione dell’orazione come via al
+                                    <quote>vuoto interiore</quote>. <note type="terminology"> La
+                                    metafora del <quote>castello</quote> non indica, come in <title
+                                        xml:lang="es">Las moradas</title> di Teresa d’Ávila, l’anima
+                                    stessa, bensì <quote>l’oratione, che l’anima fabrica dalle
+                                        fondamenta sino al tetto</quote>, reinterpretata in chiave
+                                    manualistica. </note> L’opera è redatta in un <lang
+                                    xml:lang="it">italiano regionale siciliano</lang>,
+                                caratterizzato da forte interferenza dialettale, da sintassi
+                                semicolta e da lessico influenzato sia dalla tradizione devozionale
+                                sia dall’uso liturgico latino (<quote xml:lang="la">teologia
+                                    mistica</quote>; citazioni bibliche in latino). La tradizione
+                                diretta è limitata al solo testimone autografo conservato a Palermo,
+                                mentre gli atti inquisitoriali in italiano andarono distrutti
+                                nell’incendio dello Steri. I verbali superstiti in spagnolo,
+                                conservati presso l' <orgName>Archivio di Stato di <placeName
+                                        ref="https://www.geonames.org/3117735"
+                                    >Madrid</placeName></orgName>, costituiscono la principale
+                                testimonianza sul contesto di produzione dell’opera e sulla sua
+                                ricezione censoria. </p>
+                        </origin>
+                    </history>
+                    <additional>
+                        <surrogates>
+                            <p> L’autografo del <title level="m">Castello dell’anima</title>,
+                                conservato nel ms. <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                                presso la <orgName ref="http://viaf.org/viaf/133691077">Biblioteca
+                                    Comunale di Palermo</orgName>, è consultabile in riproduzione
+                                digitale (formato JPEG) presso l’ente conservatore, laddove
+                                disponibile. </p>
+                        </surrogates>
+                    </additional>
+                </msDesc>
+                <listBibl type="fontes">
+                    <bibl xml:id="bible-vulgate">
+                        <title level="m">Biblia Sacra Vulgata</title>
+                    </bibl>
+                    <bibl xml:id="molinos-guida" corresp="#p-molinos">
+                        <author>Miguel de Molinos</author>
+                        <title>Guida spirituale</title>
+                        <date when="1675">1675/1677</date>
+                        <note>Modello strutturale e contenutistico</note>
+                    </bibl>
+                    <bibl corresp="#p-avila">
+                        <author>Teresa d’Ávila</author>
+                        <title>Castello interiore</title>
+                        <date when="1577">1577</date>
+                        <note>Metafora del castello rielaborata da Teresa di S. Geronimo</note>
+                    </bibl>
+                </listBibl>
+                <listBibl>
+
+                    <!-- fonte primaria-->
+                    <bibl xml:id="castello-anima" corresp="#ms-Palermo-2QqE29">
+                        <idno xml:id="bibl-diario-mistico-I">Libro I</idno>
+                        <idno xml:id="bibl-diario-mistico-II">Libro II</idno>
+                        <idno xml:id="bibl-diario-mistico-III">Libro III</idno>
+                        <author corresp="#Anna-La-Longa" ref="#s-teresa"> Teresa di San Geronimo
+                            (Anna La Longa) </author>
+                        <title level="m">Castello dell’anima</title>
+                        <date notBefore="1692" notAfter="1703"> 1692–1703 </date>
+                        <note>Manoscritto autografo conservato in Palermo, <name
+                                ref="http://viaf.org/viaf/133691077">Biblioteca Comunale</name>, ms.
+                            2 Qq E 29</note>
+                    </bibl>
+
+                    <!-- DESCRIZIONE E STORIA DEL MANOSCRITTO -->
+                    <bibl xml:id="desc-ms-Palermo-2QqE29" corresp="#ms-Palermo-2QqE29"
+                        ref="http://viaf.org/viaf/133691077">
+                        <title level="a">Descrizione ms. 2 Qq E 29</title>
+                        <note type="contextual">Voce archivistica e descrizione materiale del
+                            testimone autografo</note>
+                    </bibl>
+
+                    <!-- EDIZIONI E STUDI SPECIFICI SULL'OPERA -->
+                </listBibl>
+
+                <listWit>
+                    <witness xml:id="txt-b0" resp="#s-teresa">Tb0, testo base</witness>
+                    <witness xml:id="txt-b1" resp="#s-teresa">Tb1, interventi immediati</witness>
+                    <witness xml:id="txt-1" resp="#s-teresa">T1, riscrittura su testo base</witness>
+                    <witness xml:id="txt-2" resp="#s-teresa">T2, interventi
+                        correttivi-glossativi</witness>
+                    <witness xml:id="txt-3" resp="#s-teresa">T3, interventi correttivi-glossativi
+                        successivi con medium diverso</witness>
+                    <witness xml:id="txt-4" resp="#esterno">T4, interventi glossativi
+                        esterni</witness>
+                    <witness xml:id="txt-c" resp="#editor">Tc, Edizione critica.</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <ab xml:base="abstract">
+                <seg n="1"> Abstract del PRIMO COMMIT</seg>
+            </ab>
+
+            <projectDesc>
+                <p n="1">Descrizione del commit</p>
+
+                <p n="2" ana="#workflow"/>
+
+                <p n="3" ana="#structure"> Il modello TEI utilizza una segmentazione strutturata
+                    secondo la sequenza &lt;div type="book"&gt; → &lt;div type="chapter"&gt; →
+                    &lt;p&gt; → &lt;seg&gt;, con relazioni interne espresse tramite attributi quali
+                    @corresp e @target. L’integrazione con i facsimili è garantita mediante elementi
+                    come &lt;pb&gt;, &lt;surface&gt;, &lt;graphic&gt; e l’attributo @facs, così da
+                    collegare posizione grafica, ductus, mano scrivente e successione degli
+                    interventi materiale‑testuali. </p>
+
+                <p n="4" ana="#genetic-level"> I livelli genetici Tb0–T3 rappresentano fasi
+                    progressive della scrittura autografa e sono correlati in modo sistematico alla
+                    rete prudenziale: Tb0 funge da stesura base; Tb1 registra ripensamenti
+                    immediati; T1–T2 concentrano glosse attenuative e precisative; T3 raccoglie le
+                    dichiarazioni di ortodossia più tarde, collocate nei punti di massimo rischio
+                    dottrinale. </p>
+
+                <p n="9" ana="#workflow-2"> Il progetto implementa un workflow completo: definizione
+                    tassonomica → annotazione semantica → estrazione computazionale → generazione
+                    varianti → validazione specialistica → reintroduzione in TEI → analisi
+                    comparativa (pattern analysis, query strutturate, heatmap, distribuzioni
+                    funzionali). Il modello risultante è interoperabile, FAIR‑compliant e
+                    replicabile su altri corpora mistici posttridentini prodotti in condizioni di
+                    sorveglianza dottrinale. </p>
+            </projectDesc>
+
+            <refsDecl>
+                <p n="1" ana="#ref-ms"> I riferimenti interni dell’edizione seguono la struttura del
+                    testimone: la segnatura delle carte è riportata tramite l’attributo @n degli
+                    elementi &lt;pb&gt; secondo la foliazione originale (es. “158r”, “158v”). I
+                    riferimenti ai capitoli si basano su &lt;div type="chapter"&gt; e quelli ai
+                    paragrafi su &lt;p&gt;, numerati editorialmente quando necessario. </p>
+            </refsDecl>
+            <editorialDecl>
+                <p n="1"> Questo documento utilizza il sistema di codifica definito dalle linee
+                    guida della TEI P5. La trascrizione è semidiplomatica: conserva grafie, fenomeni
+                    materiali, aggiunte, cancellature e abbreviazioni presenti nel manoscritto, con
+                    normalizzazione minima dichiarata tramite &lt;orig&gt;/&lt;reg&gt;,
+                    &lt;abbr&gt;/&lt;expan&gt;, &lt;sic&gt;/&lt;corr&gt;, &lt;unclear&gt;,
+                    &lt;gap&gt; e &lt;supplied&gt;. </p>
+
+                <p n="2"> L’apparato critico è rappresentato in situ secondo la metodologia della
+                    “parallel segmentation”, mediante &lt;app&gt;, &lt;lem&gt; e &lt;rdg&gt;, ed è
+                    dedicato a cancellature, sostituzioni, aggiunte interlineari e interventi
+                    d’autrice nei punti teologicamente sensibili. Le varianti sono classificate
+                    secondo le categorie: interlinear, margin, deleted, corrected, abbreviation,
+                    orthographic, lost. </p>
+
+                <p n="3"> La DTD e il modello adottato integrano i moduli TEI relativi a linking,
+                    analysis, transcrizione e critica del testo, in accordo con il tagset TEI P5. </p>
+
+                <p n="4"> La numerazione dei paragrafi è presente nel manoscritto introdotta,
+                    tramite l’attributo @n su &lt;p&gt;. </p>
+
+                <correction>
+                    <p> Le correzioni autoriali sono rappresentate tramite &lt;del&gt;, &lt;add&gt;
+                        e &lt;subst&gt;. Eventuali interventi editoriali sono dichiarati
+                        esplicitamente attraverso &lt;corr&gt; all’interno di &lt;sic&gt;, o
+                        documentati in note di chiarimento quando necessario. </p>
+                </correction>
+
+                <hyphenation>
+                    <p> La sillabazione del testimone è mantenuta perché rilevante. Non si
+                        introducono trattini aggiuntivi, né si modernizza la divisione delle parole.
+                    </p>
+                </hyphenation>
+
+                <normalization>
+                    <p> Si è mantenuta la maiuscola originale di inizio capoverso e l’interpunzione
+                        è riprodotta fedelmente. Non sono applicate normalizzazioni grafiche; non si
+                        interviene mai a modificare la struttura sintattica o stilistica
+                        dell’autografo. </p>
+                </normalization>
+            </editorialDecl>
+
+            <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <!-- CORE STRUCTURE -->
+                    <tagUsage gi="TEI">Elemento radice della codifica TEI.</tagUsage>
+                    <tagUsage gi="teiHeader">Testata descrittiva del modulo di edizione.</tagUsage>
+                    <tagUsage gi="fileDesc">Metadati editoriali e di pubblicazione.</tagUsage>
+                    <tagUsage gi="sourceDesc">Descrizione del manoscritto autografo.</tagUsage>
+                    <tagUsage gi="msDesc">Descrizione strutturata del testimone.</tagUsage>
+                    <tagUsage gi="div">Struttura dell’opera (Libri, Capitoli).</tagUsage>
+                    <tagUsage gi="p">Unità minima del discorso.</tagUsage>
+                    <tagUsage gi="seg">Unità di struttura/unità interpretativa</tagUsage>
+                    <tagUsage gi="head">Rubriche tematiche e titoli.</tagUsage>
+                    <tagUsage gi="pb">Foliazione originale recto/verso.</tagUsage>
+
+                    <!-- MANUSCRIPT DESCRIPTION -->
+                    <tagUsage gi="msIdentifier">Identificazione archivistica del
+                        manoscritto.</tagUsage>
+                    <tagUsage gi="msContents">Contenuto del manoscritto.</tagUsage>
+                    <tagUsage gi="msItem">Unità interne (Libri I–III).</tagUsage>
+                    <tagUsage gi="physDesc">Descrizione materiale.</tagUsage>
+                    <tagUsage gi="handDesc">Descrizione delle mani scriventi.</tagUsage>
+                    <tagUsage gi="handNote">Profilo delle diverse mani (inchiostro, matita,
+                        ecc.).</tagUsage>
+                    <tagUsage gi="layoutDesc">Descrizione della mise en page.</tagUsage>
+                    <tagUsage gi="layout">Struttura grafica e rigatura.</tagUsage>
+
+                    <!-- TRANSCRIPTION -->
+                    <tagUsage gi="add">Aggiunte interlineari/marginali.</tagUsage>
+                    <tagUsage gi="del">Cancellature.</tagUsage>
+                    <tagUsage gi="abbr">Abbreviazioni.</tagUsage>
+                    <tagUsage gi="expan">Scioglimenti.</tagUsage>
+                    <tagUsage gi="sic">Errori materiali.</tagUsage>
+                    <tagUsage gi="corr">Correzioni editoriali esplicite.</tagUsage>
+                    <tagUsage gi="gap">Guasti o lacune.</tagUsage>
+                    <tagUsage gi="supplied">Integrazioni editoriali per lacune.</tagUsage>
+                    <tagUsage gi="unclear">Grafie non leggibili.</tagUsage>
+                    <tagUsage gi="lb">Interruzioni di riga rilevanti.</tagUsage>
+
+                    <!-- TEXTCRIT -->
+                    <tagUsage gi="app">Apparato critico in situ.</tagUsage>
+                    <tagUsage gi="lem">Lemma testuale.</tagUsage>
+                    <tagUsage gi="rdg">Varianti d’autore (Tb0, Tb1, T1…).</tagUsage>
+
+                    <!-- ANALYSIS -->
+                    <tagUsage gi="spanGrp">Gruppi di annotazioni analitiche.</tagUsage>
+                    <tagUsage gi="span">Annotazioni specifiche su nuclei concettuali.</tagUsage>
+
+                    <!-- LINKING -->
+                    <tagUsage gi="ref">Rinvii interni, esterni, intertestuali.</tagUsage>
+                    <tagUsage gi="ptr">Puntatori strutturali.</tagUsage>
+
+                    <!-- QUOTATIONS -->
+                    <tagUsage gi="cit">Citazioni bibliche, liturgiche, mistiche.</tagUsage>
+                    <tagUsage gi="quote">Testo della citazione.</tagUsage>
+                    <tagUsage gi="bibl">Riferimenti bibliografici.</tagUsage>
+
+                    <!-- NAMES, TERMS, DATES -->
+                    <tagUsage gi="persName">Persone.</tagUsage>
+                    <tagUsage gi="placeName">Luoghi.</tagUsage>
+                    <tagUsage gi="orgName">Istituzioni.</tagUsage>
+                    <tagUsage gi="date">Date storiche o redazionali.</tagUsage>
+                    <tagUsage gi="term">Termini tecnici o mistici.</tagUsage>
+                    <tagUsage gi="lang">Indicazione della lingua.</tagUsage>
+
+                    <!-- NOTES -->
+                    <tagUsage gi="note">Note editoriali, dottrinali, contestuali.</tagUsage>
+                </namespace>
+            </tagsDecl>
+
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <!--L’apparato critico è codificato secondo segmentazione parallela. Le varianti
+                d’autore (fasi Tb0–Tb3) sono rappresentate mediante &lt;app&gt;, &lt;lem&gt;,
+                &lt;rdg&gt;. Le varianti sperimentali generate tramite IA controllata sono
+                dichiarate come &lt;rdg ana="scenario:*"&gt; e integrate nel flusso testuale
+                senza sostituire il testo base. Tutti i fenomeni grafici (del, add, subst)
+                sono riportati in situ.-->
+
+            <classDecl>
+                <!-- TASSONOMIA DELLE FASI DI LAVORO EDITORIALE -->
+                <taxonomy xml:id="fase">
+                    <category xml:id="fase_criteri-ecdotici">
+                        <desc>Definizione dei criteri di trascrizione, apparato e
+                            normalizzazione.</desc>
+                    </category>
+                    <category xml:id="fase_impostazione-header">
+                        <desc>Strutturazione e impostazione del teiHeader.</desc>
+                    </category>
+                    <category xml:id="fase_impostazione-text">
+                        <desc>Impostazione della struttura dell'elemento text</desc>
+                    </category>
+                    <category xml:id="fase_mappatura-glosse">
+                        <desc>Mappatura delle glosse marginali e interlineari; classificazione
+                            operazioni prudenziali.</desc>
+                    </category>
+                    <category xml:id="fase_revisione-header">
+                        <desc>Revisione e aggiornamento del teiHeader.</desc>
+                    </category>
+                    <category xml:id="fase_definizione-mani">
+                        <desc>Definizione delle mani scriventi e formalizzazione in handDesc.</desc>
+                    </category>
+                    <category xml:id="fase_modello-strutturale">
+                        <desc>Definizione del modello div/p/seg e collegamento ai facsimili.</desc>
+                    </category>
+                    <category xml:id="fase_poc-digitale">
+                        <desc>Impostazione del proof-of-concept digitale.</desc>
+                    </category>
+                    <category xml:id="fase_prova-annotazione">
+                        <desc>Prime prove di annotazione interpretativa su nodi dottrinali.</desc>
+                    </category>
+                    <category xml:id="fase_revisione-struttura">
+                        <desc>Revisione del modello strutturale del testo.</desc>
+                    </category>
+                    <category xml:id="fase_armonizzazione-xml">
+                        <desc>Armonizzazione degli identificatori XML e del sistema combinato di
+                            annotazione.</desc>
+                    </category>
+                    <category xml:id="fase_annotazione-campione">
+                        <desc>Annotazione del campione del Libro III con verifica relazioni
+                            interne.</desc>
+                    </category>
+                    <category xml:id="fase_stabilizzazione-sistema">
+                        <desc>Stabilizzazione del sistema annotativo basato su @ana e
+                            @subtype.</desc>
+                    </category>
+                    <category xml:id="fase_prototipo-finale">
+                        <desc>Completamento del primo prototipo TEI interpretativo.</desc>
+                    </category>
+                    <category xml:id="fase_ampliamento-corpus">
+                        <desc>Ampliamento del campione annotato e ristrutturazione della
+                            codifica.</desc>
+                    </category>
+                    <category xml:id="fase_poc-aggiornato">
+                        <desc>Versione aggiornata del proof-of-concept con rimozione attributi
+                            incoerenti.</desc>
+                    </category>
+                    <category xml:id="fase_stabilizzazione-modello">
+                        <desc>Revisione e stabilizzazione del modello interpretativo.</desc>
+                    </category>
+                    <category xml:id="fase_implementazione-linking">
+                        <desc>Integrazione della gestione dei collegamenti interni tramite
+                            linkGrp.</desc>
+                    </category>
+                    <category xml:id="fase_riordino-cronologico">
+                        <desc>Riordino cronologico degli eventi in revisionDesc.</desc>
+                    </category>
+                    <category xml:id="fase_normalizzazione-tag">
+                        <desc>Normalizzazione della rappresentazione dei tag TEI nei testi
+                            escapati.</desc>
+                    </category>
+                    <category xml:id="fase_armonizzazione-header">
+                        <desc>Verifica coerenza fra sezioni del teiHeader e allineamento
+                            tassonomie.</desc>
+                    </category>
+                    <category xml:id="fase_revisione-poc">
+                        <desc>Revisione del proof-of-concept con pulizia strutturale
+                            generale.</desc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+            <schemaRef type="odd" url="1_ODD/castello-anima.odd"/>
+        </encodingDesc>
+
+        <profileDesc>
+            <langUsage>
+                <language ident="it-reg-sic" xml:id="it"> Italiano regionale siciliano (XVII
+                    secolo). Strato primario della redazione, caratterizzato da fenomeni fonetici
+                    come dittongamenti irregolari, metatesi vocaliche e caduta di vocali finali;
+                    morfologia con forme verbali sincopate, articoli e pronomi clitici in variazione
+                    e suffissi dialettali; lessico con presenza di sicilianismi, arabismi e prestiti
+                    dal latino ecclesiastico; sintassi con costruzioni con verbi in posizione
+                    finale, uso polivalente di "che" e ellissi del soggetto; grafia con oscillazioni
+                    nell'uso di "h", alternanza "si/sì" e uso di "j" per il suono /i/. Contesto
+                    sociolinguistico: Palermo, fine XVII secolo. Registro semicolto con influenze
+                    del siciliano volgare e del latino ecclesiastico. </language>
+                <language ident="la" xml:id="la"> Latino liturgico e biblico (citazioni e formule
+                    dottrinali). </language>
+            </langUsage>
+
+            <langUsage>
+                <language ident="it-reg-sic" corresp="#it"> Italiano regionale siciliano (XVII
+                    secolo). <term xml:id="ling-phon">
+                        <interp type="linguistic-phonetic">
+                            <desc>Fonetica: dittongamenti irregolari, metatesi vocaliche, caduta di
+                                vocali finali.</desc>
+                        </interp>
+                    </term>
+                    <term xml:id="ling-morph">
+                        <interp type="linguistic-morphology">
+                            <desc>Morfologia: forme verbali sincopate, articoli e pronomi clitici in
+                                variazione, suffissi dialettali.</desc>
+                        </interp>
+                    </term>
+                    <term xml:id="ling-lexicon">
+                        <interp type="linguistic">
+                            <desc>Lessico: presenza di sicilianismi, arabismi e prestiti dal latino
+                                ecclesiastico.</desc>
+                        </interp>
+                    </term>
+                    <term xml:id="ling-syntax">
+                        <interp type="linguistic-syntax">
+                            <desc>Sintassi: costruzioni con verbi in posizione finale, uso
+                                polivalente di "che", ellissi del soggetto.</desc>
+                        </interp>
+                    </term>
+                    <term xml:id="ling-orth">
+                        <interp type="linguistic-orthograpy">
+                            <desc>Grafia: oscillazioni nell'uso di "h", alternanza "si/sì", uso di
+                                "j" per il suono /i/.</desc>
+                        </interp>
+                    </term>
+                </language>
+            </langUsage>
+
+            <particDesc>
+                <listPerson>
+                    <!-- Autrice storica - Anna La Longa -->
+                    <person xml:id="Anna-La-Longa">
+                        <persName>
+                            <forename>Anna</forename>
+                            <surname key="Longa">La Longa</surname>
+                        </persName>
+                        <birth when="1670-12-25">25 dicembre 1670</birth>
+                        <death notBefore="1703" notAfter="1703" cert="low">post 1703</death>
+                        <persName type="religious" ref="#s-teresa" sameAs="#Anna-La-Longa">Teresa di
+                            San Geronimo</persName>
+                        <sex value="f"/>
+                        <occupation ref="#Carmelo">Terziaria carmelitana; autrice del Castello
+                            dell’anima</occupation>
+                        <trait>
+                            <note type="role">Guida spirituale di un circolo laico-religioso a
+                                Palermo (1691–1693).</note>
+                        </trait>
+                        <trait>
+                            <note type="legal" ana="#Inquisizione">Processata dal Sant’Uffizio
+                                (1695–1701) per accuse di <term ref="#risk-quietismo"
+                                    >quietismo</term>.</note>
+                        </trait>
+                        <note type="relation">
+                            <p>Affiliazione: <orgName ref="#Carmelo">Ordine del
+                                Carmelo</orgName>.</p>
+                            <p>Direttore spirituale: <persName ref="#CelestinoSanNicolo">Fra
+                                    Celestino di San Nicolò</persName>.</p>
+                        </note>
+                    </person>
+
+                    <!-- Autrice come "entità scrivente" -->
+                    <person xml:id="s-teresa" sameAs="#Anna-La-Longa">
+                        <persName ref="#s-teresa">Teresa di San Geronimo</persName>
+                        <idno type="VIAF">http://viaf.org/viaf/39222032</idno>
+                        <trait>
+                            <note type="biographical">Autrice autografa del manoscritto</note>
+                        </trait>
+                    </person>
+
+                    <!-- mano esterna non identificata-->
+                    <person xml:id="esterno">
+                        <persName type="uncertain" ref="#esterno">Mano esterna</persName>
+                        <trait>
+                            <note type="critical" ana="#ink_4-external">Annotatore non identificato;
+                                note marginali Libro III </note>
+                        </trait>
+                    </person>
+
+                    <!-- Fonti dottrinali e intertestuali -->
+                    <person xml:id="p-avila" role="guida-dottrinale">
+                        <persName ref="#p-avila">Teresa d’Ávila</persName>
+                        <occupation ref="#Carmelo">Mistica carmelitana</occupation>
+                        <idno type="VIAF">https://viaf.org/en/viaf/95217173</idno>
+                    </person>
+
+                    <person xml:id="p-john" role="guida-spirituale">
+                        <persName ref="#p-john">Giovanni della Croce</persName>
+                        <occupation>Mistico carmelitano; riferimento ascetico</occupation>
+                        <idno type="VIAF">http://viaf.org/viaf/4041150869802122190008</idno>
+                    </person>
+
+                    <person xml:id="p-molinos" role="guida-mistica">
+                        <persName ref="#p-molinos">Miguel de Molinos</persName>
+                        <occupation ref="#Inquisizione">Autore della Guía espiritual; riferimento
+                            controverso</occupation>
+                        <idno type="VIAF">https://viaf.org/en/viaf/46777589</idno>
+                    </person>
+                    <person xml:id="CelestinoSanNicolo">
+                        <persName role="director" ref="#CelestinoSanNicolo">Fra Celestino di San
+                            Nicolò</persName>
+                        <occupation>Guida spirituale dei carmelitani scalzi</occupation>
+                    </person>
+
+                    <!-- Editore -->
+                    <person xml:id="editor">
+                        <persName ref="#editor">Editor</persName>
+                        <trait>
+                            <note ana="#editor" n="1">Luciano Longo. Responsabile dell’edizione
+                                critica.</note>
+                            <note ana="#editor" n="2">Editor; modellazione TEI; annotazione
+                                interpretativa </note>
+                        </trait>
+                    </person>
+                    <!-- Controllo di qualità -->
+                    <person xml:id="QA">
+                        <persName>Quality Assurance</persName>
+                        <trait>
+                            <note>Controllo strutturale e tassonomico TEI </note>
+                        </trait>
+                    </person>
+                </listPerson>
+
+                <listOrg>
+                    <!-- IA EXPERT-IN-THE-LOOP -->
+                    <org xml:id="AI_controllata">
+                        <name>Pipeline IA controllata</name>
+                        <trait>
+                            <note>Generazione varianti; scenari IA sotto vincoli filologici </note>
+                        </trait>
+                    </org>
+
+                    <!-- istituzioni -->
+                    <org xml:id="BCP">
+                        <orgName ref="http://viaf.org/viaf/133691077"> Biblioteca Comunale di
+                            Palermo</orgName>
+                        <trait>
+                            <note>Luogo di conservazione del manoscritto</note>
+                        </trait>
+                    </org>
+                    <org xml:id="Carmelo">
+                        <orgName>Ordine della Beata Vergine del Monte Carmelo
+                            (Carmelitani)</orgName>
+                        <idno type="Wikidata">https://www.wikidata.org/wiki/Q186277</idno>
+                        <note type="historical">
+                            <p> Fondato nel <date when="1150">XII secolo</date> da eremiti latini
+                                sul Monte Carmelo (Palestina), l’Ordine si diffuse in Europa nel
+                                    <date when="1238">1238</date> dopo la migrazione forzata a causa
+                                delle crociate. I Carmelitani si dedicarono alla vita contemplativa,
+                                alla predicazione e alla promozione della devozione mariana, in
+                                particolare attraverso lo <term>Scapolare</term> e la diffusione del
+                                culto della Madonna del Carmelo. </p>
+                            <p> Nel <date when="1562">1562</date>, <persName ref="#p-avila">Santa
+                                    Teresa d’Ávila</persName> e <persName ref="#p-john">San Giovanni
+                                    della Croce</persName> riformarono l’Ordine, dando vita ai
+                                    <orgName>Carmelitani Scalzi</orgName> (o "Teresi"), con un focus
+                                sulla vita contemplativa, la povertà e la clausura. La riformata
+                                    <term>Regola del Carmelo</term> (1581) enfatizzava l’orazione
+                                mentale, la solitudine e la mortificazione, influenzando
+                                profondamente la spiritualità mistica europea, incluso il contesto
+                                siciliano di Teresa di San Geronimo. </p>
+                        </note>
+                        <note type="local-context">
+                            <p> In <placeName ref="#Sicilia">Sicilia</placeName>, i Carmelitani (sia
+                                dell’Antica Osservanza che Scalzi) ebbero un ruolo chiave nella
+                                diffusione della mistica <term>teresiana</term> e
+                                    <term>giovannista</term> tra <date notBefore="1600"
+                                    notAfter="1750">XVII e XVIII secolo</date>, grazie a conventi
+                                come quello di <placeName ref="#Palermo">Palermo</placeName> (Casa
+                                Professa) e <placeName ref="https://www.geonames.org/2524219"
+                                    >Caltanissetta</placeName>, dove Teresa visse tra il 1691 e il
+                                1693. L’Ordine promosse anche la <term>direzione spirituale</term>
+                                per terziari e laici, un contesto in cui l’autrice esercitò la sua
+                                guida carismatica, pur senza essere una monaca di clausura. </p>
+                        </note>
+                        <note type="doctrinal-influence">
+                            <p> Il <title ref="#avila-castello">Castello Interiore</title> di Teresa
+                                d’Ávila e la <title ref="#molinos-guida">Guía espiritual</title> di
+                                Miguel de Molinos (condannato per quietismo nel 1687) furono testi
+                                di riferimento per i Carmelitani siciliani, spesso letti in volgare
+                                o tradotti oralmente. Teresa di San Geronimo ne riprendere la
+                                metafora del "castello" (qui reinterpretato come "orazione"), ma
+                                anche temi controversi come l’<term ref="#mystic_state:unione"
+                                    >unione mistica</term> e l’<term ref="#mystic_state:otium">otio
+                                    delle potenze</term>, che la resero sospetta agli occhi
+                                dell’Inquisizione. </p>
+                        </note>
+                        <note type="archival">
+                            <p> Gli archivi carmelitani di <placeName ref="#Palermo"
+                                    >Palermo</placeName> e <placeName>Roma</placeName> conservano
+                                documenti sulla sorveglianza delle terziarie, inclusi i processi per
+                                "nueva mistica". Per il caso di Teresa, vedi <bibl>
+                                    <title>Archivio Generale dei Carmelitani Scalzi (Roma), Fondo
+                                        Sant’Uffizio, b. 124</title>, <date notBefore="1695"
+                                        notAfter="1703">1695–1703</date>
+                                </bibl>. </p>
+                        </note>
+                        <note type="relations">
+                            <list>
+                                <item>
+                                    <label>Fondatore:</label>
+                                    <p><orgName ref="#Carmelo">Ordine del Carmelo</orgName>
+                                        associato alla Madonna del Carmelo.</p>
+                                </item>
+                                <item>
+                                    <label>Riforma:</label>
+                                    <p><persName ref="#p-avila">Santa Teresa d’Ávila</persName>
+                                        riformò <orgName ref="#Carmelo">Ordine del Carmelo</orgName>
+                                        nel <date when="1562">1562</date>.</p>
+                                </item>
+                                <item>
+                                    <label>Influenza:</label>
+                                    <p><orgName ref="#Carmelo">Ordine del Carmelo</orgName>
+                                        influenzò <persName ref="#Anna-La-Longa">Teresa di San
+                                            Geronimo</persName> dal <date when="1688"
+                                        >1688</date>.</p>
+                                </item>
+                                <item>
+                                    <label>Conflitto:</label>
+                                    <p><orgName ref="#Carmelo">Ordine del Carmelo</orgName> in
+                                        conflitto con <orgName ref="#Inquisizione"
+                                            >Inquisizione</orgName> dal <date when="1695"
+                                            >1695</date> per rischio quietismo.</p>
+                                </item>
+                            </list>
+                        </note>
+                    </org>
+                    <org xml:id="Inquisizione">
+                        <orgName>Sant’Uffizio (Inquisizione Romana)</orgName>
+                        <idno type="VIAF">http://viaf.org/viaf/124871850</idno>
+
+                        <note>Ex Sant’Uffizio, responsabile dei processi per eresia e quietismo in
+                            Sicilia. <!-- Congregazione per la Dottrina della Fede -->
+                        </note>
+                    </org>
+                </listOrg>
+            </particDesc>
+
+        </profileDesc>
+        <xenoData> </xenoData>
+
+        <xenoData type="mets">
+            <mets:metsPtr xmlns:mets="http://www.loc.gov/METS/"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mets.xml"/>
+        </xenoData>
+
+        <revisionDesc status="consolidated">
+            <change when="2026-04-22" who="#llongo" ana="scenario_consolidamento-app"> </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <docTitle>
+                    <titlePart type="main">Il Castello dell’Anima</titlePart>
+                    <titlePart type="sub">Diviso in tre Libri per l’anime Incipienti, Proficienti e
+                        Perfette</titlePart>
+                </docTitle>
+                <docAuthor resp="#p-teresa">Suor Teresa da San Geronimo</docAuthor>
+            </titlePage>
+        </front>
+        <body>
+            
+            <!-- Start Libro III 
+         (c. 158r) Libro terzo. Del castello dell’anima per l’anime perfette, 
+         nel quale si tratta dell’unione, 	
+         che ponno arrivare queste anime con Dio anche in questa vita-->
+            
+            <div type="book" n="3" xml:id="Libro-III">
+                <fw type="sig" place="bottom" xml:id="f158"/>
+                <pb n="158r" facs="images/f158.jpg" xml:id="f158r"/>
+                <head>Libro Terzo</head>
+                
+                <!-- PREFAZIONE Libro III -->
+                <div type="preface">
+                    <!-- Argomentazione materia Libro III -->
+                    <head>
+                        <seg xml:id="III-pref-tit-001" xml:lang="it" hand="ink_1"> Del Castello dell’anima
+                            per l’anime perfette, nel quale si tratta dell’unione, che ponno arrivare
+                            queste anime con Dio anche in questa vita. </seg>
+                    </head>
+                    <argument>
+                        <p n="1">
+                            <seg type="indicatio" function="ethos-obbedienza" xml:id="III-pref-p1-001"
+                                xml:lang="it" hand="ink_1"> Incomincio mio Dio, come sapete, questo terzo ed
+                                ultimo libro per Santa obedienza, e per narrar l’opera nostra, questa sì
+                                miserabile Creatura e se nel <app>
+                                    <lem wit="#txt-c">secondo </lem>
+                                    <rdg wit="#txt-b0">
+                                        <del place="inline" hand="#pen0" resp="#p-teresa" type="correction"
+                                            >to</del> secondo </rdg>
+                                </app> libro domandano à noi mio Dio il nostro Santo agiuto, più vi soplico
+                                adesso à darmi la vostra infinita sapienza, poiche havendo Io da trattare di
+                                materia più alta di che trattano nel trascorso libro, mi vedo per ciò <app>
+                                    <lem wit="#txt-c">bisognosa</lem>
+                                    <rdg wit="#txt-b0">b <del place="inline" hand="#pen0" resp="#p-teresa"
+                                            type="correction">e</del>
+                                        <add place="inline" hand="#pen0" resp="#p-teresa" type="substition"
+                                            >i</add>sognosa </rdg>
+                                </app> della vostra della vostra sapienza, senza la quale mi Confesso al
+                                tutto inabile, ed indegna per manegiar la penna, la quale la prendo tutta
+                                fidata in voi mio Dio. </seg>
+                        </p>
+                        <p n="2">
+                            <seg type="indicatio" function="rischio-declaratio"
+                                subtype="declaratio-orthodoxiae" xml:id="III-pref-p2-001" xml:lang="it"
+                                hand="ink_1"> Anche mi protesto, che se dirò qualche cosa che contradichi la
+                                non sarà per per mia malitia, ma per Ignoranza, e cossì quanto dirò non
+                                intendo contradire quel che dice la nostra Santa Chiesa Catolica Romana,
+                                Confessandomi sua figlia, e seguace, tutto che Indegna. </seg>
+                        </p>
+                    </argument>
+                </div>
+                
+                <!-- III. I: Capitolo primo. 
+                  Si tratta della dispositione che lascia nell’anima la notte dello spirito
+               (Contiene 10 paragrafi; da cc.c. 158v-r a c. 159r-->
+                
+                <div type="chapter" n="1" xml:id="III-cap-1">
+                    <head>Capitolo Primo</head>
+                    <argument>
+                        <p>
+                            <seg xml:id="III-cap-1-rubr-001" type="indicatio"
+                                function="pedagogia-introduzione" xml:lang="it"
+                                hand="ink_1"> Si tratta della dispositione che lascia nell’anima la notte dello spirito.
+                            </seg>
+                        </p>
+                    </argument>
+                    
+                    <p n="1">
+                        <seg xml:id="III-cap-1-p3-001" type="indicatio" function="pedagogia"
+                            subtype="introductio" hand="ink_1"> 
+                            Quando più altritanto è più stato
+                            suo cosa molto certa che
+                            s’arriva a 
+                            <app>
+                                <lem wit="#txt-c">godere</lem>
+                                <rdg wit="#txt-b1">
+                                    <add place="inline" hand="#pen0" resp="#p-teresa" type="integration">
+                                        <term ana="term:godimento; stato:pace">godere</term>
+                                    </add>
+                                </rdg>
+                                <rdg wit="#txt-b0"/>
+                            </app>
+                            
+                        </seg>
+                    </p>
+                    
+                    <fw type="sig" place="bottom" xml:id="f158-1"/>
+                    <pb n="158r" facs="images/f158.jpg" xml:id="f158v"/> 
+                    <p>
+                        <seg>
+                            la vera pace, se prima non si
+                            passa per 
+                        </seg>
+                    </p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
