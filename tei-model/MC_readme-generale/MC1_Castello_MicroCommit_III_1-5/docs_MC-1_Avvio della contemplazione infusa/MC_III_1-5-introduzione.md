@@ -1,4 +1,4 @@
-# Micro‑progetto di Edizione Critica Digitale 
+# MC-1: Micro‑progetto di Edizione Critica Digitale 
 ## Il Castello dell’anima
 ### Libro III, Capitoli I–V
 ### Avvio della contemplazione infusa (MC1)
