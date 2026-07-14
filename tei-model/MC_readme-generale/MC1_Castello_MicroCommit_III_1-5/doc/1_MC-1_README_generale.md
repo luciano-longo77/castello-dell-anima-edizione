@@ -5,7 +5,7 @@
 
 ## 1. Descrizione del micro‑commit
 
-[cite_start]Il Micro‑Commit 1 (MC1) comprende i primi cinque capitoli del Libro III del *Castello dell’anima*, trasmessi nel manoscritto autografo 2 Qq E 29 alle carte 158r–168r[cite: 194, 195].
+Il Micro‑Commit 1 (MC1) comprende i primi cinque capitoli del Libro III del *Castello dell’anima*, trasmessi nel manoscritto autografo 2 Qq E 29 alle carte 158r–168r
 
 Questa sezione descrive i primi stati dell’unione mistica:
 * [cite_start]Disposizione dell’anima dopo la “notte”[cite: 196].
