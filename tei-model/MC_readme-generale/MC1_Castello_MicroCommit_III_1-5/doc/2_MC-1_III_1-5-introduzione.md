@@ -99,7 +99,7 @@ I capitoli I–V mostrano:
 * **4.1. Una forte uniformità retorica:** avvii con “Dico dunque…”, “Hor…”; frequenti comperazioni lineari e allungate; suddivisione interna in paragrafi numerati.
 * **4.2. Un asse simbolico dominante:** luce (investimento, rischiaramento, sole); acqua (pioggia, sorgente, oceano); fuoco (fuoco dell’amore; attrazione come “Mongibello”); materia plasmabile (cera, statua).
 * **4.3. Un lessico mistico tecnico:** unione, sposalitio, purga, silentio, sonno, scordanza, indifferenza; concopiscibile, notitia confusa, potenze sospese.
-* **4.4. Un registro linguistico semicolto (Da Nota al testo):** Fenomeni attestati nella tua Nota al testo: oscillazioni vocaliche, ipercorrettismi, variabilità dei pronomi clitici, forme verbali analogiche (“ponno”, “stasse”), calchi sintattici secenteschi.
+* **4.4. Un registro linguistico semicolto:** Fenomeni attestati nella tua Nota al testo: oscillazioni vocaliche, ipercorrettismi, variabilità dei pronomi clitici, forme verbali analogiche (“ponno”, “stasse”), calchi sintattici secenteschi.
 
 ### 5. Struttura del pacchetto del micro‑commit
 * Documento descrittivo 
