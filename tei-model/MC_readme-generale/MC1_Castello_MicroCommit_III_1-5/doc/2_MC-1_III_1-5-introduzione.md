@@ -64,7 +64,7 @@ L’interpunzione originale del manoscritto è conservata nel testo base dell’
 #### 3.6. Segnatura di carta
 La foliazione originale del manoscritto è indicata con precisione:
 * nella trascrizione, tramite indicazioni esplicite di carta;
-* nella codifica TEI, mediante: `<milestone unit="folio" n="158r"/>`.
+* nella codifica TEI, mediante: `<pb n="158r" facs="images/f158r.jpg" xml:id="f158r"/>`.
 
 #### 3.7. Guasti, lacune, incertezze
 Le porzioni di testo illeggibili, lacunose o meccanicamente danneggiate sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>`, `<gap reason="illegible"/>`, `<supplied reason="conjecture"/>`.
@@ -93,13 +93,49 @@ La versione finale TEI comprenderà:
  </text>
 </TEI>
 ```
+#### 3.11. Tag set "core" (elementi e attributi)
+
+Il tag set minimo adottato per la codifica del testo (elemento `<text>`) comprende gli elementi seguenti, con i rispettivi attributi.
+
+**Struttura**
+
+- `<div>` — `@type` (`book`, `preface`, `chapter`); `@n`; `@xml:id`
+- `<head>` — nessun attributo
+- `<argument>` — nessun attributo
+- `<p>` — `@n`
+- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@facs`; `@xml:id`
+- `<fw>` — `@type` (`sig`); `@place` (`bottom`); `@xml:id`
+
+**Segmentazione e retorica**
+
+- `<seg>` — `@type` (`indicatio`); `@function`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
+- `<term>` — `@ana`
+- `<figure>` — `@type`; `@ana`
+- `<ref>` — `@target`; `@type` (`intertext`, `scripture`, `liturgy`); `@subtype`; `@ana`
+- `<note>` — `@type`; `@subtype`; `@corresp`; `@hand`; `@place` (`margin`); `@ana`
+
+**Apparato critico**
+
+- `<app>` — nessun attributo
+- `<lem>` — `@wit`
+- `<rdg>` — `@wit`
+- `<del>` — `@place` (`inline`); `@hand`; `@resp`; `@type` (`correction`)
+- `<add>` — `@place` (`inline`, `margin`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
+
+**Citazioni**
+
+- `<cit>` — `@type` (`bible`, `liturgy`); `@xml:id`; `@ana`
+- `<quote>` — `@xml:lang`
+- `<foreign>` — `@xml:lang`; `@ana`
+
+L'attributo `@ana`, presente su più elementi, veicola le categorie della tassonomia interpretativa (funzione retorica, stato mistico, livello di rischio dottrinale, ecc.).
 
 ### 4. Modellizzazione descrittiva dei capitoli (struttura interna)
 I capitoli I–V mostrano:
 * **4.1. Una forte uniformità retorica:** avvii con “Dico dunque…”, “Hor…”; frequenti comperazioni lineari e allungate; suddivisione interna in paragrafi numerati.
 * **4.2. Un asse simbolico dominante:** luce (investimento, rischiaramento, sole); acqua (pioggia, sorgente, oceano); fuoco (fuoco dell’amore; attrazione come “Mongibello”); materia plasmabile (cera, statua).
 * **4.3. Un lessico mistico tecnico:** unione, sposalitio, purga, silentio, sonno, scordanza, indifferenza; concopiscibile, notitia confusa, potenze sospese.
-* **4.4. Un registro linguistico semicolto:** Fenomeni attestati nella tua Nota al testo: oscillazioni vocaliche, ipercorrettismi, variabilità dei pronomi clitici, forme verbali analogiche (“ponno”, “stasse”), calchi sintattici secenteschi.
+* **4.4. Un registro linguistico semicolto:** Fenomeni attestati: oscillazioni vocaliche, ipercorrettismi, variabilità dei pronomi clitici, forme verbali analogiche (“ponno”, “stasse”), calchi sintattici secenteschi.
 
 ### 5. Struttura del pacchetto del micro‑commit
 * Documento descrittivo 
@@ -109,7 +145,12 @@ I capitoli I–V mostrano:
 * Metadati
 
 ### 6. Metadati
-Titolo, autore, datazione, manoscritto, descrizione, parole chiave.
+- **Titolo:** Il Castello dell'anima, Libro III, capp. I–V
+- **Autore:** Teresa di San Geronimo (Anna La Longa), 1670–post 1703
+- **Datazione:** 1692–1694 (Libro III)
+- **Manoscritto:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29
+- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, con apparato genetico <app>/<lem>/<rdg>, sistema retorico via <seg>, autorità VIAF per persone e fonti dottrinali
+- **Parole chiave:** Castello dell'anima; mistica secentesca; contemplazione infusa; TEI; edizione critica digitale
 
 ### 7. Risultati attesi
 * Base critica per la marcatura TEI;
