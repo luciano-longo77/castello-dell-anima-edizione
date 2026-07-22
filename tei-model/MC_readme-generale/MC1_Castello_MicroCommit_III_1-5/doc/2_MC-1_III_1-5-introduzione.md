@@ -5,6 +5,7 @@
 
 **Autore dell'edizione:** Luciano Longo
 **ORCID:** [https://orcid.org/0009-0005-7557-7546](https://orcid.org/0009-0005-7557-7546)
+
 **Fonte primaria:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29 (autografo), *Il Castello dell'anima* di suor Teresa di San Geronimo (Anna La Longa), 1692–1694.
 
 > **Nota editoriale.** Il `teiHeader` completo (metadati descrittivi, note critiche, tassonomie, descrizione del manoscritto) è mantenuto come documento a parte, separato da questo README e dal file dati del `<text>`. Questo documento descrive esclusivamente i contenuti, le politiche editoriali e il tag set adottato per la codifica del corpo testuale.
