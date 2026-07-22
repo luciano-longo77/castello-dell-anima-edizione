@@ -196,7 +196,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<del>` — `@place` (`inline`); `@hand`; `@resp`; `@type` (`correction`)
 - `<add>` — `@place` (`inline`, `margin`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
 - `<subst>` — nessun attributo (contenitore di `<del>`+`<add>` per sostituzioni articolate)
-- `<unclear>` — nessun attributo attestato finora
+- `<unclear>` — `@unit` (char, word, line)
 - `<gap>` — `@reason` (`illegible`)
 - `<supplied>` — `@reason` (`conjecture`)
 
