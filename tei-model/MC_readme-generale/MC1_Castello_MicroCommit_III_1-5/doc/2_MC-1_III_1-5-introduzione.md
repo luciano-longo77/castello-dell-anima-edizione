@@ -106,6 +106,22 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@facs`; `@xml:id`
 - `<fw>` — `@type` (`sig`); `@place` (`bottom`); `@xml:id`
 
+**Front matter**
+
+- `<listWit>` — nessun attributo
+- `<witness>` — `@resp`; `@ana`
+- `<listPerson>` — nessun attributo
+- `<person>` — `@xml:id` (obbligatorio, per essere richiamabile da `@resp`/`@ana`)
+- `<persName>` — nessun attributo
+- `<listBibl>` — nessun attributo
+- `<bibl>` — `@ref`
+- `<title>` — `@level` (`m`)
+- `<author>` — nessun attributo (in questo contesto, come figlio di `<bibl>`)
+- `<titlePage>` — nessun attributo
+- `<docTitle>` — nessun attributo
+- `<titlePart>` — `@type` (`main`, `sub`)
+- `<docAuthor>` — `@resp`
+
 **Segmentazione e retorica**
 
 - `<seg>` — `@type` (`indicatio`); `@function`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
