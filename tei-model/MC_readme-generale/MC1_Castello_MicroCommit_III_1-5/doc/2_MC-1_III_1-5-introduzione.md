@@ -185,7 +185,6 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 - `<seg>` — `@type` (`indicatio`); `@function`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
 - `<term>` — `@ana`
-- `<figure>` — `@type`; `@ana`
 - `<ref>` — `@target`; `@type` (`intertext`, `scripture`, `liturgy`); `@subtype`; `@ana`
 - `<note>` — `@type`; `@subtype`; `@corresp`; `@hand`; `@place` (`margin`); `@ana`
 
