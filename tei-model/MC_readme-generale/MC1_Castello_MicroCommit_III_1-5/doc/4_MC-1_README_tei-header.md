@@ -1,7 +1,7 @@
 # Il `teiHeader` del *Castello dell'anima*
 - Guida al primo micro-commit (MC1)
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
-![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
+- ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
+- ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
 ## A cosa serve questo documento
 
 Questo file spiega **cosa contiene il `teiHeader`**, **come è organizzato** e **quali obiettivi persegue** in questa prima fase del progetto (MC1, Libro III, capp. I–V). 
