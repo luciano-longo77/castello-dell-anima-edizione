@@ -47,8 +47,6 @@ Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che
 - **Citazioni**: `cit`/`quote`/`foreign`
 - **Identificatori**: `idno` (in particolare per VIAF)
 
-**Esclusi deliberatamente** da questo commit: `rs`, `spanGrp`/`span`, `ptr`, `val`, `linkGrp`/`link`, `facsimile`/`surface`/`graphic`. Non perché inutili in assoluto, ma perché introdurrebbero livelli di complessità (reti di collegamento tra segmenti, indici numerici calcolati, gestione autonoma dei facsimili) che MC1 non ha ancora messo alla prova. La loro eventuale reintroduzione in MC2 o successivi andrà dichiarata esplicitamente, aggiornando sia il `tagsDecl` sia il README narrativo in parallelo.
-
 ## Le tassonomie: un sistema multiassiale, non gerarchico
 
 Le otto tassonomie in `classDecl` non sono livelli di una stessa scala, ma **assi indipendenti** dello stesso fenomeno testuale:
@@ -67,10 +65,6 @@ Le otto tassonomie in `classDecl` non sono livelli di una stessa scala, ma **ass
 Una stessa occorrenza testuale riceve normalmente più etichette contemporaneamente, una per asse pertinente, combinate nello stesso attributo `@ana`. Questo è ciò che rende possibile, ad esempio, isolare tutti i segmenti che attenuano un rischio di quietismo indipendentemente dal capitolo in cui compaiono.
 
 La tassonomia `fase`, distinta dalle otto sopra, non descrive il testo ma il **lavoro editoriale**: è il vocabolario controllato con cui `revisionDesc` traccia la cronologia degli interventi.
-
-## Cosa NON contiene questo `teiHeader` (per scelta esplicita)
-
-**Nessun riferimento alla sperimentazione TEI+AI.** Il progetto prevede, in linea teorica, una fase separata di generazione di varianti testuali tramite IA controllata — ma questo commit (MC1) non la utilizza. Il `teiHeader` è stato ripulito sistematicamente da ogni traccia di questa componente (pipeline IA, organizzazione dedicata, blocco di configurazione, tassonomia degli scenari controfattuali), per evitare che un deposito che dichiara "niente IA in questo commit" contenga poi, nei metadati, l'infrastruttura per usarla. La sperimentazione IA resta documentata altrove, nel piano generale del progetto, come traccia di ricerca futura e distinta.
 
 ## Licenza e datazione: due chiarimenti necessari
 
