@@ -1,4 +1,5 @@
-# Il `teiHeader` del *Castello dell'anima* — Guida al primo micro-commit (MC1)
+# Il `teiHeader` del *Castello dell'anima*
+- Guida al primo micro-commit (MC1)
 
 ## A cosa serve questo documento
 
@@ -6,6 +7,20 @@ Questo file spiega **cosa contiene il `teiHeader`**, **come è organizzato** e *
 È pensato come guida di lettura per chi apre il file XML senza aver seguito lo sviluppo del progetto, e come promemoria per le fasi successive (MC2 e oltre), che dovranno mantenere la coerenza qui stabilita o dichiararne esplicitamente le variazioni.
 
 Il `teiHeader` è mantenuto come componente concettualmente distinta dal file dati del `<text>` e dal README narrativo del MC1: descrive *il modello*, non il contenuto trascritto capitolo per capitolo.
+
+## Indice
+
+- [A cosa serve questo documento](#a-cosa-serve-questo-documento)
+- [Perché un `teiHeader` così esteso](#perché-un-teiheader-così-esteso)
+- [Struttura del `teiHeader` e cosa fa ciascuna sezione](#struttura-del-teiheader-e-cosa-fa-ciascuna-sezione)
+  - [`fileDesc`](#filedesc)
+  - [`encodingDesc`](#encodingdesc)
+  - [`profileDesc`](#profiledesc)
+  - [`revisionDesc`](#revisiondesc)
+- [Il tag set core: cosa è dentro, cosa è fuori, e perché](#il-tag-set-core-cosa-è-dentro-cosa-è-fuori-e-perché)
+- [Le tassonomie: un sistema multiassiale, non gerarchico](#le-tassonomie-un-sistema-multiassiale-non-gerarchico)
+- [Licenza e datazione: due chiarimenti necessari](#licenza-e-datazione-due-chiarimenti-necessari)
+- [In sintesi](#in-sintesi)
 
 ## Perché un `teiHeader` così esteso
 
