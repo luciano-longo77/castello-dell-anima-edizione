@@ -46,7 +46,7 @@ Qui si dichiara **come** il testo viene codificato:
 - `classDecl` contiene le tassonomie: otto assi interpretativi (`func`, `impact`, `risk`, `mystic_state`, `operation`, `exposition`, `phase`, `relation`) più la tassonomia di lavoro editoriale (`fase`), usata per tracciare la cronologia degli interventi in `revisionDesc`.
 
 ### `profileDesc`
-Descrive la lingua del testo (italiano regionale siciliano di fine Seicento, con fenomeni fonetici, morfologici, lessicali e sintattici dettagliati) e le persone/organizzazioni coinvolte: l'autrice, le fonti dottrinali (Ávila, Giovanni della Croce, Molinos), il direttore spirituale, l'editore, e le istituzioni storiche (Carmelo, Inquisizione).
+Descrive la lingua del testo (italiano regionale siciliano di fine Seicento, con fenomeni fonetici, morfologici, lessicali e sintattici dettagliati) e le persone/organizzazioni coinvolte: l'autrice, le fonti dottrinali (Santa Teresa d'Ávila, Giovanni della Croce, Miguel de Molinos), il direttore spirituale, l'editore, e le istituzioni storiche (Carmelo, Inquisizione).
 
 ### `revisionDesc`
 Registra la cronologia granulare degli interventi editoriali, ciascuno classificato secondo la tassonomia `fase`.
