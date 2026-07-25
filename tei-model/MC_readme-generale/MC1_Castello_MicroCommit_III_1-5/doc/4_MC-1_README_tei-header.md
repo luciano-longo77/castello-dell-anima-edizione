@@ -88,4 +88,4 @@ La tassonomia `fase`, distinta dalle otto sopra, non descrive il testo ma il **l
 
 ## In sintesi
 
-Questo `teiHeader` non è un contenitore neutro di metadati: è la dichiarazione formale — verificabile e citabile — di come e perché il testo del Libro III, capp. I–V, viene rappresentato in questo specifico commit. Ogni scelta (tag set limitato, tassonomie multiassiali, esclusione dell'IA, licenza, datazione) è tracciabile a una decisione motivata, documentata in parallelo nel README narrativo del MC1 e nella cronologia di `revisionDesc`.
+Questo `teiHeader` non è un contenitore neutro di metadati: è la dichiarazione formale, verificabile e citabile, di come e perché il testo del Libro III, capp. I–V, viene rappresentato in questo specifico commit. Ogni scelta (tag set limitato, tassonomie multiassiali, esclusione dell'IA, licenza, datazione) è tracciabile a una decisione motivata, documentata in parallelo nel README narrativo del MC1 e nella cronologia di `revisionDesc`.
