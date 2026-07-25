@@ -89,3 +89,10 @@ La tassonomia `fase`, distinta dalle otto sopra, non descrive il testo ma il **l
 ## In sintesi
 
 Questo `teiHeader` non è un contenitore neutro di metadati: è la dichiarazione formale, verificabile e citabile, di come e perché il testo del Libro III, capp. I–V, viene rappresentato in questo specifico commit. Ogni scelta (tag set limitato, tassonomie multiassiali, esclusione dell'IA, licenza, datazione) è tracciabile a una decisione motivata, documentata in parallelo nel README narrativo del MC1 e nella cronologia di `revisionDesc`.
+
+## Documenti correlati
+
+- [Readme generale del progetto](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/readme.md) — piano editoriale complessivo e roadmap dei micro-commit (MC1–MC8)
+- [1. README generale MC1](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/1_MC-1_README_generale.md) — descrizione sintetica e mappa topografica del micro-commit
+- [2. Introduzione MC1 (Libro III, capp. I–V)](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/2_MC-1_III_1-5-introduzione.md) — commento critico ai capitoli, politiche editoriali e tag set core
+- [3. Struttura capitoli e cartulazione](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/3_MC-1_III_1-5-Struttura%20capitoli%20e%20cartulazione.md) — mappa codicologica capitolo/carta del manoscritto
