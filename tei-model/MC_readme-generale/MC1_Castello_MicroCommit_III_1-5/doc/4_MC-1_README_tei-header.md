@@ -26,17 +26,17 @@ Il `teiHeader` è mantenuto come componente concettualmente distinta dal file da
 
 A differenza di un'edizione digitale minima, dove l'header si limita a pochi metadati bibliografici, qui il `teiHeader` è deliberatamente ricco perché deve sostenere due funzioni insieme:
 
-1. **Funzione descrittiva classica** — chi ha scritto cosa, quando, su quale supporto, con quali mani, sotto quale licenza.
-2. **Funzione interpretativa** — dichiarare in modo esplicito e verificabile le categorie con cui il testo viene annotato (tassonomie in `classDecl`), così che l'attributo `@ana` sui `<seg>` del testo non sia testo libero non controllabile, ma rimandi a un vocabolario formalmente definito.
+1. **Funzione descrittiva classica**: chi ha scritto cosa, quando, su quale supporto, con quali mani, sotto quale licenza.
+2. **Funzione interpretativa**: dichiarare in modo esplicito e verificabile le categorie con cui il testo viene annotato (tassonomie in `classDecl`), così che l'attributo `@ana` sui `<seg>` del testo non sia testo libero non controllabile, ma rimandi a un vocabolario formalmente definito.
 
 Questa seconda funzione è ciò che rende l'edizione più di una semplice trascrizione: permette di interrogare il testo per funzione retorica, stato mistico, livello di rischio dottrinale, e così via, in modo sistematico e riproducibile da altri.
 
 ## Struttura del `teiHeader` e cosa fa ciascuna sezione
 
 ### `fileDesc`
-Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`) — identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue quattro mani/fasi di scrittura (`ink_1`–`ink_4-external`) corrispondenti alla stratificazione genetica del testo.
+Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`), identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue quattro mani/fasi di scrittura (`ink_1`–`ink_4-external`) corrispondenti alla stratificazione genetica del testo.
 
-Le `notesStmt` raccolgono le note critiche di inquadramento (materiale, prudenziale, linguistico, sul rischio teologico, sulla trasmissione, stilistico) e le note biografiche e contestuali sull'autrice — il commento filologico che precede e giustifica le scelte editoriali applicate nel testo.
+Le `notesStmt` raccolgono le note critiche di inquadramento (materiale, prudenziale, linguistico, sul rischio teologico, sulla trasmissione, stilistico) e le note biografiche e contestuali sull'autrice, il commento filologico che precede e giustifica le scelte editoriali applicate nel testo.
 
 ### `encodingDesc`
 Qui si dichiara **come** il testo viene codificato:
