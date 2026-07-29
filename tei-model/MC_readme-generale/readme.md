@@ -37,7 +37,7 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 ## 3. Organizzazione del Repository
 * `/data/tei/`: File XML sorgente conformi allo standard TEI P5.
-* `/docs/`: Introduzione editoriale, note al testo e analisi della cartulazione.
+* `/doc/`: Introduzione editoriale, note al testo e analisi della cartulazione.
 * `/out/`: Prototipi per la visualizzazione dinamica della struttura del manoscritto.
 
 ---
