@@ -620,12 +620,12 @@
                     dottrinalmente esposti e stratificazione materiale (place, hand, layer). </p>
 
                 <p n="5"> Il modello TEI utilizza una segmentazione strutturata
-                    secondo la sequenza &lt;div type="book"&gt; → &lt;div type="chapter"&gt; →
-                    &lt;p&gt; → &lt;seg&gt;, con relazioni interne espresse tramite attributi quali
-                    @corresp e @target. L’integrazione con i facsimili è garantita mediante elementi
-                    come &lt;pb&gt;, &lt;surface&gt;, &lt;graphic&gt; e l’attributo @facs, così da
-                    collegare posizione grafica, ductus, mano scrivente e successione degli
-                    interventi materiale‑testuali. </p>
+                    secondo la sequenza <code>div type="book"</code>→ <code>div type="chapter"</code> →
+                    <code>seg</code>, con relazioni interne espresse tramite attributi quali
+                    @corresp e @target. L’integrazione con i facsimili è garantita mediante 
+                    <code>pb</code> con l’attributo @facs; il tag rinvia alle riproduzioni
+                    digitali delle carte; i rinvii interni utilizzano l’attributo @target per
+                    puntare a identificatori univoci all’interno del documento.</p>
 
                 <p n="6"> I livelli genetici Tb0–T3 rappresentano
                     fasi progressive della scrittura autografa e sono correlati in modo sistematico
@@ -1437,7 +1437,8 @@
 
                     <!-- Editore -->
                     <person xml:id="editor">
-                        <persName ref="#editor">Editor</persName>
+                        <persName ref="#editor">Luciano Longo</persName>
+                        <idno type="ORCID">https://orcid.org/0009-0005-7557-7546</idno>
                         <trait>
                             <note n="1">Luciano Longo. Responsabile dell’edizione
                                 critica.</note>
