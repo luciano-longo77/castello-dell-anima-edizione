@@ -186,7 +186,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 **Segmentazione e retorica**
 
-- `<seg>` — `@type` (`indicatio`); `@function`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
+- `<seg>` — `@type`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
 - `<term>` — `@ana`
 - `<ref>` — `@target`; `@type` (`intertext`, `scripture`, `liturgy`); `@subtype`; `@ana`
 - `<note>` — `@type`; `@subtype`; `@corresp`; `@hand`; `@place` (`margin`); `@ana`
@@ -215,7 +215,7 @@ L'attributo `@ana`, presente su più elementi, veicola le categorie della tasson
 
 **Struttura.** L'articolazione `<div type="book">` → `<div type="chapter">` riproduce la partizione originale dell'opera in tre libri, ciascuno diviso in capitoli numerati dall'autrice stessa; l'uso di `@n` accanto a `@type` permette di distinguere il livello gerarchico (libro vs. capitolo) dalla sua posizione numerica, requisito necessario per un'opera dove capitolo e libro condividono lo stesso schema di numerazione romana/araba. `<pb>` con `@n`, `@facs` e `@xml:id` ancora ogni carta sia alla foliazione originale sia all'immagine digitale corrispondente: nel caso di un autografo unico, questo è l'unico modo di garantire che ogni affermazione testuale sia verificabile contro il supporto materiale. `<fw>` registra le segnature a piè di pagina che nel manoscritto guidano la legatura dei fascicoli.
 
-**Front matter — witness e persone.** `<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo (Tb0, Tb1, T1, T2, T3, T4, Tc), ciascuno con `@resp` (chi ha prodotto quella fase: l'autrice, una mano esterna, il curatore) e `@ana` (l'identificativo che verrà richiamato da `@wit` nell'apparato). Questa dichiarazione preliminare è ciò che rende interpretabili, più avanti nel testo, valori altrimenti opachi come `wit="#txt-b0"`: senza il `<listWit>` a monte, l'apparato critico sarebbe una sigla senza chiave di lettura.
+**Front matter — witness e persone.** `<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo (Tb0, Tb1, T1, T2, T3, T4, Tc), ciascuno con `@resp` (chi ha prodotto quella fase: l'autrice, una mano esterna, il curatore).
 
 `<person>` con `@xml:id`, in combinazione con `<idno type="VIAF">`, è l'elemento che permette di ancorare le figure storiche nominate nel testo, l'autrice stessa, ma anche le fonti dottrinali richiamate come Teresa d'Ávila e Miguel de Molinos, a un'identità verificabile esternamente al progetto, tramite l'authority file VIAF. Senza VIAF, un riferimento come "Teresa d'Ávila" resterebbe una stringa di testo non disambiguata, indistinguibile da qualunque omonimo; con VIAF, il riferimento diventa un dato collegabile e interrogabile insieme ad altre biblioteche digitali e authority file internazionali.
 
