@@ -271,7 +271,11 @@ I capitoli I–V mostrano:
 
 ### 8. Roadmap
 
-- **MC1:** Capp. I–V (stati introduttivi dell'unione).
-- **MC2:** Capp. VI–VIII (sviluppo dell'unione).
-- **MC3:** Capp. IX–XII (zone più complesse).
-- **MC finale:** integrazione.
+- **MC1:** Capp. III.1–5 (avvio della contemplazione infusa: silentio e sonno spirituale).
+- **MC2:** Capp. III.6–10 (stabilizzazione: otio e annichilimento).
+- **MC3:** Capp. III.11–15 (matrice sponsale I: pace e indifferenza).
+- **MC4:** Capp. III.16–20 (matrice sponsale II: liquefazione e bacio mistico).
+- **MC5:** Capp. III.21–24 (purificazioni passive: aridità e "purghe").
+- **MC6:** Capp. III.25–29 (croce e trasformazione: conformazione al Crocifisso).
+- **MC7:** Capp. III.30–34 (deificazione: presenza trinitaria abituale).
+- **MC8:** Capp. III.35–Fine (compimento: ultime celle e *stabilitas*).
