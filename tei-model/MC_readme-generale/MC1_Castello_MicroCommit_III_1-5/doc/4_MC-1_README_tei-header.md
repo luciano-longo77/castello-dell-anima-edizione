@@ -34,14 +34,14 @@ Questa seconda funzione è ciò che rende l'edizione più di una semplice trascr
 ## Struttura del `teiHeader` e cosa fa ciascuna sezione
 
 ### `fileDesc`
-Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`), identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue quattro mani/fasi di scrittura (`ink_1`–`ink_4-external`) corrispondenti alla stratificazione genetica del testo.
+Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`), identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue cinque mani/fasi di scrittura, quattro autografe di Teresa (`ink_1` e `ink_2` a inchiostro bruno, `ink_3-dark` a inchiostro scuro e `pencil_1` a matita) più una mano esterna non identificata (`ink_4-external`), corrispondenti alla stratificazione genetica del testo (Tb0–T4).
 
 Le `notesStmt` raccolgono le note critiche di inquadramento (materiale, prudenziale, linguistico, sul rischio teologico, sulla trasmissione, stilistico) e le note biografiche e contestuali sull'autrice, il commento filologico che precede e giustifica le scelte editoriali applicate nel testo.
 
 ### `encodingDesc`
 Qui si dichiara **come** il testo viene codificato:
 - `projectDesc` descrive gli obiettivi del modello (segmentazione strutturata, apparato genetico, tassonomie multiassiali) e la fase in cui si trova il progetto.
-- `editorialDecl` fissa i criteri editoriali: trascrizione diplomatico-conservativa, apparato critico in *parallel segmentation*, nessuna normalizzazione se non minima e dichiarata.
+- `editorialDecl` fissa i criteri editoriali: trascrizione semidiplomatica (e interpretativa), apparato critico in *parallel segmentation*, nessuna normalizzazione se non minima e dichiarata.
 - `tagsDecl` elenca **esattamente** gli elementi TEI usati nel testo — il "tag set core" di questo commit (vedi sotto).
 - `classDecl` contiene le tassonomie: otto assi interpretativi (`func`, `impact`, `risk`, `mystic_state`, `operation`, `exposition`, `phase`, `relation`) più la tassonomia di lavoro editoriale (`fase`), usata per tracciare la cronologia degli interventi in `revisionDesc`.
 
