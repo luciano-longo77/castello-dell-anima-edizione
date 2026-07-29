@@ -1,5 +1,5 @@
 # Micro‑progetto di Edizione Critica Digitale
-## Il Castello dell'anima
+## **Il Castello dell'anima** di suor Tesera di San Geronimo
 ### Libro III, Capitoli I–V
 ### Avvio della contemplazione infusa (MC1)
 
@@ -186,7 +186,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 **Segmentazione e retorica**
 
-- `<seg>` — `@type`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (`ink_1`, `ink_2`, `ink_3-dark`, `ink_4-external`); `@ana`
+- `<seg>` — `@type`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (#ink_1, #ink_2, #ink_3-dark, #pencil_1, #ink_4-external); `@ana`
 - `<term>` — `@ana`
 - `<ref>` — `@target`; `@type` (`intertext`, `scripture`, `liturgy`); `@subtype`; `@ana`
 - `<note>` — `@type`; `@subtype`; `@corresp`; `@hand`; `@place` (`margin`); `@ana`
@@ -215,7 +215,9 @@ L'attributo `@ana`, presente su più elementi, veicola le categorie della tasson
 
 **Struttura.** L'articolazione `<div type="book">` → `<div type="chapter">` riproduce la partizione originale dell'opera in tre libri, ciascuno diviso in capitoli numerati dall'autrice stessa; l'uso di `@n` accanto a `@type` permette di distinguere il livello gerarchico (libro vs. capitolo) dalla sua posizione numerica, requisito necessario per un'opera dove capitolo e libro condividono lo stesso schema di numerazione romana/araba. `<pb>` con `@n`, `@facs` e `@xml:id` ancora ogni carta sia alla foliazione originale sia all'immagine digitale corrispondente: nel caso di un autografo unico, questo è l'unico modo di garantire che ogni affermazione testuale sia verificabile contro il supporto materiale. `<fw>` registra le segnature a piè di pagina che nel manoscritto guidano la legatura dei fascicoli.
 
-**Front matter — witness e persone.** `<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo (Tb0, Tb1, T1, T2, T3, T4, Tc), ciascuno con `@resp` (chi ha prodotto quella fase: l'autrice, una mano esterna, il curatore).
+**Front matter — witness e persone.** 
+
+`<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo. In questo commit l'header dichiara sei testimoni genetici — Tb0, Tb1, T1, T2, T3, T4 — ciascuno con un `@xml:id` univoco e con `@resp` (chi ha prodotto quella fase: l'autrice o una mano esterna). L'`@xml:id` è precisamente ciò a cui punta l'attributo `@wit` nell'apparato critico: è questa dichiarazione preliminare a rendere interpretabili, più avanti nel testo, valori altrimenti opachi come `wit="#txt-b0"`, che risolve al `<witness xml:id="txt-b0">` dichiarato a monte. Senza il `<listWit>`, l'apparato critico sarebbe una sigla senza chiave di lettura. Il livello Tc (testo critico, `@resp="#editor"`) rappresenta la lezione dell'edizione richiamata da `<lem>`: sarà dichiarato come `<witness>` nel momento della *constitutio textus*, non essendo ancora costituito in questa fase.
 
 `<person>` con `@xml:id`, in combinazione con `<idno type="VIAF">`, è l'elemento che permette di ancorare le figure storiche nominate nel testo, l'autrice stessa, ma anche le fonti dottrinali richiamate come Teresa d'Ávila e Miguel de Molinos, a un'identità verificabile esternamente al progetto, tramite l'authority file VIAF. Senza VIAF, un riferimento come "Teresa d'Ávila" resterebbe una stringa di testo non disambiguata, indistinguibile da qualunque omonimo; con VIAF, il riferimento diventa un dato collegabile e interrogabile insieme ad altre biblioteche digitali e authority file internazionali.
 
@@ -223,7 +225,7 @@ L'attributo `@ana`, presente su più elementi, veicola le categorie della tasson
 
 `<titlePage>`/`<docTitle>`/`<titlePart>`/`<docAuthor>` riproducono il frontespizio come si presenta nel manoscritto, distinguendo tramite `@type="main"`/`"sub"` il titolo principale dal sottotitolo, distinzione presente nell'originale ("Il Castello dell'Anima" / "Diviso in tre Libri per l'anime Incipienti, Proficienti e Perfette") e quindi non una scelta editoriale ma una trascrizione fedele della struttura del titolo storico.
 
-**Segmentazione e retorica.** `<seg>` porta il peso maggiore dell'annotazione: `@function`/`@subtype` classificano l'atto retorico compiuto dal segmento (dichiarazione di obbedienza, protesta di ortodossia, comparazione, definizione di uno stato mistico), `@hand` ne registra la mano scrivente responsabile, `@xml:lang` distingue i rari segmenti non in volgare. Questa combinazione è motivata dal fatto che nel Libro III le unità retoriche e le fasi di scrittura non coincidono sempre: un segmento della stesura base (`ink_1`) può essere seguito, nello stesso paragrafo, da una glossa di mano successiva (`ink_3-dark`) che ne attenua il contenuto, la codifica deve poter distinguere le due cose sullo stesso piano testuale.
+**Segmentazione e retorica.** `<seg>` porta il peso maggiore dell'annotazione: `@ana`/`@subtype` classificano l'atto retorico compiuto dal segmento (dichiarazione di obbedienza, protesta di ortodossia, comparazione, definizione di uno stato mistico), `@hand` ne registra la mano scrivente responsabile, `@xml:lang` distingue i rari segmenti non in volgare. Questa combinazione è motivata dal fatto che nel Libro III le unità retoriche e le fasi di scrittura non coincidono sempre: un segmento della stesura base (`ink_1`) può essere seguito, nello stesso paragrafo, da una glossa di mano successiva (`ink_3-dark`) che ne attenua il contenuto, la codifica deve poter distinguere le due cose sullo stesso piano testuale.
 
 `<term>` isola il lessico tecnico mistico dell'autrice (*silentio*, *scordanza*, *indifferenza*, *sposalitio*) mantenendolo interrogabile separatamente dal resto del testo, utile in un'opera il cui vocabolario mistico non sempre coincide con quello di Ávila o Giovanni della Croce, pur muovendo dalla stessa tradizione.
 
