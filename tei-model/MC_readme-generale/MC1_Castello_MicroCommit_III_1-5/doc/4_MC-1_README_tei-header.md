@@ -61,6 +61,7 @@ Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che
 - **Apparato critico e fenomeni materiali**: `app`/`lem`/`rdg`, `del`/`add`/`subst`, `unclear`/`gap`/`supplied`
 - **Citazioni**: `cit`/`quote`/`foreign`
 - **Identificatori**: `idno` (in particolare per VIAF)
+- **Normalizzazione minima**: `abbr`/`expan` (scioglimento abbreviazioni), `sic`/`corr` (correzioni editoriali dichiarate)
 
 ## Le tassonomie: un sistema multiassiale, non gerarchico
 
