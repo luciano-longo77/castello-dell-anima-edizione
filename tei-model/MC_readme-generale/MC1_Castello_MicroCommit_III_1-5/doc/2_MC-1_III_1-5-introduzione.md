@@ -3,6 +3,9 @@
 ### Libro III, Capitoli I–V
 ### Avvio della contemplazione infusa (MC1)
 
+![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
+![Carte: 158r–168r](https://img.shields.io/badge/carte-158r–168r-556B2F)
+
 **Autore dell'edizione:** Luciano Longo 
 **ORCID:** [https://orcid.org/0009-0005-7557-7546](https://orcid.org/0009-0005-7557-7546)
 
