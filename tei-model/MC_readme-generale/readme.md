@@ -43,7 +43,7 @@ Ogni micro-commit (es. `MC1_Castello_MicroCommit_III_1-5/`) contiene:
 ---
 
 ## 4. Requisiti Tecnici
-I file XML sono validati rispetto allo schema `tei_all.rng`. Per la consultazione si raccomanda l'uso di un editor XML o di fogli di stile XSLT compatibili con lo standard TEI.
+I file XML sono validati rispetto a uno schema TEI P5 **personalizzato**, generato dall'ODD di progetto (`MC-1_castello-anima-odd.odd`) e compilato in `MC-1_castello-anima-odd.rng` (RELAX NG con Schematron incorporato). Per la consultazione si raccomanda un editor XML (es. oXygen) o fogli di stile XSLT compatibili con lo standard TEI.
 
 ---
 
