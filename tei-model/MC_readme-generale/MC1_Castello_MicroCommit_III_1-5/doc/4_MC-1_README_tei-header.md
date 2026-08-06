@@ -9,7 +9,6 @@
 ![Datazione](https://img.shields.io/badge/Datazione-1692%E2%80%931694-8a6d3b)
 ![Manoscritto](https://img.shields.io/badge/ms.-Palermo%2C%20BCP%202%20Qq%20E%2029-8b4513)
 ![Status](https://img.shields.io/badge/status-in%20preparazione-orange)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--7557--7546-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0005-7557-7546)
 
 ## A cosa serve questo documento
 
