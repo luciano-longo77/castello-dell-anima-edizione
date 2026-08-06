@@ -2,7 +2,6 @@
 # MC1 — Libro III, Capitoli I–V
 **Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **A cura di Luciano Longo**
 
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
 ![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
 
