@@ -29,6 +29,7 @@ Il `teiHeader` è mantenuto come componente concettualmente distinta dal file da
 - [Il tag set core: cosa è dentro, cosa è fuori, e perché](#il-tag-set-core-cosa-è-dentro-cosa-è-fuori-e-perché)
 - [Le tassonomie: un sistema multiassiale, non gerarchico](#le-tassonomie-un-sistema-multiassiale-non-gerarchico)
 - [Licenza e datazione: due chiarimenti necessari](#licenza-e-datazione-due-chiarimenti-necessari)
+- [Validazione e schema](#validazione-e-schema)
 - [In sintesi](#in-sintesi)
 
 ## Perché un `teiHeader` così esteso
