@@ -1,5 +1,7 @@
-# MC 1: Struttura dei capitoli e della cartulazione (ms. 2 Qq E 29)
-## Libro III, capp. I–V (cc 158r - 168r)
+# (MC1) Micro‑progetto di Edizione Critica Digitale
+## MC 1: Struttura dei capitoli e della cartulazione (ms. 2 Qq E 29)
+### Libro III, capp. I–V (cc 158r - 168r)
+**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **(a cura di Luciano Longo)**
 
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
