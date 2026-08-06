@@ -1,5 +1,5 @@
-# Micro‑progetto di Edizione Critica Digitale
-## **Il Castello dell'anima** di suor Tesera di San Geronimo
+# (MC1) Micro‑progetto di Edizione Critica Digitale
+## **Il Castello dell'anima** di suor Tesera di San Geronimo (III, 1-4)
 
 ![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
 ![Carte: 158r–168r](https://img.shields.io/badge/carte-158r–168r-556B2F)
