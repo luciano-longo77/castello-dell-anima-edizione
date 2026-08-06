@@ -11,27 +11,19 @@
 
 Fascia di carte coperta dal MC1, dalla carta 158r alla carta 168r, senza interruzioni.
 
-* c. 158r
-* c. 158v
-* c. 159r
-* c. 159v
-* c. 160r
-* c. 160v
-* c. 161r
-* c. 161v
-* c. 162r
-* c. 162v
-* c. 163r
-* c. 163v
-* c. 164r
-* c. 164v
-* c. 165r
-* c. 165v
-* c. 166r
-* c. 166v
-* c. 167r
-* c. 167v
-* c. 168r
+| Foglio | recto | verso |
+|:--:|:--:|:--:|
+| 158 | 158r | 158v |
+| 159 | 159r | 159v |
+| 160 | 160r | 160v |
+| 161 | 161r | 161v |
+| 162 | 162r | 162v |
+| 163 | 163r | 163v |
+| 164 | 164r | 164v |
+| 165 | 165r | 165v |
+| 166 | 166r | 166v |
+| 167 | 167r | 167v |
+| 168 | 168r | — |
 
 ### 2. Struttura capitolare dettagliata
 Di seguito si riporta la struttura esatta, con indicazione precisa delle carte per ogni capitolo e dei punti di passaggio.
