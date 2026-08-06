@@ -553,7 +553,7 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <ab xml:base="abstract">
+            <ab type="abstract">
                 <seg n="1"> Questo teiHeader descrive il modello di edizione digitale del primo micro-commit
                     (MC1, Libro III, capp. I–V) del <title ref="#castello-anima">Castello dell'anima</title>
                     di Teresa di San Geronimo, fondato su una integrazione multilivello tra descrizione materiale,
@@ -663,10 +663,10 @@
                     &lt;pb&gt; secondo la foliazione originale (es. “158r”, “158v”). I riferimenti
                     ai capitoli si basano su &lt;div type="chapter"&gt; e quelli ai paragrafi su
                     &lt;p&gt;, numerati editorialmente quando necessario. </p>
-                <p> La corrispondenza fra testo e immagini del manoscritto è dichiarata tramite gli
-                    elementi &lt;surface&gt; e &lt;graphic&gt; all’interno di &lt;facsimile&gt;,
-                    mentre i rinvii interni utilizzano l’attributo @target per puntare a
-                    identificatori univoci all’interno del documento. </p>
+                <p> La corrispondenza fra testo e immagini del manoscritto è dichiarata tramite
+                    l’attributo @facs sugli elementi &lt;pb&gt;, che rinviano alle riproduzioni
+                    digitali delle carte; i rinvii interni utilizzano l’attributo @target per
+                    puntare a identificatori univoci all’interno del documento. </p>
 
             </refsDecl>
             <editorialDecl>
