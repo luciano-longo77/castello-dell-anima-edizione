@@ -2,8 +2,14 @@
 ## `teiHeader` - Libro III, Capitoli I–V
 **Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **(a cura di Luciano Longo)**
 
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)](https://creativecommons.org/licenses/by/4.0/)
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
+![Micro-commit](https://img.shields.io/badge/Micro--commit-MC1-informational)
+![Libro III](https://img.shields.io/badge/Libro%20III-capp.%20I%E2%80%93V-blue)
+![Datazione](https://img.shields.io/badge/Datazione-1692%E2%80%931694-8a6d3b)
+![Manoscritto](https://img.shields.io/badge/ms.-Palermo%2C%20BCP%202%20Qq%20E%2029-8b4513)
+![Status](https://img.shields.io/badge/status-in%20preparazione-orange)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--7557--7546-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0005-7557-7546)
 
 ## A cosa serve questo documento
 
