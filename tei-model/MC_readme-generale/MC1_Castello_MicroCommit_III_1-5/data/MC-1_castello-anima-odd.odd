@@ -35,7 +35,7 @@
          <p>ODD (One Document Does it all) conforme a TEI P5 4.11.0. Genera in un unico documento sia
             la documentazione del modello sia lo schema formale (RELAX NG + Schematron) tramite le
             catene di trasformazione TEI (<hi rend="italic">oXygen &gt; Document Type &gt; Generate
-               Schema</hi>, oppure <hi rend="italic">romajs</hi>/<hi rend="italic">oddc</hi>).</p>
+            Schema</hi>, oppure <hi rend="italic">romajs</hi>/<hi rend="italic">oddc</hi>).</p>
       </encodingDesc>
       <revisionDesc status="draft">
          <change when="2026-08-06" who="#editor">Prima redazione dell'ODD: selezione dei moduli,
@@ -45,13 +45,13 @@
    </teiHeader>
    <text>
       <body>
-         
+
          <div xml:id="scopo">
             <head>1. Scopo e ambito</head>
             <p>Questa specifica definisce e vincola formalmente il modello di codifica del
                <title>Castello dell'anima</title> per il primo micro-commit (MC1, Libro III, capp.
                I–V). Non è una semplice selezione di moduli TEI: rende <hi rend="italic">verificabili
-                  a schema</hi> le decisioni editoriali che nel <gi>teiHeader</gi> sono dichiarate in
+               a schema</hi> le decisioni editoriali che nel <gi>teiHeader</gi> sono dichiarate in
                prosa, in particolare l'integrità della rete di puntatori interni
                (<att>ana</att>, <att>who</att>, <att>corresp</att>, <att>target</att>) e la
                disciplina d'uso delle tassonomie.</p>
@@ -62,7 +62,7 @@
                varianti genetiche sono ricondotte ai livelli dichiarati in
                <gi>listWit</gi>.</p>
          </div>
-         
+
          <div xml:id="moduli">
             <head>2. Moduli TEI selezionati</head>
             <p>Lo schema include dodici moduli, sufficienti a coprire sia il <gi>teiHeader</gi>
@@ -100,14 +100,18 @@
                <item><gi>seg</gi>, <gi>ab</gi>: unità di segmentazione interpretativa.</item>
                <label>analysis</label>
                <item><gi>interp</gi> e la classe di attributi <ident type="class"
-                     >att.global.analytic</ident>, che fornisce <att>ana</att> — perno dell'annotazione
+                  >att.global.analytic</ident>, che fornisce <att>ana</att> — perno dell'annotazione
                   multiassiale.</item>
                <label>tagdocs</label>
                <item><gi>gi</gi>, <gi>code</gi>, <gi>att</gi>: usati nella prosa descrittiva del
                   <gi>projectDesc</gi> e del <gi>revisionDesc</gi>.</item>
+               <label>corpus</label>
+               <item><gi>particDesc</gi>: contenitore di <gi>listPerson</gi>/<gi>listOrg</gi> in
+                  <gi>profileDesc</gi> (le persone e le organizzazioni sono di <soCalled>namesdates</soCalled>,
+                  ma il loro contenitore appartiene a questo modulo).</item>
             </list>
          </div>
-         
+
          <div xml:id="confine">
             <head>3. Confine del tag set: elementi esclusi</head>
             <p>Coerentemente con il <gi>tagsDecl</gi> e con la cronologia del <gi>revisionDesc</gi>
@@ -126,13 +130,13 @@
                   stand-off.</item>
             </list>
          </div>
-         
+
          <div xml:id="vincoli">
             <head>4. Vincoli semantici (Schematron)</head>
             <p>Quattro regole rendono controllabile il modello interpretativo:</p>
             <list type="ordered">
                <item><term>Integrità referenziale</term>: ogni puntatore interno <hi rend="italic"
-                     >#…</hi> in <att>ana</att>, <att>who</att>, <att>corresp</att>, <att>target</att>,
+                  >#…</hi> in <att>ana</att>, <att>who</att>, <att>corresp</att>, <att>target</att>,
                   <att>ref</att>, <att>sameAs</att>, <att>scribeRef</att>, <att>resp</att>,
                   <att>select</att>, <att>source</att> deve corrispondere a un <att>xml:id</att>
                   realmente dichiarato nel documento.</item>
@@ -148,17 +152,17 @@
             </list>
             <p>La regola 1 intercetta esattamente la classe di errori corretta nel micro-commit
                (puntatori <hi rend="italic">#llongo</hi>, <att>ana</att> privo di <hi rend="italic"
-                  >#</hi>, categorie non dichiarate). Non si vincola invece la co-occorrenza tra
+               >#</hi>, categorie non dichiarate). Non si vincola invece la co-occorrenza tra
                <ident>impact</ident> ed <ident>exposition</ident>: un loro disallineamento è un dato
                interpretativo, non un errore (cfr. commento in <gi>classDecl</gi>).</p>
          </div>
-         
+
          <div xml:id="schema">
             <head>5. Specifica dello schema</head>
-            
+
             <schemaSpec ident="castello-anima" start="TEI" prefix="tei_" targetLang="it"
                docLang="it">
-               
+
                <!-- ============ MODULI ============ -->
                <moduleRef key="tei"/>
                <moduleRef key="header"/>
@@ -172,7 +176,8 @@
                <moduleRef key="linking"/>
                <moduleRef key="analysis"/>
                <moduleRef key="tagdocs"/>
-               
+               <moduleRef key="corpus"/>
+
                <!-- ============ CONFINE DEL TAG SET: ELEMENTI ESCLUSI ============ -->
                <elementSpec ident="facsimile" mode="delete"/>
                <elementSpec ident="surface" mode="delete"/>
@@ -184,7 +189,7 @@
                <elementSpec ident="linkGrp" mode="delete"/>
                <elementSpec ident="span" mode="delete"/>
                <elementSpec ident="spanGrp" mode="delete"/>
-               
+
                <!-- ============ VALORI DI @medium PER LE MANI ============ -->
                <elementSpec ident="handNote" mode="change">
                   <attList>
@@ -206,7 +211,7 @@
                      </attDef>
                   </attList>
                </elementSpec>
-               
+
                <!-- ============ VINCOLO 1: INTEGRITÀ REFERENZIALE ============ -->
                <constraintSpec ident="integrita-referenziale" scheme="schematron">
                   <desc>Ogni puntatore interno deve risolvere a un xml:id dichiarato.</desc>
@@ -227,7 +232,7 @@
                      </sch:pattern>
                   </constraint>
                </constraintSpec>
-               
+
                <!-- ============ VINCOLO 2: TASSONOMIA 'fase' IN revisionDesc ============ -->
                <constraintSpec ident="fase-in-revisiondesc" scheme="schematron">
                   <desc>change/@ana deve puntare a una categoria della tassonomia 'fase'.</desc>
@@ -247,7 +252,7 @@
                      </sch:pattern>
                   </constraint>
                </constraintSpec>
-               
+
                <!-- ============ VINCOLO 3: CO-OCCORRENZA DI phase-critical ============ -->
                <constraintSpec ident="phase-critical-cooccorrenza" scheme="schematron">
                   <desc>#phase-critical è trasversale: richiede una fase posizionale.</desc>
@@ -268,7 +273,7 @@
                      </sch:pattern>
                   </constraint>
                </constraintSpec>
-               
+
             </schemaSpec>
          </div>
       </body>
