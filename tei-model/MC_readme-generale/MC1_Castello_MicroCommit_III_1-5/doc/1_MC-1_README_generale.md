@@ -1,6 +1,6 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
-## Libro III, Capitoli I–V
-**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **A cura di Luciano Longo**
+## Introduzione al Primo Committ - Libro III, Capitoli I–V
+**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **(a cura di Luciano Longo)**
 
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
 ![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
