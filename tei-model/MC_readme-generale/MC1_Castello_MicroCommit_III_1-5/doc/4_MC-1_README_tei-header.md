@@ -91,6 +91,22 @@ Una stessa occorrenza testuale riceve normalmente più etichette contemporaneame
 
 La tassonomia `fase`, distinta dalle otto sopra, non descrive il testo ma il **lavoro editoriale**: è il vocabolario controllato con cui `revisionDesc` traccia la cronologia degli interventi.
 
+## Validazione e schema
+
+Il modello descritto qui è formalizzato in uno **schema TEI P5 personalizzato**, prodotto con la metodologia ODD:
+
+- **`MC-1_castello-anima-odd.odd`** — la specifica *One Document Does it all*: documentazione del modello, selezione dei moduli TEI, confine del tag set (elementi esclusi) e vincoli Schematron.
+- **`MC-1_castello-anima-odd.rng`** — lo schema compilato (RELAX NG + Schematron incorporato) contro cui si validano i file dati. Si rigenera dall'ODD con oXygen (*TEI ODD → RELAX NG XML*).
+
+Il file dati dichiara l'associazione in testa, con due PI verso lo stesso RNG:
+
+```xml
+<?xml-model href="MC-1_castello-anima-odd.rng" type="application/xml"
+    schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="MC-1_castello-anima-odd.rng" type="application/xml"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+```
+
 ## Licenza e datazione: due chiarimenti necessari
 
 - **Licenza**: CC BY 4.0, allineata al README generale del progetto (fonte di verità per questa decisione). Le riproduzioni digitali del manoscritto restano soggette a restrizioni dell'ente conservatore, distinte dalla licenza del testo TEI.
