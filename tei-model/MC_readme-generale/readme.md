@@ -48,7 +48,7 @@ I file XML sono validati rispetto allo schema `tei_all.rng`. Per la consultazion
 ---
 
 ## 5. Citazione e Licenza
-L'opera è rilasciata sotto licenza **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+La codifica TEI e la documentazione sono rilasciate sotto licenza **Creative Commons Attribution 4.0 International (CC BY 4.0)**: uso e riuso consentiti, anche a fini commerciali, con attribuzione. Le riproduzioni digitali del manoscritto ne sono escluse e restano consultabili solo off-line, secondo le condizioni stabilite dall'ente conservatore.
 
 **Citazione suggerita:**
 > Longo, Luciano. (2026). *Il Castello dell’anima — Libro III: Edizione Critica Digitale (Micro-commits)* [Data set]. Zenodo. https://doi.org/[Pending]
