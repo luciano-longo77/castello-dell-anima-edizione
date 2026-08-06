@@ -1,7 +1,12 @@
 # MC 1: Struttura dei capitoli e della cartulazione (ms. 2 Qq E 29)
 ## Libro III, capp. I–V (cc 158r - 168r)
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
+![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
 
 ### 1. Preliminari
+![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
+![Carte: 158r–168r](https://img.shields.io/badge/carte-158r–168r-556B2F)
+
 Fascia di carte coperta dal MC1, dalla carta 158r alla carta 168r, senza interruzioni.
 
 * c. 158r
