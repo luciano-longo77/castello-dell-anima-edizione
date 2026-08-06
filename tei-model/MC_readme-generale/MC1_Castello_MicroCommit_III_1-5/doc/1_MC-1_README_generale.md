@@ -1,5 +1,5 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
-## MC1 — Libro III, Capitoli I–V
+## Libro III, Capitoli I–V
 **Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **A cura di Luciano Longo**
 
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
