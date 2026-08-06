@@ -62,7 +62,7 @@ Registra la cronologia granulare degli interventi editoriali, ciascuno classific
 
 ## Il tag set core: cosa è dentro, cosa è fuori, e perché
 
-Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che TEI permette, ma il **tag set minimo** deciso per MC1, coerente con quanto dichiarato nel README narrativo del micro-commit (§3.11–3.12). Include:
+Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che TEI permette, ma il **tag set minimo** deciso per MC1, coerente con quanto dichiarato nel README narrativo del micro-commit. Include:
 
 - **Struttura**: `div`, `head`, `argument`, `p`, `pb`, `fw`, `text`, `body`
 - **Front matter**: `front`, `listWit`/`witness`, `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
