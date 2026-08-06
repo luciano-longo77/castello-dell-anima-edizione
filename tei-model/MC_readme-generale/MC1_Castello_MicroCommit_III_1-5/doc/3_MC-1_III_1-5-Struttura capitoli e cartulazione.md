@@ -1,7 +1,5 @@
 # MC 1: Struttura dei capitoli e della cartulazione (ms. 2 Qq E 29)
 ## Libro III, capp. I–V (cc 158r - 168r)
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
-![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
 
 ### 1. Preliminari
 ![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
@@ -87,3 +85,6 @@ Di seguito si riporta la struttura esatta, con indicazione precisa delle carte p
 | **III** | Oblivione / Sonno | 162r – 164v |
 | **IV** | Scordanza | 164v – 165v |
 | **V** | Indifferenza | 166r – 168r |
+
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
+![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
