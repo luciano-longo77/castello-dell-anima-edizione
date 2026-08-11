@@ -47,23 +47,23 @@ Il micro‑commit comprende integralmente le carte:
 * **Carte:** 158r
 * **Contenuto:** Titolo del libro e paragrafi introduttivi.
 
-### Capitolo I — Disposizione lasciata dalla notte dello spirito
+### Capitolo I - Disposizione lasciata dalla notte dello spirito
 * **Carte:** 158r–159r 
 * **Paragrafi:** 1–10 
 
-### Capitolo II — Silentio
+### Capitolo II - Silentio
 * **Carte:** 159v–162r
 * **Paragrafi:** 1–24
 
-### Capitolo III — Oblivione / Sonno
+### Capitolo III - Oblivione / Sonno
 * **Carte:** 162r–164v 
 * **Paragrafi:** 1–22
 
-### Capitolo IV — Scordanza
+### Capitolo IV - Scordanza
 * **Carte:** 165r–165v
 * **Paragrafi:** 1–12 
 
-### Capitolo V — Indifferenza
+### Capitolo V - Indifferenza
 * **Carte:** 166r–168r
 * **Paragrafi:** 1–20
 
