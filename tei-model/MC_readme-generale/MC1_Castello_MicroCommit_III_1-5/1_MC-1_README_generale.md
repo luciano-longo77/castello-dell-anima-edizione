@@ -60,7 +60,7 @@ Il micro‑commit comprende integralmente le carte:
 * **Paragrafi:** 1–22
 
 ### Capitolo IV - Scordanza
-* **Carte:** 165r–165v
+* **Carte:** 164v–165v
 * **Paragrafi:** 1–12 
 
 ### Capitolo V - Indifferenza
@@ -77,7 +77,7 @@ Il micro‑commit comprende integralmente le carte:
 | **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit: *adesso è di bene passare al seguente capitolo*. |
 | **II** | Silentio | 159v–162r | §§ 1–24 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
 | **III** | Oblivione / Sonno | 162r–164v | §§ 1–22 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
-| **IV** | Scordanza | 165r–165v | §§ 1–12 | *Quasi continuo estasi*. Oceano d’amore. |
+| **IV** | Scordanza | 164v–165v | §§ 1–12 | *Quasi continuo estasi*. Oceano d’amore. |
 | **V** | Indifferenza | 166r–168r | §§ 1–20 | Unione delle volontà. Luce dal centro dell’anima. |
 
 ---
@@ -106,5 +106,19 @@ Il micro‑commit comprende integralmente le carte:
 <pb n="167r" facs="images/f167r.jpg" xml:id="f167r"/>
 <pb n="167v" facs="images/f167v.jpg" xml:id="f167v"/>
 <pb n="168r" facs="images/f168r.jpg" xml:id="f168r"/>
+```
 
+---
+## Licenza
+Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
+
+---
+
+## 👤 Curatore
+**Luciano Longo**   
+- Contatti: <luciano.longo@dedalus.com> 
+- ORCID: <https://orcid.org/0009-0005-7557-7546> 
+- GitHub: <https://github.com/luciano-longo77>
+- Website: <https://luciano-longo77.github.io>
+````
 
