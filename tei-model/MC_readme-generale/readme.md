@@ -1,10 +1,9 @@
 # Il Castello dell’anima — Libro III (ms. 2 Qq E 29)
 ## Edizione Critica Digitale Modulare (Micro-commits)
 
-[![License](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![TEI P5](https://img.shields.io/badge/Encoding-TEI_P5-blue.svg)
+[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) [![Castello dell'anima](https://img.shields.io/badge/Castello%20dell%27anima-7b2d3b)](https://github.com/luciano-longo77/castello-anima-TEI-IA)
 
-Progetto di edizione critica digitale del terzo libro del *Castello dell’anima* (1692–1694) di **suor Teresa di San Geronimo** (Anna La Longa), basato sul manoscritto autografo conservato presso la Biblioteca Comunale di Palermo (ms. 2 Qq E 29).
+Progetto di edizione critica digitale del **III libro** del *Castello dell’anima* (1692–1694) di **suor Teresa di San Geronimo** (Anna La Longa), basato sul manoscritto autografo conservato presso la Biblioteca Comunale di Palermo (ms. 2 Qq E 29).
 
 ---
 
@@ -12,9 +11,9 @@ Progetto di edizione critica digitale del terzo libro del *Castello dell’anima
 Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni commit rappresenta un'unità dottrinale e materiale coerente, permettendo una revisione filologica puntuale e una citabilità precoce dei dati secondo i principi **FAIR**.
 
 ### Principi Editoriali
-* **Trascrizione:** Semidiplomatica e interpretativa, focalizzata sulle correzioni autografe e le glosse marginali.
-* **Modellazione TEI:** Uso dello standard TEI P5 per documentare la genesi del testo (`<app>`, `<add>`, `<del>`) e le strategie prudenziali dell'autrice.
-* **Digital Philology:** Preparazione dei dati per analisi computazionali (NLP) e intertestualità assistita.
+* **Trascrizione a due livelli:** diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
+* **Modellazione TEI su tre layer:** (1) filologico‑grafico — struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`); (2) mistico‑dottrinale — lessico agganciato via `<term ref>` a un vocabolario controllato degli stati; (3) intertestuale — `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
+* **Digital Philology (progetto separato):** la preparazione dei dati per analisi computazionali (NLP), l'annotazione interpretativa multiassiale e l'intertestualità assistita da IA sono sviluppate nel repository dedicato `castello-anima-TEI-IA`, distinto da questa edizione critica.
 
 ---
 
@@ -40,6 +39,7 @@ Ogni micro-commit (es. `MC1_Castello_MicroCommit_III_1-5/`) contiene:
 * `data/`: File XML sorgente conformi allo standard TEI P5.
 * `doc/`: Introduzione editoriale, note al testo e analisi della cartulazione.
 * `out/`: Prototipi per la visualizzazione dinamica della struttura del manoscritto.
+* `tool/`: Prototipi per l'interrogazione dinamica dell'edizione.
 ---
 
 ## 4. Requisiti Tecnici
@@ -55,6 +55,9 @@ La codifica TEI e la documentazione sono rilasciate sotto licenza **Creative Com
 
 ---
 
-## Contatti
-**Curatore:** Luciano Longo  
-**ORCID:** [0009-0005-7557-7546](https://orcid.org/0009-0005-7557-7546)
+## 👤 Curatore
+**Luciano Longo**   
+- Contatti: <luciano.longo@dedalus.com> 
+- ORCID: <https://orcid.org/0009-0005-7557-7546> 
+- GitHub: <https://github.com/luciano-longo77>
+- Website: <https://luciano-longo77.github.io>
