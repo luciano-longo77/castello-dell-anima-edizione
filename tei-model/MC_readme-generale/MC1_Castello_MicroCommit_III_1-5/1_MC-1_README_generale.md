@@ -120,5 +120,4 @@ Creative Commons Attribution 4.0 International (**CC BY 4.0**).
 - ORCID: <https://orcid.org/0009-0005-7557-7546> 
 - GitHub: <https://github.com/luciano-longo77>
 - Website: <https://luciano-longo77.github.io>
-````
 
