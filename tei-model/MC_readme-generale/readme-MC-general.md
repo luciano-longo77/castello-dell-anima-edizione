@@ -12,7 +12,7 @@ Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni
 
 ### Principi Editoriali
 * **Trascrizione a due livelli:**
-* diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
+- diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
 
 * **Modellazione TEI su tre layer:**
   - **(1)** filologico‑grafico - struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`);
