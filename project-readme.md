@@ -110,7 +110,7 @@ brano in lingua diversa
 <foreign xml:lang="lat">…</foreign>                  
 ```
 
-La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, è tenuta distinta dalla *trascrizione interpretativa* ampiamente regolarizzata descritta più avanti: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
+La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, è tenuta distinta dalla *trascrizione interpretativa* ampiamente regolarizzata, sviluppata nel repository separato **`castello-anima-TEI-IA`**: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
 
 ### Criteri editoriali
 L’edizione adotta un approccio diplomatico‑conservativo, che:
@@ -145,7 +145,7 @@ Le mani descritte sono **cinque**: quattro autografe di Teresa
 
 ```xml
 <app>
-  <lem wit="#txt-c">testo base</lem>
+  <lem wit="#txt-c">lezione critica costituita</lem>
   <rdg wit="#txt-b0">prima stesura</rdg>
   <rdg wit="#txt-1">riscrittura autoriale</rdg>
   <rdg wit="#txt-2">intervento correttivo‑glossativo</rdg>
