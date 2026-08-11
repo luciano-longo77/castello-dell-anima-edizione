@@ -29,9 +29,9 @@
 
 ## Obiettivo principale
 
-Realizzare un’edizione critica digitale del III libro del *Castello dell’anima* di suor Teresa di San Geronimo, con particolare attenzione alla dimensione genetica, alle dinamiche correttive e alle modalità di autocontrollo dottrinale presenti nell’autografo.
+Realizzare un’**edizione critica digitale** del **III libro** del *Castello dell’anima* di suor Teresa di San Geronimo, con particolare attenzione alla dimensione genetica, alle dinamiche correttive e alle modalità di autocontrollo dottrinale presenti nell’autografo.
 
-L’edizione si fonda sull’assunto metodologico che il manoscritto autografo *Palermo, Biblioteca Comunale, ms. 2 Qq E 29*  costituisca l’unica tradizione diretta dell’opera. Tutti i fenomeni grafici, materiali e linguistici sono pertanto trattati come potenzialmente rilevanti sul piano filologico, storico e interpretativo.
+L’edizione si fonda sull’assunto metodologico che il manoscritto autografo *Palermo, Biblioteca Comunale, ms. 2 Qq E 29*  costituisca l’**unica tradizione diretta dell’opera**. Tutti i fenomeni grafici, materiali e linguistici sono pertanto trattati come potenzialmente rilevanti sul piano filologico, storico e interpretativo.
 
 ## Fase 1: Edizione critica del III libro
 ## Introduzione al progetto
