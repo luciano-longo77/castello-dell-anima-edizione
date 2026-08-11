@@ -70,9 +70,22 @@ La codifica si articola in **tre layer** — filologico‑grafico, mistico‑dot
 
  ```xml
 <!-- Layer filologico-grafico: trascrizione a due livelli -->
-<choice><orig>à</orig><reg>a</reg></choice>          grafia originale ⇄ regolarizzata
-<choice><abbr>dunq</abbr><expan>dunque</expan></choice>  abbreviazione ⇄ scioglimento
-<choice><sic>ad</sic><corr>al</corr></choice>       lezione erronea ⇄ correzione editoriale
+
+<choice>
+<orig>à</orig>
+<reg>a</reg>
+</choice>  --> grafia originale ⇄ regolarizzata
+
+<choice>
+<abbr>dunq</abbr>
+<expan>dunque</expan>
+</choice>  --> abbreviazione ⇄ scioglimento
+
+<choice>
+<sic>ad</sic>
+<corr>al</corr>
+</choice>   --> lezione erronea ⇄ correzione editoriale
+
 <add>        aggiunte marginali o interlineari
 <del>        cancellazioni
 <subst>      sostituzione (del + add come evento unico)
@@ -81,15 +94,24 @@ La codifica si articola in **tre layer** — filologico‑grafico, mistico‑dot
 <supplied>   integrazioni su guasto meccanico
 
 <!-- Layer mistico-dottrinale: lessico agganciato al vocabolario degli stati -->
-<term ref="#unione">unione</term>                    stato mistico controllato
+stato mistico
+<term ref="#unione">unione</term>                    
 
 <!-- Layer intertestuale: rimandi e citazioni -->
-<ref target="#avila-castello">castello dell'anima</ref>   rimando a fonte
-<cit><quote xml:lang="lat">…</quote><bibl/></cit>   citazione con fonte
-<foreign xml:lang="lat">…</foreign>                  brano in lingua diversa
+rimando a fonte
+<ref target="#avila-castello">castello dell'anima</ref>   
+
+citazione con fonte
+<cit>
+<quote xml:lang="lat">…</quote>
+<bibl/>
+</cit>   
+
+brano in lingua diversa
+<foreign xml:lang="lat">…</foreign>                  
 ```
 
-La trascrizione a due livelli, in cui la lezione diplomatica e la sua regolarizzazione coesistono via `<choice>`, va tenuta distinta dalla trascrizione interpretativa ampiamente regolarizzata (AI) descritta più avanti: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
+La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, è tenuta distinta dalla *trascrizione interpretativa* ampiamente regolarizzata descritta più avanti: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
 
 ### Criteri editoriali
 L’edizione adotta un approccio diplomatico‑conservativo, che:
@@ -114,7 +136,11 @@ Le mani scriventi sono descritte mediante un apparato dedicato:
 </handDesc>
 ```
 
-Le mani descritte sono **cinque**: quattro autografe di Teresa — `ink_1` e `ink_2` (inchiostro bruno), `ink_3-dark` (inchiostro scuro), `pencil_1` (matita) — più la mano esterna `ink_4-external`.
+Le mani descritte sono **cinque**: quattro autografe di Teresa 
+-`ink_1` e `ink_2` (inchiostro bruno),
+- `ink_3-dark` (inchiostro scuro),
+- `pencil_1` (matita)
+- più la mano esterna `ink_4-external`.
 
 #### Apparato critico
 
@@ -146,21 +172,31 @@ Le `witness` dichiarate sono **sette**: i sei livelli genetici (Tb0, Tb1, T1–T
 <div type="book" n="3">
   <div type="chapter" n="1">
     <head>Capitolo primo</head>
-    <argument><p>Si tratta della dispositione che lascia
-      nell'anima la <term ref="#notte">notte dello spirito</term>.</p></argument>
+
+    <argument>
+        <p>Si tratta della dispositione che lascia
+            nell'anima la <term ref="#notte">notte dello spirito</term>.
+        </p>
+    </argument>
+
     <p n="1" xml:id="III-cap1-p1">Quando più un'anima è ragionata di
-      <term>croce</term> e <term>travagli</term>, <choice><orig>altri
-      tanto</orig><reg>altritanto</reg></choice> è più sicuro lo stato suo…</p>
+      <term>croce</term> e <term>travagli</term>,
+        <choice>
+          <orig>altri tanto</orig>
+          <reg>altritanto</reg>
+        </choice>
+        è più sicuro lo stato suo (...)</p>
   </div>
 </div>
 ```
 
-L'unità testuale di riferimento è il paragrafo `<p n="…">`, mentre il lessico mistico è isolato da `<term ref="…">`.
+L'unità testuale di riferimento è il paragrafo **`<p n="…">`**, mentre il lessico mistico è isolato da **`<term ref="…">`**.
 
 ### Note filologiche
 L’edizione include:
 
 * note filologiche ed esplicative:
+  
   ```xml
   <note type="critical">...</note>
   <note type="contextual">...</note>
