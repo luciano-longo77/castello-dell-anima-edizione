@@ -1,15 +1,10 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
-## Presentazione Micro‑Commit 1 (MC1)- Libro III, Capitoli I–V 
+## Presentazione Micro‑Commit 1 (MC1)- Libro III, Capitoli I–V
+### Avvio della contemplazione infusa (MC1)
 **Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** (**a cura di Luciano Longo**)
 
 ![Manoscritto: BCP 2 Qq E 29](https://img.shields.io/badge/ms.-2%20Qq%20E%2029-8B0000)
 ![Carte: 158r–168r](https://img.shields.io/badge/carte-158r–168r-556B2F)
-
-### Libro III, Capitoli I–V
-### Avvio della contemplazione infusa (MC1)
-
-**Autore dell'edizione:** Luciano Longo 
-**ORCID:** [https://orcid.org/0009-0005-7557-7546](https://orcid.org/0009-0005-7557-7546)
 
 **Fonte primaria:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29 (autografo), *Il Castello dell'anima* di suor Teresa di San Geronimo (Anna La Longa), 1692–1694.
 
@@ -49,66 +44,63 @@
 ---
 
 ### Abstract
-
-Il presente micro‑commit inaugura l'edizione critica digitale del Libro III del *Castello dell'anima*, testi destinati "alle anime perfette", secondo la tripartizione originaria. I capitoli I–V costituiscono un'unità autonoma che segna il passaggio dagli stati purgativi e luminosi del Libro II all'avvio della contemplazione infusa, caratterizzata da:
+Il presente **micro‑commit (MC1)** inaugura l'edizione critica digitale del Libro III del *Castello dell'anima*, destinato *alle anime perfette*. I **capitoli I–V** costituiscono un'unità autonoma che segna il passaggio dagli *stati purgativi e luminosi* del **Libro II** all'avvio della *contemplazione infusa*, caratterizzata da:
 
 - sospensione progressiva di sensi e potenze;
 - instaurarsi del *silentio*, distinto dalla quiete acquisita;
-- ingresso nel "sonno" spirituale come oblio delle potenze;
+- ingresso nel *sonno* spirituale come **oblio delle potenze**;
 - distacco radicale dal creato (*scordanza*);
 - perfetta coincidenza della volontà dell'anima con quella divina (*indifferenza*).
 
-Questi capitoli presentano un'elevata densità mistico‑dottrinale, un uso continuo di comparazioni, e mostrano la natura semicolta dell'italiano regionale di Sicilia di fine Seicento: oscillazioni grafiche, variazioni morfosintattiche, frantumazioni sintattiche tipiche del parlato devozionale. In questa fase della ricerca, il micro‑commit fornisce la descrizione critica integrale, la struttura retorica e la cornice storico‑spirituale, insieme alla definizione delle politiche editoriali coerenti con la marcatura TEI.
+Questi capitoli presentano un'elevata densità mistico‑dottrinale, un uso continuo di comparazioni, e mostrano la natura semicolta dell'italiano regionale di Sicilia di fine Seicento con oscillazioni grafiche, variazioni morfosintattiche, frantumazioni sintattiche tipiche del parlato devozionale. 
+In questa fase della ricerca, il micro‑commit fornisce la descrizione critica integrale, la struttura retorica e la cornice storico‑spirituale, insieme alla definizione delle politiche editoriali coerenti con la marcatura TEI.
 
 **Parole chiave:** Castello dell'anima; mistica secentesca; contemplazione infusa; unione mistica; linguistica storica; italiano regionale di Sicilia.
 
 ### 1. Contesto storico‑spirituale e profilo dell'opera
 
-Il *Castello dell'anima* è l'unico testo superstite di Teresa di San Geronimo (Anna La Longa), terziaria carmelitana palermitana vissuta tra il 1670 e il primo Settecento. La sua opera si colloca nel clima religioso siciliano della seconda metà del Seicento, segnato da arretratezza del clero, presenza diffusa di devozioni popolari e penetrazione intermittente dei modelli mistici spagnoli. L'autrice, come emerge dall'Introduzione, fu coinvolta in un procedimento inquisitoriale: il suo trattato, circolato tra religiosi e laici, contribuì alle accuse di quietismo e di guida spirituale impropria. Il manoscritto 2 Qq E 29 è autografo, presenta numerosi indizi di ripensamenti, glosse marginali, e mostra come la progressione del testo sia stata stesa in fasi successive: il Libro III, in particolare, contiene interventi rapidi, cancellature, chiarificazioni dottrinali che cercano di prevenire possibili letture eterodosse. Il Libro III è dedicato alle anime "perfette", ovvero a quelle che, dopo la fase dell'unione abituale e dello stato di sposalizio, iniziano a ricevere gradi elevati di contemplazione infusa: *silentio*, sonno, *scordanza*, *indifferenza*. Come l'autrice stessa precisa, questi sono ancora stati d'unione, "il più intimo ed il meno intimo", distinti dal matrimonio spirituale, tappa qualitativamente superiore che il trattato tratterà solo molto più avanti.
+Il *Castello dell'anima* è l'unico testo superstite di **Teresa di San Geronimo (Anna La Longa)**, terziaria carmelitana palermitana vissuta tra il 1670 e il primo Settecento (?1703). La sua opera si colloca nel clima religioso siciliano della seconda metà del Seicento, segnato da arretratezza del clero, presenza diffusa di devozioni popolari e **penetrazione intermittente dei modelli mistici spagnoli**. L'autrice fu coinvolta in un procedimento inquisitoriale: il suo trattato, circolato tra religiosi e laici, contribuì alle accuse di **quietismo** (*nueva mistica*) e di guida **spirituale impropria**. Il manoscritto *2 Qq E 29* è autografo, presenta numerosi indizi di ripensamenti, glosse marginali, e mostra come la progressione del testo sia stata stesa in fasi successive: il Libro III, in particolare, contiene interventi rapidi, cancellature, chiarificazioni dottrinali che cercano di prevenire possibili letture eterodosse. 
+
+Il Libro III è dedicato alle anime **perfette**, ovvero a quelle che, dopo la fase dell'*unione abituale* e dello *stato di sposalizio*, iniziano a ricevere gradi elevati di contemplazione infusa: *silentio*, sonno, *scordanza*, *indifferenza*. Come l'autrice stessa precisa, questi sono ancora stati d'unione, *il più intimo ed il meno intimo*, distinti dal matrimonio spirituale, tappa qualitativamente superiore che il trattato tratterà solo molto più avanti.
 
 ### 2. Perché i Capitoli I–V del Libro III costituiscono il primo micro‑commit ideale
 
-I cinque capitoli selezionati costituiscono la soglia effettiva del Libro III: introducono le categorie che strutturano tutto ciò che segue. Sono un modulo chiuso e autosufficiente, con una dinamica ascensionale progressiva e coerente. La struttura dei contenuti segue un ordine interno netto:
+I **cinque capitoli** selezionati costituiscono la soglia effettiva del Libro III: introducono le categorie che strutturano tutto ciò che segue. Sono un modulo chiuso e autosufficiente, con una dinamica ascensionale progressiva e coerente. La struttura dei contenuti segue un ordine interno netto:
 
-#### 2.1. Capitolo I – La disposizione lasciata dalla notte dello spirito
+#### 2.1. Capitolo I - La disposizione lasciata dalla notte dello spirito
+Il capitolo si apre con un'affermazione fondamentale: *Quando più un'anima è ragionata di croce e travagli, tanto è più sicuro lo stato suo*. L'anima, esposta alla **notte** trattata nel Libro II, si trova ora purgata, alleggerita, **astinuata**, pronta a ricevere luce. L'immagine delle **statue esposte al sole**, che si seccano e diventano leggere, costituisce una comparazione chiave: il calore della luce divina **stenua**, dissolve i residui passionali e rende l'anima **capace** dell'amato. Il testo descrive inoltre segnali di sicurezza interiore (Arca di Noè che appare nel *terreno dell'anima*), manifestazione simbolica di pacificazione dopo i travagli. Il capitolo termina con l'immagine del viaggiatore che, dopo un itinerario faticoso, si ferma per contemplare retrospettivamente gli affanni trascorsi.
 
-Il capitolo si apre con un'affermazione fondamentale: *Quando più un'anima è ragionata di croce e travagli, tanto è più sicuro lo stato suo*. L'anima, esposta alla "notte" trattata nel Libro II, si trova ora purgata, alleggerita, "astinuata", pronta a ricevere luce. L'immagine delle statue esposte al sole, che si seccano e diventano leggere, costituisce una comparazione chiave: il calore della luce divina "stenua", dissolve i residui passionali e rende l'anima "capace" dell'amato. Il testo descrive inoltre segnali di sicurezza interiore (Arca di Noè che appare nel "terreno dell'anima"), manifestazione simbolica di pacificazione dopo i travagli. Il capitolo termina con l'immagine del viaggiatore che, dopo un itinerario faticoso, si ferma per contemplare retrospettivamente gli affanni trascorsi.
+#### 2.2. Capitolo II - Il silentio come primo stato d'unione
+Il *silentio* non coincide con la semplice sospensione passiva delle potenze: se nella quiete acquisita le potenze ricevono, qui Dio opera *dal fondo dell'anima*, senza passare per potenze e sensi. La comparazione del **giardino irrigato prima dalla pioggia** e poi da una fonte sotterranea chiarisce la differenza: nel *silentio* non si avverte più *lo strepito della pioggia* (metafora della *notitia confusa*), ma l'acqua *nasce nel fondo*. L'autrice sottolinea che il linguaggio di questo stato è **oscuro**, non perché confuso, ma perché ineffabile: un parlare che **si deve dire in silentio**. L'anima percepisce un profumo, una forza, una quiete che nulla può togliere. Le potenze non sono distrutte, ma inattive, perché Dio opera **totalmente**. Questo stato produce anche un effetto comportamentale specifico: l'autrice nota che nel silentio l'anima **non sente più il bisogno di parlare nemmeno con il proprio direttore spirituale**, *incominciando già ella a conoscere, che solamente in lei opera Dio, né può più creatura alcuna fare, o disfare* (III,II,20). È il primo punto dell'opera in cui l'**autorità del padre spirituale viene esplicitamente sospesa in favore dell'azione diretta di Dio**, un'affermazione delicata, data la sensibilità storica del tema della direzione spirituale nel processo che coinvolse l'autrice.
 
-#### 2.2. Capitolo II – Il silentio come primo stato d'unione
-
-Il *silentio* non coincide con la semplice sospensione passiva delle potenze: se nella quiete acquisita le potenze "ricevono", qui Dio opera "dal fondo dell'anima", senza passare per potenze e sensi. La comparazione del giardino irrigato prima dalla pioggia e poi da una fonte sotterranea chiarisce la differenza: nel *silentio* non si avverte più "lo strepito della pioggia" (metafora della *notitia confusa*), ma l'acqua "nasce nel fondo". L'autrice sottolinea che il linguaggio di questo stato è "oscuro", non perché confuso, ma perché ineffabile: un parlare che "si deve dire in silentio". L'anima percepisce un profumo, una forza, una quiete che nulla può togliere. Le potenze non sono distrutte, ma inattive, perché Dio opera "totalmente". Questo stato produce anche un effetto comportamentale specifico: l'autrice nota che nel silentio l'anima non sente più il bisogno di parlare nemmeno con il proprio direttore spirituale, "incominciando già ella a conoscere, che solamente in lei opera Dio, né può più creatura alcuna fare, o disfare" (III,II,20). È il primo punto dell'opera in cui l'autorità del padre spirituale viene esplicitamente sospesa in favore dell'azione diretta di Dio, un'affermazione delicata, data la sensibilità storica del tema della direzione spirituale nel processo che coinvolse l'autrice.
-
-#### 2.3. Capitolo III – Oblivione o sonno
-
-Qui inizia lo stato superiore. L'autrice lo distingue con precisione dal *silentio*: quest'ultimo sospende le potenze; il sonno le aliena. Non è però lo stato di estasi dello sposalitio, che era transitorio: qui il sonno è "habituale", continuo, stabile. La comperazione delle due statuette di cera calda che si fondono fino a quasi diventare una sola è una delle più potenti immagini dell'intero manoscritto. Pur precisando che le due sostanze restano distinte (Dio e anima), l'autrice descrive una congiunzione strettissima, anticipazione del matrimonio spirituale. L'anima sperimenta un aumento della luce (più il sole batte sulla pietra diamantina, più la rischiara) e insieme un aumento della consapevolezza del proprio "niente".
+#### 2.3. Capitolo III - Oblivione o sonno
+Qui inizia lo stato superiore. L'autrice lo distingue con precisione dal *silentio*: quest'ultimo sospende le potenze; il sonno le aliena. Non è però lo stato di estasi dello *sposalitio*, che era transitorio: qui il sonno è *habituale*, continuo, stabile. La comparazione delle due statuette di cera calda che si fondono fino a quasi diventare una sola è una delle più potenti immagini dell'intero manoscritto. Pur precisando che le due sostanze restano distinte (Dio e anima), l'autrice descrive una **congiunzione strettissima**, anticipazione del **matrimonio spirituale**. L'anima sperimenta un aumento della luce (più il sole batte sulla pietra diamantina, più la rischiara) e insieme un aumento della consapevolezza del proprio *niente*.
 
 #### 2.4. Capitolo IV – Scordanza
-
-La *scordanza*, che nel Libro II era episodica, diventa qui stato. L'anima è "sommersa in un profondissimo oceano d'amore": torna la metafora marittima, estesa con lunga comperazione. Il testo distingue la *scordanza* di questo stadio dallo stato estatico dello sposalitio: quest'ultimo era transitorio e coinvolgeva potenze e sensi; la *scordanza* del Libro III è fondata nel fondo dell'anima, stabile, senza annullamento dell'operatività esterna.
+La *scordanza*, che nel Libro II era episodica, diventa qui stato. L'anima è *sommersa in un profondissimo oceano d'amore*: torna la metafora marittima, estesa con ina lunga comparazione. Il testo distingue la *scordanza* di questo stadio dallo stato **estatico dello sposalitio**: quest'ultimo era transitorio e coinvolgeva potenze e sensi; la *scordanza* del Libro III è fondata nel fondo dell'anima, stabile, senza annullamento dell'operatività esterna.
 
 #### 2.5. Capitolo V – Stato d'indifferenza
-
-L'anima "non ha più sua volontà, ma quella di Dio". Non si tratta dell'esercizio ascetico della *conformitas*, ma di un processo divino: la volontà dell'anima viene interiormente trasformata in quella di Dio, senza sforzo proprio. Da ciò deriva la cessazione dei desideri ("né vita, né morte, né croce"), non per tiepidezza ma per saturazione. Anche la carità verso il prossimo muta: non genera più pena, perché qui l'anima partecipa della pace di Dio. In questo capitolo l'autrice traccia anche una distinzione terminologica che avrà sviluppo pieno solo molto più avanti nel Libro III: "faccio grandissima distanza dallo stato d'unione, a quello del matrimonio spirituale... mi pare... distinguere l'unione, dal matrimonio spirituale, il quale è più assai stato soblime" (III,v,5). La distinzione conferma come i capp. I-V pongano già le premesse concettuali, qui, tra stati d'unione "il più intimo ed il meno intimo" e il matrimonio spirituale come tappa qualitativamente superiore, per categorie che il resto dell'opera svilupperà diffusamente.
+L'anima *non ha più sua volontà, ma quella di Dio*. Non si tratta dell'esercizio ascetico della *conformitas*, ma di un processo divino: **la volontà dell'anima viene interiormente trasformata in quella di Dio, senza sforzo proprio**. Da ciò deriva la cessazione dei desideri (*né vita, né morte, né croce*), non per tiepidezza ma per saturazione. Anche la carità verso il prossimo muta: non genera più pena, perché qui l'anima partecipa della pace di Dio. In questo capitolo l'autrice traccia anche una distinzione terminologica che avrà sviluppo pieno solo molto più avanti nel Libro III: *faccio grandissima distanza dallo stato d'unione, a quello del matrimonio spirituale... mi pare... distinguere l'unione, dal matrimonio spirituale, il quale è più assai stato soblime* (III,v,5). La distinzione conferma come i **capitoli I-V** pongano già le premesse concettuali, qui, tra **stati d'unione** *il più intimo ed il meno intimo* e il **matrimonio spiritual**e come tappa qualitativamente superiore, per categorie che il resto dell'opera svilupperà diffusamente.
 
 ### 3. Politiche editoriali
 
 #### 3.1. Principi di fondo
+La trascrizione adottata in questo micro‑commit si colloca integralmente nel quadro metodologico delineato nel documento di progetto. Il testo base dell'edizione è costituito da una **trascrizione diplomatico‑conservativa** del manoscritto autografo. Ogni fenomeno materiale, grafico e linguistico dell'autografo è trattato come dato filologicamente e storicamente rilevante e viene pertanto conservato nel testo editoriale. Eventuali interventi di regolarizzazione o interpretazione sono ammessi esclusivamente in livelli testuali derivati e utilizzati a fini di leggibilità o sperimentazione computazionale. 
 
-La trascrizione adottata in questo micro‑commit si colloca integralmente nel quadro metodologico delineato nel documento di progetto *Edizione Critica Digitale del Terzo Libro del Castello dell'anima*. Il testo base dell'edizione è costituito da una trascrizione diplomatico‑conservativa del manoscritto autografo, condotta senza operare normalizzazioni grafiche, ortografiche o morfosintattiche. Ogni fenomeno materiale, grafico e linguistico dell'autografo è trattato come dato filologicamente e storicamente rilevante e viene pertanto conservato nel testo editoriale. Eventuali interventi di regolarizzazione o interpretazione sono ammessi esclusivamente in livelli testuali derivati e utilizzati a fini di leggibilità o sperimentazione computazionale. Sul piano della marcatura, questa impostazione si traduce in una **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nello stesso file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che la seconda cancelli la prima (cfr. §3.11). Il doppio livello editoriale così codificato — diplomatico ⇄ interpretativo — va tenuto distinto dall'eventuale regolarizzazione automatica (AI) di livelli derivati, che non fa parte del testo dell'edizione.
+Sul piano della **marcatura**, questa impostazione si traduce in una **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nello stesso file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che la seconda cancelli la prima.
 
-Il testo del *Castello dell'anima* è stato pubblicato in edizione a stampa da R. Casapullo (a cura di), *Il Castello dell'anima*, Alessandria, Edizioni dell'Orso, 2015, in collaborazione con L. Longo — curatore dell'edizione del Libro III — insieme a Stella Mondino (Libro II) e Rita Sciovè (Libro I). Quell'edizione adotta criteri di trascrizione moderatamente regolarizzati, con l'obiettivo dichiarato di migliorare la leggibilità di un testo sintatticamente complesso (cfr. *Nota al testo*, §2). La presente edizione digitale del Libro III, capp. I–V, adotta invece un approccio diplomatico-conservativo, motivato dalla diversa natura del prodotto editoriale: mentre l'edizione a stampa privilegia la fruibilità per un pubblico di lettura corrente, l'edizione digitale privilegia la conservazione integrale del dato linguistico e materiale, funzionale sia alla ricerca filologica sia a un'eventuale sperimentazione computazionale successiva. Le due edizioni non sono quindi in competizione ma complementari, e si rivolgono a esigenze di fruizione distinte.
+Il testo del *Castello dell'anima* è stato pubblicato in edizione a stampa da R. Casapullo (a cura di), *Il Castello dell'anima*, Alessandria, Edizioni dell'Orso, 2015, in collaborazione con L. Longo — curatore dell'edizione del Libro III — insieme a Stella Mondino (Libro II) e Rita Sciovè (Libro I). Quell'edizione adotta criteri di trascrizione moderatamente regolarizzati, con l'obiettivo dichiarato di migliorare la leggibilità di un testo sintatticamente complesso. 
+
+La presente **edizione digitale del Libro III, capp. I–V**, adotta invece un approccio diplomatico-conservativo, motivato dalla diversa natura del prodotto editoriale: mentre l'edizione a stampa privilegia la fruibilità per un pubblico di lettura corrente, l'edizione digitale privilegia la conservazione integrale del dato linguistico e materiale, funzionale sia alla ricerca filologica sia a un'eventuale sperimentazione computazionale successiva. Le due edizioni non sono quindi in competizione ma complementari, e si rivolgono a esigenze di fruizione distinte.
 
 #### 3.2. Grafia e diacritici
-
-Nel testo base dell'edizione non viene applicata alcuna normalizzazione sistematica dei diacritici o delle grafie oscillanti. Sono pertanto conservate integralmente: oscillazioni come *à / a / hà*; *ò / o / hò*; variazioni nell'uso dell'accento grafico (*si / sì*; *ne / né*); grafie non standard o incoerenti all'interno del manoscritto. Tali fenomeni sono considerati parte costitutiva dell'italiano semicolto e regionale dell'autografo. In codifica ogni oscillazione è resa con `<choice>`, che affianca alla grafia originale la sua regolarizzazione senza sopprimerla, per es. `<choice><orig>à</orig><reg>a</reg></choice>`, `<choice><orig>poiche</orig><reg>poiché</reg></choice>`, `<choice><orig>ed'unirsi</orig><reg>ed unirsi</reg></choice>`.
+Nel testo base dell'edizione non viene applicata alcuna normalizzazione sistematica dei diacritici o delle grafie oscillanti. Sono pertanto conservate integralmente: **oscillazioni** come *à / a / hà*; *ò / o / hò*; **variazioni** nell'uso dell'accento grafico (*si / sì*; *ne / né*); **grafie non standard** o incoerenti all'interno del manoscritto. Tali fenomeni sono considerati **parte costitutiva** dell'italiano regionale dell'autografo. In codifica ogni oscillazione è resa con `<choice>`, che affianca alla grafia originale la sua regolarizzazione senza sopprimerla, per es. `<choice><orig>à</orig><reg>a</reg></choice>`, `<choice><orig>poiche</orig><reg>poiché</reg></choice>`, `<choice><orig>ed'unirsi</orig><reg>ed unirsi</reg></choice>`.
 
 #### 3.3. Unione e separazione delle parole
-
 Le forme di unione o separazione delle parole attestate nel manoscritto sono rigorosamente conservate nel testo base dell'edizione, anche quando divergono dall'uso moderno (es. *inquestitempi*, *alcun'altra*, *nontrattenere*). Tali fenomeni sono trattati come indizi di scrittura semicolta, tracce di oralità devozionale o segnali di velocità esecutiva.
 
 #### 3.4. Abbreviazioni
-
-Le abbreviazioni materiali del manoscritto sono:
+Le **abbreviazioni materiali** del manoscritto sono:
 
 - sciolte per esteso nel testo base, al solo fine di garantire la leggibilità;
 - registrate in codifica TEI mediante la coppia: `<abbr>...</abbr>` `<expan>...</expan>`.
@@ -116,30 +108,24 @@ Le abbreviazioni materiali del manoscritto sono:
 Lo scioglimento non implica normalizzazione linguistica né interpretazione semantica.
 
 #### 3.5. Interpunzione
-
-L'interpunzione originale del manoscritto è conservata nel testo base dell'edizione, anche quando risulta irregolare o incoerente secondo i criteri moderni.
+L'**interpunzione originale** del manoscritto è conservata nel testo base dell'edizione, anche quando risulta irregolare o incoerente secondo i criteri moderni.
 
 #### 3.6. Segnatura di carta
-
-La foliazione originale del manoscritto è indicata con precisione:
+La **foliazione** originale del manoscritto è indicata con precisione:
 
 - nella trascrizione, tramite indicazioni esplicite di carta;
 - nella codifica TEI, mediante: `<pb n="158r" facs="images/f158r.jpg" xml:id="f158r"/>`.
 
 #### 3.7. Guasti, lacune, incertezze
-
-Le porzioni di testo illeggibili, lacunose o meccanicamente danneggiate sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>`, `<gap reason="illegible"/>`, `<supplied reason="conjecture"/>`.
+Le porzioni di **testo illeggibili, lacunose o meccanicamente danneggiate** sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>`, `<gap reason="illegible"/>`, `<supplied reason="conjecture"/>`.
 
 #### 3.8. Cancellature, aggiunte, ripensamenti
-
-Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate dati genetici primari. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI: `<del>...</del>`, `<add place="margin">...</add>`, `<subst>...</subst>`.
+Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate **dati genetici primari**. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI: `<del>...</del>`, `<add place="margin">...</add>`, `<subst>...</subst>`.
 
 #### 3.9. Glosse
-
 Il Libro III include fasi in cui l'autrice aggiunge chiarificazioni successive. In TEI: `<note type="glossa" subtype="corrigenda">`.
 
 #### 3.10. Struttura TEI prevista
-
 La versione finale TEI comprenderà:
 
 ```xml
@@ -218,7 +204,6 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<titlePage>` / `<docTitle>` / `<titlePart>` (`@type`) / `<docAuthor>` (`@resp`)
 - `<note>` — `@type` (`glossa`); `@subtype`; `@corresp`; `@hand`; `@place` (`margin`)
 
-Nessun elemento di questo tag set porta `@ana`: la classificazione retorica e il rischio dottrinale, affidati nel repo TEI‑IA all'annotazione multiassiale, non appartengono al commit 1.
 
 #### 3.12. Giustificazione critica del tag set adottato
 
@@ -234,7 +219,7 @@ Nessun elemento di questo tag set porta `@ana`: la classificazione retorica e il
 
 `<titlePage>`/`<docTitle>`/`<titlePart>`/`<docAuthor>` riproducono il frontespizio come si presenta nel manoscritto, distinguendo tramite `@type="main"`/`"sub"` il titolo principale dal sottotitolo, distinzione presente nell'originale ("Il Castello dell'Anima" / "Diviso in tre Libri per l'anime Incipienti, Proficienti e Perfette") e quindi non una scelta editoriale ma una trascrizione fedele della struttura del titolo storico.
 
-**Trascrizione a due livelli (`<choice>`).** Il perno del layer filologico‑grafico non è più il segmento retorico `<seg>` (spostato, con l'intera annotazione multiassiale `@ana`, nel repo `castello-anima-TEI-IA`), ma la coppia diplomatico ⇄ interpretativo resa con `<choice>`. Le tre coppie `<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>` conservano *entrambe* le lezioni sullo stesso piano testuale: il livello diplomatico (grafia originale, abbreviazione materiale, lezione erronea del testimone) e il livello interpretativo (regolarizzazione dei diacritici e delle univerbazioni, scioglimento, correzione editoriale). Nessuna delle due sostituisce l'altra, e la scelta fra i due livelli è demandata alla lettura o all'elaborazione a valle. È questa la ragione per cui il testo trascritto resta immutato rispetto alla sorgente: `<choice>` aggiunge marcatura senza modernizzare né sopprimere alcuna lezione. La distinzione, importante, è che questo doppio livello *editoriale e verificabile a schema* non va confuso con l'eventuale trascrizione AI‑regolarizzata di livelli derivati, prodotta a soli fini di leggibilità o sperimentazione computazionale (§3.1).
+**Trascrizione a due livelli (`<choice>`).** Il perno del layer filologico‑grafico non è più il segmento retorico `<seg>` (spostato, con l'intera annotazione multiassiale `@ana`, nel repo `castello-anima-TEI-IA`), ma la coppia diplomatico ⇄ interpretativo resa con `<choice>`. Le tre coppie `<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>` conservano *entrambe* le lezioni sullo stesso piano testuale: il livello diplomatico (grafia originale, abbreviazione materiale, lezione erronea del testimone) e il livello interpretativo (regolarizzazione dei diacritici e delle univerbazioni, scioglimento, correzione editoriale). Nessuna delle due sostituisce l'altra, e la scelta fra i due livelli è demandata alla lettura o all'elaborazione a valle. È questa la ragione per cui il testo trascritto resta immutato rispetto alla sorgente: `<choice>` aggiunge marcatura senza modernizzare né sopprimere alcuna lezione. La distinzione, importante, è che questo doppio livello *editoriale e verificabile a schema* non va confuso con l'eventuale trascrizione AI‑regolarizzata di livelli derivati, prodotta a soli fini di leggibilità o sperimentazione computazionale.
 
 `<term>` isola il lessico tecnico mistico dell'autrice (*silentio*, *scordanza*, *indifferenza*, *sposalitio*, *notte*, *purga*, *unione*, *quiete*) e — questa è la novità del commit 1 — lo àncora, tramite `@ref`, a una categoria del **vocabolario controllato degli stati** dichiarato nel `<classDecl>` del `teiHeader` (`#silentio`, `#unione`, `#notte`, `#contemplazione-infusa`…). L'aggancio sostituisce la vecchia classificazione via `@ana`: rende il lessico mistico interrogabile per *stato* con un solo puntatore verificabile a schema, senza importare l'apparato multiassiale a otto tassonomie. I termini di lessico non‑stato (etico, teologico, sicilianismi) restano `<term>` nudi.
 
@@ -290,3 +275,15 @@ I capitoli I–V mostrano:
 - **MC6:** Capp. III.25–29 (croce e trasformazione: conformazione al Crocifisso).
 - **MC7:** Capp. III.30–34 (deificazione: presenza trinitaria abituale).
 - **MC8:** Capp. III.35–Fine (compimento: ultime celle e *stabilitas*).
+
+## Licenza
+Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
+
+---
+
+## 👤 Curatore
+**Luciano Longo**   
+- Contatti: <luciano.longo@dedalus.com> 
+- ORCID: <https://orcid.org/0009-0005-7557-7546> 
+- GitHub: <https://github.com/luciano-longo77>
+- Website: <https://luciano-longo77.github.io>
