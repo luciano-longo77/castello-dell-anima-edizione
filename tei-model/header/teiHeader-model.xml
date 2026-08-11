@@ -1,0 +1,297 @@
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+        <author>
+          <name type="religious"/>
+          <name type="secular"/>
+        </author>
+        <respStmt>
+          <resp/>
+          <name/>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher/>
+        <date/>
+        <idno/>
+        <availability>
+          <p/>
+          <licence/>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <noteGrp type="critical">
+          <note type="material"><p/></note>
+          <note type="prudential"><p/></note>
+          <note type="linguistic"><p/></note>
+          <note type="theological-risk"><p/></note>
+          <note type="transmission"><p/></note>
+          <note type="stylistic"><p/></note>
+        </noteGrp>
+        <noteGrp type="biographical">
+          <note type="biography-early"><p/></note>
+          <note type="biography-late"><p/></note>
+        </noteGrp>
+        <noteGrp type="contextual">
+          <note type="contextual-biographical"><p/></note>
+          <note type="contextual-historical"><p/></note>
+        </noteGrp>
+      </notesStmt>
+      <sourceDesc>
+        <listPlace>
+          <place>
+            <placeName/>
+            <note/>
+          </place>
+        </listPlace>
+        <bibl type="ms">
+          <settlement/>
+          <affiliation/>
+          <idno/>
+          <date/>
+          <title/>
+        </bibl>
+        <msDesc>
+          <msIdentifier>
+            <country><name/></country>
+            <region><name/></region>
+            <settlement><name/></settlement>
+            <institution/>
+            <repository/>
+            <altIdentifier><idno/></altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <msItem n="I">
+              <author/>
+              <title/>
+              <incipit><locus/><seg/></incipit>
+              <explicit><locus/><seg/></explicit>
+              <textLang/>
+            </msItem>
+          </msContents>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support><p><material/><date/></p></support>
+                <extent><dimensions><height/><width/></dimensions></extent>
+                <condition><p/></condition>
+              </supportDesc>
+              <layoutDesc>
+                <layout><p/></layout>
+              </layoutDesc>
+            </objectDesc>
+            
+            <!-- cfr. con witness e con ricostruzioni genetica del ms. -->
+            <handDesc>
+              <handNote xml:id="ink_1" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-b0 #txt-b1"><p/></handNote>
+              <handNote xml:id="ink_2" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-1 #txt-2"><p/></handNote>
+              <handNote xml:id="ink_3-dark" scribeRef="#s-teresa" medium="dark-ink" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="pencil_1" scribeRef="#s-teresa" medium="pencil" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="ink_4-external" scribeRef="#esterno" medium="ink" corresp="#txt-4"><p/></handNote>
+            </handDesc>
+          </physDesc>
+          <history>
+            <origin>
+              <p>
+                <origPlace><placeName/></origPlace>
+                <origDate/>
+                <note/>
+              </p>
+            </origin>
+          </history>
+          <additional>
+            <surrogates><p/></surrogates>
+          </additional>
+        </msDesc>
+        <listBibl type="fontes">
+          
+          <!-- Fonti layer 3: intertestualità -->
+          <bibl xml:id="bible-vulgate"><title/></bibl>
+          <bibl xml:id="molinos-guida"><author/><title/><date/></bibl>
+          <bibl xml:id="avila-castello"><author/><title/><date/></bibl>
+        </listBibl>
+        <listBibl>
+          <bibl/>
+        </listBibl>
+        <listWit>
+          
+          <!-- Ricostruzioni genetica del ms. -->
+          <witness xml:id="txt-b0"/>
+          <witness xml:id="txt-b1"/>
+          <witness xml:id="txt-1"/>
+          <witness xml:id="txt-2"/>
+          <witness xml:id="txt-3"/>
+          <witness xml:id="txt-4"/>
+          <witness xml:id="txt-c" resp="#editor"/>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <ab xml:base="abstract">
+        <seg/>
+      </ab>
+      <projectDesc>
+        <p n="1"/>
+        <p n="2"/>
+        <p n="3"/>
+      </projectDesc>
+      <refsDecl>
+        <p/>
+      </refsDecl>
+      <editorialDecl>
+        <p/>
+        <!-- indicazioni su azioni di intervento editoriale layer 1: filologico-grafico -->
+        <correction><p/></correction>
+        <hyphenation><p/></hyphenation>
+        <normalization><p/></normalization>
+      </editorialDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <!-- layer 1: filologico-grafico -->
+          <tagUsage gi="text"/>
+          <tagUsage gi="body"/>
+          <tagUsage gi="div"/>
+          <tagUsage gi="head"/>
+          <tagUsage gi="argument"/>
+          <tagUsage gi="p"/>
+          <tagUsage gi="pb"/>
+          <tagUsage gi="fw"/>
+          
+          <!-- Front matter -->
+          <tagUsage gi="front"/>
+          <tagUsage gi="listWit"/>
+          <tagUsage gi="witness"/>
+          <tagUsage gi="listPerson"/>
+          <tagUsage gi="person"/>
+          <tagUsage gi="listBibl"/>
+          <tagUsage gi="titlePage"/>
+          <tagUsage gi="docTitle"/>
+          <tagUsage gi="titlePart"/>
+          <tagUsage gi="docAuthor"/>
+          
+          <!-- layer 1: trascrizione a due livelli diplomatico e interpretativo -->
+          <tagUsage gi="choice"/>
+          <tagUsage gi="orig"/>
+          <tagUsage gi="reg"/>
+          <tagUsage gi="abbr"/>
+          <tagUsage gi="expan"/>
+          <tagUsage gi="sic"/>
+          <tagUsage gi="corr"/>
+          
+          <!-- layer 1: apparato genetico -->
+          <tagUsage gi="app"/>
+          <tagUsage gi="lem"/>
+          <tagUsage gi="rdg"/>
+          <tagUsage gi="add"/>
+          <tagUsage gi="del"/>
+          <tagUsage gi="subst"/>
+          <tagUsage gi="unclear"/>
+          <tagUsage gi="gap"/>
+          <tagUsage gi="supplied"/>
+          
+          <!-- layer 2: mistico-dottrinale -->
+          <tagUsage gi="term"/>
+          
+          <!-- layer 3 intertestuale -->
+          <tagUsage gi="ref"/>
+          <tagUsage gi="cit"/>
+          <tagUsage gi="quote"/>
+          <tagUsage gi="bibl"/>
+          <tagUsage gi="foreign"/>
+          
+          <!-- Nome, date, identificatori, note -->
+          <tagUsage gi="persName"/>
+          <tagUsage gi="placeName"/>
+          <tagUsage gi="orgName"/>
+          <tagUsage gi="date"/>
+          <tagUsage gi="idno"/>
+          <tagUsage gi="note"/>
+        </namespace>
+      </tagsDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+      
+      <classDecl>
+        <!-- tassonomia legata a layer 2: mistico-dottrinale -->
+        <taxonomy xml:id="stati-mistici">
+          <category xml:id="silentio"><catDesc/></category>
+          <category xml:id="otio"><catDesc/></category>
+          <category xml:id="oblivione-sonno"><catDesc/></category>
+          <category xml:id="scordanza"><catDesc/></category>
+          <category xml:id="indifferenza"><catDesc/></category>
+          <category xml:id="notte"><catDesc/></category>
+          <category xml:id="purga"><catDesc/></category>
+          <category xml:id="unione"><catDesc/></category>
+          <category xml:id="quiete"><catDesc/></category>
+          <category xml:id="contemplazione-infusa"><catDesc/></category>
+          <category xml:id="nudita-anima"><catDesc/></category>
+          <category xml:id="bacio"><catDesc/></category>
+          <category xml:id="matrimonio-spirituale"><catDesc/></category>
+          <category xml:id="cella-secreta"><catDesc/></category>
+          <category xml:id="trasformazione"><catDesc/></category>
+          <category xml:id="deificazione"><catDesc/></category>
+        </taxonomy>
+        
+        <!-- tassonomia per documentare i change-log -->
+        <taxonomy xml:id="fase">
+          <category xml:id="fase-modellazione"><catDesc/></category>
+          <category xml:id="fase-trascrizione"><catDesc/></category>
+          <category xml:id="fase-apparato"><catDesc/></category>
+          <category xml:id="fase-revisione"><catDesc/></category>
+          <category xml:id="fase-validazione"><catDesc/></category>
+        </taxonomy>
+      </classDecl>
+      <schemaRef/>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="it-reg-sic"/>
+        <language ident="la"/>
+      </langUsage>
+      
+      <particDesc>
+        <listPerson>
+          <person xml:id="Anna-La-Longa">
+            <persName><forename/><surname/></persName>
+            <birth/>
+            <death/>
+            <sex/>
+            <occupation/>
+            <trait><note/></trait>
+            <note/>
+          </person>
+          <!-- eventuali fonti dottrinali -->
+        </listPerson>
+        
+        <!-- Istituzioni storiche del contesto di produzione e conservazione -->
+        <listOrg>
+          <org xml:id="BCP">
+            <orgName/>
+            <trait><note/></trait>
+          </org>
+          <org xml:id="Carmelo">
+            <orgName/>
+          </org>
+          <org xml:id="SantUffizio">
+            <orgName/>
+          </org>
+        </listOrg>
+      </particDesc>
+    </profileDesc>
+    
+    <xenoData n="mets">
+      <!-- puntatore al pacchetto METS -->
+    </xenoData>
+    
+    <!-- Descrizione del change-log, classificato secondo la tassonomia di lavoro fase -->
+    <revisionDesc status="consolidated">
+      <change when="" who="" ana="#fase-modellazione">
+      </change>
+      <!-- altri change -->
+    </revisionDesc>
+  </teiHeader>
+  <sourceDoc>
+    <note/>
+  </sourceDoc>
+</TEI>
