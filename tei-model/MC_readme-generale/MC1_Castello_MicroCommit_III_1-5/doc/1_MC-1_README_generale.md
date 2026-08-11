@@ -20,21 +20,19 @@
 
 ## 1. Descrizione del micro‑commit
 
-Il Micro‑Commit 1 (MC1) comprende i primi cinque capitoli del Libro III del *Castello dell’anima*, trasmessi nel manoscritto autografo 2 Qq E 29 alle carte 158r–168r
+Il **Micro‑Commit 1** (MC1) comprende i **primi cinque capitoli** del **Libro III** del *Castello dell’anima*, trasmessi nel manoscritto autografo *2 Qq E 29* alle carte **158r–168r**.
 
 Questa sezione descrive i primi stati dell’unione mistica:
-* Disposizione dell’anima dopo la “notte”.
+* Disposizione dell’anima dopo la *notte*.
 * *Silentio* (primo stato d’unione).
-* Oblivione o sonno spirituale.
-* Scordanza.
-* Indifferenza (unione delle volontà).
+* *Oblivione* o *sonno spirituale*.
+* *Scordanza*.
+* Indifferenza (*unione delle volontà*).
 
-Il MC1 contiene:
+Il **MC1** contiene:
 * Introduzione editoriale.
 * Struttura capitolare e cartulazione completa.
 * Mappa TEI delle carte.
-* Trascrizione interpretativa dei capp. I–V.
-
 ---
 
 ## 2. Fascia materiale
@@ -75,11 +73,11 @@ Il micro‑commit comprende integralmente le carte:
 
 | Capitolo | Stato mistico / Tema | Carte | Paragrafi | Note strutturali |
 | :--- | :--- | :--- | :--- | :--- |
-| **Proemio** | Introduzione al Libro III | 158r | §§ 1–2 | Incipit: “Incomincio mio Dio…”. |
-| **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit: “adesso è di bene passare al seguente capitolo”. |
+| **Proemio** | Introduzione al Libro III | 158r | §§ 1–2 | Incipit: *Incomincio mio Dio…*. |
+| **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit: *adesso è di bene passare al seguente capitolo*. |
 | **II** | Silentio | 159v–162r | §§ 1–24 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
-| **III** | Oblivione / Sonno | 162r–164v | §§ 1–22 | Explicit: “mirabilia magna”. Statuette di cera fuse. |
-| **IV** | Scordanza | 165r–165v | §§ 1–12 | “Quasi continuo estasi”. Oceano d’amore. |
+| **III** | Oblivione / Sonno | 162r–164v | §§ 1–22 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
+| **IV** | Scordanza | 165r–165v | §§ 1–12 | *Quasi continuo estasi*. Oceano d’amore. |
 | **V** | Indifferenza | 166r–168r | §§ 1–20 | Unione delle volontà. Luce dal centro dell’anima. |
 
 ---
