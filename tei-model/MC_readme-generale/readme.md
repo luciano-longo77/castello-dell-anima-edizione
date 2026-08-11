@@ -8,11 +8,17 @@ Progetto di edizione critica digitale del **III libro** del *Castello dell’ani
 ---
 
 ## 1. Obiettivi e Metodologia
-Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni commit rappresenta un'unità dottrinale e materiale coerente, permettendo una revisione filologica puntuale e una citabilità precoce dei dati secondo i principi **FAIR**.
+Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni commit rappresenta un'unità dottrinale e materiale coerente, permettendo una revisione filologica puntuale e una citabilità dei dati secondo i principi **FAIR**.
 
 ### Principi Editoriali
-* **Trascrizione a due livelli:** diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
-* **Modellazione TEI su tre layer:** (1) filologico‑grafico — struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`); (2) mistico‑dottrinale — lessico agganciato via `<term ref>` a un vocabolario controllato degli stati; (3) intertestuale — `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
+* **Trascrizione a due livelli:**
+* diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
+
+* **Modellazione TEI su tre layer:**
+  - (1) filologico‑grafico — struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`);
+  - (2) mistico‑dottrinale — lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
+  - (3) intertestuale — `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
+
 * **Digital Philology (progetto separato):** la preparazione dei dati per analisi computazionali (NLP), l'annotazione interpretativa multiassiale e l'intertestualità assistita da IA sono sviluppate nel repository dedicato `castello-anima-TEI-IA`, distinto da questa edizione critica.
 
 ---
@@ -43,7 +49,7 @@ Ogni micro-commit (es. `MC1_Castello_MicroCommit_III_1-5/`) contiene:
 ---
 
 ## 4. Requisiti Tecnici
-I file XML sono validati rispetto a uno schema TEI P5 **personalizzato**, generato dall'ODD di progetto (`MC-1_castello-anima-odd.odd`) e compilato in `MC-1_castello-anima-odd.rng` (RELAX NG con Schematron incorporato). Per la consultazione si raccomanda un editor XML (es. oXygen) o fogli di stile XSLT compatibili con lo standard TEI.
+I file XML sono validati rispetto a uno schema TEI **personalizzato**, generato dall'ODD di progetto (`MC-1_castello-anima-odd.odd`) e compilato in `MC-1_castello-anima-odd.rng` (RELAX NG con Schematron incorporato). Per la consultazione si raccomanda un editor XML (es. oXygen) o fogli di stile XSLT compatibili con lo standard TEI.
 
 ---
 
