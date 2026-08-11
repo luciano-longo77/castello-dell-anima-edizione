@@ -69,7 +69,7 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 └── docs                    # Documentazione a supporto dell'edizione
 └── out                     # Modelli di visualizzazione dell'edizione
 └── tool                    # MStrumenti di ricerca sull’edizione
-
+```
 --- 
 
 ## Licenza
