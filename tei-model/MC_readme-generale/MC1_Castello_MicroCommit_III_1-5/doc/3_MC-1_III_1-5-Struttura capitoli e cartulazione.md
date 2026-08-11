@@ -1,7 +1,7 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
 ## MC 1: Struttura dei capitoli e della cartulazione (ms. 2 Qq E 29)
 ### Libro III, capp. I–V (cc 158r - 168r)
-**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **(a cura di Luciano Longo)**
+**Edizione critica digitale del *Castello dell’anima***
 
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
@@ -84,3 +84,16 @@ Di seguito si riporta la struttura esatta, con indicazione precisa delle carte p
 | **IV** | Scordanza | 164v – 165v |
 | **V** | Indifferenza | 166r – 168r |
 
+---
+
+## Licenza
+Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
+
+---
+
+## 👤 Curatore
+**Luciano Longo**   
+- Contatti: <luciano.longo@dedalus.com> 
+- ORCID: <https://orcid.org/0009-0005-7557-7546> 
+- GitHub: <https://github.com/luciano-longo77>
+- Website: <https://luciano-longo77.github.io>
