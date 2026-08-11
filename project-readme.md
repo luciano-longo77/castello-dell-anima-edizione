@@ -31,14 +31,10 @@
 
 Realizzare un’edizione critica digitale del III libro del *Castello dell’anima* di suor Teresa di San Geronimo, con particolare attenzione alla dimensione genetica, alle dinamiche correttive e alle modalità di autocontrollo dottrinale presenti nell’autografo.
 
-L’edizione si fonda sull’assunto metodologico che il manoscritto autografo  
-Palermo, Biblioteca Comunale, ms. 2 Qq E 29  
-costituisca l’unica tradizione diretta dell’opera. Tutti i fenomeni grafici, materiali e linguistici sono pertanto trattati come potenzialmente rilevanti sul piano filologico, storico e interpretativo.
+L’edizione si fonda sull’assunto metodologico che il manoscritto autografo *Palermo, Biblioteca Comunale, ms. 2 Qq E 29*  costituisca l’unica tradizione diretta dell’opera. Tutti i fenomeni grafici, materiali e linguistici sono pertanto trattati come potenzialmente rilevanti sul piano filologico, storico e interpretativo.
 
 ## Fase 1: Edizione critica del III libro
-
 ## Introduzione al progetto
-
 ### Contesto storico e teologico
 
 Il Castello dell’anima articola il percorso di perfezione spirituale secondo tre stadi progressivi:
@@ -47,9 +43,9 @@ Il Castello dell’anima articola il percorso di perfezione spirituale secondo t
 - anime proficienti
 - anime perfette
 
-Suor Teresa di San Geronimo (Anna La Longa, 1670–post 1703), terziaria carmelitana palermitana, sviluppa la propria riflessione mistica in un contesto caratterizzato da forte sorveglianza dottrinale. A partire dalla fine del Seicento, temi quali l’**unione mistica**, la **quiete** e l’**otium delle potenze** erano considerati suscettibili di equivoci teologici e frequentemente associati al sospetto di quietismo.
+**Suor Teresa di San Geronimo** (Anna La Longa, 1670–post 1703), terziaria carmelitana palermitana, sviluppa la propria riflessione mistica in un contesto caratterizzato da forte sorveglianza dottrinale. A partire dalla fine del Seicento, temi quali l’**unione mistica**, la **quiete** e l’**otium delle potenze** erano considerati suscettibili di equivoci teologici e frequentemente associati al sospetto di quietismo.
 
-Nel terzo libro, tali tensioni emergono con particolare evidenza attraverso:
+Nel **III libro**, tali tensioni emergono con particolare evidenza attraverso:
 
 - un incremento delle aggiunte marginali e interlineari;
 - riscritture e precisazioni dottrinali;
@@ -57,10 +53,9 @@ Nel terzo libro, tali tensioni emergono con particolare evidenza attraverso:
 
 ### Struttura del trattato
 
-Il III libro è dedicato allo stadio delle **anime perfette** e rappresenta la sezione più densa dal punto di vista dottrinale e genetico. Per questo motivo è assunto come focus esclusivo dell’edizione critica, con attenzione specifica alla stratificazione scrittoria e ai processi di revisione autoriale.
+Il **III libro** è dedicato allo stadio delle **anime perfette** e rappresenta la sezione più densa dal punto di vista dottrinale e genetico. Per questo motivo è assunto come focus dell’edizione critica, con attenzione specifica alla stratificazione scrittoria e ai processi di revisione autoriale.
 
 ## Edizione digitale del III libro
-
 ### Trascrizione e digitalizzazione
 
 Il lavoro editoriale si articola in due passaggi principali:
