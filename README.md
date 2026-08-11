@@ -60,7 +60,7 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 ---
 
 ## Repository contents
-````text
+
 ```text
 .
 ├── README.md            # Orientamento generale del repository
@@ -75,8 +75,8 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
             ├── data/    # File XML/TEI e schema ODD/RNG
             ├── doc/     # Introduzione, cartulazione, teiHeader
             └── out/     # Prototipi di visualizzazione
+            └── tool/    # Strumenti di ricerca sull’edizione
 ```
-````
 --- 
 
 ## Licenza
