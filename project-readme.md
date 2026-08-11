@@ -23,7 +23,6 @@
     - [Note filologiche](#note-filologiche)
   - [Analisi delle correzioni e aggiunte](#analisi-delle-correzioni-e-aggiunte)
   - [Pubblicazione open access](#pubblicazione-open-access)
-- [Testi derivati e sperimentazione TEI + AI](#testi-derivati-e-sperimentazione-tei--ai)
 - [Workflow TEI](#workflow-tei)
 - [Conclusione](#conclusione)
 
