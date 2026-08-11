@@ -2,44 +2,44 @@
 graph TD
   text[text] --> front[front]
   text --> body[body]
-  
-  front --> listWit[listWit]
+
+  front --> listWit[listWit: 7 livelli Tb0-Tc]
   front --> listPerson[listPerson]
-  front --> listBibl[listBibl]
+  front --> listBibl[listBibl fontes]
   front --> titlePage[titlePage]
-  
+
   body --> libro1[Libro I]
   body --> libro2[Libro II]
   body --> libro3[Libro III]
-  
+
   libro3 --> preface[preface]
   libro3 --> cap1[Capitolo 1]
-  libro3 --> cap3[Capitolo 3]
-  
+  libro3 --> capN[Capitolo N]
+
   preface --> headPref[head]
   preface --> argumentPref[argument]
-  
+
   cap1 --> head1[head]
   cap1 --> argument1[argument]
-  cap1 --> paragraphs1[p x10]
-  
-  cap3 --> head3[head]
-  cap3 --> argument3[argument]
-  cap3 --> paragraphs3[p x14]
-  
-  paragraphs1 --> seg[seg]
-  paragraphs3 --> seg
-  
-  seg --> rs[rs]
-  seg --> term[term]
-  seg --> cit[cit]
-  seg --> val[val]
-  seg --> spanGrp[spanGrp]
-  
-  cap1 --> linkGrp[linkGrp]
-  cap3 --> linkGrp
-  
+  cap1 --> paragraphs1[p n=... : unita di riferimento]
+
+  capN --> headN[head]
+  capN --> argumentN[argument]
+  capN --> paragraphsN[p n=...]
+
+  %% Dentro <p>: i tre layer, nessun seg/@ana interpretativo
+  paragraphs1 --> L1[layer 1 filologico-grafico]
+  paragraphs1 --> L2[layer 2 mistico-dottrinale]
+  paragraphs1 --> L3[layer 3 intertestuale]
+
+  L1 --> choice[choice: orig/reg, abbr/expan, sic/corr]
+  L1 --> genetic[add / del / subst / unclear / gap / supplied]
+  L1 --> app[app: lem wit=txt-c + rdg wit=Tb0..T4]
+  L2 --> term[term ref -> stati-mistici]
+  L3 --> ref[ref target]
+  L3 --> cit[cit / quote / foreign / bibl]
+
   style text fill:#f9f,stroke:#333
-  style seg fill:#bbf,stroke:#333
-  style linkGrp fill:#bfb,stroke:#333
+  style paragraphs1 fill:#bbf,stroke:#333
+  style app fill:#bfb,stroke:#333
 ```
