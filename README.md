@@ -60,16 +60,23 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 ---
 
 ## Repository contents
-
+````text
 ```text
 .
-├── README.md               # Orientamento generale del repository
-├── project-readme.md       # Documento scientifico del progetto
-├── `tei-model/`              # Modello TEI/XML dell’edizione
-└── `docs`                    # Documentazione a supporto dell'edizione
-└── `out`                     # Modelli di visualizzazione dell'edizione
-└── `tool`                    # MStrumenti di ricerca sull’edizione
+├── README.md            # Orientamento generale del repository
+├── project-readme.md    # Documento scientifico del progetto
+└── tei-model/           # Modello TEI/XML dell'edizione
+    ├── header/          # Modello e documentazione del teiHeader
+    ├── text/            # Modello e documentazione del <text>
+    └── MC_readme-generale/
+        ├── readme-MC-general.md   # Piano editoriale e roadmap MC1–MC8
+        └── MC1_Castello_MicroCommit_III_1-5/
+            ├── 1_MC-1_README_generale.md
+            ├── data/    # File XML/TEI e schema ODD/RNG
+            ├── doc/     # Introduzione, cartulazione, teiHeader
+            └── out/     # Prototipi di visualizzazione
 ```
+````
 --- 
 
 ## Licenza
