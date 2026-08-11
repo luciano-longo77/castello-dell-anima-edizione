@@ -94,13 +94,13 @@ L'anima "non ha più sua volontà, ma quella di Dio". Non si tratta dell'eserciz
 
 #### 3.1. Principi di fondo
 
-La trascrizione adottata in questo micro‑commit si colloca integralmente nel quadro metodologico delineato nel documento di progetto *Edizione Critica Digitale del Terzo Libro del Castello dell'anima*. Il testo base dell'edizione è costituito da una trascrizione diplomatico‑conservativa del manoscritto autografo, condotta senza operare normalizzazioni grafiche, ortografiche o morfosintattiche. Ogni fenomeno materiale, grafico e linguistico dell'autografo è trattato come dato filologicamente e storicamente rilevante e viene pertanto conservato nel testo editoriale. Eventuali interventi di regolarizzazione o interpretazione sono ammessi esclusivamente in livelli testuali derivati e utilizzati a fini di leggibilità o sperimentazione computazionale.
+La trascrizione adottata in questo micro‑commit si colloca integralmente nel quadro metodologico delineato nel documento di progetto *Edizione Critica Digitale del Terzo Libro del Castello dell'anima*. Il testo base dell'edizione è costituito da una trascrizione diplomatico‑conservativa del manoscritto autografo, condotta senza operare normalizzazioni grafiche, ortografiche o morfosintattiche. Ogni fenomeno materiale, grafico e linguistico dell'autografo è trattato come dato filologicamente e storicamente rilevante e viene pertanto conservato nel testo editoriale. Eventuali interventi di regolarizzazione o interpretazione sono ammessi esclusivamente in livelli testuali derivati e utilizzati a fini di leggibilità o sperimentazione computazionale. Sul piano della marcatura, questa impostazione si traduce in una **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nello stesso file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che la seconda cancelli la prima (cfr. §3.11). Il doppio livello editoriale così codificato — diplomatico ⇄ interpretativo — va tenuto distinto dall'eventuale regolarizzazione automatica (AI) di livelli derivati, che non fa parte del testo dell'edizione.
 
 Il testo del *Castello dell'anima* è stato pubblicato in edizione a stampa da R. Casapullo (a cura di), *Il Castello dell'anima*, Alessandria, Edizioni dell'Orso, 2015, in collaborazione con L. Longo — curatore dell'edizione del Libro III — insieme a Stella Mondino (Libro II) e Rita Sciovè (Libro I). Quell'edizione adotta criteri di trascrizione moderatamente regolarizzati, con l'obiettivo dichiarato di migliorare la leggibilità di un testo sintatticamente complesso (cfr. *Nota al testo*, §2). La presente edizione digitale del Libro III, capp. I–V, adotta invece un approccio diplomatico-conservativo, motivato dalla diversa natura del prodotto editoriale: mentre l'edizione a stampa privilegia la fruibilità per un pubblico di lettura corrente, l'edizione digitale privilegia la conservazione integrale del dato linguistico e materiale, funzionale sia alla ricerca filologica sia a un'eventuale sperimentazione computazionale successiva. Le due edizioni non sono quindi in competizione ma complementari, e si rivolgono a esigenze di fruizione distinte.
 
 #### 3.2. Grafia e diacritici
 
-Nel testo base dell'edizione non viene applicata alcuna normalizzazione sistematica dei diacritici o delle grafie oscillanti. Sono pertanto conservate integralmente: oscillazioni come *à / a / hà*; *ò / o / hò*; variazioni nell'uso dell'accento grafico (*si / sì*; *ne / né*); grafie non standard o incoerenti all'interno del manoscritto. Tali fenomeni sono considerati parte costitutiva dell'italiano semicolto e regionale dell'autografo.
+Nel testo base dell'edizione non viene applicata alcuna normalizzazione sistematica dei diacritici o delle grafie oscillanti. Sono pertanto conservate integralmente: oscillazioni come *à / a / hà*; *ò / o / hò*; variazioni nell'uso dell'accento grafico (*si / sì*; *ne / né*); grafie non standard o incoerenti all'interno del manoscritto. Tali fenomeni sono considerati parte costitutiva dell'italiano semicolto e regionale dell'autografo. In codifica ogni oscillazione è resa con `<choice>`, che affianca alla grafia originale la sua regolarizzazione senza sopprimerla, per es. `<choice><orig>à</orig><reg>a</reg></choice>`, `<choice><orig>poiche</orig><reg>poiché</reg></choice>`, `<choice><orig>ed'unirsi</orig><reg>ed unirsi</reg></choice>`.
 
 #### 3.3. Unione e separazione delle parole
 
@@ -161,60 +161,64 @@ La versione finale TEI comprenderà:
 
 #### 3.11. Tag set "core" (elementi e attributi)
 
-Il tag set minimo adottato per la codifica del testo (elemento `<text>`) comprende gli elementi seguenti, con i rispettivi attributi.
+Il tag set minimo adottato per la codifica del testo (elemento `<text>`) comprende gli elementi seguenti, con i rispettivi attributi, organizzati secondo i **tre layer** del commit 1 — filologico‑grafico, mistico‑dottrinale, intertestuale — su cui poggiano i **due livelli** di trascrizione (diplomatico ⇄ interpretativo) resi con `<choice>`. Sono esclusi dal tag set di questo commit gli elementi e gli attributi dell'annotazione interpretativa multiassiale (`<seg>`, `@ana`, `<interp>`, `<figure>`, le otto tassonomie): la loro sede è il progetto separato `castello-anima-TEI-IA` (cfr. §3.12).
 
-**Struttura**
+**Layer 1 — filologico‑grafico**
+
+*Struttura.*
 
 - `<div>` — `@type` (`book`, `preface`, `chapter`); `@n`; `@xml:id`
 - `<head>` — nessun attributo
 - `<argument>` — nessun attributo
-- `<p>` — `@n`
-- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@facs`; `@xml:id`
-- `<fw>` — `@type` (`sig`); `@place` (`bottom`); `@xml:id`
+- `<p>` — `@n`; `@xml:id`
+- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@xml:id` (es. `f158r`); `@facs` (es. `images/f158r.jpg`)
+- `<fw>` — `@type` (`header`, `catch`, `sig`); `@place` (`top`, `bottom-right`, `bottom`)
 
-**Front matter**
+*Trascrizione a due livelli.* La coppia diplomatico ⇄ interpretativo è resa con `<choice>`, che affianca la lezione conservativa e la sua regolarizzazione senza sostituire l'una all'altra:
 
-- `<listWit>` — nessun attributo
-- `<witness>` — `@resp`; `@ana`
-- `<listPerson>` — nessun attributo
-- `<person>` — `@xml:id` (obbligatorio, per essere richiamabile da `@resp`/`@ana`)
-- `<persName>` — nessun attributo
-- `<idno>` — `@type` (`VIAF`) — identificatore di autorità per persone e fonti dottrinali
-- `<listBibl>` — nessun attributo
-- `<bibl>` — `@ref`
-- `<title>` — `@level` (`m`)
-- `<author>` — nessun attributo (in questo contesto, come figlio di `<bibl>`)
-- `<titlePage>` — nessun attributo
-- `<docTitle>` — nessun attributo
-- `<titlePart>` — `@type` (`main`, `sub`)
-- `<docAuthor>` — `@resp`
+- `<choice>` — nessun attributo (contenitore delle tre coppie seguenti)
+- `<orig>` / `<reg>` — lezione grafica originale ⇄ regolarizzata (diacritici, univerbazioni)
+- `<abbr>` / `<expan>` — abbreviazione materiale ⇄ scioglimento; `@xml:lang`, `@resp`, `@cert` su `<expan>`
+- `<sic>` / `<corr>` — lezione erronea del testimone ⇄ correzione editoriale; `@resp`, `@cert` su `<corr>`
 
-**Segmentazione e retorica**
-
-- `<seg>` — `@type`; `@subtype`; `@xml:id`; `@xml:lang`; `@hand` (#ink_1, #ink_2, #ink_3-dark, #pencil_1, #ink_4-external); `@ana`
-- `<term>` — `@ana`
-- `<ref>` — `@target`; `@type` (`intertext`, `scripture`, `liturgy`); `@subtype`; `@ana`
-- `<note>` — `@type`; `@subtype`; `@corresp`; `@hand`; `@place` (`margin`); `@ana`
-
-**Apparato critico e fenomeni materiali**
+*Apparato genetico d'autrice.*
 
 - `<app>` — nessun attributo
-- `<lem>` — `@wit`
-- `<rdg>` — `@wit`
-- `<del>` — `@place` (`inline`); `@hand`; `@resp`; `@type` (`correction`)
-- `<add>` — `@place` (`inline`, `margin`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
-- `<subst>` — nessun attributo (contenitore di `<del>`+`<add>` per sostituzioni articolate)
-- `<unclear>` — `@unit` (char, word, line)
-- `<gap>` — `@reason` (`illegible`)
-- `<supplied>` — `@reason` (`conjecture`)
+- `<lem>` — `@wit` (`#txt-c`, lezione costituita)
+- `<rdg>` — `@wit` (`#txt-b0`…); `@varSeq` (ordine cronologico delle varianti d'autrice, non gerarchico)
+- `<subst>` — contenitore di `<del>`+`<add>` per la sostituzione come evento unico
+- `<del>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`)
+- `<add>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
 
-**Citazioni**
+*Incertezze e guasti materiali.*
 
-- `<cit>` — `@type` (`bible`, `liturgy`); `@xml:id`; `@ana`
-- `<quote>` — `@xml:lang`
-- `<foreign>` — `@xml:lang`; `@ana`
+- `<unclear>` — `@reason`; `@unit` (char, word, line)
+- `<gap>` — `@reason` (`illegible`, `hole`); `@unit`; `@quantity`
+- `<supplied>` — `@reason` (`hole`, `conjecture`); `@resp`
 
-L'attributo `@ana`, presente su più elementi, veicola le categorie della tassonomia interpretativa (funzione retorica, stato mistico, livello di rischio dottrinale, ecc.).
+**Layer 2 — mistico‑dottrinale**
+
+- `<term>` — `@ref` che àncora il lessico mistico a una categoria del **vocabolario controllato degli stati** dichiarato nel `<classDecl>` del `teiHeader` (`#silentio`, `#otio`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#notte`, `#purga`, `#unione`, `#quiete`, `#contemplazione-infusa`, `#matrimonio-spirituale`, ecc.). I termini di lessico non‑stato restano `<term>` nudi.
+
+**Layer 3 — intertestuale**
+
+- `<ref>` — `@target` (rimando interno, es. `#msItem-II`, o a una voce di `<listBibl>`, es. `#avila-castello`)
+- `<cit>` — contenitore di citazione (`<quote>`+`<bibl>`)
+- `<quote>` — `@xml:lang` (`lat`) per le citazioni latine
+- `<bibl>` — riferimento alla fonte in `<listBibl>`; `<biblScope>` per capitolo/versetto (l'uso di `@cRef` è subordinato a un `refsDecl`: cfr. §3.12 e verifica TEI P5)
+- `<foreign>` — `@xml:lang`
+- `<sic>` / `<corr>` — impiegati anche per le citazioni tràdite con errore
+
+**Front matter e note**
+
+- `<listWit>` — nessun attributo; `<witness>` — `@xml:id`; `@resp`
+- `<listPerson>` — nessun attributo; `<person>` — `@xml:id` (richiamabile da `@resp`); `<persName>`
+- `<idno>` — `@type` (`VIAF`) — autorità per persone e fonti dottrinali
+- `<listBibl>` — `@type` (`fontes`); `<bibl>` — `@xml:id`; `<title>` — `@level`; `<author>`
+- `<titlePage>` / `<docTitle>` / `<titlePart>` (`@type`) / `<docAuthor>` (`@resp`)
+- `<note>` — `@type` (`glossa`); `@subtype`; `@corresp`; `@hand`; `@place` (`margin`)
+
+Nessun elemento di questo tag set porta `@ana`: la classificazione retorica e il rischio dottrinale, affidati nel repo TEI‑IA all'annotazione multiassiale, non appartengono al commit 1.
 
 #### 3.12. Giustificazione critica del tag set adottato
 
@@ -222,7 +226,7 @@ L'attributo `@ana`, presente su più elementi, veicola le categorie della tasson
 
 **Front matter — witness e persone.** 
 
-`<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo. In questo commit l'header dichiara sei testimoni genetici — Tb0, Tb1, T1, T2, T3, T4 — ciascuno con un `@xml:id` univoco e con `@resp` (chi ha prodotto quella fase: l'autrice o una mano esterna). L'`@xml:id` è precisamente ciò a cui punta l'attributo `@wit` nell'apparato critico: è questa dichiarazione preliminare a rendere interpretabili, più avanti nel testo, valori altrimenti opachi come `wit="#txt-b0"`, che risolve al `<witness xml:id="txt-b0">` dichiarato a monte. Senza il `<listWit>`, l'apparato critico sarebbe una sigla senza chiave di lettura. Il livello Tc (testo critico, `@resp="#editor"`) rappresenta la lezione dell'edizione richiamata da `<lem>`: sarà dichiarato come `<witness>` nel momento della *constitutio textus*, non essendo ancora costituito in questa fase.
+`<listWit>`/`<witness>` dichiarano esplicitamente i livelli genetici del testo. In questo commit l'header dichiara **sette testimoni** — i sei livelli d'autrice/mano esterna Tb0, Tb1, T1, T2, T3, T4 più il livello costituito **Tc** (`xml:id="txt-c"`, `@resp="#editor"`) — ciascuno con un `@xml:id` univoco e con `@resp` (chi ha prodotto quella fase: l'autrice, una mano esterna o l'editore). L'`@xml:id` è precisamente ciò a cui punta l'attributo `@wit` nell'apparato critico: è questa dichiarazione preliminare a rendere interpretabili, più avanti nel testo, valori altrimenti opachi come `wit="#txt-b0"`, che risolve al `<witness xml:id="txt-b0">` dichiarato a monte. Senza il `<listWit>`, l'apparato critico sarebbe una sigla senza chiave di lettura. A differenza delle fasi precedenti, Tc è qui dichiarato fin da subito come `<witness>`, perché `<lem wit="#txt-c">` ne richiama la lezione costituita già nell'esemplare del commit 1.
 
 `<person>` con `@xml:id`, in combinazione con `<idno type="VIAF">`, è l'elemento che permette di ancorare le figure storiche nominate nel testo, l'autrice stessa, ma anche le fonti dottrinali richiamate come Teresa d'Ávila e Miguel de Molinos, a un'identità verificabile esternamente al progetto, tramite l'authority file VIAF. Senza VIAF, un riferimento come "Teresa d'Ávila" resterebbe una stringa di testo non disambiguata, indistinguibile da qualunque omonimo; con VIAF, il riferimento diventa un dato collegabile e interrogabile insieme ad altre biblioteche digitali e authority file internazionali.
 
@@ -230,15 +234,15 @@ L'attributo `@ana`, presente su più elementi, veicola le categorie della tasson
 
 `<titlePage>`/`<docTitle>`/`<titlePart>`/`<docAuthor>` riproducono il frontespizio come si presenta nel manoscritto, distinguendo tramite `@type="main"`/`"sub"` il titolo principale dal sottotitolo, distinzione presente nell'originale ("Il Castello dell'Anima" / "Diviso in tre Libri per l'anime Incipienti, Proficienti e Perfette") e quindi non una scelta editoriale ma una trascrizione fedele della struttura del titolo storico.
 
-**Segmentazione e retorica.** `<seg>` porta il peso maggiore dell'annotazione: `@ana`/`@subtype` classificano l'atto retorico compiuto dal segmento (dichiarazione di obbedienza, protesta di ortodossia, comparazione, definizione di uno stato mistico), `@hand` ne registra la mano scrivente responsabile, `@xml:lang` distingue i rari segmenti non in volgare. Questa combinazione è motivata dal fatto che nel Libro III le unità retoriche e le fasi di scrittura non coincidono sempre: un segmento della stesura base (`ink_1`) può essere seguito, nello stesso paragrafo, da una glossa di mano successiva (`ink_3-dark`) che ne attenua il contenuto, la codifica deve poter distinguere le due cose sullo stesso piano testuale.
+**Trascrizione a due livelli (`<choice>`).** Il perno del layer filologico‑grafico non è più il segmento retorico `<seg>` (spostato, con l'intera annotazione multiassiale `@ana`, nel repo `castello-anima-TEI-IA`), ma la coppia diplomatico ⇄ interpretativo resa con `<choice>`. Le tre coppie `<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>` conservano *entrambe* le lezioni sullo stesso piano testuale: il livello diplomatico (grafia originale, abbreviazione materiale, lezione erronea del testimone) e il livello interpretativo (regolarizzazione dei diacritici e delle univerbazioni, scioglimento, correzione editoriale). Nessuna delle due sostituisce l'altra, e la scelta fra i due livelli è demandata alla lettura o all'elaborazione a valle. È questa la ragione per cui il testo trascritto resta immutato rispetto alla sorgente: `<choice>` aggiunge marcatura senza modernizzare né sopprimere alcuna lezione. La distinzione, importante, è che questo doppio livello *editoriale e verificabile a schema* non va confuso con l'eventuale trascrizione AI‑regolarizzata di livelli derivati, prodotta a soli fini di leggibilità o sperimentazione computazionale (§3.1).
 
-`<term>` isola il lessico tecnico mistico dell'autrice (*silentio*, *scordanza*, *indifferenza*, *sposalitio*) mantenendolo interrogabile separatamente dal resto del testo, utile in un'opera il cui vocabolario mistico non sempre coincide con quello di Ávila o Giovanni della Croce, pur muovendo dalla stessa tradizione.
+`<term>` isola il lessico tecnico mistico dell'autrice (*silentio*, *scordanza*, *indifferenza*, *sposalitio*, *notte*, *purga*, *unione*, *quiete*) e — questa è la novità del commit 1 — lo àncora, tramite `@ref`, a una categoria del **vocabolario controllato degli stati** dichiarato nel `<classDecl>` del `teiHeader` (`#silentio`, `#unione`, `#notte`, `#contemplazione-infusa`…). L'aggancio sostituisce la vecchia classificazione via `@ana`: rende il lessico mistico interrogabile per *stato* con un solo puntatore verificabile a schema, senza importare l'apparato multiassiale a otto tassonomie. I termini di lessico non‑stato (etico, teologico, sicilianismi) restano `<term>` nudi.
 
 `<ref target="#avila-castello">`/`<ref target="#molinos-guida">` con `@type="intertext"` rendono esplicito, a livello di markup, un dato che nel testo resta implicito: il rapporto di dipendenza strutturale tra quest'opera e i suoi modelli, in particolare con Molinos, la cui *Guida spirituale* fu condannata nel 1687, un collegamento che ha peso interpretativo diretto sulla comprensione del rischio dottrinale corso dall'autrice.
 
 `<note type="glossa" subtype="corrigenda">` con `@hand` e `@place="margin"` distingue le glosse marginali con cui l'autrice, in un secondo momento, precisa o attenua un'affermazione già scritta, da qualunque altra nota di natura diversa, fenomeno materiale specifico e ricorrente nel Libro III, dove tali glosse costituiscono la principale traccia visibile della sua auto-censura dottrinale.
 
-**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione dell'edizione critica, le lezioni alternative sono ancorate ai testimoni dichiarati in `<listWit>` tramite `@wit`. All'interno di ciascun `<rdg>`, `<del>` e `<add>` — con `@place` (`inline`/`margin`), `@hand`, `@resp` e `@type` (`correction`/`substitution`/`integration`), permettono di specificare non solo che una variante esiste, ma la sua natura materiale precisa: una cancellatura interlineare di mano dell'autrice non ha lo stesso peso filologico di un'aggiunta marginale di mano esterna, e il tag set core li rende entrambi tracciabili distintamente. `<subst>` è previsto per le sostituzioni che comportano insieme una cancellatura e un'aggiunta come evento unico, distinguendole dai casi in cui le due operazioni sono invece disgiunte nel tempo.
+**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione dell'edizione critica, le lezioni alternative sono ancorate ai testimoni dichiarati in `<listWit>` tramite `@wit`. Le varianti d'autrice sono **ordinate cronologicamente** con `@varSeq` sul `<rdg>` e non gerarchizzate: `@varSeq` registra la successione delle stesure senza stabilire fra esse un rapporto di subordinazione, coerentemente con la natura genetica (e non stemmatica) dell'apparato. All'interno di ciascun `<rdg>`, `<del>` e `<add>` — con `@place` (`inline`/`margin`), `@hand`, `@resp` e `@type` (`correction`/`substitution`/`integration`), permettono di specificare non solo che una variante esiste, ma la sua natura materiale precisa: una cancellatura interlineare di mano dell'autrice non ha lo stesso peso filologico di un'aggiunta marginale di mano esterna, e il tag set core li rende entrambi tracciabili distintamente. `<subst>` è previsto per le sostituzioni che comportano insieme una cancellatura e un'aggiunta come evento unico, distinguendole dai casi in cui le due operazioni sono invece disgiunte nel tempo.
 
 `<unclear>`, `<gap reason="illegible">` e `<supplied reason="conjecture">` completano l'apparato per le porzioni di testo materialmente compromesse, coerenti con quanto dichiarato nella descrizione fisica del manoscritto, dove si segnalano abrasioni, scolorimenti e guasti meccanici marginali.
 
@@ -267,7 +271,7 @@ I capitoli I–V mostrano:
 - **Autore:** Teresa di San Geronimo (Anna La Longa), 1670–post 1703
 - **Datazione:** 1692–1694 (Libro III)
 - **Manoscritto:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29
-- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, con apparato genetico `<app>`/`<lem>`/`<rdg>`, sistema retorico via `<seg>`, autorità VIAF per persone e fonti dottrinali
+- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, modellata su **tre layer** (filologico‑grafico, mistico‑dottrinale, intertestuale) e **due livelli** di trascrizione via `<choice>`: apparato genetico `<app>`/`<lem>`/`<rdg>` con `@varSeq`, lessico mistico agganciato al vocabolario degli stati via `<term ref>`, intertesto via `<cit>`/`<quote>`/`<bibl>` e `<ref>`, autorità VIAF per persone e fonti dottrinali
 - **Parole chiave:** Castello dell'anima; mistica secentesca; contemplazione infusa; TEI; edizione critica digitale
 
 ### 7. Risultati attesi
