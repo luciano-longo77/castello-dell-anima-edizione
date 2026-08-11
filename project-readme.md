@@ -237,7 +237,7 @@ Creative Commons Attribution 4.0 International (**CC BY 4.0**).
 
 ---
 
-## 👤 Autore
+## 👤 Curatore
 **Luciano Longo**   
 - Contatti: <luciano.longo@dedalus.com> 
 - ORCID: <https://orcid.org/0009-0005-7557-7546> 
