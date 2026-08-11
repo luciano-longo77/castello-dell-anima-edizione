@@ -66,7 +66,7 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 ├── README.md               # Orientamento generale del repository
 ├── project-readme.md       # Documento scientifico del progetto
 ├── tei-model/              # Modello TEI/XML dell’edizione (header + text)
-└── MC_readme-generale/     # Micro-commits: dati, documentazione e prototipi per rilascio (MC1…)
+└── micro-commits/          # Micro-commits: dati, documentazione e prototipi per rilascio (MC1…)
 ```
 --- 
 
