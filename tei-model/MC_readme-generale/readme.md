@@ -1,5 +1,5 @@
-# Il Castello dell’anima — Libro III (ms. 2 Qq E 29)
-## Edizione Critica Digitale Modulare (Micro-commits)
+# Edizione Critica Digitale Modulare (Micro-commits) 
+## *Il Castello dell'anima* - Libro III
 
 [![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) [![Castello dell'anima](https://img.shields.io/badge/Castello%20dell%27anima-7b2d3b)](https://github.com/luciano-longo77/castello-anima-TEI-IA)
 
