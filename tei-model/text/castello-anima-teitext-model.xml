@@ -4,203 +4,131 @@
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Title</title>
-         </titleStmt>
-         <publicationStmt>
-            <p>Publication Information</p>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
-      </fileDesc>
+    <!-- Il teiHeader completo e' modellato a parte: cfr. teiHeader-model.xml; 
+      questa a seguire è solo una struttura basica di TEI-ALL P5 -->
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
   </teiHeader>
-   <text>
-      <front>
-         <div rend="/">
-            <listWit>
-               <witness resp="/" ana="/"/>
-               <!-- ripeti per ciascun testimone (Tb0, Tb1, T1, T2, T3, T4, Tc) -->
-            </listWit>
-         </div>
-         <div rend="/">
-            <listPerson>
-               <person/>
-            </listPerson>
-         </div>
-         <div rend="/">
-            <listBibl>
-               <bibl ref="/">
-                  <title level="/"/>
-               </bibl>
-               <bibl ref="/">
-                  <author/>
-                  <title/>
-                  <date when="/"/>
-                  <note/>
-               </bibl>
-               <!-- ripeti per ciascuna fonte bibliografica -->
-            </listBibl>
-         </div>
-         <titlePage>
-            <docTitle>
-               <titlePart type="/"/>
-               <titlePart type="/"/>
-            </docTitle>
-            <docAuthor resp="/"/>
-         </titlePage>
-      </front>
-      
-      <body>
-         <!-- LIBRO I -->
-         <div type="/" n="/" xml:id="/">
-            <fw type="/" place="/" xml:id="/"/>
-            <pb n="/" facs="/" xml:id="/"/>
-            <head/>
-         </div>
-         
-         <!-- LIBRO II -->
-         <div type="/" n="/" xml:id="/">
-            <fw type="/" place="/" xml:id="/"/>
-            <pb n="/" facs="/" xml:id="/"/>
-            <head/>
-         </div>
-         
-         <!-- LIBRO III -->
-         <div type="/" n="/" xml:id="/">
-            <fw type="/" place="/" xml:id="/"/>
-            <pb n="/" facs="/" xml:id="/"/>
-            <head/>
-            
-            <!-- PREFAZIONE -->
-            <div type="/">
-               <head>
-                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                     <ref target="/" xml:lang="/" type="/" subtype="/" ana="/"/>
-                     <ref target="/" type="/" subtype="/" ana="/"/>
-                     <val n="/" cert="/" ana="/"/>
-                  </seg>
-               </head>
-               <argument>
-                  <p n="/">
-                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                        <rs type="/" ana="/"/>
-                        <term ana="/"/>
-                        <ptr target="/" ana="/"/>
-                        <spanGrp type="/" ana="/">
-                           <span xml:id="/" from="/" to="/" ana="/"/>
-                        </spanGrp>
-                        <figure type="/" ana="/"/>
-                        <cit type="/" xml:id="/" ana="/">
-                           <quote xml:lang="/">
-                              <foreign xml:lang="/" ana="/"/>
-                           </quote>
-                           <ref type="/" target="/"/>
-                        </cit>
-                        <val n="/" cert="/" ana="/"/>
-                     </seg>
-                     <!-- ripeti per ciascun <seg> del paragrafo -->
-                  </p>
-                  <p n="/">
-                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                        <rs type="/" ana="/"/>
-                        <figure type="/" ana="/"/>
-                        <spanGrp type="/" ana="/">
-                           <span ana="/"/>
-                        </spanGrp>
-                        <cit type="/" xml:id="/" ana="/">
-                           <quote xml:lang="/">
-                              <foreign xml:lang="/" ana="/"/>
-                           </quote>
-                           <ref type="/" target="/"/>
-                        </cit>
-                        <val n="/" cert="/" ana="/"/>
-                     </seg>
-                     <!-- ripeti per ciascun <seg> del paragrafo -->
-                  </p>
-               </argument>
-            </div>
-            
-            <!-- CAPITOLO PRIMO -->
-            <div type="/" n="/" xml:id="/">
-               <head/>
-               <argument>
-                  <p>
-                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                        <term ana="/"/>
-                        <rs type="/" ana="/"/>
-                        <figure type="/" ana="/"/>
-                        <ptr target="/" ana="/"/>
-                        <spanGrp type="/" ana="/">
-                           <span ana="/"/>
-                        </spanGrp>
-                        <val n="/" cert="/" ana="/"/>
-                     </seg>
-                  </p>
-               </argument>
-               <p n="/">
-                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                     <rs type="/" ana="/"/>
-                     <term ana="/"/>
-                     <figure type="/" ana="/"/>
-                     <spanGrp type="/" ana="/">
-                        <span ana="/"/>
-                     </spanGrp>
-                     <val n="/" cert="/" ana="/"/>
-                  </seg>
-                  <!-- ripeti per ciascun <seg> del paragrafo -->
-               </p>
-               <!-- ripeti <p n="/"> ... </p> per ciascun paragrafo del capitolo -->
-               
-               <!-- COLLEGAMENTI SEMANTICI (linkGrp) -->
-               <linkGrp type="/" subtype="/" xml:id="/" ana="/">
-                  <link xml:id="/" type="/" subtype="/" ana="/" target="/"/>
-               </linkGrp>
-               <!-- ripeti per ciascun gruppo di collegamenti -->
-            </div>
-            
-            <!-- CAPITOLO TERZO -->
-            <div type="/" n="/" xml:id="/">
-               <fw type="/" place="/" xml:id="/"/>
-               <pb n="/" facs="/" xml:id="/"/>
-               <head/>
-               <argument>
-                  <p n="/">
-                     <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                        <term ana="/"/>
-                        <figure type="/" ana="/"/>
-                        <spanGrp type="/" ana="/">
-                           <span ana="/"/>
-                        </spanGrp>
-                        <val n="/" cert="/" ana="/"/>
-                     </seg>
-                  </p>
-               </argument>
-               <p n="/">
-                  <seg type="/" function="/" subtype="/" xml:id="/" xml:lang="/" hand="/" ana="/">
-                     <term ana="/"/>
-                     <rs type="/" ana="/"/>
-                     <figure type="/" ana="/"/>
-                     <spanGrp type="/" ana="/">
-                        <span ana="/"/>
-                     </spanGrp>
-                     <spanGrp type="/" ana="/">
-                        <span ana="/"/>
-                     </spanGrp>
-                     <val n="/" cert="/" ana="/"/>
-                  </seg>
-                  <!-- ripeti per ciascun <seg> del paragrafo -->
-               </p>
-               <!-- ripeti <p n="/"> ... </p> per ciascun paragrafo del capitolo -->
-               
-               <!-- COLLEGAMENTI SEMANTICI (linkGrp) -->
-               <linkGrp type="/" subtype="/" xml:id="/" ana="/">
-                  <link xml:id="/" type="/" subtype="/" ana="/" target="/"/>
-               </linkGrp>
-               <!-- ripeti per ciascun gruppo di collegamenti -->
-            </div>
-         </div>
-      </body>
-   </text>
+  <text>
+    <front> 
+      <div type="witness-list">
+        <listWit>
+          <witness xml:id="txt-b0" resp="#s-teresa"/>
+          <witness xml:id="txt-b1" resp="#s-teresa"/>
+          <witness xml:id="txt-1" resp="#s-teresa"/>
+          <witness xml:id="txt-2" resp="#s-teresa"/>
+          <witness xml:id="txt-3" resp="#s-teresa"/>
+          <witness xml:id="txt-4" resp="#esterno"/>
+          <witness xml:id="txt-c" resp="#editor"/>
+        </listWit>
+      </div>
+      <div type="person-list">
+        <listPerson>
+          <person xml:id="s-teresa"/>
+          <!-- ripeti per ciascuna persona (autrice, fonti, direttore, curatore) -->
+        </listPerson>
+      </div>
+      <div type="source-list">
+        <!-- Fonti dell'intertesto (layer 3)-->
+        <listBibl type="fontes">
+          <bibl xml:id="bible-vulgate"><title level="m"/></bibl>
+          <bibl xml:id="molinos-guida"><author/><title/><date/></bibl>
+          <bibl xml:id="avila-castello"><author/><title/><date/></bibl>
+        </listBibl>
+      </div>
+      <titlePage>
+        <docTitle>
+          <titlePart type="main"/>
+          <titlePart type="sub"/>
+        </docTitle>
+        <docAuthor/>
+      </titlePage>
+    </front>
+
+    <body>
+      <!-- LIBRO I -->
+      <div type="book" n="1" xml:id="libro-1">
+        <pb n="1r" facs="/" xml:id="pb-1r"/>
+        <head/>
+        <!-- capitoli con la stessa struttura del Libro III (vedi sotto) -->
+      </div>
+
+      <!-- LIBRO II -->
+      <div type="book" n="2" xml:id="libro-2">
+        <pb n="63r" facs="/" xml:id="pb-63r"/>
+        <head/>
+        <!-- capitoli con la stessa struttura del Libro III (vedi sotto) -->
+      </div>
+
+      <!-- LIBRO III (focus dell'edizione) -->
+      <div type="book" n="3" xml:id="libro-3">
+        <fw type="sig" place="bottom" xml:id="fw-158r"/>
+        <pb n="158r" facs="/" xml:id="pb-158r"/>
+        <head/>
+
+        <!-- PREFAZIONE -->
+        <div type="preface">
+          <head/>
+          <argument>
+            <p n="1"/>
+          </argument>
+        </div>
+
+        <!-- CAPITOLO: unita' di riferimento = <p n="…">-->
+        <div type="chapter" n="1" xml:id="III-cap1">
+          <head/>
+          <argument>
+            <!-- Layer 2 (mistico-dottrinale): term/@ref al vocabolario controllato degli stati -->
+            <p>Si tratta della dispositione che lascia nell'anima la
+              <term ref="#notte">notte dello spirito</term>.</p>
+          </argument>
+
+          <p n="1" xml:id="III-cap1-p1">
+            <!-- Layer 1 (filologico-grafico): trascrizione a due livelli via choice -->
+            <choice><orig/><reg/></choice>
+            <choice><abbr/><expan/></choice>
+            <choice><sic/><corr/></choice>
+
+            <!-- Layer 1: fenomeni materiali e correzioni autoriali -->
+            <add place="margin" hand="#ink_2" resp="#s-teresa" type="integration"/>
+            <del hand="#ink_1"/>
+            <subst><del hand="#ink_1"/><add hand="#ink_2"/></subst>
+            <unclear reason="illegible"/>
+            <gap reason="illegible" unit="word" quantity="1"/>
+            <supplied reason="damage"/>
+
+            <!-- Layer 1: apparato genetico in parallel segmentation -->
+            <app>
+              <lem wit="#txt-c"/>
+              <rdg wit="#txt-b0" varSeq="1"/>
+              <rdg wit="#txt-1" varSeq="2"/>
+              <rdg wit="#txt-2" varSeq="3"/>
+              <rdg wit="#txt-3" varSeq="4"/>
+            </app>
+
+            <!-- Layer 2: lessico mistico -->
+            <term ref="#unione"/>
+
+            <!-- Layer 3 (intertestuale): rimandi e citazioni con fonte -->
+            <ref target="#avila-castello" type="model"/>
+            <cit type="bible">
+              <quote xml:lang="la"><foreign xml:lang="la"/></quote>
+              <bibl corresp="#bible-vulgate"/>
+            </cit>
+          </p>
+          <!-- ripeti <p n="…"> per ciascun paragrafo del capitolo -->
+        </div>
+        <!-- ripeti <div type="chapter" n="…"> per ciascun capitolo -->
+      </div>
+    </body>
+  </text>
 </TEI>
