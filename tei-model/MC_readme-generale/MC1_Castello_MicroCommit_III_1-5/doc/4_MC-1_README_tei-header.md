@@ -137,5 +137,3 @@ Creative Commons Attribution 4.0 International (**CC BY 4.0**).
 - GitHub: <https://github.com/luciano-longo77>
 - Website: <https://luciano-longo77.github.io>
 
-
-- [3. Struttura capitoli e cartulazione](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/3_MC-1_III_1-5-Struttura%20capitoli%20e%20cartulazione.md) — mappa codicologica capitolo/carta del manoscritto
