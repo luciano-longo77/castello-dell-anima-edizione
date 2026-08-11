@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Consolidated-brightgreen)
 ![Lang](https://img.shields.io/badge/Language-it--reg--sic%20%7C%20la-orange)
 
-> **File**: `castello-anima-teiHeader-model.xml`  
+> **File**: `teiHeader-model.xml`  
 > **Schema**: TEI P5 + ODD custom (`MC-1_castello-anima-odd.odd` → `.rng`)  
 > **Testimone**: ms. 2 Qq E 29, Biblioteca Comunale di Palermo
 
