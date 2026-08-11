@@ -1,6 +1,6 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
 ## `teiHeader` - Libro III, Capitoli I–V
-**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29** **(a cura di Luciano Longo)**
+**Edizione critica digitale del *Castello dell’anima*** **ms. Palermo, BCP, 2 Qq E 29**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)](https://creativecommons.org/licenses/by/4.0/)
 ![TEI P5](https://img.shields.io/badge/TEI-P5-blueviolet?logo=xml)
@@ -27,19 +27,19 @@ Il `teiHeader` è mantenuto come componente concettualmente distinta dal file da
   - [`profileDesc`](#profiledesc)
   - [`revisionDesc`](#revisiondesc)
 - [Il tag set core: cosa è dentro, cosa è fuori, e perché](#il-tag-set-core-cosa-è-dentro-cosa-è-fuori-e-perché)
-- [Le tassonomie: un sistema multiassiale, non gerarchico](#le-tassonomie-un-sistema-multiassiale-non-gerarchico)
+- [Il vocabolario controllato degli stati e le fonti](#il-vocabolario-controllato-degli-stati-e-le-fonti)
 - [Licenza e datazione: due chiarimenti necessari](#licenza-e-datazione-due-chiarimenti-necessari)
 - [Validazione e schema](#validazione-e-schema)
 - [In sintesi](#in-sintesi)
 
 ## Perché un `teiHeader` così esteso
 
-A differenza di un'edizione digitale minima, dove l'header si limita a pochi metadati bibliografici, qui il `teiHeader` è deliberatamente ricco perché deve sostenere due funzioni insieme:
+A differenza di un'edizione digitale minima, dove l'**header** si limita a pochi metadati bibliografici, qui il `teiHeader` è deliberatamente ricco perché deve sostenere due funzioni insieme:
 
-1. **Funzione descrittiva classica**: chi ha scritto cosa, quando, su quale supporto, con quali mani, sotto quale licenza.
-2. **Funzione interpretativa**: dichiarare in modo esplicito e verificabile le categorie con cui il testo viene annotato (tassonomie in `classDecl`), così che l'attributo `@ana` sui `<seg>` del testo non sia testo libero non controllabile, ma rimandi a un vocabolario formalmente definito.
+1. **Funzione descrittiva**: chi ha scritto cosa, quando, su quale supporto, con quali mani, sotto quale licenza.
+2. **Funzione interpretativa (leggera)**: dichiarare in modo esplicito e verificabile il **vocabolario controllato degli stati mistici** (`<classDecl>`) e le **fonti** (`<listBibl>`), così che l'attributo `@ref` sui `<term>` del testo e i rimandi intertestuali non siano stringhe libere non controllabili, ma puntino a categorie e a voci bibliografiche formalmente definite.
 
-Questa seconda funzione è ciò che rende l'edizione più di una semplice trascrizione: permette di interrogare il testo per funzione retorica, stato mistico, livello di rischio dottrinale, e così via, in modo sistematico e riproducibile da altri.
+Questa seconda funzione è ciò che rende l'edizione più di una semplice trascrizione: permette di interrogare il testo per *stato mistico* e di collegare ogni citazione alla sua fonte, in modo sistematico e riproducibile da altri. Rispetto al modello del repo `castello-anima-TEI-IA` — dove lo stesso fenomeno è annotato con un sistema multiassiale a otto tassonomie e `@ana` sui `<seg>` — il commit 1 adotta la forma leggera: un solo asse (`term/@ref` → stati), senza indice di impatto né segmentazione retorica.
 
 ## Struttura del `teiHeader` e cosa fa ciascuna sezione
 
@@ -50,10 +50,10 @@ Le `notesStmt` raccolgono le note critiche di inquadramento (materiale, prudenzi
 
 ### `encodingDesc`
 Qui si dichiara **come** il testo viene codificato:
-- `projectDesc` descrive gli obiettivi del modello (segmentazione strutturata, apparato genetico, tassonomie multiassiali) e la fase in cui si trova il progetto.
-- `editorialDecl` fissa i criteri editoriali: trascrizione semidiplomatica (e interpretativa), apparato critico in *parallel segmentation*, nessuna normalizzazione se non minima e dichiarata.
+- `projectDesc` descrive gli obiettivi del modello (tre layer: filologico‑grafico, mistico‑dottrinale, intertestuale; trascrizione a due livelli; apparato genetico) e la fase in cui si trova il progetto.
+- `editorialDecl` fissa i criteri editoriali e in particolare la **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nel file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`); apparato critico in *parallel segmentation* con `@varSeq`; nessuna normalizzazione del testo trascritto se non quella dichiarata e reversibile via `<choice>`.
 - `tagsDecl` elenca **esattamente** gli elementi TEI usati nel testo — il "tag set core" di questo commit (vedi sotto).
-- `classDecl` contiene le tassonomie: otto assi interpretativi (`func`, `impact`, `risk`, `mystic_state`, `operation`, `exposition`, `phase`, `relation`) più la tassonomia di lavoro editoriale (`fase`), usata per tracciare la cronologia degli interventi in `revisionDesc`.
+- `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header: restano nel progetto `castello-anima-TEI-IA`.
 
 ### `profileDesc`
 Descrive la lingua del testo (italiano regionale siciliano di fine Seicento, con fenomeni fonetici, morfologici, lessicali e sintattici dettagliati) e le persone/organizzazioni coinvolte: l'autrice, le fonti dottrinali (Santa Teresa d'Ávila, Giovanni della Croce, Miguel de Molinos), il direttore spirituale, l'editore, e le istituzioni storiche (Carmelo, Inquisizione).
@@ -65,32 +65,39 @@ Registra la cronologia granulare degli interventi editoriali, ciascuno classific
 
 Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che TEI permette, ma il **tag set minimo** deciso per MC1, coerente con quanto dichiarato nel README narrativo del micro-commit. Include:
 
-- **Struttura**: `div`, `head`, `argument`, `p`, `pb`, `fw`, `text`, `body`
-- **Front matter**: `front`, `listWit`/`witness`, `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
-- **Segmentazione e retorica**: `seg`, `term`, `figure`, `ref`, `note`
-- **Apparato critico e fenomeni materiali**: `app`/`lem`/`rdg`, `del`/`add`/`subst`, `unclear`/`gap`/`supplied`
-- **Citazioni**: `cit`/`quote`/`foreign`
-- **Identificatori**: `idno` (in particolare per VIAF)
-- **Normalizzazione minima**: `abbr`/`expan` (scioglimento abbreviazioni), `sic`/`corr` (correzioni editoriali dichiarate)
+- **Struttura** (layer filologico‑grafico): `div`, `head`, `argument`, `p`, `pb` (`@n`/`@xml:id`/`@facs`), `fw`, `text`, `body`
+- **Front matter**: `front`, `listWit`/`witness` (sette testimoni, incl. `txt-c`), `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
+- **Trascrizione a due livelli** (layer filologico‑grafico): `choice` con `orig`/`reg`, `abbr`/`expan`, `sic`/`corr`
+- **Apparato genetico**: `app`/`lem`/`rdg` (`@wit`, `@varSeq`), `del`/`add`/`subst` (`@place`/`@hand`/`@resp`/`@type`), `unclear`/`gap`/`supplied`
+- **Lessico mistico** (layer mistico‑dottrinale): `term` con `@ref` al vocabolario degli stati
+- **Intertesto** (layer intertestuale): `ref` (`@target`), `cit`/`quote`/`bibl`/`foreign`
+- **Identificatori e fonti**: `idno` (in particolare per VIAF), `listBibl type="fontes"` (Vulgata, Molinos, Ávila)
 
-## Le tassonomie: un sistema multiassiale, non gerarchico
+Sono **fuori** dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale — `seg`, `figure`, `interp` — e l'attributo `@ana`: la loro sede è il progetto separato `castello-anima-TEI-IA`.
 
-Le otto tassonomie in `classDecl` non sono livelli di una stessa scala, ma **assi indipendenti** dello stesso fenomeno testuale:
+## Il vocabolario controllato degli stati e le fonti
 
-| Tassonomia | Cosa cattura |
+Nel commit 1 il `classDecl` non ospita più le otto tassonomie interpretative, ma un solo **vocabolario controllato degli stati mistici**, dichiarato come `taxonomy xml:id="stati-mistici"`. Ogni categoria ha un `@xml:id` che funge da bersaglio per l'attributo `@ref` dei `<term>` nel testo:
+
+| Categoria (`xml:id`) | Stato mistico |
 |---|---|
-| `func` | La funzione retorica del segmento (legittimazione, pedagogia, gestione del rischio...) |
-| `mystic_state` | Lo stato mistico coinvolto (purificazione, quiete, otium, unione...) |
-| `risk` | Il livello di pericolo dottrinale (quietismo, panteismo, impeccabilità, ambiguità) |
-| `operation` | Il meccanismo discorsivo usato per gestire il rischio (attenuatio, precisatio, declaratio...) |
-| `exposition` | Il giudizio interpretativo sul livello di esposizione dottrinale |
-| `impact` | Il peso interpretativo calcolato del segmento |
-| `phase` | La posizione del segmento nel discorso (introduttiva, mediana, conclusiva, critica) |
-| `relation` | Il legame con altri passaggi o fonti esterne (intertesto biblico, liturgico, teresiano, molinista) |
+| `silentio` | Silentio (primo stato d'unione) |
+| `otio` | Otio / quiete passiva |
+| `oblivione-sonno` | Oblivione o sonno |
+| `scordanza` | Scordanza del creato e di sé |
+| `indifferenza` | Indifferenza (unione delle volontà) |
+| `notte` | Notte dello spirito |
+| `purga` | Purga / purificazione passiva |
+| `unione` | Unione con Dio |
+| `quiete` | Quiete |
+| `contemplazione-infusa` | Contemplazione infusa |
+| `nudita-anima`, `bacio`, `matrimonio-spirituale`, `cella-secreta`, `trasformazione`, `deificazione` | Stati delle celle superiori del Libro III |
 
-Una stessa occorrenza testuale riceve normalmente più etichette contemporaneamente, una per asse pertinente, combinate nello stesso attributo `@ana`. Questo è ciò che rende possibile, ad esempio, isolare tutti i segmenti che attenuano un rischio di quietismo indipendentemente dal capitolo in cui compaiono.
+Un `<term ref="#unione">unione</term>` nel testo risolve così a una categoria dichiarata una sola volta nell'header: questo è ciò che rende possibile isolare *tutte* le occorrenze di uno stato (p. es. l'unione) indipendentemente dal capitolo, senza importare l'apparato multiassiale a otto tassonomie né l'indice di impatto (che restano nel repo `castello-anima-TEI-IA`). I termini di lessico non‑stato restano `<term>` nudi.
 
-La tassonomia `fase`, distinta dalle otto sopra, non descrive il testo ma il **lavoro editoriale**: è il vocabolario controllato con cui `revisionDesc` traccia la cronologia degli interventi.
+Accanto al vocabolario, il `<listBibl type="fontes">` dichiara le **fonti** richiamate dall'intertesto — la Vulgata (`#bible-vulgate`), la *Guida spirituale* di Molinos (`#molinos-guida`), il *Castello interiore* di Ávila (`#avila-castello`) — bersagli dei rimandi `<ref target="…">` e delle `<bibl>` interne alle citazioni `<cit>`.
+
+Resta distinta da tutto ciò la tassonomia di lavoro `fase`, che non descrive il testo ma il **lavoro editoriale**: è il vocabolario controllato con cui `revisionDesc` traccia la cronologia degli interventi.
 
 ## Validazione e schema
 
@@ -115,11 +122,20 @@ Il file dati dichiara l'associazione in testa, con due PI verso lo stesso RNG:
 
 ## In sintesi
 
-Questo `teiHeader` non è un contenitore neutro di metadati: è la dichiarazione formale, verificabile e citabile, di come e perché il testo del Libro III, capp. I–V, viene rappresentato in questo specifico commit. Ogni scelta (tag set limitato, tassonomie multiassiali, esclusione dell'IA, licenza, datazione) è tracciabile a una decisione motivata, documentata in parallelo nel README narrativo del MC1 e nella cronologia di `revisionDesc`.
+Questo `teiHeader` non è un contenitore neutro di metadati: è la dichiarazione formale, verificabile e citabile, di come e perché il testo del Libro III, capp. I–V, viene rappresentato in questo specifico commit. Ogni scelta (tag set limitato a tre layer, trascrizione a due livelli, vocabolario controllato degli stati, esclusione dell'annotazione multiassiale e dell'IA, licenza, datazione) è tracciabile a una decisione motivata, documentata in parallelo nel README narrativo del MC1 e nella cronologia di `revisionDesc`.
 
-## Documenti correlati
+---
+## Licenza
+Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
 
-- [Readme generale del progetto](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/readme.md) — piano editoriale complessivo e roadmap dei micro-commit (MC1–MC8)
-- [1. README generale MC1](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/1_MC-1_README_generale.md) — descrizione sintetica e mappa topografica del micro-commit
-- [2. Introduzione MC1 (Libro III, capp. I–V)](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/2_MC-1_III_1-5-introduzione.md) — commento critico ai capitoli, politiche editoriali e tag set core
+---
+
+## 👤 Curatore
+**Luciano Longo**   
+- Contatti: <luciano.longo@dedalus.com> 
+- ORCID: <https://orcid.org/0009-0005-7557-7546> 
+- GitHub: <https://github.com/luciano-longo77>
+- Website: <https://luciano-longo77.github.io>
+
+
 - [3. Struttura capitoli e cartulazione](https://github.com/luciano-longo77/castello-dell-anima-edizione/blob/main/tei-model/MC_readme-generale/MC1_Castello_MicroCommit_III_1-5/doc/3_MC-1_III_1-5-Struttura%20capitoli%20e%20cartulazione.md) — mappa codicologica capitolo/carta del manoscritto
