@@ -15,9 +15,9 @@ Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni
 * diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
 
 * **Modellazione TEI su tre layer:**
-  - (1) filologico‑grafico — struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`);
-  - (2) mistico‑dottrinale — lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
-  - (3) intertestuale — `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
+  - **(1)** filologico‑grafico - struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`);
+  - **(2)** mistico‑dottrinale - lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
+  - **(3)** intertestuale - `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
 
 * **Digital Philology (progetto separato):** la preparazione dei dati per analisi computazionali (NLP), l'annotazione interpretativa multiassiale e l'intertestualità assistita da IA sono sviluppate nel repository dedicato `castello-anima-TEI-IA`, distinto da questa edizione critica.
 
