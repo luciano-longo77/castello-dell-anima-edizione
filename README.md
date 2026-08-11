@@ -65,10 +65,10 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 .
 ├── README.md               # Orientamento generale del repository
 ├── project-readme.md       # Documento scientifico del progetto
-├── tei-model/              # Modello TEI/XML dell’edizione
-└── docs                    # Documentazione a supporto dell'edizione
-└── out                     # Modelli di visualizzazione dell'edizione
-└── tool                    # MStrumenti di ricerca sull’edizione
+├── `tei-model/`              # Modello TEI/XML dell’edizione
+└── `docs`                    # Documentazione a supporto dell'edizione
+└── `out`                     # Modelli di visualizzazione dell'edizione
+└── `tool`                    # MStrumenti di ricerca sull’edizione
 ```
 --- 
 
