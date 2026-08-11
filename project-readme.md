@@ -60,7 +60,7 @@ Il **III libro** è dedicato allo stadio delle **anime perfette** e rappresenta 
 
 Il lavoro editoriale si articola in due passaggi principali:
 
-1. **Trascrizione diplomatico** del manoscritto autografo, condotta senza operare alcuna normalizzazione grafica, ortografica o morfosintattica.  
+1. **Trascrizione diplomatico-interpretativa** del manoscritto autografo, condotta senza operare alcuna normalizzazione grafica, ortografica o morfosintattica.  
    La trascrizione conserva integralmente la patina linguistica del testo, incluse oscillazioni diacritiche, grafiche e sintattiche, considerate parte costitutiva del dato autografo.  
    Le abbreviazioni materiali che comprometterebbero la leggibilità (ad es. dunq., total.te, V.R.) sono sciolte per esteso.
 
