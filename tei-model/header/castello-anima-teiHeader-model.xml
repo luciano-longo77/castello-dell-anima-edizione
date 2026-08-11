@@ -84,10 +84,15 @@
               </layoutDesc>
             </objectDesc>
             <handDesc>
-              <handNote xml:id="ink_1"><p/></handNote>
-              <handNote xml:id="ink_2"><p/></handNote>
-              <handNote xml:id="ink_3-dark"><p/></handNote>
-              <handNote xml:id="ink_4-external"><p/></handNote>
+              <!-- Cinque mani/fasi: quattro autografe di Teresa (ink_1, ink_2 a inchiostro
+                   bruno; ink_3-dark a inchiostro scuro; pencil_1 a matita) piu' una mano
+                   esterna non identificata (ink_4-external). Corrispondono alla
+                   stratificazione genetica Tb0-T4. -->
+              <handNote xml:id="ink_1" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-b0 #txt-b1"><p/></handNote>
+              <handNote xml:id="ink_2" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-1 #txt-2"><p/></handNote>
+              <handNote xml:id="ink_3-dark" scribeRef="#s-teresa" medium="dark-ink" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="pencil_1" scribeRef="#s-teresa" medium="pencil" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="ink_4-external" scribeRef="#esterno" medium="ink" corresp="#txt-4"><p/></handNote>
             </handDesc>
           </physDesc>
           <history>
@@ -103,11 +108,25 @@
             <surrogates><p/></surrogates>
           </additional>
         </msDesc>
+        <listBibl type="fontes">
+          <!-- Fonti dell'intertesto (layer 3): bersagli di ref/@target e delle bibl in cit -->
+          <bibl xml:id="bible-vulgate"><title/></bibl>
+          <bibl xml:id="molinos-guida"><author/><title/><date/></bibl>
+          <bibl xml:id="avila-castello"><author/><title/><date/></bibl>
+        </listBibl>
         <listBibl>
           <bibl/>
         </listBibl>
         <listWit>
-          <witness/>
+          <!-- Sette livelli: sei genetici d'autore/esterni (Tb0, Tb1, T1-T3, T4) piu' il
+               testo critico costituito (Tc = txt-c), richiamato da <lem wit="#txt-c">. -->
+          <witness xml:id="txt-b0"/>
+          <witness xml:id="txt-b1"/>
+          <witness xml:id="txt-1"/>
+          <witness xml:id="txt-2"/>
+          <witness xml:id="txt-3"/>
+          <witness xml:id="txt-4"/>
+          <witness xml:id="txt-c" resp="#editor"/>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -116,9 +135,12 @@
         <seg/>
       </ab>
       <projectDesc>
-        <p ana="#validazione"/>
-        <p ana="#workflow"/>
-        <!-- altri paragrafi -->
+        <!-- Modello a tre layer: (1) filologico-grafico (struttura, trascrizione a due
+             livelli, apparato genetico); (2) mistico-dottrinale (term/@ref al vocabolario
+             controllato degli stati); (3) intertestuale (cit/quote/bibl, ref). -->
+        <p n="1"/>
+        <p n="2"/>
+        <p n="3"/>
       </projectDesc>
       <refsDecl>
         <p/>
@@ -128,26 +150,101 @@
         <correction><p/></correction>
         <hyphenation><p/></hyphenation>
         <normalization><p/></normalization>
-        <interpretation>
-          <ab>
-            <hi/>
-            <list><item><label/><p/></item></list>
-          </ab>
-        </interpretation>
       </editorialDecl>
       <tagsDecl>
-        <namespace>
-          <tagUsage gi="TEI"/>
-          <!-- altri tagUsage -->
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <!-- STRUTTURA (layer 1: filologico-grafico) -->
+          <tagUsage gi="text"/>
+          <tagUsage gi="body"/>
+          <tagUsage gi="div"/>
+          <tagUsage gi="head"/>
+          <tagUsage gi="argument"/>
+          <tagUsage gi="p"/>
+          <tagUsage gi="pb"/>
+          <tagUsage gi="fw"/>
+          <!-- FRONT MATTER -->
+          <tagUsage gi="front"/>
+          <tagUsage gi="listWit"/>
+          <tagUsage gi="witness"/>
+          <tagUsage gi="listPerson"/>
+          <tagUsage gi="person"/>
+          <tagUsage gi="listBibl"/>
+          <tagUsage gi="titlePage"/>
+          <tagUsage gi="docTitle"/>
+          <tagUsage gi="titlePart"/>
+          <tagUsage gi="docAuthor"/>
+          <!-- TRASCRIZIONE A DUE LIVELLI (layer 1) -->
+          <tagUsage gi="choice"/>
+          <tagUsage gi="orig"/>
+          <tagUsage gi="reg"/>
+          <tagUsage gi="abbr"/>
+          <tagUsage gi="expan"/>
+          <tagUsage gi="sic"/>
+          <tagUsage gi="corr"/>
+          <!-- APPARATO GENETICO (layer 1) -->
+          <tagUsage gi="app"/>
+          <tagUsage gi="lem"/>
+          <tagUsage gi="rdg"/>
+          <tagUsage gi="add"/>
+          <tagUsage gi="del"/>
+          <tagUsage gi="subst"/>
+          <tagUsage gi="unclear"/>
+          <tagUsage gi="gap"/>
+          <tagUsage gi="supplied"/>
+          <!-- LESSICO MISTICO (layer 2: mistico-dottrinale) -->
+          <tagUsage gi="term"/>
+          <!-- INTERTESTO (layer 3: intertestuale) -->
+          <tagUsage gi="ref"/>
+          <tagUsage gi="cit"/>
+          <tagUsage gi="quote"/>
+          <tagUsage gi="bibl"/>
+          <tagUsage gi="foreign"/>
+          <!-- NOMI, DATE, IDENTIFICATORI, NOTE -->
+          <tagUsage gi="persName"/>
+          <tagUsage gi="placeName"/>
+          <tagUsage gi="orgName"/>
+          <tagUsage gi="date"/>
+          <tagUsage gi="idno"/>
+          <tagUsage gi="note"/>
+          <!-- Fuori dal tag set di questo modello (sede propria: repo castello-anima-TEI-IA):
+               l'annotazione interpretativa multiassiale, cioe' seg/@ana, figure, interp. -->
         </namespace>
       </tagsDecl>
-      <variantEncoding/>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
       <classDecl>
-        <taxonomy xml:id="func">
-          <category><desc/></category>
-          <!-- categorie annidate -->
+        <!-- Unico asse dichiarato per il testo: vocabolario controllato degli stati mistici.
+             Ogni @xml:id e' bersaglio di term/@ref nel <text>. -->
+        <taxonomy xml:id="stati-mistici">
+          <category xml:id="silentio"><catDesc/></category>
+          <category xml:id="otio"><catDesc/></category>
+          <category xml:id="oblivione-sonno"><catDesc/></category>
+          <category xml:id="scordanza"><catDesc/></category>
+          <category xml:id="indifferenza"><catDesc/></category>
+          <category xml:id="notte"><catDesc/></category>
+          <category xml:id="purga"><catDesc/></category>
+          <category xml:id="unione"><catDesc/></category>
+          <category xml:id="quiete"><catDesc/></category>
+          <category xml:id="contemplazione-infusa"><catDesc/></category>
+          <category xml:id="nudita-anima"><catDesc/></category>
+          <category xml:id="bacio"><catDesc/></category>
+          <category xml:id="matrimonio-spirituale"><catDesc/></category>
+          <category xml:id="cella-secreta"><catDesc/></category>
+          <category xml:id="trasformazione"><catDesc/></category>
+          <category xml:id="deificazione"><catDesc/></category>
         </taxonomy>
-        <!-- altre tassonomie: impact, risk, mystic_state, operation, ecc. -->
+        <!-- Tassonomia di lavoro: non descrive il testo ma il workflow editoriale.
+             E' il vocabolario controllato con cui revisionDesc classifica gli interventi. -->
+        <taxonomy xml:id="fase">
+          <category xml:id="fase-modellazione"><catDesc/></category>
+          <category xml:id="fase-trascrizione"><catDesc/></category>
+          <category xml:id="fase-apparato"><catDesc/></category>
+          <category xml:id="fase-revisione"><catDesc/></category>
+          <category xml:id="fase-validazione"><catDesc/></category>
+        </taxonomy>
+        <!-- Le otto tassonomie interpretative multiassiali (func, impact, risk,
+             mystic_state, operation, exposition, phase, relation) e l'indice d'impatto
+             (I = 0.40N + 0.35A + 0.25F) NON fanno parte di questo header: restano nel
+             progetto separato castello-anima-TEI-IA. -->
       </classDecl>
       <schemaRef/>
     </encodingDesc>
@@ -167,26 +264,30 @@
             <trait><note/></trait>
             <note/>
           </person>
-          <!-- altre persone -->
+          <!-- fonti dottrinali (#p-avila, #p-john, #p-molinos), direttore spirituale (#CelestinoSanNicolo),
+               curatore (#editor); mano esterna (#esterno) -->
         </listPerson>
         <listOrg>
-          <org xml:id="AI_controllata">
-            <name/>
+          <!-- Istituzioni storiche del contesto di produzione e conservazione -->
+          <org xml:id="BCP">
+            <orgName/>
             <trait><note/></trait>
           </org>
-          <!-- altre organizzazioni -->
+          <org xml:id="Carmelo">
+            <orgName/>
+          </org>
+          <org xml:id="SantUffizio">
+            <orgName/>
+          </org>
         </listOrg>
       </particDesc>
     </profileDesc>
-    <xenoData>
-      <![CDATA[ ... JSON metadata ... ]]>
-    </xenoData>
-    <xenoData type="mets">
-      <!--  -->
+    <xenoData n="mets">
+      <!-- puntatore al pacchetto METS -->
     </xenoData>
     <revisionDesc status="consolidated">
-      <change when="" who="" ana="">
-        <!-- descrizione del cambiamento -->
+      <change when="" who="" ana="#fase-modellazione">
+        <!-- descrizione del cambiamento, classificato secondo la tassonomia di lavoro fase -->
       </change>
       <!-- altri change -->
     </revisionDesc>
