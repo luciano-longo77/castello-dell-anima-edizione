@@ -1912,6 +1912,179 @@
                             alcuno spieg<supplied reason="damage" resp="#editor" cert="low">arse</supplied></add>
                         e con una parola direi il tutto, <foreign xml:lang="la">mirabilia magna</foreign>.</p>
                 </div>
+                <!-- ============ CAP. IV — cc. 164v–165v, §§1–8 (scordanza) ============
+                     Fonte: dipl. §§48–55 → interp. §§1–8. docs/Struttura-cartulazione.md indica
+                     «§§1–12»: discrepanza da riconciliare. La c. 164v è già aperta dal cap. III. -->
+                <div type="chapter" n="4" xml:id="III-cap4">
+                    <head>Capitolo quarto</head>
+                    <argument>
+                        <p>Siegue un stato di <term ref="#scordanza">scordanza</term>, che tiene
+                            l’anima di tutto il <choice><orig>Creato</orig><reg>creato</reg></choice>,
+                            e <choice><orig>se Stessa</orig><reg>sé stessa</reg></choice>.</p>
+                    </argument>
+
+                    <p n="1" xml:id="III-cap4-p1"><choice><orig>Si come</orig><reg>Sì come</reg></choice>
+                        il <term ref="#oblivione-sonno">sonno</term> naturale fa perdire i sensi, e
+                        totalmente scordarci di noi stessi, e senza ricordarci più cosa alcuna,
+                        <choice><orig>cossì</orig><reg>cossì</reg></choice> anche padre il sopra detto
+                        <term ref="#oblivione-sonno">sonno, <choice><orig>ò</orig><reg>o</reg></choice>
+                        oblio</term> facendosi habituato nel <choice><orig>fono</orig><reg>fondo</reg></choice>
+                        dell’anima e senza impedirci l’operatione esterne,
+                        <choice><orig>ò</orig><reg>o</reg></choice> vero le potenze;
+                        <choice><orig>à</orig><reg>a</reg></choice> diffirenza di quando era l’anima in
+                        sposalitio, che havendo altissima <choice><orig>Contemplatione</orig><reg><term
+                            ref="#contemplazione-infusa">contemplatione</term></reg></choice> veniva
+                        <subst><del hand="#ink_1" resp="#s-teresa">u</del><add hand="#ink_1"
+                            resp="#s-teresa" place="overwrite">i</add></subst>n
+                        <choice><orig>uni estasi</orig><reg>un’estasi</reg></choice> di potenze, e per
+                        il tiro interiore venevano totalmente escluse l’operatione naturale, cioè
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> sensi
+                        ester<supplied reason="damage" resp="#editor" cert="high">n</supplied>i,
+                        talmente, che per quell’atto era impossibile il corpo parer vivo.</p>
+
+                    <p n="2" xml:id="III-cap4-p2">Dio tutto ciò spiegando con chiarezza il tutto per
+                        chi legge, poiche essendovi questo stato di <term ref="#scordanza">scordanza</term>
+                        anche nello sposalitio per altissima <choice><orig>Contemplatione</orig><reg><term
+                            ref="#contemplazione-infusa">contemplatione</term></reg></choice>,
+                        <choice><orig>ed’ assorbimento</orig><reg>ed assorbimento</reg></choice>, che
+                        fa Dio nell’anima, potria essene credere dico, che fosse quello stato,
+                        <choice><orig>per ciò</orig><reg>perciò</reg></choice> dico, che v’è gran
+                        distanza, ma si somiglia il come. Primieramente si differiscono questi doi
+                        stati nell’<choice><orig>attoale</orig><reg>attoale</reg></choice><note
+                            type="material" hand="#ink_3-dark" place="margin">la «-l-» di «attoale»
+                            vergata a inchiostro diverso (mano T3).</note>, e nell’habituale, essendo
+                        quello dello sposalitio per<fw type="catch" place="bottom-right">breve</fw>
+                        <pb n="165r" xml:id="f165r" facs="images/f165r.jpg"/> breve tempo, non
+                        passandovi alle volte più d’un’hora, <choice><orig>ò</orig><reg>o</reg></choice>
+                        quanto vuole Dio basti, che non è habituale; questo del quale stamo noi
+                        trattando, cioè questa <term ref="#scordanza">scordanza</term>, è habituale
+                        nell’anima, anzi col tempo crescerà più assai. Altra differenza vi è, che
+                        quella <term ref="#scordanza">scordanza</term> <choice><orig>e</orig><reg>è</reg></choice>
+                        nelle potenze, (ed anche per quest’atto nell’anima) e questa di cui stamo
+                        trattando è nel fondo dell’anima. L’altre <choice><orig>differenze</orig><reg>diffirenze</reg></choice>
+                        son grande per <choice><orig>l’atezza</orig><reg>l’altezza</reg></choice> dello
+                        stato, <choice><orig>ne Io</orig><reg>né io</reg></choice> qui so dirle, ma
+                        bene intenderle, passo <choice><abbr>dunq</abbr><expan>dunque</expan></choice>
+                        il tutto in <term ref="#silentio">silentio</term>.</p>
+
+                    <p n="3" xml:id="III-cap4-p3">Hor <choice><orig>si come</orig><reg>sì come</reg></choice>
+                        dissi sopra, dal <term ref="#oblivione-sonno">sonno</term> continuo,
+                        <choice><orig>ed’abbraccio</orig><reg>ed abbraccio</reg></choice>, che l’anima
+                        tiene in Dio gli nasce la <term ref="#scordanza">scordanza</term>, talmente,
+                        che non solamente è scordata da tutto il <choice><orig>Creato</orig><reg>creato</reg></choice>,
+                        essendo che quest’anima non è più di questa vita, ma dell’altra, ma anche di
+                        tutta <choice><orig>se stessa</orig><reg>sé stessa</reg></choice>, e solamente
+                        pensa per l’amato. <choice><orig>Io</orig><reg>Io</reg></choice> padre non mi
+                        meraviglio, che l’anima entri in questa sì grande
+                        <term ref="#scordanza">scordanza</term>, poiche vede tanto, ed intende tanto
+                        nel centro suo, che resta attonita. Per <choice><orig>à punto</orig><reg>a
+                            punto</reg></choice>, come chi guardasse molte
+                        <choice><orig>meraviglia</orig><reg>meraviglie</reg></choice>,
+                        <choice><orig>ò</orig><reg>o</reg></choice> per dir meglio per l’oggetto, che
+                        stà godendo, <choice><orig>ed’amando</orig><reg>ed amando</reg></choice> fosse
+                        <choice><orig>cossì</orig><reg>cossì</reg></choice> la spinta dell’amore, che
+                        non <choice><orig>sì</orig><reg>si</reg></choice> ricordasse più di
+                        <choice><orig>se stesso</orig><reg>sé stesso</reg></choice>. Hor
+                        <choice><orig>cossì</orig><reg>cossì</reg></choice> qui l’anima ama tanto, che
+                        anche si scorda di <choice><orig>se stessa</orig><reg>sé stessa</reg></choice>;
+                        e qui resta l’anima sommersa in un profondissimo
+                        <choice><orig>Oceano</orig><reg>oceano</reg></choice> d’amore, e senza poter
+                        dare ad intendire ciò vede, <choice><orig>ò</orig><reg>o</reg></choice> gode.
+                        Scrivendo questi stati <choice><orig>Padre</orig><reg>padre</reg></choice>, mi
+                        viene un profondissimo <term ref="#silentio">silentio</term> nell’anima mia,
+                        ed altro non faccio, che resto attonita di quanto vorrei dire, se però trovasse
+                        termini opportuni per spiegarmi; ma che padre, che niente dico di quanto
+                        intendo, e mi viene certa confosione gustosa di vedermi in un labirinto
+                        <choice><orig>cossì</orig><reg>cossì</reg></choice> confuso, mi vedo per certo
+                        imbrogliata, poiche di quanto <choice><orig>hò</orig><reg>ho</reg></choice>
+                        detto non è altro, che dare <choice><orig>à</orig><reg>a</reg></choice> gustare
+                        dal granato la sola scorcia, il cibo non <choice><orig>sò</orig><reg>so</reg></choice>
+                        chi mi trattene <choice><orig>à</orig><reg>a</reg></choice> communicarlo; non
+                        sarei <choice><orig>Io</orig><reg>io</reg></choice> tanto scortese, se la mia
+                        <del hand="#ink_1" resp="#s-teresa" type="correction">pa</del>
+                        <choice><orig>capacità</orig><reg>capacità</reg></choice><note type="material"
+                            hand="#ink_3-dark" place="margin">le «-c-» ed «-n-» di «licenza» (poco
+                            oltre) rivergate a inchiostro diverso (mano T3).</note> mi dasse licenza di
+                        dire il tutto: e <choice><orig>per cio</orig><reg>perciò</reg></choice>
+                        <choice><abbr>V. R.</abbr><expan>Vostra Reverenza</expan></choice> mi
+                        compatisca di quanto saccio.</p>
+
+                    <p n="4" xml:id="III-cap4-p4">Torno al mio dire. Quì l’anima sta, per lo più, in un
+                        estasi d’amore, talmente, che viene alle volte
+                        <choice><orig>ad’alienarsi</orig><reg>ad alienarsi</reg></choice>
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> sensi esteriori, ma per poco
+                        spatio di tempo; dico ciò, ch’è tanto lo raccoglimento, che tiene in
+                        <choice><orig>se stessa</orig><reg>sé stessa</reg></choice>, che
+                        <choice><orig>tovandosi</orig><reg>trovandosi</reg></choice> nel mezzo di chi
+                        si sia, <choice><orig>ò</orig><reg>o</reg></choice>
+                        <choice><abbr>qualunq</abbr><expan>qualunque</expan></choice> tratto,
+                        <choice><orig>ò</orig><reg>o</reg></choice> che se gli parli, non ode ciò che
+                        gli vien detto, <choice><orig>ò</orig><reg>o</reg></choice> ciò che si facci, e
+                        ciò per la profonda distrattione, che tiene di tutto il
+                        <choice><orig>Creato</orig><reg>creato</reg></choice>, e per la compagnia di
+                        Dio, e communicatione, che riceve, e <choice><orig>cossì</orig><reg>cossì</reg></choice>
+                        posso chiamar questo stato, quasi un continuo estasi, senza però detrimento di
+                        corpo.<fw type="catch" place="bottom-right">E</fw>
+                        <pb n="165v" xml:id="f165v" facs="images/f165v.jpg"/></p>
+
+                    <p n="5" xml:id="III-cap4-p5">E qui pare mi disdicesse di quanto
+                        <choice><orig>hò</orig><reg>ho</reg></choice> detto sopra, cioè che nello stato
+                        d’<term ref="#unione">unione</term> non vi sono le potenze, ed alienatione di
+                        sensi, e dico, ch’è per poco spatio di tempo tornando doppo li sensi in
+                        <choice><orig>se</orig><reg>sé</reg></choice>, e l’esterni, e li
+                        <choice><orig>intermi</orig><reg>interni</reg></choice>, che per la spinta
+                        dell’amore stanno sospes<subst><del hand="#ink_1" resp="#s-teresa">e</del><add
+                            hand="#ink_1" resp="#s-teresa" place="overwrite">i</add></subst>, ma non
+                        cessa però l’estasi dell’anima e lo raccoglimento che tiene, poiche la
+                        sospensione di questi tempi, non è altro, che di quando in quando restano
+                        attoniti di ciò che non sanno percepire, e
+                        <choice><orig>per ciò</orig><reg>perciò</reg></choice> sortisce quanto
+                        <choice><orig>hò</orig><reg>ho</reg></choice> detto. Il come poi è l’operatione
+                        delle potenze, se ne tratterà nel
+                        <term ref="#matrimonio-spirituale">matrimonio spirituale</term>.</p>
+
+                    <p n="6" xml:id="III-cap4-p6">Qui è più fortificato il muro della pace; quì il
+                        godimento è maggiore, poiché di grado in grado va quì salendo l’anima più
+                        <choice><orig>à</orig><reg>a</reg></choice> Dio, e
+                        <choice><orig>cossì</orig><reg>cossì</reg></choice> al godimento, e
+                        sodisfattione interiore; quì non si trovino punto le passioni per inquietarla;
+                        e sopra tutto intende una nuova cosa, la quale vorrei darla ad intendire, se
+                        potesse; <subst><del hand="#ink_1" resp="#s-teresa">E</del><add hand="#ink_1"
+                            resp="#s-teresa" place="overwrite">e</add></subst> dico, che questa nuova
+                        vita, che va sentendo l’anima in questo stato d’<term ref="#unione">unione</term>,
+                        gliela diede quella morte, che dissimo eserci nella
+                        <term ref="#notte">notte oscura</term>, la quale la fe morire alla vecchia, per
+                        adesso vivere alla nuova, la quale non è più di lei, ma di Dio; e questa nella
+                        <term ref="#trasformazione">trasformatione</term>, e
+                        <term ref="#matrimonio-spirituale">matrimonio spirituale</term>, crescerà più
+                        al magior segno.</p>
+
+                    <p n="7" xml:id="III-cap4-p7">Hor la nuova vita caccia la vecchia, distrutte tutte
+                        <add place="supralinear" hand="#ink_3-dark" resp="#s-teresa">le</add>
+                        passioni, e mancata ogni sorte di <choice><orig>desiderij</orig><reg>desiderii</reg></choice>,
+                        e l’abbraccio, che l’anima tiene con Dio, fa, che dorma in un tranquillo
+                        <choice><orig>Mar</orig><reg>mar</reg></choice> di sua
+                        <term ref="#quiete">quiete</term>, e canti felicemente la sua trovata sorte, e
+                        del trovato <choice><orig>tesoro</orig><reg>tesoro</reg></choice><note
+                            type="material" hand="#ink_3-dark" place="margin">la «-s-» di «tesoro»
+                            vergata a inchiostro diverso (mano T3).</note>; qui vede, che lo stato
+                        soblime, vede, che non se separerà più di Dio, e conosce ciò che prima non
+                        conosceva.</p>
+
+                    <p n="8" xml:id="III-cap4-p8">Hor <choice><orig>Io</orig><reg>io</reg></choice>
+                        conchiodo questo capitolo con dire, che questo stato di
+                        <term ref="#scordanza">scordanza</term> vuol dire, non solamente esser l’anima
+                        scordata da tutto il <choice><orig>Creato</orig><reg>creato</reg></choice>,
+                        <choice><orig>ne</orig><reg>né</reg></choice> anche
+                        <choice><sic>cordata</sic><corr resp="#editor" cert="high">scordata</corr></choice>
+                        dal sensibile, e corporeo, che di ciò era anche scordata prima d’arrivare
+                        all’<term ref="#unione">unione</term> con Dio, poiché un’anima
+                        <choice><orig>Contemplativa</orig><reg>contemplativa</reg></choice>
+                        gi<supplied reason="damage" resp="#editor" cert="high">a</supplied> si soppone
+                        esser tutto il sensibile alienata; hor quì non solamente di ciò, ma anche di
+                        <choice><orig>se stessa</orig><reg>sé stessa</reg></choice>, essendo abbissata,
+                        e sprofondata nell’amor del suo amato.<fw type="catch" place="bottom-right">Cap</fw></p>
+                </div>
             </div>
         </body>
     </text>
