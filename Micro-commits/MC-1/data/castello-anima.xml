@@ -515,6 +515,13 @@
                         <date when="1577">1577</date>
                         <note>Metafora del castello rielaborata da Teresa di S. Geronimo</note>
                     </bibl>
+                    <bibl xml:id="aquinas-scg">
+                        <author>Tommaso d’Aquino</author>
+                        <title level="m">Summa contra Gentiles</title>
+                        <biblScope unit="book">III</biblScope>
+                        <biblScope unit="chapter">38</biblScope>
+                        <note>Loco dottrinale della «notitia confusa di Dio» (cap. II)</note>
+                    </bibl>
                 </listBibl>
                 <listBibl>
 
@@ -1191,6 +1198,360 @@
                         d’<term ref="#unione">unione</term>, adesso è di bene passare al seguente
                         capitolo per trattare di questa <term ref="#unione">unione</term>.<fw
                             type="catch" place="bottom-right">Cap.</fw></p>
+                </div>
+                <!-- ============ CAP. II — cc. 159v–162r, §§1–21 (silentio) ============
+                     NB: la fonte critica reca 21 paragrafi (dipl. §§13–33 → interp. §§1–21);
+                     docs/Struttura-cartulazione.md indica «§§1–24»: discrepanza da riconciliare. -->
+                <div type="chapter" n="2" xml:id="III-cap2">
+                    <pb n="159v" xml:id="f159v" facs="images/f159v.jpg"/>
+                    <head>Capitolo secondo</head>
+                    <argument>
+                        <p>Si tratta del primo stato d’<term ref="#unione">unione</term>, ch’è di
+                            <term ref="#silentio">silentio</term>.</p>
+                    </argument>
+
+                    <p n="1" xml:id="III-cap2-p1">E per essere il nome di questo stato di
+                        <term ref="#silentio">silentio</term> sarebbe padre assai meglio trattarne in
+                        <term ref="#silentio">silentio</term>, che pretendire dirne qualche cosa;
+                        <choice><orig>ò</orig><reg>o</reg></choice> pure per l’obedienza, che
+                        <choice><abbr>V. R.</abbr><expan>Vostra Reverenza</expan></choice> mi dà di scrivere tal cose, vuole lo
+                        <choice><orig>spirito. Santo</orig><reg>Spirito Santo</reg></choice> regermi
+                        la penna, altrimenti non posso con la mia
+                        <app>
+                            <lem wit="#txt-c">rozza</lem>
+                            <rdg wit="#txt-b0" varSeq="1">rozz<subst><del hand="#ink_1"
+                                resp="#s-teresa">e</del><add hand="#ink_1" resp="#s-teresa"
+                                place="overwrite">a</add></subst></rdg>
+                        </app>
+                        penna trattarne. E <choice><orig>per ciò</orig><reg>perciò</reg></choice>
+                        prego la <choice><orig>Bontà Vostra</orig><reg>bontà vostra</reg></choice>
+                        mio Dio, <choice><orig>à</orig><reg>a</reg></choice> poter fare compitamente
+                        l’obedienza, ch’è tanto grata alla <choice><orig>Maestà</orig><reg>Maesta</reg></choice>
+                        vostra.</p>
+
+                    <p n="2" xml:id="III-cap2-p2">Dico <choice><abbr>dunq</abbr><expan>dunque</expan></choice>,
+                        che in questo stato cessano le potenze, e sensi, e non intendo dire come
+                        prima, che <choice><orig>ne meno</orig><reg>né meno</reg></choice> operavano,
+                        poiche il suo operare era in modo di ricevere l’altra
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>
+                        infusa, e <choice><orig>cossì</orig><reg>cossì</reg></choice> ricevevano, ed
+                        in questo modo operavano: quì però non è cossì, ma di quanto l’anima riceve
+                        non più, <choice><orig>à</orig><reg>a</reg></choice> mio parere, per mezzo
+                        delle potenze, e <choice><orig>de’i</orig><reg>dei</reg></choice> sensi, ma
+                        tutto nasce dal <choice><sic>certo</sic><corr resp="#editor" cert="high">centro</corr></choice>,
+                        e fondo dell’anima, poiche in questo stato demora Dio nel fondo dell’anima, e
+                        col tempo<note type="material" hand="#ink_3-dark" place="margin">il gruppo
+                            «tem» di «tempo» è rivergato a inchiostro diverso (mano T3).</note>
+                        s’anderà più internando, sì come poi si dirà.</p>
+
+                    <p n="3" xml:id="III-cap2-p3">Hor come dico con le potenze voglio spiegarmi con una
+                        <choice><orig>Comperatione</orig><reg>comperatione</reg></choice>, non so
+                        <choice><orig>s’è à</orig><reg>s’è a</reg></choice> proposito padre mio.
+                        Chiama la nostra <persName ref="#p-avila">Santa Madre Teresa</persName> la
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>,
+                        la <choice><sic>compara</sic><corr resp="#editor" cert="medium">compera</corr></choice>
+                        dissi, alla <app>
+                            <lem wit="#txt-c">pioggia</lem>
+                            <rdg wit="#txt-b0" varSeq="1">p<del hand="#ink_1" resp="#s-teresa"
+                                type="correction">o</del>ioggia</rdg>
+                        </app>
+                        che cade dal <choice><orig>Cielo</orig><reg>cielo</reg></choice>, e senza
+                        fatica alcuna dell’anima, come infatti è, <choice><orig>ed’</orig><reg>ed</reg></choice>
+                        habbiamo detto <ref target="#msItem-II">nel secondo libro</ref>: però non è
+                        cossì in questo stato; la <choice><orig>Comperatione</orig><reg>comperatione</reg></choice>
+                        è questa: Vi fosse un giardino, che senza fatica alcuna del giardiniero, fosse
+                        <choice><orig>ad acquato</orig><reg>adacquato</reg></choice> con la copiosa
+                        pioggia, che senza suo travaglio viene dal <choice><orig>Cielo</orig><reg>cielo</reg></choice>;
+                        hor voglio quì dire, che tutto senza suo travaglio intende però lo strepito
+                        della p<del hand="#ink_1" resp="#s-teresa" type="correction">o</del>ioggia, e
+                        vede in che modo vengano <choice><orig>à</orig><reg>a</reg></choice> crescere
+                        i frutti, e fiori <del hand="#ink_1" resp="#s-teresa" type="correction"><gap
+                            reason="cancelled" unit="words" quantity="1"/></del> di quel giardino.
+                        <choice><orig>Cossì</orig><reg>cossì</reg></choice> è l’anima
+                        <choice><orig>Contemplativa</orig><reg>contemplativa</reg></choice>, cioè
+                        mentre stà ricevendo l’acqua di quella gratia e
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>
+                        infusa, intende lo strepito della pioggia, e questo nell’intelletto, ch’è la
+                        <ref target="#aquinas-scg">notitia <choice><orig>Confusa</orig><reg>confusa</reg></choice>
+                        di Dio</ref>, viene questa pioggia ed <choice><orig>ad’acquar</orig><reg>adacquar</reg></choice>
+                        l’anima, ma ella tutto che non<fw type="catch" place="bottom-right">fatica</fw>
+                        <pb n="160r" xml:id="f160r" facs="images/f160r.jpg"/> fatica, intende però lo
+                        strepito di quella pioggia, e questa è la
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>
+                        infusa.</p>
+
+                    <p n="4" xml:id="III-cap2-p4">Andiamo di nuovo alla
+                        <choice><orig>Comperatione</orig><reg>comperatione</reg></choice>. E dico,
+                        viene lo giardino <choice><orig>à</orig><reg>a</reg></choice>
+                        <app>
+                            <lem wit="#txt-c">fruttare</lem>
+                            <rdg wit="#txt-b0" varSeq="1">fr<del hand="#ink_1" resp="#s-teresa"
+                                type="correction">o</del>uttare</rdg>
+                        </app>, anzi meglio di prima, ma senza, che il giardiniero veda pioggia,
+                        <choice><orig>ò</orig><reg>o</reg></choice> intenda strepito, ma con più
+                        <term ref="#quiete">quiete</term>, e senza sapere il come, viene meglio di
+                        prima adacquato; hor questa non sarebbe più cosa perfetta di prima? Certo
+                        padre. <choice><orig>Cossì à punto</orig><reg>cossì a punto</reg></choice> è
+                        l’anima della quale <choice><orig>stiamo</orig><reg>stamo</reg></choice> noi
+                        adesso trattando, ch’è questo stato di <term ref="#silentio">silentio</term>,
+                        senza, che intenda più strepito d’intelletto, e veda l’acqua di donde viene,
+                        se vede di bel modo nascere l’acqua nel fondo suo, e senza sapere il come.</p>
+
+                    <p n="5" xml:id="III-cap2-p5">Tutto ciò è padre, che lo sposo già demora
+                        nell’anima, e va più, e più <choice><orig>interna dosi</orig><reg>internadosi</reg></choice>
+                        in lei. Demora Dio nell’anima <choice><orig>à</orig><reg>a</reg></choice>
+                        questi tempi nel fondo suo <choice><sic>talmete</sic><corr resp="#editor"
+                            cert="high">talmente</corr></choice>, che l’anima lo sente godendo con
+                        gustoso raccoglimento, e dolce <term ref="#quiete">quiete</term>, e senza più
+                        <choice><orig>operation<supplied reason="damage" resp="#editor" cert="high">e</supplied></orig><reg>operatione</reg></choice>
+                        di sensi, <choice><orig>ò</orig><reg>o</reg></choice> vero sospensione di
+                        potenze, non havendo più, che fare nell’anima e godendo di questa
+                        <term ref="#quiete">quiete</term> nel centro suo, non v’è cosa, che la possi
+                        inquietare, poiche principiando in lei l’<term ref="#unione">unione</term>,
+                        muta stato, onde se prima le persone di questo mondo gli potevano in qualche
+                        parte toglire la <term ref="#quiete">quiete</term> in questo stato però non
+                        ponno più inquietarla, ma sempre se ne gode della sua
+                        <term ref="#quiete">quiete</term>.</p>
+
+                    <p n="6" xml:id="III-cap2-p6">A questi tempi non <choice><orig>hà</orig><reg>ha</reg></choice>
+                        più l’anima come prima l’hore attoale di raccoglimento:
+                        <choice><sic>vogli</sic><corr resp="#editor" cert="high">voglio</corr></choice>
+                        quì dire, che prima quando riceveva gratie erano sospese le potenze, alienati
+                        i sensi, talmente, che non poteva parlare, <choice><orig>ne</orig><reg>né</reg></choice>
+                        far moto alcuno, se non vuoleva perdire la sua <term ref="#quiete">quiete</term>,
+                        e talvolta tutto che havesse voluto, non haverebbe
+                        p<del hand="#ink_1" resp="#s-teresa" type="correction"><gap reason="cancelled"
+                            unit="chars" quantity="1"/></del>otuto, poiche veniva fortemente alienata
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> sensi, e quanto ella teneva.</p>
+
+                    <p n="7" xml:id="III-cap2-p7">Poteva anche il Demonio <choice><orig>à</orig><reg>a</reg></choice>
+                        qualche tempo inquietarla, servendosi per istromento delli medesimi sensi;
+                        gli poteva qualche poco inquietar la pace (qui intendo parlare di quando era
+                        in stato di sposalitio) per mezzo di qualche specie communicata alli sensi, e
+                        fantasia, che tutto vuol dire una cosa.</p>
+
+                    <p n="8" xml:id="III-cap2-p8">In questo tempo però non è cossì, poiche può l’anima
+                        godere, <choice><sic>è</sic><corr resp="#editor" cert="high">e</corr></choice>
+                        nell’attoale (cioè all’hore dell’oratione particolare)
+                        <choice><sic>è</sic><corr resp="#editor" cert="high">e</corr></choice>
+                        nell’habituale, poiche tutto è un tempo per lei, per quel che s’è detto<fw
+                            type="catch" place="bottom-right">sopra</fw>
+                        <pb n="160v" xml:id="f160v" facs="images/f160v.jpg"/> sopra.</p>
+
+                    <p n="9" xml:id="III-cap2-p9">Hor sopposto ciò che s’è detto, viene l’anima
+                        <choice><orig>à</orig><reg>a</reg></choice> godere la sua pace, senza, che
+                        niuno la possi inquietare come prima.</p>
+
+                    <p n="10" xml:id="III-cap2-p10">A questi tempi
+                        <del hand="#ink_1" resp="#s-teresa" type="correction">d.</del> Dio
+                        nell’anima <add hand="#ink_3-dark" resp="#s-teresa" place="inline">è</add>
+                        molto di vicino, e gli parla d’un linguaggio tanto oscuro, ch’è necessario
+                        dirsi in <term ref="#silentio">silentio</term>, già che è cosa impossibile
+                        poter noi percepire questo parlare, che fa Dio all’hora con l’anima; solamente
+                        padre posso dire, che v’è una grandissima notitia di Dio, e una gran sapienza
+                        nell’anima, poiche parla Dio: quando è cossì intende l’anima
+                        <choice><orig>in se stesa</orig><reg>in sé stesa</reg></choice> in
+                        <term ref="#silentio">silentio</term> <choice><sic>grandissim</sic><corr
+                            resp="#editor" cert="high">grandissima</corr></choice>, e
+                        <choice><abbr>qualunq</abbr><expan>qualunque</expan></choice> romori del
+                        mondo, non può levarcelo. Vede l’anima, che quel tratto di Dio gli dà fortezza
+                        grande, e pace interiore; intendisi nel suo interno, come se fosse tutta
+                        <choice><orig>in balsamata</orig><reg>inbalsamata</reg></choice>, ed certa
+                        d’odorosissimi inguenti, senza saper dir ciò che fosse, ma ben vede, che nasce
+                        di chi habita in lei, che <choice><orig>gl’incomincia</orig><reg>gl’incomincia</reg></choice>
+                        <choice><orig>à</orig><reg>a</reg></choice> dar sapore di vita eterna, ma non
+                        <choice><orig>sà</orig><reg>sa</reg></choice> dirlo.</p>
+
+                    <p n="11" xml:id="III-cap2-p11">A mio parere sono queste tutte dispositione del
+                        <choice><orig>Divino matrimonio</orig><reg>divino
+                            <term ref="#matrimonio-spirituale">matrimonio</term></reg></choice>, che
+                        farà Dio con l’anima, e queste unsione sono più assai fine, di quanto l’andava
+                        unguendo per lo sposalitio, gia che l’opera che se deve fare è senza
+                        comperatione più perfetta, e <choice><orig>per ciò</orig><reg>perciò</reg></choice>
+                        ci vogliono unguenti più pretiosi, per disponire la sposa, per celebrare il
+                        <choice><orig>Divino matrimonio</orig><reg>divino
+                            <term ref="#matrimonio-spirituale">matrimonio</term></reg></choice> sì
+                        come in questo libro <choice><orig>sì</orig><reg>si</reg></choice> dirà con
+                        l’agiuto di Dio.</p>
+
+                    <p n="12" xml:id="III-cap2-p12">Incomincia gia l’anima <choice><orig>à</orig><reg>a</reg></choice>
+                        provar ciò che vi è nel fondo del <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>,
+                        ch’è il centro suo con l’amato ed è in questo modo; essendo l’anima libera, e
+                        sciolta <choice><orig>de’i</orig><reg>dei</reg></choice> sensi, e potenze,
+                        (cioè che <choice><sic>passano</sic><corr resp="#editor" cert="medium">possano</corr></choice>
+                        impedirla) e passione ed avvicinandosi nel fondo suo, non è altro, che
+                        internarsi nel centro del <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term> di cui
+                        dissimo, che l’anima (cioè lo dissimo <ref target="#msItem-I">al principio del
+                            primo libro</ref>) <supplied reason="damage" resp="#editor" cert="low">…</supplied>darsi
+                        che fa all’oratione, non fa altro, che dar principio ad
+                        <supplied reason="damage" resp="#editor" cert="high">u</supplied>n forte
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>, ch’è l’oratione, nel quale si
+                        possa difendire <choice><orig>de’</orig><reg>dei</reg></choice> i pericoli, e
+                        tempeste del fiero <choice><orig>Mar</orig><reg>mar</reg></choice> di questo
+                        mondo; hor non tutte l’anime, che danno principio <choice><orig>à</orig><reg>a</reg></choice>
+                        questo <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>, chiama Dio, e premia per lo
+                        fondo di esso, poiche, si come colà dissimo, non è altro questo fondo, che
+                        chiamar l’anima per la <choice><orig>Contemplatione</orig><reg><term
+                            ref="#contemplazione-infusa">contemplatione</term></reg></choice>,
+                        <choice><orig>ed’unione</orig><reg>ed <term ref="#unione">unione</term></reg></choice>,
+                        che puoche anime v’arrivano, essendo che molte se ne restano nella sopraficie
+                        di <choice><abbr>d</abbr><expan>detto</expan></choice>
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>,<fw type="catch"
+                            place="bottom-right">non</fw>
+                        <pb n="161r" xml:id="f161r" facs="images/f161r.jpg"/> non mai provano queste la
+                        dolce <term ref="#quiete">quiete</term> del fondo, e certo di questo
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>, ma se ne stanno
+                        <choice><orig>nela</orig><reg>nella</reg></choice> sopraficie combattendo
+                        sempre, cioè con la proprie passioni, e queste sono l’anime meditative.</p>
+
+                    <p n="13" xml:id="III-cap2-p13">Hor quella anima, che Dio premia per la
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>
+                        fa, che se ne passino dalla sopraficie del <choice><abbr>d</abbr><expan>detto</expan></choice>
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term> al fondo, e ciò per non combattire
+                        più con proprie passioni, e sensi, ma per goder la dolce, e saporita
+                        <term ref="#quiete">quiete</term>, poche entrando nel fondo del
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term> il <choice><orig>Castellano</orig><reg>castellano</reg></choice> e cosa certa, che si
+                        nasconde <choice><orig>da’i</orig><reg>dai</reg></choice> tomolti, e rumori del
+                        <choice><orig>Castello</orig><reg>castello</reg></choice>, se nasconde <choice><orig>de’i</orig><reg>dei</reg></choice> colpi,
+                        quando v’è guerra, se nasconde <choice><orig>de’ì</orig><reg>dei</reg></choice>
+                        fi<supplied reason="damage" resp="#editor" cert="high">s</supplied>chi
+                        <choice><orig>de’ i</orig><reg>dei</reg></choice> soldati, e gridi di
+                        <choice><abbr>qualunq</abbr><expan>qualunque</expan></choice> persona, e tutto
+                        per che si ritira <choice><orig>à</orig><reg>a</reg></choice> parte sotterranea,
+                        e molto secreta. Hor <choice><orig>cossì à punto</orig><reg>cossì a punto</reg></choice>
+                        e quì <choice><sic>lil</sic><corr resp="#editor" cert="high">il</corr></choice>
+                        <choice><orig>Castellano</orig><reg>castellano</reg></choice> <choice><orig>Celeste</orig><reg>celeste</reg></choice>, quando si compiace chiamar l’anima per la
+                        <choice><orig>Contemplatione</orig><reg><term ref="#contemplazione-infusa">contemplatione</term></reg></choice>,
+                        non è altro all’hora, che incaminarla per il centro, e fondo del
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>, ch’è il fondo dell’anima, dove poi
+                        in questo stato d’<term ref="#unione">unione</term>, di cui incominciamo
+                        <choice><orig>à</orig><reg>a</reg></choice> trattar fa, che s’interni in questo
+                        <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term> insieme con lei, e ciò per goder la
+                        dolce <term ref="#quiete">quiete</term>; che può godere un’anima unita con Dio,
+                        non v’è lingua humana che possa padre spiegarlo, <choice><orig>ne meno</orig><reg>né
+                            meno</reg></choice> intelletto
+                        p<supplied reason="damage" resp="#editor" cert="high">e</supplied>r acuto che
+                        sia, che possa perciperlo. Ciò che dicevo, questo internarsi l’anima nel fondo
+                        detto del <term ref="#cella-secreta"><choice><orig>Castello</orig><reg>castello</reg></choice></term>, ed uscir
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> molti, e gridi
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> soldati, non è altro, che
+                        esser già libera, e sciolta delle
+                        p<del hand="#ink_1" resp="#s-teresa" type="correction"><gap reason="cancelled"
+                            unit="chars" quantity="1"/></del>roprie passioni, e sensi, e cossì, gode di
+                        Dio <choice><orig>à</orig><reg>a</reg></choice> suo gusto nel fondo suo, e di
+                        ciò si tratterà più diffusamente nel
+                        <term ref="#matrimonio-spirituale">matrimonio spirituale</term>, dove diremo
+                        della <term ref="#cella-secreta"><choice><orig>Cella</orig><reg>cella</reg></choice> secreta</term>, che tiene l’anima in se
+                        stessa.</p>
+
+                    <p n="14" xml:id="III-cap2-p14">Hor sopposto ciò che s’è detto viene l’anima
+                        <choice><orig>à</orig><reg>a</reg></choice> goder pace di vita eterna, già che
+                        quanto prima pativa tutto era per mezzo di quanto sopra s’è detto,
+                        <choice><orig>cioe</orig><reg>cioè</reg></choice> sensi, passioni, ed altre
+                        cose simili, oltre che anche era esposta <choice><sic>alli ire</sic><corr
+                            resp="#editor" cert="high">alli tre</corr></choice> nemici del mondo, cioè
+                        mondo, carne, e Demonio, e della sicurtà, e pace, che gode circa questi nemici
+                        tratteremo doppo con il <choice><orig>Divino</orig><reg>divino</reg></choice>
+                        agiuto, poiche quanto più l’anima <choice><orig>à</orig><reg>a</reg></choice>
+                        questi tempi passa di grado in grado non è altro, che nascondersi più, e più
+                        delli soi nemici ed unirsi più con Dio, e come conseguentemente goder più
+                        perfetta pace.</p>
+
+                    <p n="15" xml:id="III-cap2-p15">In questo stato di cui <choice><orig>stamo</orig><reg>stamo</reg></choice>
+                        trattando, ch’è di <term ref="#silentio">silentio</term>, gode tanto l’anima,
+                        che gli viene certa voglia di non trattar con persona alcuna, poiche non fa
+                        altro Dio all’hora, che communicarsi tutto <choice><orig>se stesso</orig><reg>sé
+                            stesso</reg></choice> per tutta l’anima, e ciò non per mezzo più di
+                        <choice><orig>Creature</orig><reg>creature</reg></choice>,
+                        <choice><orig>ò d’<del hand="#ink_1" resp="#s-teresa" type="correction"><gap
+                            reason="cancelled" unit="chars" quantity="1"/></del>Angiolo</orig><reg>o
+                            d’Angioli</reg></choice>, <choice><orig>ò</orig><reg>o</reg></choice>
+                        d’altra cosa <choice><orig>Creata</orig><reg>creata</reg></choice>, come<fw
+                            type="catch" place="bottom-right">forse</fw>
+                        <pb n="161v" xml:id="f161v" facs="images/f161v.jpg"/> forse prima sortiva, ma
+                        solamente per mezzo suo, mentre in questo tempo
+                        <choice><sic>e</sic><corr resp="#editor" cert="high">è</corr></choice> totale
+                        opera di Dio, che nella sostanza dell’anima per sua misericordia
+                        <choice><orig>fà</orig><reg>fa</reg></choice>; e cossì come dico, non è altra
+                        la communicatione, che un diffondirsi Dio per tutta l’anima, e parlarci egli
+                        solo, ed ella non fa altro che tacitamente ascoltare.
+                        <choice><sic>E</sic><corr resp="#editor" cert="high">È</corr></choice> tale
+                        però la dolcezza, e godimento dell’anima, che non fa altro, che
+                        <del hand="#ink_1" resp="#s-teresa" type="correction">diff</del> disfarsi nel
+                        soavi fuoco dell’amore e non farebbe altro, <choice><orig>ne</orig><reg>né</reg></choice>
+                        fa altro, che stare <choice><orig>in se stessa</orig><reg>in sé stessa</reg></choice>
+                        molto raccolta ascoltando il suo sposo. <choice><orig>A punto</orig><reg>a
+                            punto</reg></choice> come chi ascolta una cosa mai saputa, e stà cossì
+                        attonita, quando non può dar l’orecchio <choice><orig>ad’altra</orig><reg>ad
+                            altra</reg></choice> cosa, che gli venghi detto.</p>
+
+                    <p n="16" xml:id="III-cap2-p16">E <choice><orig>per ciò</orig><reg>perciò</reg></choice>
+                        dico, che gli viene certa voglia di starsine in <term ref="#silentio">silentio</term>,
+                        e <choice><orig>ne meno</orig><reg>né meno</reg></choice> parlar di Dio, poiche
+                        ciò che ella intende, e vede non può darlo ad intendire,
+                        <choice><orig>ne</orig><reg>né</reg></choice> ponno i sensi
+                        perc<subst><del hand="#ink_1" resp="#s-teresa">e</del><add hand="#ink_1"
+                            resp="#s-teresa" place="overwrite">i</add></subst>pere cosa alcuna, e cossì
+                        non potendo ella dire ciò che vorrebbe, se ne sta in
+                        <term ref="#silentio">silentio</term> gustando di Dio: E cossì grande la voglia
+                        di starsine in <term ref="#silentio">silentio</term>, che ne anche vuole parlar
+                        con il proprio padre che la guida, incominciando gia ella a conoscere, che
+                        solamente in lei opera Dio, <choice><orig>ne</orig><reg>né</reg></choice> può
+                        più <choice><orig>Creatura</orig><reg>creatura</reg></choice> alcuna fare,
+                        <choice><orig>ò</orig><reg>o</reg></choice> disfare. Anche non hà questa voglia
+                        di parlare, che vede non trovar termini <choice><orig>à</orig><reg>a</reg></choice>
+                        quelche ella vorria dire, e <choice><orig>par ciò</orig><reg>perciò</reg></choice>
+                        si contenta non dir niente.</p>
+
+                    <p n="17" xml:id="III-cap2-p17">A questi tempi trovare, che il padre di
+                        <choice><orig>quest’anima</orig><reg>quest’anima</reg></choice> non gode per
+                        ancora del frutto suo, cioè della dottrina, che <choice><orig>hà</orig><reg>ha</reg></choice>
+                        l’anima, ed anche dell’opere di Dio, poiche, sì come <choice><orig>hò</orig><reg>ho</reg></choice>
+                        detto sopra, non è tempo di parlare, come doppo sarà, ma solamente
+                        d’ascoltare ciò che gli vien detto.</p>
+
+                    <p n="18" xml:id="III-cap2-p18">In questo stato non v’è più amarezza per l’anima,
+                        ma tutto dolcezza, e doppo che il mondo si voltasse contro di lei, non può un
+                        tantino <choice><orig>in quietarla</orig><reg>inquietarla</reg></choice>, ma
+                        gode d’una continua pace
+                        inter<supplied reason="damage" resp="#editor" cert="high">io</supplied>re.</p>
+
+                    <p n="19" xml:id="III-cap2-p19">E non occorre di qua innanzi dar segni
+                        <choice><orig>de’i</orig><reg>dei</reg></choice> stati per conoscere l’affetti
+                        se sono di Dio, <choice><orig>ò</orig><reg>o</reg></choice> del Demonio,
+                        poiche mi lascio dire, che se veramente è <term ref="#unione">unione</term>,
+                        come <choice><orig>s<subst><del hand="#ink_1" resp="#s-teresa">e</del><add
+                            hand="#ink_1" resp="#s-teresa" place="overwrite">i</add></subst></orig><reg>si</reg></choice>
+                        deve trattare in questo libro, e cosa impossibile poterci entrare il Demonio,
+                        poiche, si come dissi sopra, in questi stati d’<term ref="#unione">unione</term>
+                        il tutto opera Dio nel fondo dell’anima, <choice><orig>ne</orig><reg>né</reg></choice>
+                        può il Demonio fin<subst><del hand="#ink_3-dark" resp="#s-teresa">c</del><add
+                            hand="#ink_3-dark" resp="#s-teresa" place="overwrite">g</add></subst>ere,
+                        come poteva prima, e cossì sarebbe tempo perso dar<fw type="catch"
+                            place="bottom-right">dar</fw>
+                        <pb n="162r" xml:id="f162r" facs="images/f162r.jpg"/> più segni.</p>
+
+                    <p n="20" xml:id="III-cap2-p20">Anche non
+                        d<supplied reason="damage" resp="#editor" cert="high">a</supplied>rò più modo
+                        per guidar anime, essendo che entrando l’anima in stato d’<term ref="#unione">unione</term>,
+                        non può più il <choice><orig>Padre</orig><reg>padre</reg></choice> impedirla, poiché il motore di quest’anima è solamente
+                        Dio, <choice><orig>ne</orig><reg>né</reg></choice>
+                        <choice><orig>à</orig><reg>a</reg></choice> questi tempi se mancasse guida
+                        all’anima, potrebbe danneggiarla come prima, guidandola Dio, e per dove vuole,
+                        e come vuole.<note type="material" hand="#ink_3-dark" place="margin">Il
+                            paragrafo è contrassegnato da una linea verticale tracciata a inchiostro
+                            diverso (mano T3).</note></p>
+
+                    <p n="21" xml:id="III-cap2-p21"><choice><orig>Hò</orig><reg>Ho</reg></choice>
+                        trattato padre dello stato di <term ref="#silentio">silentio</term> in
+                        <term ref="#silentio">silentio</term>, non potendo dire ciò vi sia, e
+                        conchiodo, che questo <term ref="#silentio">silentio</term> non s’intende
+                        nelle potenze, come quando l’anima era <choice><orig>Contemplativa</orig><reg>contemplativa</reg></choice>,
+                        ma è nelle potenze, è più nel fondo dell’anima, e cossì si chiama
+                        <term ref="#silentio">silentio</term> d’anima, e non di spirito solamente; e
+                        nel principio di questo capitolo dissi <choice><orig>Io</orig><reg>io</reg></choice>,
+                        che non vi sono in questo stato le potenze, il come intendo dire lo
+                        <choice><orig>dirò à</orig><reg>dirò a</reg></choice> suo luogo.</p>
                 </div>
             </div>
         </body>

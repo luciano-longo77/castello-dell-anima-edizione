@@ -515,6 +515,13 @@
                         <date when="1577">1577</date>
                         <note>Metafora del castello rielaborata da Teresa di S. Geronimo</note>
                     </bibl>
+                    <bibl xml:id="aquinas-scg">
+                        <author>Tommaso d’Aquino</author>
+                        <title level="m">Summa contra Gentiles</title>
+                        <biblScope unit="book">III</biblScope>
+                        <biblScope unit="chapter">38</biblScope>
+                        <note>Loco dottrinale della «notitia confusa di Dio» (cap. II)</note>
+                    </bibl>
                 </listBibl>
                 <listBibl>
 
