@@ -25,6 +25,7 @@
   - [Pubblicazione open access](#pubblicazione-open-access)
 - [Workflow TEI](#workflow-tei)
 - [Conclusione](#conclusione)
+- [Struttura del repository](#struttura-del-repository)
 
 ## Obiettivo principale
 
@@ -229,6 +230,32 @@ L’edizione è pubblicata in open access nei seguenti formati:
 
 ## Conclusione
 L’edizione critica digitale del III del *Castello dell’anima* mira a restituire il testo come processo stratificato, influenzato dal contesto storico‑dottrinale e dalle pratiche di autocontrollo. La separazione tra edizione critica e sperimentazione computazionale consente di coniugare rigore filologico e innovazione metodologica senza compromettere lo statuto del testo.
+
+## Struttura del repository
+
+Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizione (`tei-model/`) e i **micro-commit** che rilasciano il testo capitolo per capitolo (`Micro-commits/`, MC-1…MC-8). La validazione automatica del modello leggero è in `.github/workflows/`. L'annotazione multiassiale sperimentale (indice d'impatto, `seg`/`@ana`, standOff) vive nel repository gemello [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA), non qui.
+
+```text
+.
+├── README.md                     # Questo documento: edizione critica + guida al repository
+├── .github/workflows/            # CI di validazione del modello leggero
+│   ├── validate.yml              #   NFC → XInclude → jing → guardia puntatori
+│   ├── guardia_nfc.py
+│   ├── guardia_puntatori.py
+│   └── README.md
+├── tei-model/                    # Modelli TEI generici dell'edizione (3 layer, 2 livelli)
+│   ├── README.md                 #   modello a 3 layer + diagramma d'insieme
+│   ├── header/                   #   teiHeader-model.xml + README + diagramma + output/
+│   └── text/                     #   text-model.xml + README + diagramma + output/
+└── Micro-commits/                # I micro-commit dell'edizione (MC-1…MC-8)
+    ├── README.md                 #   piano editoriale e roadmap
+    └── MC-1/                     #   Commit 1 — Libro III, capp. I–V
+        ├── README.md             #     introduzione sintetica e cartulazione del MC
+        ├── data/                 #     TEI-Header.xml, castello-anima-text.xml, ODD/RNG
+        ├── docs/                 #     Introduzione, Struttura-cartulazione, Header-README
+        ├── output/               #     prototipi di visualizzazione (viewer, cartulazione)
+        └── tool/                 #     viewer-stati-mistici.html (ricerca degli stati mistici)
+```
 
 ## Licenza
 Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
