@@ -49,29 +49,29 @@ Di seguito si riporta la struttura esatta, con indicazione precisa delle carte p
 * **Inizio:** c. 159v
 * **Continua:** c. 160r
 * **Prosegue:** c. 160v, 161r, 161v
-* **Fine:** c. 162r (ultimo § 24)
-* **Paragrafi:** §§ 1–24
+* **Fine:** c. 162r (ultimo § 21)
+* **Paragrafi:** §§ 1–21
 
 #### 2.4. Capitolo terzo - *Si tratta di certo stato che siegue doppo il su detto, ch’è d’oblivione, o sonno*
 **Estensione materiale**
 * **Inizio:** c. 162r (subito dopo §24 del silentio)
 * **Continua:** c. 162v, 163r, 163v, 164r, 164v
 * **Fine:** c. 164v (chiusura: *mirabilia magna*)
-* **Paragrafi:** §§ 1–22
+* **Paragrafi:** §§ 1–14
 
 #### 2.5. Capitolo quarto: *Siegue un stato di scordanza, che tiene l’anima di tutto il creato, e sé stessa*
 **Estensione materiale**
 * **Inizio:** c. 164v
 * **Continua:** c. 165r
 * **Fine:** c. 165v
-* **Paragrafi:** §§ 1–12
+* **Paragrafi:** §§ 1–8
 
 #### 2.6. Capitolo quinto - *Si tratta di un stato d’indiffirenza, che siegue doppo il suddetto di scordanza*
 **Estensione materiale**
 * **Inizio:** c. 166r
 * **Continua:** c. 166v, 167r, 167v
 * **Fine:** c. 168r 
-* **Paragrafi:** §§ 1–20
+* **Paragrafi:** §§ 1–17
 
 ### 2.7. Tabella topografica Libro III, 1-5
 
