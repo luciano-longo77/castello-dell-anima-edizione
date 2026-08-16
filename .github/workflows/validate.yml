@@ -1,0 +1,53 @@
+name: Validate MC
+
+# Validazione dell'edizione leggera: per ogni micro-commit valida il modulo <text>
+# (che include il teiHeader via XInclude) contro lo schema ODD del progetto.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Micro-commits/**/data/**"
+      - ".github/workflows/validate.yml"
+      - ".github/workflows/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "Micro-commits/**/data/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Installa lxml
+        run: pip install lxml
+      - name: Installa xmllint e jing
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils jing
+      - name: Valida ogni micro-commit
+        run: |
+          set -e
+          shopt -s nullglob
+          found=0
+          for TEXT in Micro-commits/*/data/castello-anima-text.xml; do
+            found=1
+            DIR=$(dirname "$TEXT")
+            RNG="$DIR/castello-anima-odd.rng"
+            echo "::group::$TEXT"
+            test -s "$RNG" || { echo "::error::$RNG mancante o vuoto"; exit 1; }
+            # 1) NFC
+            python3 .github/workflows/guardia_nfc.py "$DIR"
+            # 2) ben formato + risoluzione XInclude (il <text> include il teiHeader)
+            xmllint --noout --xinclude "$TEXT"
+            # 3) RelaxNG (jing) sul documento risolto
+            xmllint --nofixup-base-uris --xinclude "$TEXT" > /tmp/resolved.xml
+            jing "$RNG" /tmp/resolved.xml
+            # 4) guardia puntatori (integrità referenziale + term/@ref + change/@ana)
+            python3 .github/workflows/guardia_puntatori.py "$TEXT"
+            echo "::endgroup::"
+          done
+          test "$found" = 1 || { echo "::error::nessun Micro-commits/*/data/castello-anima-text.xml trovato"; exit 1; }
+          echo "Validazione completata."
