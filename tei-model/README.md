@@ -1,4 +1,4 @@
-# Modello TEI dell'edizione — i tre layer
+# Modello TEI dell'edizione - i tre layer
 
 ## *Il Castello dell'anima*, Libro III · ms. Palermo, BCP, 2 Qq E 29
 
