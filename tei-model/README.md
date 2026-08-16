@@ -22,9 +22,6 @@ L'edizione è *leggera*: un solo asse interpretativo (gli stati mistici), niente
 
 I **due livelli di trascrizione** (diplomatico ⇄ interpretativo) vivono dentro il **Layer 1** tramite `<choice>`: la lezione conservativa e la sua regolarizzazione coesistono, senza che l'una sostituisca l'altra. L'**unità di riferimento** è il paragrafo `<p n="…">`, non il `<seg>`.
 
-### Fuori dal modello (progetto gemello)
-L'annotazione interpretativa multiassiale — `seg`/`@ana` a più assi, indice d'impatto, *feature structures*, `standOff`, `figure`/`interp` — **non** fa parte di questa edizione: è sviluppata nel repository separato [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA).
-
 ---
 
 ## Come i due file lavorano insieme
