@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viewer · Modello &lt;text&gt; — Castello dell'anima</title>
+<style>
+:root{
+  --bg:#fdfcf9; --panel:#fff; --side:#f8f6f2; --text:#2c241b; --muted:#6b5d4f;
+  --accent:#8a6d3b; --accent-soft:#eaddcf; --border:#e6e0d4; --code:#f4f1eb;
+  --tag:#8a6d3b; --attr:#7a6a54; --val:#417a5a;
+  --l1:#8a6d3b; --l2:#7a5aa0; --l3:#417a5a;
+  --mono:'Consolas','Monaco',monospace; --sans:system-ui,-apple-system,sans-serif; --serif:Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1a1814; --panel:#24211c; --side:#1f1d19; --text:#e6e0d4; --muted:#a89f91;
+  --accent:#d4b483; --accent-soft:#3d3428; --border:#3d3428; --code:#151310;
+  --tag:#d4b483; --attr:#c2b291; --val:#8fce9f;
+  --l1:#d4b483; --l2:#c0a8e0; --l3:#8fce9f;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;display:flex;min-height:100vh}
+.sidebar{width:250px;flex-shrink:0;background:var(--side);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.25rem 0}
+.sb-head{padding:0 1.25rem 1rem;border-bottom:1px solid var(--border);margin-bottom:.5rem}
+.sb-title{font-family:var(--serif);font-size:1.15rem;color:var(--accent)}
+.sb-sub{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:.15rem}
+.nav a{display:flex;justify-content:space-between;gap:.5rem;padding:.4rem 1.25rem;color:var(--muted);text-decoration:none;font-size:.85rem;border-left:3px solid transparent}
+.nav a:hover,.nav a.active{color:var(--accent);background:var(--accent-soft);border-left-color:var(--accent)}
+.nav .cnt{font-size:.7rem;opacity:.7;font-family:var(--mono)}
+.main{flex:1;min-width:0;padding:1.75rem 2.5rem;max-width:1050px}
+.banner{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.5rem}
+.banner h1{font-family:var(--serif);font-size:1.7rem;color:var(--accent);margin-bottom:.3rem}
+.banner .note{font-size:.85rem;color:var(--muted)}
+.pill{display:inline-block;font-size:.68rem;font-family:var(--mono);background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:99px;margin-right:.35rem}
+.controls{display:flex;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.search{flex:1;min-width:200px;padding:.55rem .9rem;border:1px solid var(--border);border-radius:5px;background:var(--panel);color:var(--text);font-size:.9rem}
+.search:focus{outline:2px solid var(--accent);border-color:transparent}
+.btn{padding:.55rem 1rem;border:1px solid var(--border);border-radius:5px;background:var(--panel);color:var(--text);cursor:pointer;font-size:.82rem}
+.btn:hover{background:var(--accent-soft);border-color:var(--accent)}
+.btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sec{background:var(--panel);border:1px solid var(--border);border-radius:7px;padding:1.25rem 1.4rem;margin-bottom:1.25rem}
+.sec h2{font-family:var(--serif);font-size:1.25rem;color:var(--accent);margin-bottom:.85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:baseline}
+.sec h2 .n{font-size:.8rem;font-family:var(--mono);color:var(--muted)}
+.hint{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:.75rem}
+table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.25rem 0}
+th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--side);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+tr:hover td{background:var(--accent-soft)}
+.mono{font-family:var(--mono)}
+.id{font-family:var(--mono);color:var(--accent);font-weight:600}
+.muted{color:var(--muted)}
+.grid{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font-family:var(--mono);font-size:.8rem;background:var(--side);border:1px solid var(--border);border-radius:5px;padding:.25rem .6rem}
+.chip b{color:var(--accent)}
+.layer{border:1px solid var(--border);border-left-width:4px;border-radius:6px;padding:.9rem 1rem;margin-bottom:.8rem}
+.layer.l1{border-left-color:var(--l1)} .layer.l2{border-left-color:var(--l2)} .layer.l3{border-left-color:var(--l3)}
+.layer h3{font-size:1rem;margin-bottom:.2rem}
+.layer.l1 h3{color:var(--l1)} .layer.l2 h3{color:var(--l2)} .layer.l3 h3{color:var(--l3)}
+.layer .d{font-size:.82rem;color:var(--muted);margin-bottom:.55rem}
+/* tree */
+.tree{font-family:var(--mono);font-size:.83rem;line-height:1.7}
+.tree details{margin-left:1.1rem;border-left:1px dotted var(--border);padding-left:.6rem}
+.tree>details{margin-left:0;border-left:none;padding-left:0}
+.tree summary{cursor:pointer;list-style:none}
+.tree summary::-webkit-details-marker{display:none}
+.tree summary::before{content:"▸";color:var(--muted);display:inline-block;width:1em;transition:transform .15s}
+.tree details[open]>summary::before{transform:rotate(90deg)}
+.tree .leaf{margin-left:1.1rem;border-left:1px dotted var(--border);padding-left:.6rem}
+.tree .leaf::before{content:"·";color:var(--muted);display:inline-block;width:1em;text-align:center}
+.t-tag{color:var(--tag);font-weight:600}
+.t-attr{color:var(--attr)}
+.t-val{color:var(--val)}
+.t-txt{color:var(--text);font-family:var(--serif);font-style:italic}
+.t-empty{color:var(--muted);opacity:.55}
+.treebtns{margin-bottom:.6rem;display:flex;gap:.5rem}
+.treebtns button{font-size:.75rem;padding:.3rem .7rem;border:1px solid var(--border);border-radius:4px;background:var(--panel);color:var(--muted);cursor:pointer}
+.xml{display:none;background:var(--code);border:1px solid var(--border);border-radius:7px;padding:1.25rem;overflow-x:auto;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre;tab-size:2}
+.xml.on{display:block}
+.x-tag{color:var(--tag)}.x-attr{color:var(--attr)}.x-val{color:var(--val)}.x-com{color:var(--muted);font-style:italic}
+mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
+@media(max-width:860px){body{flex-direction:column}.sidebar{width:100%;height:auto;position:static;border-right:none;border-bottom:1px solid var(--border)}.main{padding:1.25rem}}
+</style>
+</head>
+<body>
+
+<script id="tei-source" type="application/xml">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+  <teiHeader>
+    <!-- teiHeader modellato in ../header/teiHeader-model.xml. -->
+    <fileDesc>
+      <titleStmt>
+        <title/>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p/>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text xml:lang="it">
+    <front>
+      <!-- listWit / listPerson / listBibl NON stanno nel front:
+           sono dichiarati una sola volta nel teiHeader; nel testo si puntano via @wit/@ref/@target -->
+      <titlePage>
+        <docTitle>
+          <titlePart/>
+          <titlePart/>
+        </docTitle>
+        <docAuthor/>
+      </titlePage>
+    </front>
+
+    <body>
+      <!-- Libri I e II: stessa struttura; fuori dal focus dei micro-commit (che riguardano il Libro III) -->
+      <div type="book" n="1">
+        <head/>
+      </div>
+      <div type="book" n="2">
+        <head/>
+      </div>
+
+      <!-- Libro III: focus dell'edizione -->
+      <div type="book" n="3">
+        <pb n="000r" xml:id="f000r" facs="images/f000r.jpg"/>
+        <fw/>
+        <head/>
+
+        <!-- Proemio (protesta / prologo): head + paragrafi, senza argument -->
+        <div type="preface">
+          <head/>
+          <p n="1" xml:id="III-proem-p1"/>
+        </div>
+
+        <!-- Capitoli I–V: stessa struttura; se ne modella uno solo -->
+        <div type="chapter" n="0">
+          <head/>
+          <argument>
+            <p/>
+          </argument>
+          <pb n="000v" xml:id="f000v" facs="images/f000v.jpg"/>
+          <fw/>
+
+          <!-- Unità di riferimento = il paragrafo <p n="…" xml:id="…">; dentro, i tre layer -->
+          <p n="1" xml:id="III-cap0-p1">
+
+            <!-- layer 1: filologico-grafico -->
+            <!-- trascrizione a due livelli (diplomatico <-> interpretativo) -->
+            <choice><orig/><reg/></choice>
+            <choice><abbr/><expan/></choice>
+            <choice><sic/><corr/></choice>
+
+            <!-- fenomeni materiali e correzioni autoriali (@place/@hand/@resp/@type) -->
+            <add place="margin" hand="#ink_1" resp="#s-teresa" type="integration"/>
+            <del/>
+            <subst><del/><add/></subst>
+            <unclear/>
+            <gap/>
+            <supplied/>
+
+            <!-- apparato genetico (parallel segmentation) -->
+            <app>
+              <lem wit="#txt-c"/>
+              <rdg wit="#txt-b0" varSeq="1"/>
+              <rdg wit="#txt-1" varSeq="2"/>
+            </app>
+
+            <!-- layer 2: mistico-dottrinale -->
+            <!-- @ref -> categoria del vocabolario controllato #stati-mistici del teiHeader -->
+            <term ref="#silentio"/>
+
+            <!-- layer 3: intertestuale -->
+            <ref target="#avila-castello"/>
+            <cit>
+              <quote xml:lang="la">
+                <foreign xml:lang="la"/>
+              </quote>
+              <bibl corresp="#bible-vulgate"/>
+            </cit>
+
+          </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
+</script>
+
+<nav class="sidebar">
+  <div class="sb-head">
+    <div class="sb-title">Modello &lt;text&gt;</div>
+    <div class="sb-sub">Castello dell'anima · macro-struttura</div>
+  </div>
+  <div class="nav" id="nav"></div>
+</nav>
+
+<main class="main">
+  <header class="banner">
+    <h1>Modello del <code>&lt;text&gt;</code></h1>
+    <p class="note">
+      <span class="pill">MODELLO</span>
+      Vista della <strong>macro-struttura</strong> del corpo testuale generata da <code>text-model.xml</code>.
+      Elementi a contenuto vuoto: la trascrizione reale sta nei file dati dei micro-commit; i puntatori risolvono nel <code>teiHeader</code>.
+    </p>
+  </header>
+
+  <div class="controls">
+    <input type="search" id="q" class="search" placeholder="Cerca elemento, id, attributo…" aria-label="Cerca">
+    <button class="btn" id="xmlBtn" type="button">Mostra XML grezzo</button>
+    <button class="btn" id="copyBtn" type="button" style="display:none">Copia XML</button>
+  </div>
+
+  <div id="content"></div>
+  <pre class="xml" id="xml" aria-label="Sorgente XML"></pre>
+</main>
+
+<script>
+(function(){
+  const NS='http://www.tei-c.org/ns/1.0';
+  const src=document.getElementById('tei-source').textContent;
+  const doc=new DOMParser().parseFromString(src,'application/xml');
+  const content=document.getElementById('content');
+  const nav=document.getElementById('nav');
+  if(doc.querySelector('parsererror')){content.innerHTML='<div class="sec"><p style="color:#c00">Errore di parsing XML.</p></div>';return;}
+
+  const esc=s=>{const d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  const ln=e=>e.localName;
+  const all=(p,name)=>p?Array.from(p.getElementsByTagNameNS(NS,name)):[];
+  const first=(p,name)=>{const a=all(p,name);return a.length?a[0]:null;};
+  const childEls=p=>p?Array.from(p.children):[];
+  const attr=(e,n)=>e.getAttribute(n);
+
+  const textEl=first(doc,'text');
+  const body=first(doc,'body');
+
+  const secs=[];
+  function section(id,title,count,bodyHTML,hint){
+    secs.push({id,title,count});
+    const c=(count!=null)?`<span class="n">${count}</span>`:'';
+    content.insertAdjacentHTML('beforeend',
+      `<section class="sec" id="${id}"><h2>${title} ${c}</h2>${hint?`<p class="hint">${hint}</p>`:''}${bodyHTML}</section>`);
+  }
+  function navBuild(){nav.innerHTML=secs.map(s=>`<a href="#${s.id}" data-t="${s.id}">${s.title}${s.count!=null?`<span class="cnt">${s.count}</span>`:''}</a>`).join('');}
+
+  /* 1. STRUTTURA (albero) */
+  function renderTree(node,depth){
+    depth=depth||0;
+    const kids=childEls(node);
+    const attrs=Array.from(node.attributes||[]).map(a=>` <span class="t-attr">${esc(a.name)}</span>=<span class="t-val">"${esc(a.value)}"</span>`).join('');
+    let dt='';node.childNodes.forEach(n=>{if(n.nodeType===3&&n.textContent.trim())dt+=n.textContent.trim()+' ';});
+    const label=`<span class="t-tag">${esc(ln(node))}</span>${attrs}`;
+    if(kids.length){
+      const inner=kids.map(k=>renderTree(k,depth+1)).join('');
+      const open=depth<2?' open':'';
+      const badge=depth>=2?` <span class="t-empty">(${kids.length})</span>`:'';
+      return `<details${open}><summary>${label}${badge}</summary>${inner}</details>`;
+    }
+    const txt=dt.trim()?` <span class="t-txt">${esc(dt.trim())}</span>`:` <span class="t-empty">∅</span>`;
+    return `<div class="leaf">${label}${txt}</div>`;
+  }
+  section('struttura','Struttura del &lt;text&gt;',null,
+    `<div class="treebtns"><button id="expAll" type="button">Espandi tutto</button><button id="colAll" type="button">Comprimi tutto</button></div>
+     <div class="tree" id="tree">${renderTree(textEl)}</div>`,
+    'Albero degli elementi (collassabile, aperto ai 2 livelli superiori). ∅ = elemento vuoto nel modello.');
+
+  /* 2. STRUTTURA EDITORIALE (front / libri / divisioni) */
+  const books=childEls(body).filter(d=>ln(d)==='div'&&attr(d,'type')==='book');
+  const book3=books.find(b=>attr(b,'n')==='3');
+  const divTypes=all(body,'div').map(d=>attr(d,'type'));
+  const tp=first(textEl,'titlePage');
+  let structHTML=`<table><tbody>
+    <tr><th>&lt;front&gt;</th><td>${tp?'<code>titlePage</code> (docTitle · '+all(tp,'titlePart').length+' titlePart, docAuthor)':'—'} <span class="muted">— listWit/listPerson/listBibl stanno nel teiHeader</span></td></tr>
+    <tr><th>&lt;body&gt;</th><td>${books.length} <code>div type="book"</code> (n=${books.map(b=>attr(b,'n')).join(', ')}) — focus: Libro III</td></tr>`;
+  if(book3){
+    const pref=childEls(book3).find(d=>ln(d)==='div'&&attr(d,'type')==='preface');
+    const chap=childEls(book3).find(d=>ln(d)==='div'&&attr(d,'type')==='chapter');
+    const topLib=childEls(book3).filter(e=>['pb','fw','head'].includes(ln(e))).map(ln);
+    structHTML+=`<tr><th>Libro III · testa</th><td class="mono">${topLib.join(' · ')||'—'}</td></tr>`;
+    if(pref)structHTML+=`<tr><th>&lt;div type="preface"&gt;</th><td class="mono">${childEls(pref).map(ln).join(' · ')} <span class="muted" style="font-family:var(--sans)">(proemio: head + p, senza argument)</span></td></tr>`;
+    if(chap)structHTML+=`<tr><th>&lt;div type="chapter"&gt;</th><td class="mono">${childEls(chap).map(ln).join(' · ')} <span class="muted" style="font-family:var(--sans)">(pattern per capp. I–V)</span></td></tr>`;
+  }
+  structHTML+=`</tbody></table>`;
+  section('struttura-ed','Struttura editoriale',null,structHTML,'Front, libri, proemio e capitolo: lo scheletro modella un capitolo come pattern.');
+
+  /* 3. I TRE LAYER DENTRO <p> */
+  const paras=all(textEl,'p');
+  const layerP=paras.find(p=>all(p,'term').length||all(p,'app').length)||paras[paras.length-1];
+  const LMAP={
+    l1:['choice','orig','reg','abbr','expan','sic','corr','add','del','subst','unclear','gap','supplied','app','lem','rdg'],
+    l2:['term'],
+    l3:['ref','cit','quote','foreign','bibl']
+  };
+  function elemsIn(p){const set=[];all(p,'*').forEach(e=>set.push(ln(e)));return set;}
+  const present=layerP?elemsIn(layerP):[];
+  function layerBox(cls,title,desc,items){
+    const found=items.filter(i=>present.includes(i));
+    if(!found.length)return '';
+    return `<div class="layer ${cls}"><h3>${title}</h3><div class="d">${desc}</div><div class="grid">${found.map(i=>`<span class="chip">&lt;<b>${esc(i)}</b>&gt;</span>`).join('')}</div></div>`;
+  }
+  let layHTML='';
+  layHTML+=layerBox('l1','Layer 1 · filologico-grafico','Trascrizione a due livelli (<code>choice</code>: orig/reg, abbr/expan, sic/corr), fenomeni materiali e correzioni d\'autrice (add/del/subst, unclear/gap/supplied) e apparato genetico (app/lem/rdg).',LMAP.l1);
+  layHTML+=layerBox('l2','Layer 2 · mistico-dottrinale','Lessico degli stati isolato da <code>term/@ref</code> agganciato al vocabolario <code>#stati-mistici</code> del teiHeader.',LMAP.l2);
+  layHTML+=layerBox('l3','Layer 3 · intertestuale','Citazioni e rimandi alle fonti: <code>cit/quote/foreign/bibl</code> e <code>ref/@target</code>.',LMAP.l3);
+  section('layer','I tre layer nel paragrafo',present.length,layHTML,'Elementi effettivamente modellati dentro il <code>&lt;p&gt;</code> di riferimento, raggruppati per layer.');
+
+  /* 4. TRASCRIZIONE A DUE LIVELLI (choice) */
+  const choices=layerP?all(layerP,'choice'):[];
+  if(choices.length){
+    const rows=choices.map(c=>{const pair=childEls(c).map(ln);return `<tr><td class="mono">&lt;${esc(pair[0]||'')}&gt;</td><td class="mono">&lt;${esc(pair[1]||'')}&gt;</td></tr>`;}).join('');
+    section('choice','Trascrizione a due livelli',choices.length,
+      `<table><thead><tr><th>livello diplomatico</th><th>livello interpretativo/editoriale</th></tr></thead><tbody>${rows}</tbody></table>`,
+      'Le coppie <code>&lt;choice&gt;</code> modellate: la lezione conservativa e la sua regolarizzazione coesistono.');
+  }
+
+  /* 5. APPARATO GENETICO */
+  const app=layerP?first(layerP,'app'):null;
+  if(app){
+    const lem=first(app,'lem');const rdgs=all(app,'rdg');
+    let rows=`<tr><td class="mono">lem</td><td class="mono">${esc(attr(lem,'wit')||'')}</td><td>—</td></tr>`;
+    rdgs.forEach(r=>rows+=`<tr><td class="mono">rdg</td><td class="mono">${esc(attr(r,'wit')||'')}</td><td class="mono">${esc(attr(r,'varSeq')||'')}</td></tr>`);
+    section('app','Apparato genetico',rdgs.length+1,
+      `<table><thead><tr><th>elemento</th><th>@wit</th><th>@varSeq</th></tr></thead><tbody>${rows}</tbody></table>`,
+      'Parallel segmentation: <code>lem</code> (testo costituito, <code>#txt-c</code>) + <code>rdg</code> ordinati per <code>@varSeq</code>.');
+  }
+
+  /* 6. PUNTATORI INTERNI (risolvono nel teiHeader) */
+  const ptrs={};
+  all(textEl,'*').forEach(e=>{Array.from(e.attributes).forEach(a=>{
+    a.value.split(/\s+/).forEach(v=>{if(v.startsWith('#')){(ptrs[a.name]=ptrs[a.name]||new Set()).add(v);}});
+  });});
+  let ptrHTML='';Object.keys(ptrs).sort().forEach(k=>{
+    ptrHTML+=`<div class="hint" style="margin-top:.5rem;color:var(--accent)">@${esc(k)}</div><div class="grid">`+
+      [...ptrs[k]].sort().map(v=>`<span class="chip">${esc(v)}</span>`).join('')+`</div>`;
+  });
+  const ptrCount=Object.values(ptrs).reduce((n,s)=>n+s.size,0);
+  section('puntatori','Puntatori interni',ptrCount,ptrHTML,'Tutti i riferimenti <code>#…</code> usati nel testo: risolvono a identificatori dichiarati nel <code>teiHeader</code> (testimoni, mani, persone, stati, fonti).');
+
+  navBuild();
+
+  document.getElementById('expAll').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=true);
+  document.getElementById('colAll').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=false);
+
+  /* XML grezzo */
+  function fmt(x){let out='',pad=0;x.replace(/>\s*</g,'><').split(/(<[^>]+>)/g).filter(Boolean).forEach(n=>{
+    if(/^<\/\w/.test(n))pad--;out+='  '.repeat(Math.max(pad,0))+n+'\n';
+    if(/^<\w[^>]*[^\/]>$/.test(n)&&!/^<!--/.test(n))pad++;});return out;}
+  function hl(x){return esc(fmt(x))
+    .replace(/(&lt;!--[\s\S]*?--&gt;)/g,'<span class="x-com">$1</span>')
+    .replace(/(&lt;\/?)([\w:-]+)/g,'$1<span class="x-tag">$2</span>')
+    .replace(/\s([\w:-]+)=(&quot;.*?&quot;)/g,' <span class="x-attr">$1</span>=<span class="x-val">$2</span>');}
+  const xmlBox=document.getElementById('xml'),xmlBtn=document.getElementById('xmlBtn'),copyBtn=document.getElementById('copyBtn');
+  xmlBtn.onclick=()=>{const on=xmlBox.classList.toggle('on');xmlBtn.textContent=on?'Nascondi XML grezzo':'Mostra XML grezzo';xmlBtn.classList.toggle('active',on);copyBtn.style.display=on?'inline-block':'none';if(on&&!xmlBox.innerHTML)xmlBox.innerHTML=hl(src.trim());};
+  copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(src.trim());copyBtn.textContent='Copiato!';setTimeout(()=>copyBtn.textContent='Copia XML',1500);}catch(e){}};
+
+  /* ricerca */
+  const q=document.getElementById('q');let tmr;
+  q.addEventListener('input',e=>{clearTimeout(tmr);tmr=setTimeout(()=>{
+    const term=e.target.value.trim().toLowerCase();
+    content.querySelectorAll('mark').forEach(m=>{const p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});
+    if(!term)return;
+    const w=document.createTreeWalker(content,NodeFilter.SHOW_TEXT,null);const hits=[];
+    while(w.nextNode()){const n=w.currentNode;if(n.parentElement.closest('.xml'))continue;const i=n.textContent.toLowerCase().indexOf(term);if(i>-1)hits.push({n,i});}
+    hits.reverse().forEach(({n,i})=>{const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+term.length);const m=document.createElement('mark');try{r.surroundContents(m);}catch(_){}});
+    const f=content.querySelector('mark');if(f)f.scrollIntoView({behavior:'smooth',block:'center'});
+  },250);});
+
+  /* scroll-spy */
+  const links=[...nav.querySelectorAll('a')];
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=nav.querySelector(`a[data-t="${en.target.id}"]`);if(a)a.classList.add('active');}});},{rootMargin:'-10% 0px -75% 0px'});
+  secs.forEach(s=>{const el=document.getElementById(s.id);if(el)io.observe(el);});
+})();
+</script>
+</body>
+</html>
