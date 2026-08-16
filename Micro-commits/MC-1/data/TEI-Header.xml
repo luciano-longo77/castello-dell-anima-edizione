@@ -21,7 +21,7 @@
                 <date when="2026-01-28"/>
                 <idno type="METS">mets.xml</idno>
                 <idno type="digital_edition">Edizione digitale con annotazione semantica</idno>
-                <availability status="restricted">
+                <availability status="free">
                     <p>Le riproduzioni digitali degli autografi possono essere consultate solo in
                         modalità off-line, secondo le condizioni stabilite dall'ente conservatore.
                         Tale restrizione riguarda esclusivamente le immagini del manoscritto.</p>
