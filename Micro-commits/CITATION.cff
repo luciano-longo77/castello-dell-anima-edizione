@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Se usi questa edizione, cita come segue."
+title: "Il Castello dell'anima, Libro III — Edizione critica digitale TEI (MC-1)"
+abstract: >-
+  Edizione critica digitale TEI P5 del Libro III del trattato mistico
+  «Il Castello dell'anima» di suor Teresa di San Geronimo (Anna La Longa,
+  1670–post 1703), condotta sull'autografo unico Palermo, Biblioteca
+  Comunale, ms. 2 Qq E 29. Modello leggero a tre layer (filologico-grafico,
+  mistico-dottrinale, intertestuale) su due livelli di trascrizione
+  (diplomatico ⇄ interpretativo). Questa release (MC-1) copre il proemio e i
+  capitoli I–V del Libro III (cc. 158r–168r).
+type: dataset
+authors:
+  - family-names: Longo
+    given-names: Luciano
+    orcid: "https://orcid.org/0009-0005-7557-7546"
+    email: luciano.longo@dedalus.com
+    website: "https://luciano-longo77.github.io"
+    # curatore ed editore dell'edizione digitale
+version: "MC-1"
+date-released: "2026-08-16"
+license: CC-BY-4.0
+repository-code: "https://github.com/luciano-longo77/castello-dell-anima-edizione"
+url: "https://github.com/luciano-longo77/castello-dell-anima-edizione"
+keywords:
+  - "Castello dell'anima"
+  - "Teresa di San Geronimo"
+  - "Anna La Longa"
+  - "TEI P5"
+  - "edizione critica digitale"
+  - "Digital Scholarly Editing"
+  - "filologia d'autore"
+  - "critica genetica"
+  - "mistica secentesca"
+  - "ms. 2 Qq E 29"
+languages:
+  - ita
