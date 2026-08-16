@@ -23,8 +23,6 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 - **Layer mistico-dottrinale** — lessico agganciato via `<term ref>` a un **vocabolario controllato degli stati mistici**
 - **Layer intertestuale** — citazioni e rimandi alle fonti (`<cit>`/`<quote>`/`<bibl>`, `<ref>`)
 
-> **Nota sullo scope.** L'annotazione interpretativa multiassiale (le otto tassonomie su `@ana`, la segmentazione retorica con `<seg>`/`<figure>`, l'indice d'impatto `I = 0.40N + 0.35A + 0.25F`) **non** fa parte di questo header: è sviluppata nel repository separato [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA). Qui l'header resta descrittivo + interpretativo *leggero* (un solo asse: `term/@ref` → stati).
-
 ---
 
 ## Struttura del `teiHeader` (scheletro TEI)
