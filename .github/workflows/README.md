@@ -43,4 +43,3 @@ xmllint --nofixup-base-uris --xinclude "$DIR/castello-anima-text.xml" > resolved
 jing "$DIR/castello-anima-odd.rng" resolved.xml
 python3 .github/workflows/guardia_puntatori.py "$DIR/castello-anima-text.xml"
 ```
-Gli stessi passi sono disponibili come script unico in `Micro-commits/MC-1/tool/valida-locale.sh`.
