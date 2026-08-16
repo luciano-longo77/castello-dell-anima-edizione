@@ -195,13 +195,13 @@
                 <bibl type="ms" xml:id="ms-Palermo-2QqE29">
                     <settlement ref="#Palermo">Palermo</settlement>
                     <affiliation ref="#BCP">Biblioteca Comunale</affiliation>
-                    <idno ana="#ms-Palermo-2QqE29">ms. 2 Qq E 29</idno>
+                    <idno>ms. 2 Qq E 29</idno>
                     <date notBefore="1692" notAfter="1703">sec. XVII ex.</date>
                     <title level="m" ref="#castello-anima">Il Castello dell’anima</title>
                 </bibl>
 
                 <!-- Origine dei loci e delle citazioni: edizione e introduzione -->
-                <msDesc xml:lang="ita" corresp="#castello-anima">
+                <msDesc xml:lang="it" corresp="#castello-anima">
                     <msIdentifier>
                         <country>
                             <name type="place" ref="https://www.geonames.org/3175395">Italia</name>
@@ -217,12 +217,12 @@
                             Comunale</institution>
                         <repository ref="#BCP">Casa Professa</repository>
                         <altIdentifier>
-                            <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                            <idno corresp="#ms-Palermo-2QqE29">2 Qq E 29</idno>
                         </altIdentifier>
                     </msIdentifier>
 
-                    <msContents ana="#castello-anima">
-                        <msItem n="I" xml:id="msItem-I" ana="#bibl-diario-mistico-I">
+                    <msContents corresp="#castello-anima">
+                        <msItem n="I" xml:id="msItem-I" corresp="#bibl-diario-mistico-I">
                             <author cert="high" ref="http://viaf.org/viaf/39222032"
                                 corresp="#s-teresa"> Teresa di San Geronimo </author>
                             <title>Libro primo del Castello dell’anima per l’anime
@@ -241,9 +241,9 @@
                                     contemplativa, che sono l’anime proficienti. Iddio sia quello,
                                     che la conceda per sola sua gloria, et honore, amen. </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
-                        <msItem n="II" xml:id="msItem-II" ana="#bibl-diario-mistico-II">
+                        <msItem n="II" xml:id="msItem-II" corresp="#bibl-diario-mistico-II">
 
                             <author cert="high" ref="http://viaf.org/viaf/39222032"
                                 corresp="#s-teresa"> Teresa di San Geronimo </author>
@@ -279,9 +279,9 @@
                                     bontà divina, faccio, non potendo più con le mie debo- le forze,
                                     e finisco. </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
-                        <msItem n="III" xml:id="msItem-III" ana="#bibl-diario-mistico-III">
+                        <msItem n="III" xml:id="msItem-III" corresp="#bibl-diario-mistico-III">
 
                             <author cert="high" ref="http://viaf.org/viaf/39222032"
                                 corresp="#s-teresa"> Teresa di San Geronimo </author>
@@ -318,7 +318,7 @@
                                     d’haver fatto quanto l’obe- dienza m’ha comandato. Soli Deo
                                     honor, et gloria </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
                     </msContents>
 
@@ -491,7 +491,7 @@
                     <additional>
                         <surrogates>
                             <p> L’autografo del <title level="m">Castello dell’anima</title>,
-                                conservato nel ms. <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                                conservato nel ms. <idno corresp="#ms-Palermo-2QqE29">2 Qq E 29</idno>
                                 presso la <orgName ref="http://viaf.org/viaf/133691077">Biblioteca
                                     Comunale di Palermo</orgName>, è consultabile in riproduzione
                                 digitale (formato JPEG) presso l’ente conservatore, laddove
