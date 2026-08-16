@@ -29,9 +29,9 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 | ID | Capitoli | Focus Tematico | Stato |
 | :--- | :--- | :--- | :--- |
-| **MC1** | III.1–5 | **Avvio della contemplazione infusa**: silentio e sonno spirituale. | 🏗️ In preparazione |
+| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🏗️ In preparazione |
 | **MC2** | III.6–10 | **Stabilizzazione**: otio e annichilimento. | 📅 Programmato |
-| **MC3** | III.11–15 | **Matrice sponsale I**: pace e indifferenza. | 📅 Programmato |
+| **MC3** | III.11–15 | **Matrice sponsale I**: pace e quiete. | 📅 Programmato |
 | **MC4** | III.16–20 | **Matrice sponsale II**: liquefazione e bacio mistico. | 📅 Programmato |
 | **MC5** | III.21–24 | **Purificazioni passive**: aridità e "purghe". | 📅 Programmato |
 | **MC6** | III.25–29 | **Croce e trasformazione**: conformazione al Crocifisso. | 📅 Programmato |
