@@ -53,13 +53,13 @@ Qui si dichiara **come** il testo viene codificato:
 - `projectDesc` descrive gli obiettivi del modello (tre layer: filologico‑grafico, mistico‑dottrinale, intertestuale; trascrizione a due livelli; apparato genetico) e la fase in cui si trova il progetto.
 - `editorialDecl` fissa i criteri editoriali e in particolare la **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nel file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`); apparato critico in *parallel segmentation* con `@varSeq`; nessuna normalizzazione del testo trascritto se non quella dichiarata e reversibile via `<choice>`.
 - `tagsDecl` elenca **esattamente** gli elementi TEI usati nel testo — il "tag set core" di questo commit (vedi sotto).
-- `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header: restano nel progetto `castello-anima-TEI-IA`.
+- `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#annichilimento`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header: restano nel progetto `castello-anima-TEI-IA`.
 
 ### `profileDesc`
 Descrive la lingua del testo (italiano regionale siciliano di fine Seicento, con fenomeni fonetici, morfologici, lessicali e sintattici dettagliati) e le persone/organizzazioni coinvolte: l'autrice, le fonti dottrinali (Santa Teresa d'Ávila, Giovanni della Croce, Miguel de Molinos), il direttore spirituale, l'editore, e le istituzioni storiche (Carmelo, Inquisizione).
 
 ### `revisionDesc`
-Registra la cronologia granulare degli interventi editoriali, ciascuno classificato secondo la tassonomia `fase`.
+Registra la cronologia sintetica degli interventi editoriali (voci proforma), ciascuno classificato secondo la tassonomia `fase`.
 
 ## Il tag set core: cosa è dentro, cosa è fuori, e perché
 
@@ -83,6 +83,7 @@ Nel commit 1 il `classDecl` non ospita più le otto tassonomie interpretative, m
 |---|---|
 | `silentio` | Silentio (primo stato d'unione) |
 | `otio` | Otio / quiete passiva |
+| `annichilimento` | Annichilazione della volontà propria |
 | `oblivione-sonno` | Oblivione o sonno |
 | `scordanza` | Scordanza del creato e di sé |
 | `indifferenza` | Indifferenza (unione delle volontà) |
@@ -103,15 +104,15 @@ Resta distinta da tutto ciò la tassonomia di lavoro `fase`, che non descrive il
 
 Il modello descritto qui è formalizzato in uno **schema TEI P5 personalizzato**, prodotto con la metodologia ODD:
 
-- **`MC-1_castello-anima-odd.odd`** — la specifica *One Document Does it all*: documentazione del modello, selezione dei moduli TEI, confine del tag set (elementi esclusi) e vincoli Schematron.
-- **`MC-1_castello-anima-odd.rng`** — lo schema compilato (RELAX NG + Schematron incorporato) contro cui si validano i file dati. Si rigenera dall'ODD con oXygen (*TEI ODD → RELAX NG XML*).
+- **`castello-anima-odd.odd`** — la specifica *One Document Does it all*: documentazione del modello, selezione dei moduli TEI, confine del tag set (elementi esclusi) e vincoli Schematron.
+- **`castello-anima-odd.rng`** — lo schema compilato (RELAX NG + Schematron incorporato) contro cui si validano i file dati. Si rigenera dall'ODD con oXygen (*TEI ODD → RELAX NG XML*).
 
 Il file dati dichiara l'associazione in testa, con due PI verso lo stesso RNG:
 
 ```xml
-<?xml-model href="MC-1_castello-anima-odd.rng" type="application/xml"
+<?xml-model href="castello-anima-odd.rng" type="application/xml"
     schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="MC-1_castello-anima-odd.rng" type="application/xml"
+<?xml-model href="castello-anima-odd.rng" type="application/xml"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 ```
 
