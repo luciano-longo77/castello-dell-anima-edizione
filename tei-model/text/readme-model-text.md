@@ -8,7 +8,7 @@
 ![Lang](https://img.shields.io/badge/Language-it--reg--sic%20%7C%20la-orange)
 
 > **File**: `text-model.xml`  
-> **Schema**: TEI P5 + ODD custom (`MC-1_castello-anima-odd.odd` → `.rng`)  
+> **Schema**: TEI P5 + ODD custom (`castello-anima-odd.odd` → `.rng`)  
 > **Testimone**: ms. 2 Qq E 29, Biblioteca Comunale di Palermo
 
 ---
@@ -30,10 +30,9 @@ Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articola
 ```text
 <text>
 ├── <front>
-│   ├── <div type="witness-list"> → <listWit> (7 livelli: Tb0, Tb1, T1–T3, T4, Tc)
-│   ├── <div type="person-list">  → <listPerson>
-│   ├── <div type="source-list">  → <listBibl type="fontes"> (Vulgata, Molinos, Ávila)
 │   └── <titlePage> (<docTitle>/<titlePart>, <docAuthor>)
+│       <!-- listWit / listPerson / listBibl NON stanno nel <front>:
+│            sono dichiarati una sola volta nel teiHeader; qui si puntano via @wit/@ref -->
 └── <body>
     ├── <div type="book" n="1"> (Libro I)
     ├── <div type="book" n="2"> (Libro II)
@@ -91,7 +90,7 @@ La lezione diplomatica e la sua regolarizzazione coesistono, senza che l'una sos
 </app>
 ```
 
-I `@wit` puntano ai testimoni dichiarati in `<front>/…/<listWit>` (e replicati nel `teiHeader`):
+I `@wit` puntano ai testimoni dichiarati **una sola volta nel `teiHeader`** (`sourceDesc/listWit`); nel `<text>` non si ridichiara la lista, si punta soltanto via `@wit`:
 
 | `xml:id` | Livello genetico |
 |---|---|
@@ -130,7 +129,7 @@ Questo consente di isolare *tutte* le occorrenze di uno stato (p. es. l'unione) 
 </cit>
 ```
 
-I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiarati in `<listBibl type="fontes">` (front e `teiHeader`).
+I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiarati in `<listBibl type="fontes">` **nel `teiHeader`** (`sourceDesc`).
 
 ---
 
@@ -147,7 +146,7 @@ I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiara
 ## Validazione
 
 ```bash
-xmllint --noout castello-anima-teitext-model.xml
+xmllint --noout text-model.xml
 ```
 
 ---
