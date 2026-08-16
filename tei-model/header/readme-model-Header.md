@@ -8,14 +8,14 @@
 ![Lang](https://img.shields.io/badge/Language-it--reg--sic%20%7C%20la-orange)
 
 > **File**: `teiHeader-model.xml`  
-> **Schema**: TEI P5 + ODD custom (`MC-1_castello-anima-odd.odd` → `.rng`)  
+> **Schema**: TEI P5 + ODD custom (`castello-anima-odd.odd` → `.rng`)  
 > **Testimone**: ms. 2 Qq E 29, Biblioteca Comunale di Palermo
 
 ---
 
 ## Abstract
 
-Il *Castello dell'anima* è l'unica opera pervenutaci della terziaria carmelitana palermitana **Teresa di San Geronimo** (nata Anna La Longa, 1670–post 1703). Redatto tra il 1692 e il 1703 in un italiano regionale siciliano fortemente influenzato dal latino liturgico, il trattato si inserisce nella tradizione della teologia mistica post-tridentina, mostrando affinità con i modelli di Teresa d'Ávila, Giovanni della Croce e le correnti di spiritualità contemporanea.
+Il *Castello dell'anima* è l'unica opera pervenutaci della terziaria carmelitana palermitana **Teresa di San Geronimo** (nata Anna La Longa, 1670–post 1703). Il **Libro III** fu redatto tra il **1692 e il 1694**, entro la traiettoria compositiva dell'intera opera (**1692–1703**), in un italiano regionale siciliano fortemente influenzato dal latino liturgico, il trattato si inserisce nella tradizione della teologia mistica post-tridentina, mostrando affinità con i modelli di Teresa d'Ávila, Giovanni della Croce e le correnti di spiritualità contemporanea.
 
 Questo file descrive il **modello del `teiHeader`**: non il testo trascritto capitolo per capitolo, ma la struttura formale che lo sostiene. Il modello adotta un'architettura **leggera a tre layer**:
 
@@ -69,7 +69,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
     │       ├── <listBibl>                 (fonte primaria + descrizione ms.)
     │       └── <listWit>                  (7 livelli: Tb0, Tb1, T1–T3, T4, Tc)
     ├── <encodingDesc>
-    │   ├── <ab xml:base="abstract"> (<seg/>)
+    │   ├── <ab type="abstract"> (sommario del modello, prosa)
     │   ├── <projectDesc>            (i tre layer: filologico-grafico, mistico-dottrinale, intertestuale)
     │   ├── <refsDecl> (<p/>)
     │   ├── <editorialDecl>
@@ -107,7 +107,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
   - struttura in 3 Libri (`msItem n="I|II|III"`) con incipit/explicit puntuali;
   - supporto cartaceo, formato 20.5×19 cm, 1 colonna, 40 righe;
   - **Mani (`handDesc`)**: **cinque** mani/fasi — quattro autografe di Teresa (`ink_1` e `ink_2` a inchiostro bruno, `ink_3-dark` a inchiostro scuro, `pencil_1` a matita) più la mano esterna `ink_4-external`, corrispondenti alla stratificazione genetica Tb0–T4;
-  - **Testimoni genetici (`listWit`)**: **sette** livelli — `txt-b0` (Tb0, base), `txt-b1` (Tb1, ripensamenti immediati), `txt-1`/`txt-2`/`txt-3` (T1–T3, stratificazione autografa), `txt-4` (T4, esterno) e `txt-c` (Tc, testo critico costituito, `@resp="#editor"`, richiamato da `<lem wit="#txt-c">`).
+  - **Testimoni (`listWit`)**: **sette** — **sei livelli genetici** (`txt-b0` Tb0 base, `txt-b1` Tb1 ripensamenti immediati, `txt-1`/`txt-2`/`txt-3` T1–T3 stratificazione autografa, `txt-4` T4 esterno) più il **testo critico costituito** `txt-c` (Tc, `@resp="#editor"`, richiamato da `<lem wit="#txt-c">`), che è la lezione ricostruita dall'editore e può anche coincidere con una delle lezioni d'autrice.
 
 ### 2. `<encodingDesc>` — dichiarazione di codifica
 - **Tre layer (`projectDesc`)**: (1) filologico-grafico — struttura, trascrizione a due livelli, apparato genetico; (2) mistico-dottrinale — `term/@ref` al vocabolario controllato; (3) intertestuale — `cit`/`quote`/`bibl` e `ref`.
@@ -119,6 +119,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 |---|---|
 | `silentio` | Silentio (primo stato d'unione) |
 | `otio` | Otio / quiete passiva |
+| `annichilimento` | Annichilazione dell'anima (azzeramento del proprio volere) |
 | `oblivione-sonno` | Oblivione o sonno |
 | `scordanza` | Scordanza del creato e di sé |
 | `indifferenza` | Indifferenza (unione delle volontà) |
@@ -149,10 +150,10 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 ### Validazione locale
 ```bash
 # Buona formazione
-xmllint --noout castello-anima-teiHeader-model.xml
+xmllint --noout teiHeader-model.xml
 
 # Validazione contro lo schema ODD di progetto (RELAX NG + Schematron)
-java -jar jing.jar MC-1_castello-anima-odd.rng castello-anima-teiHeader-model.xml
+java -jar jing.jar castello-anima-odd.rng teiHeader-model.xml
 ```
 
 ### Query esempio (XPath)
