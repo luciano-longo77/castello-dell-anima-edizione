@@ -32,7 +32,7 @@ La descrizione completa di:
 
 ## TEI model
 
-La cartella [`tei-model/`](./tei-model/) contiene il **modello TEI/XML del progetto**.
+La cartella [`tei-model/`](./tei-model/) contiene i **modelli TEI generici** dell'edizione (header e text); i singoli micro-commit dell'edizione stanno in [`Micro-commits/`](./Micro-commits/) (MC-1, MC-2, …).
 
 Il modello è concepito per:
 - rappresentare la **stratificazione testuale** del manoscritto autografo;
@@ -63,19 +63,19 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
 
 ```text
 .
-├── README.md            # Orientamento generale del repository
-├── project-readme.md    # Documento scientifico del progetto
-└── tei-model/           # Modello TEI/XML dell'edizione
-    ├── header/          # Modello e documentazione del teiHeader
-    ├── text/            # Modello e documentazione del <text>
-    └── MC_readme-generale/
-        ├── readme-MC-general.md   # Piano editoriale e roadmap MC1–MC8
-        └── MC1_Castello_MicroCommit_III_1-5/
-            ├── 1_MC-1_README_generale.md
-            ├── data/    # File XML/TEI e schema ODD/RNG
-            ├── doc/     # Introduzione, cartulazione, teiHeader
-            └── out/     # Prototipi di visualizzazione
-            └── tool/    # Strumenti di ricerca sull’edizione
+├── README.md                     # Orientamento del repository
+├── project-readme.md             # Documento scientifico dell'edizione
+├── tei-model/                    # Modelli TEI generici dell'edizione
+│   ├── header/                   # teiHeader-model.xml + readme + diagramma
+│   └── text/                     # text-model.xml + readme + diagramma
+└── Micro-commits/                # I micro-commit dell'edizione
+    ├── readme-MC-general.md      # Piano editoriale e roadmap MC1…MC8
+    └── MC-1/                     # Commit 1 — Libro III, capp. I–V
+        ├── MC1-README_generale.md
+        ├── data/                 # castello-anima.xml, TEI-Header.xml, ODD/RNG
+        ├── docs/                 # Introduzione, Struttura-cartulazione, Header-README
+        ├── output/               # Prototipi di visualizzazione
+        └── tool/                 # Strumenti di ricerca (in preparazione)
 ```
 --- 
 
