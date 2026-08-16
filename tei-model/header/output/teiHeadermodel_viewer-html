@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viewer · Modello teiHeader — Castello dell'anima</title>
+<style>
+:root{
+  --bg:#fdfcf9; --panel:#fff; --side:#f8f6f2; --text:#2c241b; --muted:#6b5d4f;
+  --accent:#8a6d3b; --accent-soft:#eaddcf; --border:#e6e0d4; --code:#f4f1eb;
+  --tag:#8a6d3b; --attr:#7a6a54; --val:#417a5a;
+  --mono:'Consolas','Monaco',monospace; --sans:system-ui,-apple-system,sans-serif; --serif:Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1a1814; --panel:#24211c; --side:#1f1d19; --text:#e6e0d4; --muted:#a89f91;
+  --accent:#d4b483; --accent-soft:#3d3428; --border:#3d3428; --code:#151310;
+  --tag:#d4b483; --attr:#c2b291; --val:#8fce9f;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;display:flex;min-height:100vh}
+.sidebar{width:250px;flex-shrink:0;background:var(--side);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.25rem 0}
+.sb-head{padding:0 1.25rem 1rem;border-bottom:1px solid var(--border);margin-bottom:.5rem}
+.sb-title{font-family:var(--serif);font-size:1.15rem;color:var(--accent)}
+.sb-sub{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:.15rem}
+.nav a{display:flex;justify-content:space-between;gap:.5rem;padding:.4rem 1.25rem;color:var(--muted);text-decoration:none;font-size:.85rem;border-left:3px solid transparent}
+.nav a:hover,.nav a.active{color:var(--accent);background:var(--accent-soft);border-left-color:var(--accent)}
+.nav .cnt{font-size:.7rem;opacity:.7;font-family:var(--mono)}
+.main{flex:1;min-width:0;padding:1.75rem 2.5rem;max-width:1050px}
+.banner{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.5rem}
+.banner h1{font-family:var(--serif);font-size:1.7rem;color:var(--accent);margin-bottom:.3rem}
+.banner .note{font-size:.85rem;color:var(--muted)}
+.pill{display:inline-block;font-size:.68rem;font-family:var(--mono);background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:99px;margin-right:.35rem}
+.controls{display:flex;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.search{flex:1;min-width:200px;padding:.55rem .9rem;border:1px solid var(--border);border-radius:5px;background:var(--panel);color:var(--text);font-size:.9rem}
+.search:focus{outline:2px solid var(--accent);border-color:transparent}
+.btn{padding:.55rem 1rem;border:1px solid var(--border);border-radius:5px;background:var(--panel);color:var(--text);cursor:pointer;font-size:.82rem}
+.btn:hover{background:var(--accent-soft);border-color:var(--accent)}
+.btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sec{background:var(--panel);border:1px solid var(--border);border-radius:7px;padding:1.25rem 1.4rem;margin-bottom:1.25rem}
+.sec h2{font-family:var(--serif);font-size:1.25rem;color:var(--accent);margin-bottom:.85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:baseline}
+.sec h2 .n{font-size:.8rem;font-family:var(--mono);color:var(--muted)}
+.hint{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:.75rem}
+table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.25rem 0}
+th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--side);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+tr:hover td{background:var(--accent-soft)}
+.mono{font-family:var(--mono)}
+.id{font-family:var(--mono);color:var(--accent);font-weight:600}
+.muted{color:var(--muted)}
+.grid{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font-family:var(--mono);font-size:.8rem;background:var(--side);border:1px solid var(--border);border-radius:5px;padding:.25rem .6rem}
+.chip b{color:var(--accent)}
+/* tree */
+.tree{font-family:var(--mono);font-size:.83rem;line-height:1.7}
+.tree details{margin-left:1.1rem;border-left:1px dotted var(--border);padding-left:.6rem}
+.tree>details{margin-left:0;border-left:none;padding-left:0}
+.tree summary{cursor:pointer;list-style:none}
+.tree summary::-webkit-details-marker{display:none}
+.tree summary::before{content:"▸";color:var(--muted);display:inline-block;width:1em;transition:transform .15s}
+.tree details[open]>summary::before{transform:rotate(90deg)}
+.tree .leaf{margin-left:1.1rem;border-left:1px dotted var(--border);padding-left:.6rem}
+.tree .leaf::before{content:"·";color:var(--muted);display:inline-block;width:1em;text-align:center}
+.t-tag{color:var(--tag);font-weight:600}
+.t-attr{color:var(--attr)}
+.t-val{color:var(--val)}
+.t-txt{color:var(--text);font-family:var(--serif);font-style:italic}
+.t-empty{color:var(--muted);opacity:.55}
+.treebtns{margin-bottom:.6rem;display:flex;gap:.5rem}
+.treebtns button{font-size:.75rem;padding:.3rem .7rem;border:1px solid var(--border);border-radius:4px;background:var(--panel);color:var(--muted);cursor:pointer}
+/* raw xml */
+.xml{display:none;background:var(--code);border:1px solid var(--border);border-radius:7px;padding:1.25rem;overflow-x:auto;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre;tab-size:2}
+.xml.on{display:block}
+.x-tag{color:var(--tag)}.x-attr{color:var(--attr)}.x-val{color:var(--val)}.x-com{color:var(--muted);font-style:italic}
+mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
+@media(max-width:860px){body{flex-direction:column}.sidebar{width:100%;height:auto;position:static;border-right:none;border-bottom:1px solid var(--border)}.main{padding:1.25rem}}
+</style>
+</head>
+<body>
+
+<script id="tei-source" type="application/xml">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+        <author>
+          <name type="religious"/>
+          <name type="secular"/>
+        </author>
+        <respStmt>
+          <resp/>
+          <name/>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher/>
+        <date/>
+        <idno/>
+        <availability>
+          <p/>
+          <licence/>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <noteGrp type="critical">
+          <note type="material"><p/></note>
+          <note type="prudential"><p/></note>
+          <note type="linguistic"><p/></note>
+          <note type="theological-risk"><p/></note>
+          <note type="transmission"><p/></note>
+          <note type="stylistic"><p/></note>
+        </noteGrp>
+        <noteGrp type="biographical">
+          <note type="biography-early"><p/></note>
+          <note type="biography-late"><p/></note>
+        </noteGrp>
+        <noteGrp type="contextual">
+          <note type="contextual-biographical"><p/></note>
+          <note type="contextual-historical"><p/></note>
+        </noteGrp>
+      </notesStmt>
+      <sourceDesc>
+        <listPlace>
+          <place>
+            <placeName/>
+            <note/>
+          </place>
+        </listPlace>
+        <bibl type="ms">
+          <settlement/>
+          <affiliation/>
+          <idno/>
+          <date/>
+          <title/>
+        </bibl>
+        <msDesc>
+          <msIdentifier>
+            <country><name/></country>
+            <region><name/></region>
+            <settlement><name/></settlement>
+            <institution/>
+            <repository/>
+            <altIdentifier><idno/></altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <msItem n="I">
+              <author/>
+              <title/>
+              <incipit><locus/><seg/></incipit>
+              <explicit><locus/><seg/></explicit>
+              <textLang/>
+            </msItem>
+          </msContents>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support><p><material/><date/></p></support>
+                <extent><dimensions><height/><width/></dimensions></extent>
+                <condition><p/></condition>
+              </supportDesc>
+              <layoutDesc>
+                <layout><p/></layout>
+              </layoutDesc>
+            </objectDesc>
+            <handDesc>
+              <handNote xml:id="ink_1" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-b0 #txt-b1"><p/></handNote>
+              <handNote xml:id="ink_2" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-1 #txt-2"><p/></handNote>
+              <handNote xml:id="ink_3-dark" scribeRef="#s-teresa" medium="dark-ink" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="pencil_1" scribeRef="#s-teresa" medium="pencil" corresp="#txt-3"><p/></handNote>
+              <handNote xml:id="ink_4-external" scribeRef="#esterno" medium="ink" corresp="#txt-4"><p/></handNote>
+            </handDesc>
+          </physDesc>
+          <history>
+            <origin>
+              <p>
+                <origPlace><placeName/></origPlace>
+                <origDate/>
+                <note/>
+              </p>
+            </origin>
+          </history>
+          <additional>
+            <surrogates><p/></surrogates>
+          </additional>
+        </msDesc>
+        <listBibl type="fontes">
+          <bibl xml:id="bible-vulgate"><title/></bibl>
+          <bibl xml:id="molinos-guida"><author/><title/><date/></bibl>
+          <bibl xml:id="avila-castello"><author/><title/><date/></bibl>
+        </listBibl>
+        <listBibl>
+          <bibl/>
+        </listBibl>
+        <listWit>
+          <witness xml:id="txt-b0"/>
+          <witness xml:id="txt-b1"/>
+          <witness xml:id="txt-1"/>
+          <witness xml:id="txt-2"/>
+          <witness xml:id="txt-3"/>
+          <witness xml:id="txt-4"/>
+          <witness xml:id="txt-c" resp="#editor"/>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <ab type="abstract">
+        <seg/>
+      </ab>
+      <projectDesc>
+        <p n="1"/>
+        <p n="2"/>
+        <p n="3"/>
+      </projectDesc>
+      <refsDecl>
+        <p/>
+      </refsDecl>
+      <editorialDecl>
+        <p/>
+        <correction><p/></correction>
+        <hyphenation><p/></hyphenation>
+        <normalization><p/></normalization>
+      </editorialDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="text"/>
+          <tagUsage gi="body"/>
+          <tagUsage gi="div"/>
+          <tagUsage gi="head"/>
+          <tagUsage gi="argument"/>
+          <tagUsage gi="p"/>
+          <tagUsage gi="pb"/>
+          <tagUsage gi="fw"/>
+          <tagUsage gi="front"/>
+          <tagUsage gi="listWit"/>
+          <tagUsage gi="witness"/>
+          <tagUsage gi="listPerson"/>
+          <tagUsage gi="person"/>
+          <tagUsage gi="listBibl"/>
+          <tagUsage gi="titlePage"/>
+          <tagUsage gi="docTitle"/>
+          <tagUsage gi="titlePart"/>
+          <tagUsage gi="docAuthor"/>
+          <tagUsage gi="choice"/>
+          <tagUsage gi="orig"/>
+          <tagUsage gi="reg"/>
+          <tagUsage gi="abbr"/>
+          <tagUsage gi="expan"/>
+          <tagUsage gi="sic"/>
+          <tagUsage gi="corr"/>
+          <tagUsage gi="app"/>
+          <tagUsage gi="lem"/>
+          <tagUsage gi="rdg"/>
+          <tagUsage gi="add"/>
+          <tagUsage gi="del"/>
+          <tagUsage gi="subst"/>
+          <tagUsage gi="unclear"/>
+          <tagUsage gi="gap"/>
+          <tagUsage gi="supplied"/>
+          <tagUsage gi="term"/>
+          <tagUsage gi="ref"/>
+          <tagUsage gi="cit"/>
+          <tagUsage gi="quote"/>
+          <tagUsage gi="bibl"/>
+          <tagUsage gi="foreign"/>
+          <tagUsage gi="persName"/>
+          <tagUsage gi="placeName"/>
+          <tagUsage gi="orgName"/>
+          <tagUsage gi="date"/>
+          <tagUsage gi="idno"/>
+          <tagUsage gi="note"/>
+        </namespace>
+      </tagsDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <classDecl>
+        <taxonomy xml:id="stati-mistici">
+          <category xml:id="silentio"><catDesc/></category>
+          <category xml:id="otio"><catDesc/></category>
+          <category xml:id="annichilimento"><catDesc/></category>
+          <category xml:id="oblivione-sonno"><catDesc/></category>
+          <category xml:id="scordanza"><catDesc/></category>
+          <category xml:id="indifferenza"><catDesc/></category>
+          <category xml:id="notte"><catDesc/></category>
+          <category xml:id="purga"><catDesc/></category>
+          <category xml:id="unione"><catDesc/></category>
+          <category xml:id="quiete"><catDesc/></category>
+          <category xml:id="contemplazione-infusa"><catDesc/></category>
+          <category xml:id="nudita-anima"><catDesc/></category>
+          <category xml:id="bacio"><catDesc/></category>
+          <category xml:id="matrimonio-spirituale"><catDesc/></category>
+          <category xml:id="cella-secreta"><catDesc/></category>
+          <category xml:id="trasformazione"><catDesc/></category>
+          <category xml:id="deificazione"><catDesc/></category>
+        </taxonomy>
+        <taxonomy xml:id="fase">
+          <category xml:id="fase-modellazione"><catDesc/></category>
+          <category xml:id="fase-trascrizione"><catDesc/></category>
+          <category xml:id="fase-apparato"><catDesc/></category>
+          <category xml:id="fase-revisione"><catDesc/></category>
+          <category xml:id="fase-validazione"><catDesc/></category>
+        </taxonomy>
+      </classDecl>
+      <schemaRef type="odd" url="castello-anima-odd.odd"/>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="it-reg-sic"/>
+        <language ident="la"/>
+      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="Anna-La-Longa">
+            <persName><forename/><surname/></persName>
+            <birth/>
+            <death/>
+            <sex/>
+            <occupation/>
+            <trait><note/></trait>
+            <note/>
+          </person>
+        </listPerson>
+        <listOrg>
+          <org xml:id="BCP">
+            <orgName/>
+            <trait><note/></trait>
+          </org>
+          <org xml:id="Carmelo">
+            <orgName/>
+          </org>
+          <org xml:id="SantUffizio">
+            <orgName/>
+          </org>
+        </listOrg>
+      </particDesc>
+    </profileDesc>
+    <xenoData n="mets"/>
+    <revisionDesc status="consolidated">
+      <change ana="#fase-modellazione"/>
+    </revisionDesc>
+  </teiHeader>
+  <sourceDoc>
+    <note/>
+  </sourceDoc>
+</TEI>
+</script>
+
+<nav class="sidebar">
+  <div class="sb-head">
+    <div class="sb-title">Modello teiHeader</div>
+    <div class="sb-sub">Castello dell'anima · macro-struttura</div>
+  </div>
+  <div class="nav" id="nav"></div>
+</nav>
+
+<main class="main">
+  <header class="banner">
+    <h1>Modello del <code>teiHeader</code></h1>
+    <p class="note">
+      <span class="pill">MODELLO</span>
+      Vista della <strong>macro-struttura</strong> generata da <code>teiHeader-model.xml</code>.
+      Gli elementi sono a contenuto vuoto: i valori sono valorizzati nei file dati dei micro-commit.
+    </p>
+  </header>
+
+  <div class="controls">
+    <input type="search" id="q" class="search" placeholder="Cerca elemento, id, attributo…" aria-label="Cerca">
+    <button class="btn" id="xmlBtn" type="button">Mostra XML grezzo</button>
+    <button class="btn" id="copyBtn" type="button" style="display:none">Copia XML</button>
+  </div>
+
+  <div id="content"></div>
+  <pre class="xml" id="xml" aria-label="Sorgente XML"></pre>
+</main>
+
+<script>
+(function(){
+  const NS='http://www.tei-c.org/ns/1.0';
+  const src=document.getElementById('tei-source').textContent;
+  const doc=new DOMParser().parseFromString(src,'application/xml');
+  const content=document.getElementById('content');
+  const nav=document.getElementById('nav');
+
+  if(doc.querySelector('parsererror')){content.innerHTML='<div class="sec"><p style="color:#c00">Errore di parsing XML.</p></div>';return;}
+
+  const esc=s=>{const d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  const ln=e=>e.localName; // namespace-safe local name
+  const all=(p,name)=>p?Array.from(p.getElementsByTagNameNS(NS,name)):[];
+  const first=(p,name)=>{const a=all(p,name);return a.length?a[0]:null;};
+  const childEls=p=>p?Array.from(p.children):[];
+  const attr=(e,n)=>e.getAttribute(n);
+
+  const secs=[];
+  function section(id,title,count,bodyHTML,hint){
+    secs.push({id,title,count});
+    const c=(count!=null)?`<span class="n">${count}</span>`:'';
+    content.insertAdjacentHTML('beforeend',
+      `<section class="sec" id="${id}"><h2>${esc(title)} ${c}</h2>${hint?`<p class="hint">${hint}</p>`:''}${bodyHTML}</section>`);
+  }
+  function navBuild(){
+    nav.innerHTML=secs.map(s=>`<a href="#${s.id}" data-t="${s.id}">${esc(s.title)}${s.count!=null?`<span class="cnt">${s.count}</span>`:''}</a>`).join('');
+  }
+
+  const teiHeader=first(doc,'teiHeader');
+
+  /* ---------- 1. STRUTTURA (albero collassabile) ---------- */
+  function renderTree(node,depth){
+    depth=depth||0;
+    const kids=childEls(node);
+    const attrs=Array.from(node.attributes||[]).map(a=>` <span class="t-attr">${esc(a.name)}</span>=<span class="t-val">"${esc(a.value)}"</span>`).join('');
+    let directText='';
+    node.childNodes.forEach(n=>{if(n.nodeType===3&&n.textContent.trim())directText+=n.textContent.trim()+' ';});
+    const label=`<span class="t-tag">${esc(ln(node))}</span>${attrs}`;
+    if(kids.length){
+      const inner=kids.map(k=>renderTree(k,depth+1)).join('');
+      // aperti solo i primi due livelli, il resto collassato (pagina compatta)
+      const open=depth<2?' open':'';
+      const badge=depth>=2?` <span class="t-empty">(${kids.length})</span>`:'';
+      return `<details${open}><summary>${label}${badge}</summary>${inner}</details>`;
+    }
+    const txt=directText.trim()?` <span class="t-txt">${esc(directText.trim())}</span>`:` <span class="t-empty">∅</span>`;
+    return `<div class="leaf">${label}${txt}</div>`;
+  }
+  section('struttura','Struttura del teiHeader',null,
+    `<div class="treebtns"><button id="expAll" type="button">Espandi tutto</button><button id="colAll" type="button">Comprimi tutto</button></div>
+     <div class="tree" id="tree">${renderTree(teiHeader)}</div>`,
+    'Albero degli elementi (collassabile). ∅ = elemento a contenuto vuoto nel modello.');
+
+  /* ---------- 2. TAG SET ---------- */
+  const GROUPS=[
+    ['Struttura (layer 1)',['text','body','div','head','argument','p','pb','fw']],
+    ['Front matter',['front','listWit','witness','listPerson','person','listBibl','titlePage','docTitle','titlePart','docAuthor']],
+    ['Trascrizione due livelli (layer 1)',['choice','orig','reg','abbr','expan','sic','corr']],
+    ['Apparato genetico (layer 1)',['app','lem','rdg','add','del','subst','unclear','gap','supplied']],
+    ['Lessico mistico (layer 2)',['term']],
+    ['Intertesto (layer 3)',['ref','cit','quote','bibl','foreign']],
+    ['Nomi, date, id, note',['persName','placeName','orgName','date','idno','note']],
+  ];
+  const gis=all(teiHeader,'tagUsage').map(t=>attr(t,'gi'));
+  const giSet=new Set(gis);
+  let tsHTML='';
+  GROUPS.forEach(([g,items])=>{
+    const present=items.filter(i=>giSet.has(i));
+    if(!present.length)return;
+    tsHTML+=`<div class="hint" style="margin-top:.8rem;color:var(--accent)">${esc(g)}</div><div class="grid">`+
+      present.map(i=>`<span class="chip">&lt;<b>${esc(i)}</b>&gt;</span>`).join('')+`</div>`;
+  });
+  section('tagset','Tag set core',gis.length,tsHTML,'Gli elementi TEI ammessi nel modello (raggruppati per layer).');
+
+  /* ---------- 3. TASSONOMIE ---------- */
+  function taxTable(taxId,title,sid,hint){
+    const tax=all(teiHeader,'taxonomy').find(t=>attr(t,'xml:id')===taxId);
+    if(!tax)return;
+    const cats=all(tax,'category');
+    const rows=cats.map(c=>{
+      const id=attr(c,'xml:id');const d=(first(c,'catDesc')||{}).textContent||'';
+      return `<tr id="cat-${esc(id)}"><td class="id">${esc(id)}</td><td>${d.trim()?esc(d.trim()):'<span class="t-empty">— (nel micro-commit)</span>'}</td></tr>`;
+    }).join('');
+    section(sid,title,cats.length,`<table><thead><tr><th>xml:id</th><th>catDesc</th></tr></thead><tbody>${rows}</tbody></table>`,hint);
+  }
+  taxTable('stati-mistici','Vocabolario · stati mistici','stati','Bersagli di <code>term/@ref</code> nel testo (layer 2).');
+  taxTable('fase','Tassonomia di lavoro · fase','fase','Bersagli di <code>change/@ana</code> nel revisionDesc.');
+
+  /* ---------- 4. TESTIMONI ---------- */
+  const wits=all(teiHeader,'witness');
+  section('testimoni','Testimoni genetici',wits.length,
+    `<table><thead><tr><th>xml:id</th><th>@resp</th></tr></thead><tbody>`+
+    wits.map(w=>`<tr id="${esc(attr(w,'xml:id'))}"><td class="id">${esc(attr(w,'xml:id'))}</td><td class="mono">${attr(w,'resp')?esc(attr(w,'resp')):'<span class="t-empty">—</span>'}</td></tr>`).join('')+
+    `</tbody></table>`,'Sei strati genetici (Tb0–T4) + il testo critico costituito (Tc = <code>#txt-c</code>).');
+
+  /* ---------- 5. MANI ---------- */
+  const hands=all(teiHeader,'handNote');
+  section('mani','Mani scriventi',hands.length,
+    `<table><thead><tr><th>xml:id</th><th>@medium</th><th>@scribeRef</th><th>@corresp</th></tr></thead><tbody>`+
+    hands.map(h=>`<tr id="${esc(attr(h,'xml:id'))}"><td class="id">${esc(attr(h,'xml:id'))}</td><td>${esc(attr(h,'medium')||'')}</td><td class="mono">${esc(attr(h,'scribeRef')||'')}</td><td class="mono">${esc(attr(h,'corresp')||'')}</td></tr>`).join('')+
+    `</tbody></table>`);
+
+  /* ---------- 6. FONTI ---------- */
+  const fontesList=all(teiHeader,'listBibl').find(lb=>attr(lb,'type')==='fontes');
+  const fontes=fontesList?all(fontesList,'bibl'):[];
+  section('fonti','Fonti intertestuali',fontes.length,
+    `<div class="grid">`+fontes.map(b=>`<span class="chip" id="${esc(attr(b,'xml:id'))}"><b>#${esc(attr(b,'xml:id'))}</b></span>`).join('')+`</div>`,
+    'Bersagli di <code>ref/@target</code> e delle <code>bibl</code> nelle citazioni (layer 3).');
+
+  /* ---------- 7. NOTE ---------- */
+  const grps=all(teiHeader,'noteGrp');
+  let notesHTML='';
+  grps.forEach(g=>{
+    const t=attr(g,'type');const ns=all(g,'note').map(n=>attr(n,'type')).filter(Boolean);
+    notesHTML+=`<div class="hint" style="margin-top:.6rem;color:var(--accent)">${esc(t)}</div><div class="grid">`+
+      ns.map(x=>`<span class="chip">${esc(x)}</span>`).join('')+`</div>`;
+  });
+  section('note','Note critiche/contestuali',grps.length,notesHTML,'Gruppi (<code>noteGrp/@type</code>) e tipi di nota previsti.');
+
+  /* ---------- 8. LINGUE / PERSONE / ORG ---------- */
+  const langs=all(teiHeader,'language').map(l=>attr(l,'ident'));
+  const persons=all(teiHeader,'person').map(p=>attr(p,'xml:id')).filter(Boolean);
+  const orgs=all(teiHeader,'org').map(o=>attr(o,'xml:id')).filter(Boolean);
+  section('profilo','Profilo · lingue, persone, istituzioni',null,
+    `<div class="hint" style="color:var(--accent)">Lingue (langUsage)</div><div class="grid">${langs.map(l=>`<span class="chip"><b>${esc(l)}</b></span>`).join('')}</div>
+     <div class="hint" style="margin-top:.7rem;color:var(--accent)">Persone (listPerson)</div><div class="grid">${persons.length?persons.map(p=>`<span class="chip">#${esc(p)}</span>`).join(''):'<span class="t-empty">—</span>'}</div>
+     <div class="hint" style="margin-top:.7rem;color:var(--accent)">Istituzioni (listOrg)</div><div class="grid">${orgs.map(o=>`<span class="chip">#${esc(o)}</span>`).join('')}</div>`);
+
+  /* ---------- 9. SCHEMA / REVISIONI ---------- */
+  const sr=first(teiHeader,'schemaRef');
+  const ve=first(teiHeader,'variantEncoding');
+  const rev=first(teiHeader,'revisionDesc');
+  const changes=all(rev,'change');
+  section('meta','Schema e revisioni',null,
+    `<table><tbody>
+      <tr><th>schemaRef</th><td class="mono">${sr?esc((attr(sr,'type')||'')+' → '+(attr(sr,'url')||'')):'—'}</td></tr>
+      <tr><th>variantEncoding</th><td class="mono">${ve?esc((attr(ve,'method')||'')+' / '+(attr(ve,'location')||'')):'—'}</td></tr>
+      <tr><th>revisionDesc</th><td class="mono">status="${esc(attr(rev,'status')||'')}" · ${changes.length} change (proforma, @ana→fase)</td></tr>
+    </tbody></table>`);
+
+  navBuild();
+
+  /* ---------- albero: espandi/comprimi ---------- */
+  document.getElementById('expAll').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=true);
+  document.getElementById('colAll').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=false);
+
+  /* ---------- XML grezzo ---------- */
+  function fmt(x){let out='',pad=0;x.replace(/>\s*</g,'><').split(/(<[^>]+>)/g).filter(Boolean).forEach(n=>{
+    if(/^<\/\w/.test(n))pad--;out+='  '.repeat(Math.max(pad,0))+n+'\n';
+    if(/^<\w[^>]*[^\/]>$/.test(n)&&!/^<!--/.test(n))pad++;});return out;}
+  function hl(x){return esc(fmt(x))
+    .replace(/(&lt;!--[\s\S]*?--&gt;)/g,'<span class="x-com">$1</span>')
+    .replace(/(&lt;\/?)([\w:-]+)/g,'$1<span class="x-tag">$2</span>')
+    .replace(/\s([\w:-]+)=(&quot;.*?&quot;)/g,' <span class="x-attr">$1</span>=<span class="x-val">$2</span>');}
+  const xmlBox=document.getElementById('xml'),xmlBtn=document.getElementById('xmlBtn'),copyBtn=document.getElementById('copyBtn');
+  xmlBtn.onclick=()=>{const on=xmlBox.classList.toggle('on');xmlBtn.textContent=on?'Nascondi XML grezzo':'Mostra XML grezzo';xmlBtn.classList.toggle('active',on);copyBtn.style.display=on?'inline-block':'none';if(on&&!xmlBox.innerHTML)xmlBox.innerHTML=hl(src.trim());};
+  copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(src.trim());copyBtn.textContent='Copiato!';setTimeout(()=>copyBtn.textContent='Copia XML',1500);}catch(e){}};
+
+  /* ---------- ricerca ---------- */
+  const q=document.getElementById('q');let tmr;
+  q.addEventListener('input',e=>{clearTimeout(tmr);tmr=setTimeout(()=>{
+    const term=e.target.value.trim().toLowerCase();
+    content.querySelectorAll('mark').forEach(m=>{const p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});
+    if(!term)return;
+    const w=document.createTreeWalker(content,NodeFilter.SHOW_TEXT,null);const hits=[];
+    while(w.nextNode()){const n=w.currentNode;if(n.parentElement.closest('.xml'))continue;const i=n.textContent.toLowerCase().indexOf(term);if(i>-1)hits.push({n,i});}
+    hits.reverse().forEach(({n,i})=>{const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+term.length);const m=document.createElement('mark');try{r.surroundContents(m);}catch(_){}});
+    const f=content.querySelector('mark');if(f)f.scrollIntoView({behavior:'smooth',block:'center'});
+  },250);});
+
+  /* ---------- scroll-spy ---------- */
+  const links=[...nav.querySelectorAll('a')];
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=nav.querySelector(`a[data-t="${en.target.id}"]`);if(a)a.classList.add('active');}});},{rootMargin:'-10% 0px -75% 0px'});
+  secs.forEach(s=>{const el=document.getElementById(s.id);if(el)io.observe(el);});
+})();
+</script>
+</body>
+</html>
