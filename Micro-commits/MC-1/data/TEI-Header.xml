@@ -19,7 +19,6 @@
             <publicationStmt>
                 <publisher>Prototipo DH. Proof-of-concept</publisher>
                 <date when="2026-01-28"/>
-                <idno type="METS">mets.xml</idno>
                 <idno type="digital_edition">Edizione digitale con annotazione semantica</idno>
                 <availability status="free">
                     <p>Le riproduzioni digitali degli autografi possono essere consultate solo in
@@ -981,10 +980,6 @@
             </particDesc>
 
         </profileDesc>
-        <xenoData n="mets">
-            <mets:metsPtr xmlns:mets="http://www.loc.gov/METS/"
-                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mets.xml"/>
-        </xenoData>
 
         <revisionDesc status="draft">
             <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche del gemello con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
