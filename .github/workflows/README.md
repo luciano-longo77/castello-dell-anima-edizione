@@ -25,13 +25,6 @@ Per ogni `Micro-commits/*/data/castello-anima-text.xml`, in sequenza:
 > validazione (schema e puntatori) ha senso solo dopo la risoluzione dell'include, quando i
 > puntatori del testo trovano gli `xml:id` dichiarati nel `teiHeader`.
 
-## Confine col progetto gemello
-Questa CI è la versione **ridotta e coerente** di quella di
-[`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA): non include le
-guardie del modello multiassiale (indice d'impatto, co-occorrenza `@ana`, cit/glossa, commenti,
-interventi, 8 tassonomie) né i workflow di generazione, perché quei costrutti non fanno parte
-dell'edizione leggera.
-
 ## Eseguire la validazione in locale (prima di committare)
 ```bash
 pip install lxml
