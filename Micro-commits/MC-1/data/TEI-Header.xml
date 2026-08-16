@@ -981,12 +981,18 @@
 
         </profileDesc>
 
-        <revisionDesc status="draft">
-            <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche del gemello con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
-            <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
-            <change when="2026-01-14" who="#editor" ana="#fase-modellazione">Definizione dei criteri ecdotici (trascrizione diplomatico-conservativa a due livelli, apparato genetico) e impostazione del teiHeader sull'autografo unico, Palermo, Biblioteca Comunale, ms. 2 Qq E 29.</change>
-            <change when="2026-01-10" who="#editor" ana="#fase-modellazione">Avvio del progetto di edizione critica digitale del Libro III del Castello dell'anima.</change>
-        </revisionDesc>
+<revisionDesc status="draft">
+    <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
+    <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
+    <change when="2026-07-15" who="#editor" ana="#fase-validazione">Separazione di teiHeader e testo in file distinti, uniti tramite XInclude, e validazione dell'edizione: jing contro lo schema ODD, guardie di forma NFC e di integrità dei puntatori.</change>
+    <change when="2026-06-12" who="#editor" ana="#fase-modellazione">Stesura dello schema ODD di progetto (castello-anima-odd) e compilazione in RELAX NG, ristretto al modello leggero (esclusione dell'annotazione interpretativa multiassiale e dello stand-off).</change>
+    <change when="2026-05-08" who="#editor" ana="#fase-trascrizione">Aggancio del lessico mistico al vocabolario controllato degli stati (term/@ref alla taxonomy <ref target="#stati-mistici">stati-mistici</ref>, layer 2) e codifica dell'intertesto (cit/quote/bibl e ref, layer 3).</change>
+    <change when="2026-04-10" who="#editor" ana="#fase-apparato">Codifica dell'apparato genetico d'autrice (app/lem/rdg con @varSeq; del/add/subst con @place, @hand, @resp) e dei guasti materiali (gap/supplied/unclear).</change>
+    <change when="2026-03-06" who="#editor" ana="#fase-trascrizione">Trascrizione diplomatico-conservativa a due livelli dei capp. I-V (choice: orig/reg, abbr/expan, sic/corr), con struttura div/head/argument/p e cartulazione (pb 158r-168r, fw).</change>
+    <change when="2026-02-05" who="#editor" ana="#fase-modellazione">Completamento del teiHeader leggero: dichiarazione dei sette testimoni (listWit, incluso il costituito <ref target="#txt-c">txt-c</ref>), delle cinque mani (handDesc), del vocabolario controllato dei diciassette stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>) e della tassonomia di lavoro fase; listBibl delle fonti.</change>
+    <change when="2026-01-14" who="#editor" ana="#fase-modellazione">Definizione dei criteri ecdotici (trascrizione diplomatico-conservativa a due livelli, apparato genetico) e impostazione del teiHeader sull'autografo unico, Palermo, Biblioteca Comunale, ms. 2 Qq E 29.</change>
+    <change when="2026-01-10" who="#editor" ana="#fase-modellazione">Avvio del progetto di edizione critica digitale del Libro III del Castello dell'anima.</change>
+</revisionDesc>
     </teiHeader>
     <sourceDoc>
         <note/>
