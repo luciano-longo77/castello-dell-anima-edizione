@@ -1,18 +1,18 @@
 name: Validate MC
 
-# Validazione dell'edizione leggera: per ogni micro-commit valida il modulo <text>
+# Validazione dell'edizione: per ogni micro-commit valida il modulo <text>
 # (che include il teiHeader via XInclude) contro lo schema ODD del progetto.
 on:
   push:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
-      - ".github/workflows/validate.yml"
       - ".github/workflows/**"
   pull_request:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 jobs:
