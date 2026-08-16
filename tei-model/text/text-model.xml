@@ -16,8 +16,11 @@
 
   <text xml:lang="it">
     <front>
+      <!-- listWit / listPerson / listBibl NON stanno nel front:
+           sono dichiarati una sola volta nel teiHeader; nel testo si puntano via @wit/@ref/@target -->
       <titlePage>
         <docTitle>
+          <titlePart/>
           <titlePart/>
         </docTitle>
         <docAuthor/>
@@ -25,7 +28,13 @@
     </front>
 
     <body>
-      <!-- Libri I e II: stessa struttura di <div type="book">; fuori dal focus dei micro-commit del Libro III. -->
+      <!-- Libri I e II: stessa struttura; fuori dal focus dei micro-commit (che riguardano il Libro III) -->
+      <div type="book" n="1">
+        <head/>
+      </div>
+      <div type="book" n="2">
+        <head/>
+      </div>
 
       <!-- Libro III: focus dell'edizione -->
       <div type="book" n="3">
@@ -33,13 +42,10 @@
         <fw/>
         <head/>
 
-        <!-- Proemio (protesta / prologo) -->
+        <!-- Proemio (protesta / prologo): head + paragrafi, senza argument -->
         <div type="preface">
           <head/>
-          <argument>
-            <p/>
-          </argument>
-          <p n="0" xml:id="III-proem-p0"/>
+          <p n="1" xml:id="III-proem-p1"/>
         </div>
 
         <!-- Capitoli I–V: stessa struttura; se ne modella uno solo -->
@@ -52,7 +58,7 @@
           <fw/>
 
           <!-- Unità di riferimento = il paragrafo <p n="…" xml:id="…">; dentro, i tre layer -->
-          <p n="0" xml:id="III-cap0-p0">
+          <p n="1" xml:id="III-cap0-p1">
 
             <!-- layer 1: filologico-grafico -->
             <!-- trascrizione a due livelli (diplomatico <-> interpretativo) -->
@@ -60,8 +66,8 @@
             <choice><abbr/><expan/></choice>
             <choice><sic/><corr/></choice>
 
-            <!-- fenomeni materiali e correzioni autoriali -->
-            <add place="margin"/>
+            <!-- fenomeni materiali e correzioni autoriali (@place/@hand/@resp/@type) -->
+            <add place="margin" hand="#ink_1" resp="#s-teresa" type="integration"/>
             <del/>
             <subst><del/><add/></subst>
             <unclear/>
@@ -75,11 +81,11 @@
               <rdg wit="#txt-1" varSeq="2"/>
             </app>
 
-            <!-- layer 2: mistico-dottrinale  -->
+            <!-- layer 2: mistico-dottrinale -->
             <!-- @ref -> categoria del vocabolario controllato #stati-mistici del teiHeader -->
             <term ref="#silentio"/>
 
-            <!--  layer 3: intertestuale -->
+            <!-- layer 3: intertestuale -->
             <ref target="#avila-castello"/>
             <cit>
               <quote xml:lang="la">
