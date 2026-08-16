@@ -102,12 +102,12 @@ rimando a fonte
 
 citazione con fonte
 <cit>
-<quote xml:lang="lat">…</quote>
+<quote xml:lang="la">…</quote>
 <bibl/>
 </cit>   
 
 brano in lingua diversa
-<foreign xml:lang="lat">…</foreign>                  
+<foreign xml:lang="la">…</foreign>                  
 ```
 
 La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, è tenuta distinta dalla *trascrizione interpretativa* ampiamente regolarizzata, sviluppata nel repository separato **`castello-anima-TEI-IA`**: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
