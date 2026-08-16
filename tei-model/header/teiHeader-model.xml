@@ -1,4 +1,4 @@
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -129,7 +129,7 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <ab xml:base="abstract">
+      <ab type="abstract">
         <seg/>
       </ab>
       <projectDesc>
@@ -217,6 +217,7 @@
         <taxonomy xml:id="stati-mistici">
           <category xml:id="silentio"><catDesc/></category>
           <category xml:id="otio"><catDesc/></category>
+          <category xml:id="annichilimento"><catDesc/></category>
           <category xml:id="oblivione-sonno"><catDesc/></category>
           <category xml:id="scordanza"><catDesc/></category>
           <category xml:id="indifferenza"><catDesc/></category>
@@ -242,7 +243,7 @@
           <category xml:id="fase-validazione"><catDesc/></category>
         </taxonomy>
       </classDecl>
-      <schemaRef/>
+      <schemaRef type="odd" url="castello-anima-odd.odd"/>
     </encodingDesc>
     <profileDesc>
       <langUsage>
@@ -286,8 +287,7 @@
     
     <!-- Descrizione del change-log, classificato secondo la tassonomia di lavoro fase -->
     <revisionDesc status="consolidated">
-      <change when="" who="" ana="#fase-modellazione">
-      </change>
+      <change ana="#fase-modellazione"/>
       <!-- altri change -->
     </revisionDesc>
   </teiHeader>
