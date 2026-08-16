@@ -15,7 +15,7 @@
 Questo file spiega **cosa contiene il `teiHeader`**, **come è organizzato** e **quali obiettivi persegue** in questa prima fase del progetto (MC1, Libro III, capp. I–V). 
 È pensato come guida di lettura per chi apre il file XML senza aver seguito lo sviluppo del progetto, e come promemoria per le fasi successive (MC2 e oltre), che dovranno mantenere la coerenza qui stabilita o dichiararne esplicitamente le variazioni.
 
-Il `teiHeader` è mantenuto come componente concettualmente distinta dal file dati del `<text>` e dal README narrativo del MC1: descrive *il modello*, non il contenuto trascritto capitolo per capitolo.
+Il `teiHeader` è mantenuto come componente concettualmente distinta dal file dati del `<text>` e dal README narrativo del MC1: descrive *il modello*, non il contenuto trascritto capitolo per capitolo. Sul piano fisico i due file restano **separati**: il file dati (`castello-anima-text.xml`) richiama questo header via `<xi:include href="TEI-Header.xml" xpointer="element(/1/1)"/>`, così l'header è modellato una sola volta e i puntatori del testo risolvono a validazione (con l'elaborazione XInclude attiva in oXygen).
 
 ## Indice
 
@@ -73,7 +73,7 @@ Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che
 - **Intertesto** (layer intertestuale): `ref` (`@target`), `cit`/`quote`/`bibl`/`foreign`
 - **Identificatori e fonti**: `idno` (in particolare per VIAF), `listBibl type="fontes"` (Vulgata, Molinos, Ávila)
 
-Sono **fuori** dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale — `seg`, `figure`, `interp` — e l'attributo `@ana`: la loro sede è il progetto separato `castello-anima-TEI-IA`.
+Sono **fuori** dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale — `figure`, `interp`/`interpGrp`, `rs` e il linking stand-off `span`/`link` — che lo schema ODD rimuove: la loro sede è il progetto separato `castello-anima-TEI-IA`. Restano invece ammessi, nel loro **uso standard**, `seg` (dentro `incipit`/`explicit` del `msDesc`) e l'attributo `@ana`, quest'ultimo limitato ai `<change>` del `revisionDesc` (aggancio alla tassonomia `fase`): non sono quindi il perno di un'annotazione multiassiale, ma servizi puntuali dell'header.
 
 ## Il vocabolario controllato degli stati e le fonti
 
