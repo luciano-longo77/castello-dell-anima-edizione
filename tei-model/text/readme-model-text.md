@@ -41,7 +41,7 @@ Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articola
         ├── <head>
         ├── <div type="preface"> (protesta/prologo)
         │   ├── <head>
-        │   └── <argument> (<p>)
+        │   └── <p>   (paragrafi del proemio; il preface non usa <argument>)
         └── <div type="chapter" n="*">
             ├── <head>, <argument>
             └── <p n="*" xml:id="*">   ← unità di riferimento
