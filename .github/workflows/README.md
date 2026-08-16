@@ -1,4 +1,4 @@
-# CI dell'edizione — validazione (modello leggero)
+# CI dell'edizione — validazione
 
 A ogni `push`/`pull_request` che tocca i dati (`Micro-commits/**/data/**`), GitHub Actions
 verifica che ciascun micro-commit resti **ben formato, valido e coerente**.
@@ -17,8 +17,9 @@ Per ogni `Micro-commits/*/data/castello-anima-text.xml`, in sequenza:
 2. **Ben formato + XInclude** — `xmllint --noout --xinclude`: il `<text>` include il `teiHeader`
    (`<xi:include href="TEI-Header.xml" xpointer="element(/1/1)"/>`) e il documento risolto è ben formato.
 3. **RelaxNG** — `jing castello-anima-odd.rng` sul documento **risolto** (header + text).
-4. **Guardia puntatori** (`guardia_puntatori.py`) — riproduce i due vincoli Schematron dell'ODD
-   (che `jing` non esegue): integrità referenziale di `@wit/@hand/@resp/@ref/@target/@corresp/@ana`,
+4. **Guardia puntatori** (`guardia_puntatori.py`) — sul documento risolto ricontrolla i vincoli che
+   `jing` non esegue (i controlli Schematron dell'ODD più l'aggancio del layer 2), tre invarianti:
+   integrità referenziale di `@wit/@hand/@resp/@ref/@target/@corresp/@ana` (e `@scribeRef/@sameAs`),
    `term/@ref` → categoria di `#stati-mistici`, `change/@ana` → categoria di `#fase`.
 
 > **Perché sul documento risolto.** Header e testo sono file separati uniti via XInclude: la
