@@ -53,19 +53,19 @@ Il micro‑commit comprende integralmente le carte:
 
 ### Capitolo II - Silentio
 * **Carte:** 159v–162r
-* **Paragrafi:** 1–24
+* **Paragrafi:** 1–21
 
 ### Capitolo III - Oblivione / Sonno
 * **Carte:** 162r–164v 
-* **Paragrafi:** 1–22
+* **Paragrafi:** 1–14
 
 ### Capitolo IV - Scordanza
 * **Carte:** 164v–165v
-* **Paragrafi:** 1–12 
+* **Paragrafi:** 1–8 
 
 ### Capitolo V - Indifferenza
 * **Carte:** 166r–168r
-* **Paragrafi:** 1–20
+* **Paragrafi:** 1–17
 
 ---
 
@@ -75,10 +75,10 @@ Il micro‑commit comprende integralmente le carte:
 | :--- | :--- | :--- | :--- | :--- |
 | **Proemio** | Introduzione al Libro III | 158r | §§ 1–2 | Incipit: *Incomincio mio Dio…*. |
 | **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit: *adesso è di bene passare al seguente capitolo*. |
-| **II** | Silentio | 159v–162r | §§ 1–24 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
-| **III** | Oblivione / Sonno | 162r–164v | §§ 1–22 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
-| **IV** | Scordanza | 164v–165v | §§ 1–12 | *Quasi continuo estasi*. Oceano d’amore. |
-| **V** | Indifferenza | 166r–168r | §§ 1–20 | Unione delle volontà. Luce dal centro dell’anima. |
+| **II** | Silentio | 159v–162r | §§ 1–21 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
+| **III** | Oblivione / Sonno | 162r–164v | §§ 1–14 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
+| **IV** | Scordanza | 164v–165v | §§ 1–8 | *Quasi continuo estasi*. Oceano d’amore. |
+| **V** | Indifferenza | 166r–168r | §§ 1–17 | Unione delle volontà. Luce dal centro dell’anima. |
 
 ---
 
