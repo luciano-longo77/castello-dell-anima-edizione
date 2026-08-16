@@ -42,11 +42,11 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 ## 3. Organizzazione del Repository
 Ogni micro-commit (es. `Micro-commits/MC-1/`) contiene:
-* `MC1-README_generale.md`: introduzione sintetica e cartulazione del micro-commit.
+* `README.md`: introduzione sintetica e cartulazione del micro-commit.
 * `data/`: file XML/TEI sorgente e schema di progetto (ODD/RNG).
 * `docs/`: introduzione critica, struttura/cartulazione e guida al teiHeader.
 * `output/`: prototipi per la visualizzazione dinamica della struttura del manoscritto.
-* `tool/`: prototipi per l'interrogazione dinamica dell'edizione *(in preparazione)*.
+* `tool/`: strumenti locali per l'interrogazione dinamica dell'edizione (es. `viewer-stati-mistici.html`, ricerca degli stati mistici nel browser).
 ---
 
 ## 4. Requisiti Tecnici
