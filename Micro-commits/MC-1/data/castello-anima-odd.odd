@@ -19,7 +19,7 @@
          </titleStmt>
          <publicationStmt>
             <publisher>Prototipo DH — Proof-of-concept</publisher>
-            <availability status="restricted">
+            <availability status="free">
                <licence target="https://creativecommons.org/licenses/by/4.0/">La presente specifica
                   di codifica è rilasciata con licenza Creative Commons BY 4.0: uso consentito con
                   attribuzione, anche a fini commerciali.</licence>
@@ -27,20 +27,24 @@
          </publicationStmt>
          <sourceDesc>
             <p>Specifica redatta a partire dal <hi rend="italic">tag set core</hi> dichiarato nel
-               <gi>tagsDecl</gi> e dalle tassonomie interpretative del <gi>classDecl</gi> del file
-               <ref target="MC-1_castello-anima-TEI_Header.xml">MC-1_castello-anima-TEI_Header.xml</ref>.</p>
+               <gi>tagsDecl</gi> e dal vocabolario controllato degli stati del <gi>classDecl</gi> del
+               file <ref target="TEI-Header.xml">TEI-Header.xml</ref>.</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <p>ODD (One Document Does it all) conforme a TEI P5 4.11.0. Genera in un unico documento sia
+         <p>ODD (One Document Does it all) conforme a TEI P5. Genera in un unico documento sia
             la documentazione del modello sia lo schema formale (RELAX NG + Schematron) tramite le
             catene di trasformazione TEI (<hi rend="italic">oXygen &gt; Document Type &gt; Generate
             Schema</hi>, oppure <hi rend="italic">romajs</hi>/<hi rend="italic">oddc</hi>).</p>
       </encodingDesc>
       <revisionDesc status="draft">
+         <change when="2026-08-16" who="#editor">Allineamento al modello leggero: esclusi gli
+            elementi dell'annotazione multiassiale realmente non usati (<gi>interp</gi>,
+            <gi>interpGrp</gi>, <gi>figure</gi>, <gi>rs</gi>) e rimosso il modulo <ident>figures</ident>;
+            eliminato il vincolo Schematron sulle fasi posizionali (tassonomie non presenti
+            nell'header leggero); corretti nome del file header e stato di <gi>availability</gi>.</change>
          <change when="2026-08-06" who="#editor">Prima redazione dell'ODD: selezione dei moduli,
-            confine del tag set (elementi esclusi) e vincoli Schematron sul modello
-            interpretativo.</change>
+            confine del tag set (elementi esclusi) e vincoli Schematron.</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -51,16 +55,25 @@
             <p>Questa specifica definisce e vincola formalmente il modello di codifica del
                <title>Castello dell'anima</title> per il primo micro-commit (MC1, Libro III, capp.
                I–V). Non è una semplice selezione di moduli TEI: rende <hi rend="italic">verificabili
-               a schema</hi> le decisioni editoriali che nel <gi>teiHeader</gi> sono dichiarate in
-               prosa, in particolare l'integrità della rete di puntatori interni
-               (<att>ana</att>, <att>who</att>, <att>corresp</att>, <att>target</att>) e la
-               disciplina d'uso delle tassonomie.</p>
+               a schema</hi> le decisioni editoriali dichiarate in prosa nel <gi>teiHeader</gi>, in
+               particolare l'integrità della rete di puntatori interni (<att>ref</att>,
+               <att>target</att>, <att>corresp</att>, <att>wit</att>, <att>hand</att>, <att>resp</att>,
+               <att>ana</att>) e il confine del modello <hi rend="italic">leggero</hi>.</p>
             <p>Il testimone è l'<term>autografo unico</term> conservato a Palermo (BCP, ms. 2 Qq E
-               29), stratificato in sei livelli genetici (Tb0, Tb1, T1–T4). L'edizione è
-               <term>genetico-interpretativa</term>: l'apparato è codificato in
-               <term>parallel segmentation</term> (<gi>app</gi>/<gi>lem</gi>/<gi>rdg</gi>) e le
-               varianti genetiche sono ricondotte ai livelli dichiarati in
-               <gi>listWit</gi>.</p>
+               29), stratificato in sei livelli genetici (Tb0, Tb1, T1–T4) più il testo critico
+               costituito (Tc). L'edizione è <term>genetico-conservativa a due livelli</term>:
+               l'apparato è codificato in <term>parallel segmentation</term>
+               (<gi>app</gi>/<gi>lem</gi>/<gi>rdg</gi>) e le varianti genetiche sono ricondotte ai
+               livelli dichiarati in <gi>listWit</gi>.</p>
+            <p>Il modello è a <hi rend="italic">tre layer</hi> — filologico-grafico
+               (<gi>choice</gi>, <gi>app</gi>/<gi>lem</gi>/<gi>rdg</gi>, <gi>add</gi>/<gi>del</gi>/<gi>subst</gi>),
+               mistico-dottrinale (<gi>term</gi>/<att>ref</att> al vocabolario degli stati) e
+               intertestuale (<gi>cit</gi>/<gi>quote</gi>/<gi>bibl</gi>, <gi>ref</gi>) — su due
+               livelli di trascrizione resi con <gi>choice</gi>. L'annotazione interpretativa
+               multiassiale (segmentazione con <att>ana</att> su unità del testo, figure retoriche,
+               indice d'impatto) è sviluppata nel repository separato
+               <ref target="https://github.com/luciano-longo77/castello-anima-TEI-IA">castello-anima-TEI-IA</ref>
+               e resta fuori da questo schema.</p>
          </div>
 
          <div xml:id="moduli">
@@ -83,7 +96,7 @@
                <label>msdescription</label>
                <item>descrizione del testimone: <gi>msDesc</gi>, <gi>physDesc</gi>,
                   <gi>handDesc</gi>/<gi>handNote</gi>, <gi>history</gi>,
-                  <gi>incipit</gi>/<gi>explicit</gi>.</item>
+                  <gi>incipit</gi>/<gi>explicit</gi> (con <gi>locus</gi>/<gi>seg</gi>).</item>
                <label>namesdates</label>
                <item>entità nominate: <gi>person</gi>, <gi>org</gi>, <gi>place</gi> e i relativi
                   nomi e tratti biografici.</item>
@@ -93,32 +106,32 @@
                <label>textcrit</label>
                <item>apparato critico: <gi>app</gi>, <gi>lem</gi>, <gi>rdg</gi>,
                   <gi>variantEncoding</gi>.</item>
-               <label>figures</label>
-               <item><gi>figure</gi> (uso risemantizzato: marcatore di dispositivo/figura retorica,
-                  cfr. §4).</item>
                <label>linking</label>
-               <item><gi>seg</gi>, <gi>ab</gi>: unità di segmentazione interpretativa.</item>
+               <item><gi>ab</gi>: blocco anonimo usato per l'<hi rend="italic">abstract</hi>
+                  dell'<gi>encodingDesc</gi>. (Gli elementi di linking stand-off — <gi>span</gi>,
+                  <gi>link</gi> e affini — sono esclusi, §3.)</item>
                <label>analysis</label>
-               <item><gi>interp</gi> e la classe di attributi <ident type="class"
-                  >att.global.analytic</ident>, che fornisce <att>ana</att> — perno dell'annotazione
-                  multiassiale.</item>
+               <item>fornisce la classe <ident type="class">att.global.analytic</ident> e quindi
+                  <att>ana</att>, usato <hi rend="italic">esclusivamente</hi> su <gi>change</gi> per
+                  agganciare la tassonomia di lavoro <ident>fase</ident>. Gli elementi
+                  <gi>interp</gi>/<gi>interpGrp</gi> (annotazione multiassiale) sono esclusi
+                  (§3).</item>
                <label>tagdocs</label>
                <item><gi>gi</gi>, <gi>code</gi>, <gi>att</gi>: usati nella prosa descrittiva del
                   <gi>projectDesc</gi> e del <gi>revisionDesc</gi>.</item>
                <label>corpus</label>
                <item><gi>particDesc</gi>: contenitore di <gi>listPerson</gi>/<gi>listOrg</gi> in
-                  <gi>profileDesc</gi> (le persone e le organizzazioni sono di <soCalled>namesdates</soCalled>,
-                  ma il loro contenitore appartiene a questo modulo).</item>
+                  <gi>profileDesc</gi>.</item>
             </list>
          </div>
 
          <div xml:id="confine">
             <head>3. Confine del tag set: elementi esclusi</head>
-            <p>Coerentemente con il <gi>tagsDecl</gi> e con la cronologia del <gi>revisionDesc</gi>
-               (voce del 2026-07-10), i seguenti elementi sono <hi rend="italic">rimossi</hi> dallo
-               schema: la loro comparsa nel testo è quindi un errore di validazione, non una scelta
-               libera. Il collegamento ai facsimili passa esclusivamente per <att>facs</att> su
-               <gi>pb</gi>; non si usano <gi>facsimile</gi>/<gi>surface</gi>/<gi>graphic</gi>.</p>
+            <p>Coerentemente con il <gi>tagsDecl</gi> e con il modello leggero, i seguenti elementi
+               sono <hi rend="italic">rimossi</hi> dallo schema: la loro comparsa nel testo è quindi
+               un errore di validazione, non una scelta libera. Il collegamento ai facsimili passa
+               esclusivamente per <att>facs</att> su <gi>pb</gi>; non si usano
+               <gi>facsimile</gi>/<gi>surface</gi>/<gi>graphic</gi>.</p>
             <list>
                <item><gi>facsimile</gi>, <gi>surface</gi>, <gi>graphic</gi> — zona facsimilare non
                   implementata in questa fase.</item>
@@ -128,33 +141,36 @@
                <item><gi>link</gi>, <gi>linkGrp</gi>, <gi>span</gi>, <gi>spanGrp</gi> — le relazioni
                   sono espresse tramite <att>corresp</att>/<att>target</att>, non con linking
                   stand-off.</item>
+               <item><gi>interp</gi>, <gi>interpGrp</gi>, <gi>figure</gi>, <gi>rs</gi> — costrutti
+                  dell'annotazione interpretativa multiassiale (segmentazione analitica, figure
+                  retoriche, stringhe referenziali): la loro sede è il progetto separato
+                  <ref target="https://github.com/luciano-longo77/castello-anima-TEI-IA">castello-anima-TEI-IA</ref>.
+                  Con essi è rimosso il modulo <ident>figures</ident>.</item>
             </list>
+            <p><hi rend="italic">Nota.</hi> <gi>seg</gi> resta ammesso perché usato nell'accezione
+               standard dentro <gi>incipit</gi>/<gi>explicit</gi> del <gi>msDesc</gi>, non come unità
+               di segmentazione interpretativa del testo; <att>ana</att> resta ammesso perché usato
+               solo su <gi>change</gi> (vincolo 2).</p>
          </div>
 
          <div xml:id="vincoli">
             <head>4. Vincoli semantici (Schematron)</head>
-            <p>Quattro regole rendono controllabile il modello interpretativo:</p>
+            <p>Due regole rendono controllabile a schema la disciplina dei puntatori:</p>
             <list type="ordered">
                <item><term>Integrità referenziale</term>: ogni puntatore interno <hi rend="italic"
                   >#…</hi> in <att>ana</att>, <att>who</att>, <att>corresp</att>, <att>target</att>,
                   <att>ref</att>, <att>sameAs</att>, <att>scribeRef</att>, <att>resp</att>,
                   <att>select</att>, <att>source</att> deve corrispondere a un <att>xml:id</att>
-                  realmente dichiarato nel documento.</item>
+                  realmente dichiarato nel documento. È la regola che rende la validazione utile solo
+                  sul <hi rend="italic">file unico</hi> (teiHeader + text): il modulo <gi>text</gi>
+                  isolato, con header segnaposto, segnala legittimamente i puntatori pendenti.</item>
                <item><term>Disciplina della tassonomia di lavoro</term>: in <gi>revisionDesc</gi>
                   ogni <gi>change</gi>/<att>ana</att> deve puntare a una categoria della tassonomia
                   <ident>fase</ident>.</item>
-               <item><term>Co-occorrenza di <ident>phase-critical</ident></term>: essendo un
-                  marcatore trasversale, non può comparire da solo ma va combinato con una fase
-                  posizionale (<ident>phase-introduction</ident> | <ident>phase-mediana</ident> |
-                  <ident>phase-conclusive</ident>).</item>
-               <item><term>Strumento scrittorio delle mani</term>: <gi>handNote</gi>/<att>medium</att>
-                  è ristretto (lista semi-aperta) ai valori realmente attestati.</item>
             </list>
-            <p>La regola 1 intercetta esattamente la classe di errori corretta nel micro-commit
-               (puntatori <hi rend="italic">#llongo</hi>, <att>ana</att> privo di <hi rend="italic"
-               >#</hi>, categorie non dichiarate). Non si vincola invece la co-occorrenza tra
-               <ident>impact</ident> ed <ident>exposition</ident>: un loro disallineamento è un dato
-               interpretativo, non un errore (cfr. commento in <gi>classDecl</gi>).</p>
+            <p>La regola 1 intercetta la classe di errori corretta nel micro-commit (puntatori con
+               <hi rend="italic">#</hi> mancante, categorie non dichiarate, sigle di testimone o mano
+               non definite in <gi>listWit</gi>/<gi>handDesc</gi>).</p>
          </div>
 
          <div xml:id="schema">
@@ -172,7 +188,6 @@
                <moduleRef key="namesdates"/>
                <moduleRef key="transcr"/>
                <moduleRef key="textcrit"/>
-               <moduleRef key="figures"/>
                <moduleRef key="linking"/>
                <moduleRef key="analysis"/>
                <moduleRef key="tagdocs"/>
@@ -189,6 +204,10 @@
                <elementSpec ident="linkGrp" mode="delete"/>
                <elementSpec ident="span" mode="delete"/>
                <elementSpec ident="spanGrp" mode="delete"/>
+               <!-- annotazione interpretativa multiassiale: fuori dal modello leggero -->
+               <elementSpec ident="interp" mode="delete"/>
+               <elementSpec ident="interpGrp" mode="delete"/>
+               <elementSpec ident="rs" mode="delete"/>
 
                <!-- ============ VALORI DI @medium PER LE MANI ============ -->
                <elementSpec ident="handNote" mode="change">
@@ -248,27 +267,6 @@
                               In revisionDesc ogni change/@ana deve puntare a una categoria della
                               tassonomia di lavoro 'fase'.
                            </sch:report>
-                        </sch:rule>
-                     </sch:pattern>
-                  </constraint>
-               </constraintSpec>
-
-               <!-- ============ VINCOLO 3: CO-OCCORRENZA DI phase-critical ============ -->
-               <constraintSpec ident="phase-critical-cooccorrenza" scheme="schematron">
-                  <desc>#phase-critical è trasversale: richiede una fase posizionale.</desc>
-                  <constraint>
-                     <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="tei"
-                        uri="http://www.tei-c.org/ns/1.0"/>
-                     <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                        id="phase-critical">
-                        <sch:rule
-                           context="*[contains(concat(' ',normalize-space(@ana),' '),' #phase-critical ')]">
-                           <sch:assert role="error"
-                              test="tokenize(normalize-space(@ana),' ') = ('#phase-introduction','#phase-mediana','#phase-conclusive')">
-                              #phase-critical è un marcatore trasversale: va combinato con una fase
-                              posizionale (#phase-introduction, #phase-mediana o #phase-conclusive),
-                              non usato da solo.
-                           </sch:assert>
                         </sch:rule>
                      </sch:pattern>
                   </constraint>
