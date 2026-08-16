@@ -8,7 +8,7 @@
 **Licenza**: CC BY 4.0  
 
 Repository del progetto di **edizione critica digitale del terzo libro del _Castello dell’anima_**
-di *suor Teresa di San Geronimo* (ms. autografo 2Qq E 29).
+di *suor Teresa di San Geronimo* (ms. 2Qq E 29).
 
 ---
 
