@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-08-06T08:48:14Z. . 
+Schema generated from ODD source 2026-08-16T09:21:33Z. . 
 TEI Edition: P5 Version 4.12.0. Last updated on 28th July 2026, revision 113e933e2 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/ 
   
@@ -138,7 +138,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d5176162e97179-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+               id="d19867319e95246-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -208,7 +209,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d5176162e98962-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+               id="d19867319e97028-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -854,46 +856,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                <oneOrMore>
                   <data type="token">
                      <param name="pattern">[^\p{C}\p{Z}]+</param>
-                  </data>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.interpLike.attributes">
-      <ref name="tei_att.interpLike.attribute.type"/>
-      <ref name="tei_att.interpLike.attribute.subtype"/>
-      <ref name="tei_att.interpLike.attribute.inst"/>
-   </define>
-   <define name="tei_att.interpLike.attribute.type">
-      <optional>
-         <attribute name="type">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indica quale sia il fenomeno osservato nella porzione di testo in questione.
-Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.interpLike.attribute.subtype">
-      <optional>
-         <attribute name="subtype">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the phenomenon is being noted in the passage, if needed.</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.interpLike.attribute.inst">
-      <optional>
-         <attribute name="inst">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(casi) indica esempi di analisi o interpretazione rappresentati dall'elemento corrente.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI">
-                     <param name="pattern">\S+</param>
                   </data>
                </oneOrMore>
             </list>
@@ -2510,20 +2472,17 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <choice>
          <ref name="tei_media"/>
          <ref name="tei_binaryObject"/>
-         <ref name="tei_formula"/>
       </choice>
    </define>
    <define name="tei_model.graphicLike_alternation">
       <choice>
          <ref name="tei_media"/>
          <ref name="tei_binaryObject"/>
-         <ref name="tei_formula"/>
       </choice>
    </define>
    <define name="tei_model.graphicLike_sequence">
       <ref name="tei_media"/>
       <ref name="tei_binaryObject"/>
-      <ref name="tei_formula"/>
    </define>
    <define name="tei_model.graphicLike_sequenceOptional">
       <optional>
@@ -2531,9 +2490,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </optional>
       <optional>
          <ref name="tei_binaryObject"/>
-      </optional>
-      <optional>
-         <ref name="tei_formula"/>
       </optional>
    </define>
    <define name="tei_model.graphicLike_sequenceOptionalRepeatable">
@@ -2543,9 +2499,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <zeroOrMore>
          <ref name="tei_binaryObject"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_formula"/>
-      </zeroOrMore>
    </define>
    <define name="tei_model.graphicLike_sequenceRepeatable">
       <oneOrMore>
@@ -2553,9 +2506,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_binaryObject"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_formula"/>
       </oneOrMore>
    </define>
    <define name="tei_model.offsetLike">
@@ -3209,8 +3159,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_joinGrp"/>
          <ref name="tei_alt"/>
          <ref name="tei_altGrp"/>
-         <ref name="tei_interp"/>
-         <ref name="tei_interpGrp"/>
       </choice>
    </define>
    <define name="tei_model.global.meta_alternation">
@@ -3223,8 +3171,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_joinGrp"/>
          <ref name="tei_alt"/>
          <ref name="tei_altGrp"/>
-         <ref name="tei_interp"/>
-         <ref name="tei_interpGrp"/>
       </choice>
    </define>
    <define name="tei_model.global.meta_sequence">
@@ -3236,8 +3182,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <ref name="tei_joinGrp"/>
       <ref name="tei_alt"/>
       <ref name="tei_altGrp"/>
-      <ref name="tei_interp"/>
-      <ref name="tei_interpGrp"/>
    </define>
    <define name="tei_model.global.meta_sequenceOptional">
       <optional>
@@ -3263,12 +3207,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </optional>
       <optional>
          <ref name="tei_altGrp"/>
-      </optional>
-      <optional>
-         <ref name="tei_interp"/>
-      </optional>
-      <optional>
-         <ref name="tei_interpGrp"/>
       </optional>
    </define>
    <define name="tei_model.global.meta_sequenceOptionalRepeatable">
@@ -3296,12 +3234,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <zeroOrMore>
          <ref name="tei_altGrp"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_interp"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_interpGrp"/>
-      </zeroOrMore>
    </define>
    <define name="tei_model.global.meta_sequenceRepeatable">
       <oneOrMore>
@@ -3327,12 +3259,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_altGrp"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_interp"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_interpGrp"/>
       </oneOrMore>
    </define>
    <define name="tei_model.milestoneLike">
@@ -3807,7 +3733,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_listNym"/>
          <ref name="tei_listApp"/>
          <ref name="tei_listWit"/>
-         <ref name="tei_table"/>
       </choice>
    </define>
    <define name="tei_model.listLike_alternation">
@@ -3822,7 +3747,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_listNym"/>
          <ref name="tei_listApp"/>
          <ref name="tei_listWit"/>
-         <ref name="tei_table"/>
       </choice>
    </define>
    <define name="tei_model.listLike_sequence">
@@ -3836,7 +3760,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <ref name="tei_listNym"/>
       <ref name="tei_listApp"/>
       <ref name="tei_listWit"/>
-      <ref name="tei_table"/>
    </define>
    <define name="tei_model.listLike_sequenceOptional">
       <optional>
@@ -3868,9 +3791,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </optional>
       <optional>
          <ref name="tei_listWit"/>
-      </optional>
-      <optional>
-         <ref name="tei_table"/>
       </optional>
    </define>
    <define name="tei_model.listLike_sequenceOptionalRepeatable">
@@ -3904,9 +3824,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <zeroOrMore>
          <ref name="tei_listWit"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_table"/>
-      </zeroOrMore>
    </define>
    <define name="tei_model.listLike_sequenceRepeatable">
       <oneOrMore>
@@ -3938,9 +3855,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_listWit"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_table"/>
       </oneOrMore>
    </define>
    <define name="tei_model.noteLike">
@@ -4790,7 +4704,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_model.nameLike.agent"/>
          <ref name="tei_model.offsetLike"/>
          <ref name="tei_model.placeStateLike"/>
-         <ref name="tei_rs"/>
          <ref name="tei_idno"/>
          <ref name="tei_model.persNamePart"/>
          <ref name="tei_eventName"/>
@@ -4802,7 +4715,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_model.nameLike.agent_alternation"/>
          <ref name="tei_model.offsetLike_alternation"/>
          <ref name="tei_model.placeStateLike_alternation"/>
-         <ref name="tei_rs"/>
          <ref name="tei_idno"/>
          <ref name="tei_model.persNamePart_alternation"/>
          <ref name="tei_eventName"/>
@@ -4813,7 +4725,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <ref name="tei_model.nameLike.agent_sequence"/>
       <ref name="tei_model.offsetLike_sequence"/>
       <ref name="tei_model.placeStateLike_sequence"/>
-      <ref name="tei_rs"/>
       <ref name="tei_idno"/>
       <ref name="tei_model.persNamePart_sequence"/>
       <ref name="tei_eventName"/>
@@ -4828,9 +4739,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       </optional>
       <optional>
          <ref name="tei_model.placeStateLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="tei_rs"/>
       </optional>
       <optional>
          <ref name="tei_idno"/>
@@ -4856,9 +4764,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_model.placeStateLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_rs"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="tei_idno"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -4882,9 +4787,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_model.placeStateLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_rs"/>
-      </oneOrMore>
-      <oneOrMore>
          <ref name="tei_idno"/>
       </oneOrMore>
       <oneOrMore>
@@ -4904,8 +4806,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_model.noteLike"/>
          <ref name="tei_model.global.edit"/>
          <ref name="tei_metamark"/>
-         <ref name="tei_notatedMusic"/>
-         <ref name="tei_figure"/>
       </choice>
    </define>
    <define name="tei_model.biblPart">
@@ -5978,17 +5878,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.personal.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_rs">
-      <element name="rs">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stringa di riferimento) contiene un nome generico o una stringa di riferimento. [14.2.1. Personal Names 3.6.1. Referring Strings]</a:documentation>
-         <ref name="tei_macro.phraseSeq"/>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.naming.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
@@ -10414,7 +10303,6 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
             <choice>
                <text/>
                <ref name="tei_model.gLike"/>
-               <ref name="tei_rs"/>
                <ref name="tei_name"/>
             </choice>
          </zeroOrMore>
@@ -14471,182 +14359,6 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          <empty/>
       </element>
    </define>
-   <define name="tei_att.tableDecoration.attributes">
-      <ref name="tei_att.tableDecoration.attribute.role"/>
-      <ref name="tei_att.tableDecoration.attribute.rows"/>
-      <ref name="tei_att.tableDecoration.attribute.cols"/>
-   </define>
-   <define name="tei_att.tableDecoration.attribute.role">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="role"
-                    a:defaultValue="data">
-            <a:documentation>(role) specifica il tipo di informazione contenuta nela cella in questione o in ciascuna delle celle della riga presa in esame.
-Suggested values include: 1] label; 2] data</a:documentation>
-            <choice>
-               <value>label</value>
-               <a:documentation>informazione esclusivamente descrittiva o del tipo etichetta.</a:documentation>
-               <value>data</value>
-               <a:documentation>valori di dati.</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.tableDecoration.attribute.rows">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="rows"
-                    a:defaultValue="1">
-            <a:documentation>(rows) indica il numero di righe occupate dalla cella o riga in questione.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.tableDecoration.attribute.cols">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="cols"
-                    a:defaultValue="1">
-            <a:documentation>(colonne) indica il numero di colonne occupate dalla cella o riga.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_table">
-      <element name="table">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table) contiene testo visualizzato in forma di tabella, in righe e colonne. [15.1.1. TEI Tables]</a:documentation>
-         <group>
-            <zeroOrMore>
-               <choice>
-                  <ref name="tei_model.headLike"/>
-                  <ref name="tei_model.global"/>
-               </choice>
-            </zeroOrMore>
-            <choice>
-               <oneOrMore>
-                  <ref name="tei_row"/>
-                  <zeroOrMore>
-                     <ref name="tei_model.global"/>
-                  </zeroOrMore>
-               </oneOrMore>
-               <oneOrMore>
-                  <ref name="tei_model.graphicLike"/>
-                  <zeroOrMore>
-                     <ref name="tei_model.global"/>
-                  </zeroOrMore>
-               </oneOrMore>
-            </choice>
-            <zeroOrMore>
-               <ref name="tei_model.divBottom"/>
-               <zeroOrMore>
-                  <ref name="tei_model.global"/>
-               </zeroOrMore>
-            </zeroOrMore>
-         </group>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <optional>
-            <attribute name="rows">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rows) indica il numero di righe della tabella.</a:documentation>
-               <data type="nonNegativeInteger"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="cols">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(colonne) indica il numero di colonne in ciascuna riga della tabella-</a:documentation>
-               <data type="nonNegativeInteger"/>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_row">
-      <element name="row">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(row) contiene una riga di una tabella. [15.1.1. TEI Tables]</a:documentation>
-         <oneOrMore>
-            <ref name="tei_cell"/>
-         </oneOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.tableDecoration.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_cell">
-      <element name="cell">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cell) contiene una cella di una tabella. [15.1.1. TEI Tables]</a:documentation>
-         <ref name="tei_macro.specialPara"/>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.tableDecoration.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_formula">
-      <element name="formula">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(formula) contiene una formula matematica o di altra natura. [15.2. Formulæ and Mathematical Expressions]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.graphicLike"/>
-               <ref name="tei_model.hiLike"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_notatedMusic">
-      <element name="notatedMusic">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">encodes the presence of music notation in a text. [15.3. Notated Music in Written Text]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="tei_model.labelLike"/>
-               <ref name="tei_model.ptrLike"/>
-               <ref name="tei_binaryObject"/>
-               <ref name="tei_seg"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.placement.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_figure">
-      <element name="figure">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure) contiene una porzione di testo costituita da grafici, illustrazioni o figure. [15.4. Specific Elements for Graphic Images]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="tei_model.headLike"/>
-               <ref name="tei_model.common"/>
-               <ref name="tei_figDesc"/>
-               <ref name="tei_model.graphicLike"/>
-               <ref name="tei_model.global"/>
-               <ref name="tei_model.divBottom"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.placement.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.written.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_figDesc">
-      <element name="figDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Descrizione di una figura) contiene una breve descrizione dell'aspetto o del contenuto di una figura, da utilizzare quando si vuole documentare un'immagine senza mostrarla. [15.4. Specific Elements for Graphic Images]</a:documentation>
-         <ref name="tei_macro.limitedContent"/>
-         <ref name="tei_att.global.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="tei_att.global.linking.attributes">
       <ref name="tei_att.global.linking.attribute.corresp"/>
       <ref name="tei_att.global.linking.attribute.synch"/>
@@ -15499,40 +15211,6 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
                <data type="boolean"/>
             </attribute>
          </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_interp">
-      <element name="interp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interpretazione) riassume una specifica annotazione interpretativa che può essere associata ad una porzione di testo [18.3. Spans and Interpretations]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.descLike"/>
-               <ref name="tei_model.certLike"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.interpLike.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_interpGrp">
-      <element name="interpGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gruppo di interpretazioni) raggruppa un insieme di interpretazioni accomunate per responsabilità o tipo [18.3. Spans and Interpretations]</a:documentation>
-         <group>
-            <zeroOrMore>
-               <ref name="tei_model.descLike"/>
-            </zeroOrMore>
-            <oneOrMore>
-               <ref name="tei_interp"/>
-            </oneOrMore>
-         </group>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.interpLike.attributes"/>
          <empty/>
       </element>
    </define>
@@ -18298,22 +17976,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</a:do
                               In revisionDesc ogni change/@ana deve puntare a una categoria della
                               tassonomia di lavoro 'fase'.
                            </sch:report>
-      </sch:rule>
-   </sch:pattern>
-   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           prefix="tei"
-           uri="http://www.tei-c.org/ns/1.0"/>
-   <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                id="phase-critical">
-      <sch:rule context="*[contains(concat(' ',normalize-space(@ana),' '),' #phase-critical ')]">
-         <sch:assert role="error"
-                     test="tokenize(normalize-space(@ana),' ') = ('#phase-introduction','#phase-mediana','#phase-conclusive')">
-                              #phase-critical è un marcatore trasversale: va combinato con una fase
-                              posizionale (#phase-introduction, #phase-mediana o #phase-conclusive),
-                              non usato da solo.
-                           </sch:assert>
       </sch:rule>
    </sch:pattern>
 </grammar>
