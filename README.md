@@ -72,7 +72,7 @@ Le fasi successive prevedono l’integrazione del modello TEI in un
     ├── readme-MC-general.md      # Piano editoriale e roadmap MC1…MC8
     └── MC-1/                     # Commit 1 — Libro III, capp. I–V
         ├── MC1-README_generale.md
-        ├── data/                 # castello-anima.xml, TEI-Header.xml, ODD/RNG
+        ├── data/                 # TEI-Header.xml, castello-anima-text.xml, ODD/RNG
         ├── docs/                 # Introduzione, Struttura-cartulazione, Header-README
         ├── output/               # Prototipi di visualizzazione
         └── tool/                 # Strumenti di ricerca (in preparazione)
