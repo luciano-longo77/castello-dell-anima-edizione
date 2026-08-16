@@ -1,4 +1,4 @@
-# CI dell'edizione — validazione
+# CI dell'edizione - validazione
 
 A ogni `push`/`pull_request` che tocca i dati (`Micro-commits/**/data/**`), GitHub Actions
 verifica che ciascun micro-commit resti **ben formato, valido e coerente**.
