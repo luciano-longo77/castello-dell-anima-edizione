@@ -190,7 +190,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 - `<ref>` — `@target` (rimando interno, es. `#msItem-II`, o a una voce di `<listBibl>`, es. `#avila-castello`)
 - `<cit>` — contenitore di citazione (`<quote>`+`<bibl>`)
-- `<quote>` — `@xml:lang` (`lat`) per le citazioni latine
+- `<quote>` — `@xml:lang` (`la`) per le citazioni latine
 - `<bibl>` — riferimento alla fonte in `<listBibl>`; `<biblScope>` per capitolo/versetto (l'uso di `@cRef` è subordinato a un `refsDecl`: cfr. §3.12 e verifica TEI P5)
 - `<foreign>` — `@xml:lang`
 - `<sic>` / `<corr>` — impiegati anche per le citazioni tràdite con errore
