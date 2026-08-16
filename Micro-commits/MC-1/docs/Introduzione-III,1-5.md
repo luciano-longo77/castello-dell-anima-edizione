@@ -147,7 +147,7 @@ La versione finale TEI comprenderà:
 
 #### 3.11. Tag set "core" (elementi e attributi)
 
-Il tag set minimo adottato per la codifica del testo (elemento `<text>`) comprende gli elementi seguenti, con i rispettivi attributi, organizzati secondo i **tre layer** del commit 1 — filologico‑grafico, mistico‑dottrinale, intertestuale — su cui poggiano i **due livelli** di trascrizione (diplomatico ⇄ interpretativo) resi con `<choice>`. Sono esclusi dal tag set di questo commit gli elementi e gli attributi dell'annotazione interpretativa multiassiale (`<seg>`, `@ana`, `<interp>`, `<figure>`, le otto tassonomie): la loro sede è il progetto separato `castello-anima-TEI-IA` (cfr. §3.12).
+Il tag set minimo adottato per la codifica del testo (elemento `<text>`) comprende gli elementi seguenti, con i rispettivi attributi, organizzati secondo i **tre layer** del commit 1 — filologico‑grafico, mistico‑dottrinale, intertestuale — su cui poggiano i **due livelli** di trascrizione (diplomatico ⇄ interpretativo) resi con `<choice>`. Sono esclusi dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale (`<interp>`/`<interpGrp>`, `<figure>`, `<rs>`, il linking stand-off `<span>`/`<link>`) e l'uso *analitico* di `@ana` sul testo, con le otto tassonomie: la loro sede è il progetto separato `castello-anima-TEI-IA` (cfr. §3.12). Restano ammessi, nel loro uso standard, `<seg>` (dentro `<incipit>`/`<explicit>` del `<msDesc>`) e `@ana` limitatamente ai `<change>` del `revisionDesc` (tassonomia `fase`).
 
 **Layer 1 — filologico‑grafico**
 
