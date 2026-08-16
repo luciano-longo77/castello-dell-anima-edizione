@@ -2,27 +2,12 @@
 <?xml-model href="castello-anima-odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="castello-anima-odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="it">
-    <teiHeader>
-        <!-- MODULO text di MC-1. Il teiHeader completo (testimoni #txt-*, mani #ink_*, persone
-             #s-teresa/#editor, vocabolario #stati-mistici, fonti #bible-vulgate/#molinos-guida/#avila-castello)
-             e' modellato a parte in TEI-Header.xml e integrato nel file unico castello-anima.xml.
-             I puntatori del testo (@wit/@hand/@resp/@ref/@target) risolvono in quel contesto. -->
-        <fileDesc>
-            <titleStmt>
-                <title>Il Castello dell'anima — Libro III, MC-1: modulo text (proemio, capp. I–V)</title>
-                <author><name type="religious" ref="#s-teresa">Teresa di San Geronimo</name><name type="secular">Anna La Longa</name></author>
-                <respStmt><resp>Edizione critica digitale</resp><name ref="#editor">Luciano Longo</name></respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Edizione critica digitale del Castello dell'anima</publisher>
-                <availability status="restricted"><licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence></availability>
-            </publicationStmt>
-            <sourceDesc>
-                <p>Autografo unico: Palermo, Biblioteca Comunale, ms. 2 Qq E 29. Descrizione completa
-                    del testimone, delle mani e dei testimoni genetici in TEI-Header.xml.</p>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
+    <!-- teiHeader incluso da TEI-Header.xml via XInclude: i due file restano SEPARATI.
+         In oXygen mantenere attiva l'elaborazione XInclude; risolto l'include, i puntatori
+         (@wit/@hand/@resp/@ref/@target) risolvono e il file valida contro castello-anima-odd.rng
+         con 0 riferimenti pendenti. Il teiHeader completo (testimoni, mani, vocabolario stati,
+         fonti) e' modellato una sola volta in TEI-Header.xml. -->
+    <xi:include href="TEI-Header.xml" xpointer="element(/1/1)"/>
     <text xml:lang="it">
         <front>
             <titlePage>
