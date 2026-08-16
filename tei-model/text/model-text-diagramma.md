@@ -3,10 +3,8 @@ graph TD
   text[text] --> front[front]
   text --> body[body]
 
-  front --> listWit[listWit: 7 livelli Tb0-Tc]
-  front --> listPerson[listPerson]
-  front --> listBibl[listBibl fontes]
   front --> titlePage[titlePage]
+  %% listWit / listPerson / listBibl NON stanno nel front: sono dichiarati nel teiHeader
 
   body --> libro1[Libro I]
   body --> libro2[Libro II]
@@ -17,7 +15,7 @@ graph TD
   libro3 --> capN[Capitolo N]
 
   preface --> headPref[head]
-  preface --> argumentPref[argument]
+  preface --> pPref[p n=... : paragrafi del proemio]
 
   cap1 --> head1[head]
   cap1 --> argument1[argument]
