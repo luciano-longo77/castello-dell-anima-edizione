@@ -41,15 +41,16 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 ---
 
 ## 3. Organizzazione del Repository
-Ogni micro-commit (es. `MC1_Castello_MicroCommit_III_1-5/`) contiene:
-* `data/`: File XML sorgente conformi allo standard TEI P5.
-* `doc/`: Introduzione editoriale, note al testo e analisi della cartulazione.
-* `out/`: Prototipi per la visualizzazione dinamica della struttura del manoscritto.
-* `tool/`: Prototipi per l'interrogazione dinamica dell'edizione.
+Ogni micro-commit (es. `Micro-commits/MC-1/`) contiene:
+* `MC1-README_generale.md`: introduzione sintetica e cartulazione del micro-commit.
+* `data/`: file XML/TEI sorgente e schema di progetto (ODD/RNG).
+* `docs/`: introduzione critica, struttura/cartulazione e guida al teiHeader.
+* `output/`: prototipi per la visualizzazione dinamica della struttura del manoscritto.
+* `tool/`: prototipi per l'interrogazione dinamica dell'edizione *(in preparazione)*.
 ---
 
 ## 4. Requisiti Tecnici
-I file XML sono validati rispetto a uno schema TEI **personalizzato**, generato dall'ODD di progetto (`MC-1_castello-anima-odd.odd`) e compilato in `MC-1_castello-anima-odd.rng` (RELAX NG con Schematron incorporato). Per la consultazione si raccomanda un editor XML (es. oXygen) o fogli di stile XSLT compatibili con lo standard TEI.
+I file XML sono validati rispetto a uno schema TEI **personalizzato**, generato dall'ODD di progetto (`castello-anima-odd.odd`) e compilato in `castello-anima-odd.rng` (RELAX NG con Schematron incorporato). Per la consultazione si raccomanda un editor XML (es. oXygen) o fogli di stile XSLT compatibili con lo standard TEI.
 
 ---
 
