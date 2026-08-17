@@ -96,9 +96,11 @@ Sotto l'etichetta «due livelli» convivono in realtà **quattro operazioni filo
 | `<orig>` / `<reg>` | regolarizzazione grafica (diacritici, univerbazioni, maiuscole) | livello editoriale; non tocca la sostanza linguistica |
 | `<abbr>` / `<expan>` | scioglimento di abbreviazione materiale | livello editoriale; espansione, non normalizzazione linguistica |
 | `<sic>` / `<corr>` | **emendatio**: correzione di un errore materiale del testimone | **giudizio editoriale sul testo** (`@resp="#editor"`, `@cert`) |
-| `<app>` / `<lem>` / `<rdg>` | variante genetica d'autrice | fase del processo di scrittura (`@varSeq`); non è errore né normalizzazione |
+| `<app>` / `<lem>` / `<rdg>` | variante genetica d'autrice (correzione *currente calamo*) | fase del processo di scrittura; non è errore né normalizzazione (`@varSeq` opzionale, solo con ≥2 letture concorrenti) |
 
 La distinzione è dirimente: `<orig>/<reg>` e `<abbr>/<expan>` sono trasformazioni reversibili di *rappresentazione*; `<sic>/<corr>` è l'unica operazione in cui l'editore **corregge** il testo, e va perciò riservata agli errori materiali genuini, tenendola distinta dalle forme d'autrice o regionali (che restano tali, non emendate).
+
+L'apparato genetico (`<app>`) registra invece le correzioni **a *currente calamo*** dell'autrice: la forma canonica è `<lem wit="#txt-c">` (lezione costituita) affiancato da uno o più `<rdg wit="#txt-b0">`, con `<del>`/`<add>`/`<subst>` **sempre all'interno di `<app>`**. L'attributo `@varSeq` non è la norma dell'apparato: è **opzionale** e si impiega soltanto quando concorrono **due o più `<rdg>`** con ordine cronologico da esplicitare — evenienza che in MC1 (capp. I–V) **non ricorre**. Distinto dall'apparato è `<retrace>` (ripasso a inchiostro di mano `#ink_3-dark`, testo *invariato*): non registra una correzione e perciò **non** si colloca dentro `<app>`.
 
 Il testo del *Castello dell'anima* è stato pubblicato in edizione a stampa da R. Casapullo (a cura di), *Il Castello dell'anima*, Alessandria, Edizioni dell'Orso, 2015, in collaborazione con L. Longo — curatore dell'edizione del Libro III — insieme a Stella Mondino (Libro II) e Rita Sciovè (Libro I). Quell'edizione adotta criteri di trascrizione moderatamente regolarizzati, con l'obiettivo dichiarato di migliorare la leggibilità di un testo sintatticamente complesso. 
 
@@ -125,13 +127,15 @@ L'**interpunzione originale** del manoscritto è conservata nel testo base dell'
 La **foliazione** originale del manoscritto è indicata con precisione:
 
 - nella trascrizione, tramite indicazioni esplicite di carta;
-- nella codifica TEI, mediante: `<pb n="158r" facs="images/f158r.jpg" xml:id="f158r"/>`.
+- nella codifica TEI, mediante: `<pb n="158r" xml:id="f158r"/>`.
+
+MC1 adotta un modello **facs‑free**: l'attributo `@facs` è previsto dallo schema ma **non usato** nel testo (nessuna carta è ancorata a un file immagine in questo micro‑commit).
 
 #### 3.7. Guasti, lacune, incertezze
-Le porzioni di **testo illeggibili, lacunose o meccanicamente danneggiate** sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>`, `<gap reason="illegible"/>`, `<supplied reason="conjecture"/>`.
+Le porzioni di **testo illeggibili, lacunose o meccanicamente danneggiate** sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>` (abrasione/scoloritura), `<gap reason="illegible"/>` (illeggibile), `<supplied reason="hole"/>` (lacuna materiale, es. foro/guasto) e `<supplied reason="conjecture"/>` (integrazione congetturale).
 
 #### 3.8. Cancellature, aggiunte, ripensamenti
-Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate **dati genetici primari**. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI: `<del>...</del>`, `<add place="margin">...</add>`, `<subst>...</subst>`.
+Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate **dati genetici primari**. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI, **all'interno di `<app>`**: `<del>...</del>`, `<add place="margin">...</add>`, `<subst>...</subst>`. Da questi va tenuto distinto `<retrace hand="#ink_3-dark">...</retrace>`, che registra il solo **ripasso a inchiostro** di una porzione già scritta (mano T3, *inchiostro scuro*): il testo resta **invariato**, non vi è né cancellatura né aggiunta, e perciò `<retrace>` **non** rientra in `<app>`.
 
 #### 3.9. Glosse
 Il Libro III include fasi in cui l'autrice aggiunge chiarificazioni successive. In TEI: `<note type="glossa" subtype="corrigenda">`.
@@ -168,7 +172,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<head>` — nessun attributo
 - `<argument>` — nessun attributo
 - `<p>` — `@n`; `@xml:id`
-- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@xml:id` (es. `f158r`); `@facs` (es. `images/f158r.jpg`)
+- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@xml:id` (es. `f158r`). L'attributo `@facs` è ammesso dallo schema ma **non usato** in MC1 (modello *facs‑free*): la resa canonica è `<pb n="158r" xml:id="f158r"/>`
 - `<fw>` — `@type` (`header`, `catch`, `sig`); `@place` (`top`, `bottom-right`, `bottom`)
 
 *Trascrizione a due livelli.* La coppia diplomatico ⇄ interpretativo è resa con `<choice>`, che affianca la lezione conservativa e la sua regolarizzazione senza sostituire l'una all'altra:
@@ -178,20 +182,21 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<abbr>` / `<expan>` — abbreviazione materiale ⇄ scioglimento; `@xml:lang`, `@resp`, `@cert` su `<expan>`
 - `<sic>` / `<corr>` — lezione erronea del testimone ⇄ correzione editoriale; `@resp`, `@cert` su `<corr>`
 
-*Apparato genetico d'autrice.*
+*Apparato genetico d'autrice (correzioni a *currente calamo*).* `<del>`/`<add>`/`<subst>` compaiono **sempre dentro `<app>`**.
 
 - `<app>` — nessun attributo
 - `<lem>` — `@wit` (`#txt-c`, lezione costituita)
-- `<rdg>` — `@wit` (`#txt-b0`…); `@varSeq` (ordine cronologico delle varianti d'autrice, non gerarchico)
+- `<rdg>` — `@wit` (`#txt-b0`…); `@varSeq` **opzionale**, riservato ai casi di ≥2 `<rdg>` concorrenti da ordinare cronologicamente (non gerarchico) — in MC1 **non ricorre** (0 occorrenze). Nessun `@type` su `<lem>`/`<rdg>`
 - `<subst>` — contenitore di `<del>`+`<add>` per la sostituzione come evento unico
 - `<del>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`)
 - `<add>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
+- `<retrace>` — `@hand` (`#ink_3-dark`, mano T3); `@resp` — ripasso a inchiostro (testo **invariato**): elemento inline, **fuori** da `<app>`, distinto da `<add>` (aggiunta genuina) e da `<subst>` (correzione)
 
 *Incertezze e guasti materiali.*
 
 - `<unclear>` — `@reason`; `@unit` (char, word, line)
 - `<gap>` — `@reason` (`illegible`, `hole`); `@unit`; `@quantity`
-- `<supplied>` — `@reason` (`hole`, `conjecture`); `@resp`
+- `<supplied>` — `@reason` (`hole` = lacuna materiale, `conjecture` = integrazione congetturale); `@resp`
 
 **Layer 2 — mistico‑dottrinale**
 
@@ -238,7 +243,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 `<note type="glossa" subtype="corrigenda">` con `@hand` e `@place="margin"` distingue le glosse marginali con cui l'autrice, in un secondo momento, precisa o attenua un'affermazione già scritta, da qualunque altra nota di natura diversa, fenomeno materiale specifico e ricorrente nel Libro III, dove tali glosse costituiscono la principale traccia visibile della sua auto-censura dottrinale.
 
-**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione dell'edizione critica, le lezioni alternative sono ancorate ai testimoni dichiarati in `<listWit>` tramite `@wit`. Le varianti d'autrice sono **ordinate cronologicamente** con `@varSeq` sul `<rdg>` e non gerarchizzate: `@varSeq` registra la successione delle stesure senza stabilire fra esse un rapporto di subordinazione, coerentemente con la natura genetica (e non stemmatica) dell'apparato. All'interno di ciascun `<rdg>`, `<del>` e `<add>` — con `@place` (`inline`/`margin`), `@hand`, `@resp` e `@type` (`correction`/`substitution`/`integration`), permettono di specificare non solo che una variante esiste, ma la sua natura materiale precisa: una cancellatura interlineare di mano dell'autrice non ha lo stesso peso filologico di un'aggiunta marginale di mano esterna, e il tag set core li rende entrambi tracciabili distintamente. `<subst>` è previsto per le sostituzioni che comportano insieme una cancellatura e un'aggiunta come evento unico, distinguendole dai casi in cui le due operazioni sono invece disgiunte nel tempo.
+**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione dell'edizione critica, le lezioni alternative sono ancorate ai testimoni dichiarati in `<listWit>` tramite `@wit`. L'apparato registra soprattutto correzioni **a *currente calamo*** (la stessa mano si corregge nell'atto stesso della scrittura): la forma canonica è dunque un solo `<rdg wit="#txt-b0">` che contiene `<subst>`/`<del>`/`<add>`. `@varSeq` **non è il tratto ordinario** dell'apparato: è opzionale e va usato **solo** quando concorrono due o più `<rdg>` da ordinare cronologicamente — condizione che in MC1 (capp. I–V) non si presenta. Su `<lem>` e `<rdg>` non compare `@type`. All'interno di `<app>`, `<del>` e `<add>` — con `@place` (`inline`/`margin`), `@hand`, `@resp` e `@type` (`correction`/`substitution`/`integration`) — permettono di specificare non solo che una variante esiste, ma la sua natura materiale precisa: una cancellatura interlineare di mano dell'autrice non ha lo stesso peso filologico di un'aggiunta marginale di mano esterna, e il tag set core li rende entrambi tracciabili distintamente. `<subst>` è previsto per le sostituzioni che comportano insieme una cancellatura e un'aggiunta come evento unico, distinguendole dai casi in cui le due operazioni sono invece disgiunte nel tempo. Va infine tenuto distinto dall'apparato il fenomeno del **ripasso a inchiostro**, reso con `<retrace hand="#ink_3-dark" resp="#s-teresa">`: qui la mano T3 rivergà un tratto già scritto senza mutarne il testo, sicché `<retrace>` documenta un dato materiale (l'inchiostro) e non una variante — per questo resta **fuori** da `<app>` e non va confuso con `<add>` né con `<subst>`.
 
 `<unclear>`, `<gap reason="illegible">` e `<supplied reason="conjecture">` completano l'apparato per le porzioni di testo materialmente compromesse, coerenti con quanto dichiarato nella descrizione fisica del manoscritto, dove si segnalano abrasioni, scolorimenti e guasti meccanici marginali.
 
@@ -267,14 +272,14 @@ I capitoli I–V mostrano:
 - **Autore:** Teresa di San Geronimo (Anna La Longa), 1670–post 1703
 - **Datazione:** 1692–1694 (Libro III)
 - **Manoscritto:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29
-- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, modellata su **tre layer** (filologico‑grafico, mistico‑dottrinale, intertestuale) e **due livelli** di trascrizione via `<choice>`: apparato genetico `<app>`/`<lem>`/`<rdg>` con `@varSeq`, lessico mistico agganciato al vocabolario degli stati via `<term ref>`, intertesto via `<cit>`/`<quote>`/`<bibl>` e `<ref>`, autorità VIAF per persone e fonti dottrinali
+- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, modellata su **tre layer** (filologico‑grafico, mistico‑dottrinale, intertestuale) e **due livelli** di trascrizione via `<choice>`: apparato genetico `<app>`/`<lem>`/`<rdg>` a registrazione *currente calamo* (con `<retrace>` per i ripassi a inchiostro; `@varSeq` solo con ≥2 letture concorrenti), lessico mistico agganciato al vocabolario degli stati via `<term ref>`, intertesto via `<cit>`/`<quote>`/`<bibl>` e `<ref>`, autorità VIAF per persone e fonti dottrinali
 - **Parole chiave:** Castello dell'anima; mistica secentesca; contemplazione infusa; TEI; edizione critica digitale
 
 ### 7. Risultati attesi
 
 - Base critica per la marcatura TEI;
 - Definizione del blocco ascensionale del Libro III;
-- Preparazione del terreno per MC2 (capp. VI–VIII).
+- Preparazione del terreno per MC2 (capp. VI–X, ossia III.6–10).
 
 ### 8. Roadmap
 

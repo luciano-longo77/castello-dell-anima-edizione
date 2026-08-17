@@ -13,7 +13,7 @@
 ## A cosa serve questo documento
 
 Questo file spiega **cosa contiene il `teiHeader`**, **come è organizzato** e **quali obiettivi persegue** in questa prima fase del progetto (MC1, Libro III, capp. I–V). 
-È pensato come guida di lettura per chi apre il file XML senza aver seguito lo sviluppo del progetto, e come promemoria per le fasi successive (MC2 e oltre), che dovranno mantenere la coerenza qui stabilita o dichiararne esplicitamente le variazioni.
+È pensato come guida di lettura per chi apre il file XML senza aver seguito lo sviluppo del progetto, e come promemoria per le fasi successive (MC2 e oltre), che dovranno mantenere la coerenza qui stabilita o dichiararne esplicitamente le variazioni. L'estensione dichiarata da questo header è **Libro III, proemio + capp. I–V, cc. 158r–168r** (§§ 1–72).
 
 Il `teiHeader` è mantenuto come componente concettualmente distinta dal file dati del `<text>` e dal README narrativo del MC1: descrive *il modello*, non il contenuto trascritto capitolo per capitolo. Sul piano fisico i due file restano **separati**: il file dati (`castello-anima-text.xml`) richiama questo header via `<xi:include href="TEI-Header.xml" xpointer="element(/1/1)"/>`, così l'header è modellato una sola volta e i puntatori del testo risolvono a validazione (con l'elaborazione XInclude attiva in oXygen).
 
@@ -44,14 +44,14 @@ Questa seconda funzione è ciò che rende l'edizione più di una semplice trascr
 ## Struttura del `teiHeader` e cosa fa ciascuna sezione
 
 ### `fileDesc`
-Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`), identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue cinque mani/fasi di scrittura, quattro autografe di Teresa (`ink_1` e `ink_2` a inchiostro bruno, `ink_3-dark` a inchiostro scuro e `pencil_1` a matita) più una mano esterna non identificata (`ink_4-external`), corrispondenti alla stratificazione genetica del testo (Tb0–T4).
+Contiene i metadati editoriali in senso stretto: titolo, autrice (con nome religioso e secolare), curatore, licenza, e la descrizione approfondita del manoscritto (`sourceDesc/msDesc`), identificazione archivistica, contenuto dei tre libri con incipit/explicit, descrizione fisica del supporto, e soprattutto `handDesc`, che distingue cinque mani/fasi di scrittura, quattro autografe di Teresa (`ink_1` e `ink_2` a inchiostro bruno, `ink_3-dark` a inchiostro scuro — mano T3 dei `<retrace>` e delle glosse prudenziali — e `pencil_1` a matita) più una mano esterna non identificata (`ink_4-external`), corrispondenti alla stratificazione genetica del testo (Tb0–T4).
 
 Le `notesStmt` raccolgono le note critiche di inquadramento (materiale, prudenziale, linguistico, sul rischio teologico, sulla trasmissione, stilistico) e le note biografiche e contestuali sull'autrice, il commento filologico che precede e giustifica le scelte editoriali applicate nel testo.
 
 ### `encodingDesc`
 Qui si dichiara **come** il testo viene codificato:
 - `projectDesc` descrive gli obiettivi del modello (tre layer: filologico‑grafico, mistico‑dottrinale, intertestuale; trascrizione a due livelli; apparato genetico) e la fase in cui si trova il progetto.
-- `editorialDecl` fissa i criteri editoriali e in particolare la **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nel file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`); apparato critico in *parallel segmentation* con `@varSeq`; nessuna normalizzazione del testo trascritto se non quella dichiarata e reversibile via `<choice>`.
+- `editorialDecl` fissa i criteri editoriali e in particolare la **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nel file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`); apparato genetico in *parallel segmentation* a registrazione **a *currente calamo*** (`<lem wit="#txt-c">` + `<rdg wit="#txt-b0">` con `<del>`/`<add>`/`<subst>` interni a `<app>`), integrato da `<retrace>` per i ripassi a inchiostro (mano `#ink_3-dark`, testo invariato) — `@varSeq` **non è il default**: opzionale e riservato ai casi di ≥2 `<rdg>` concorrenti, non ricorre in MC1; nessuna normalizzazione del testo trascritto se non quella dichiarata e reversibile via `<choice>`.
 - `tagsDecl` elenca **esattamente** gli elementi TEI usati nel testo — il "tag set core" di questo commit (vedi sotto).
 - `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#annichilimento`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header.
 
@@ -65,10 +65,10 @@ Registra la cronologia sintetica degli interventi editoriali (voci proforma), ci
 
 Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che TEI permette, ma il **tag set minimo** deciso per MC1, coerente con quanto dichiarato nel README narrativo del micro-commit. Include:
 
-- **Struttura** (layer filologico‑grafico): `div`, `head`, `argument`, `p`, `pb` (`@n`/`@xml:id`/`@facs`), `fw`, `text`, `body`
+- **Struttura** (layer filologico‑grafico): `div`, `head`, `argument`, `p`, `pb` (`@n`/`@xml:id`; `@facs` ammesso dallo schema ma **non usato** — MC1 è *facs‑free*, es. `<pb n="158r" xml:id="f158r"/>`), `fw`, `text`, `body`
 - **Front matter**: `front`, `listWit`/`witness` (sette **stati testuali di un unico autografo** — non sette manoscritti — incluso il testo critico costituito `txt-c` con `@resp="#editor"`), `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
 - **Trascrizione a due livelli** (layer filologico‑grafico): `choice` con `orig`/`reg`, `abbr`/`expan`, `sic`/`corr`
-- **Apparato genetico**: `app`/`lem`/`rdg` (`@wit`, `@varSeq`), `del`/`add`/`subst` (`@place`/`@hand`/`@resp`/`@type`), `unclear`/`gap`/`supplied`
+- **Apparato genetico** (correzioni a *currente calamo*): `app`/`lem`/`rdg` (`@wit`; `@varSeq` opzionale, solo con ≥2 `rdg` concorrenti — assente in MC1), `del`/`add`/`subst` (`@place`/`@hand`/`@resp`/`@type`) **interni a `app`**, `retrace` (`@hand="#ink_3-dark"`/`@resp` — ripasso a inchiostro, testo invariato, fuori da `app`), `unclear`/`gap`/`supplied`
 - **Lessico mistico** (layer mistico‑dottrinale): `term` con `@ref` al vocabolario degli stati
 - **Intertesto** (layer intertestuale): `ref` (`@target`), `cit`/`quote`/`bibl`/`foreign`
 - **Identificatori e fonti**: `idno` (in particolare per VIAF), `listBibl type="fontes"` (Vulgata, Molinos, Ávila)

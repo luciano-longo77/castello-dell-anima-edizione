@@ -43,29 +43,32 @@ Il micro‑commit comprende integralmente le carte:
 
 ## 3. Struttura dei capitoli (con carte)
 
+La numerazione dei paragrafi segue la **numerazione continua d'autrice** (§§ 1–72 sull'intero MC1), non un conteggio che riparte da capitolo a capitolo.
+
 ### Frontespizio del Libro III
 * **Carte:** 158r
-* **Contenuto:** Titolo del libro e paragrafi introduttivi.
+* **Paragrafi:** §§ 1–2
+* **Contenuto:** Titolo del libro e paragrafi introduttivi (proemio).
 
 ### Capitolo I - Disposizione lasciata dalla notte dello spirito
 * **Carte:** 158r–159r 
-* **Paragrafi:** 1–10 
+* **Paragrafi:** §§ 3–12 
 
 ### Capitolo II - Silentio
 * **Carte:** 159v–162r
-* **Paragrafi:** 1–21
+* **Paragrafi:** §§ 13–33
 
 ### Capitolo III - Oblivione / Sonno
 * **Carte:** 162r–164v 
-* **Paragrafi:** 1–14
+* **Paragrafi:** §§ 34–47
 
 ### Capitolo IV - Scordanza
 * **Carte:** 164v–165v
-* **Paragrafi:** 1–8 
+* **Paragrafi:** §§ 48–55 
 
 ### Capitolo V - Indifferenza
 * **Carte:** 166r–168r
-* **Paragrafi:** 1–17
+* **Paragrafi:** §§ 56–72
 
 ---
 
@@ -74,38 +77,42 @@ Il micro‑commit comprende integralmente le carte:
 | Capitolo | Stato mistico / Tema | Carte | Paragrafi | Note strutturali |
 | :--- | :--- | :--- | :--- | :--- |
 | **Proemio** | Introduzione al Libro III | 158r | §§ 1–2 | Incipit: *Incomincio mio Dio…*. |
-| **I** | Disposizione post‑notte | 158r–159r | §§ 1–10 | Explicit: *adesso è di bene passare al seguente capitolo*. |
-| **II** | Silentio | 159v–162r | §§ 1–21 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
-| **III** | Oblivione / Sonno | 162r–164v | §§ 1–14 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
-| **IV** | Scordanza | 164v–165v | §§ 1–8 | *Quasi continuo estasi*. Oceano d’amore. |
-| **V** | Indifferenza | 166r–168r | §§ 1–17 | Unione delle volontà. Luce dal centro dell’anima. |
+| **I** | Disposizione post‑notte | 158r–159r | §§ 3–12 | Explicit: *adesso è di bene passare al seguente capitolo*. |
+| **II** | Silentio | 159v–162r | §§ 13–33 | Comperazioni: pioggia, giardino, acqua che nasce dal fondo. |
+| **III** | Oblivione / Sonno | 162r–164v | §§ 34–47 | Explicit: *mirabilia magna*. Statuette di cera fuse. |
+| **IV** | Scordanza | 164v–165v | §§ 48–55 | *Quasi continuo estasi*. Oceano d’amore. |
+| **V** | Indifferenza | 166r–168r | §§ 56–72 | Unione delle volontà. Luce dal centro dell’anima. |
+
+Totale: **§§ 1–72** (72 paragrafi). Le carte 162r (cap. II→III) e 164v (cap. III→IV) sono condivise ai confini di capitolo: il `<pb>` compare una sola volta, nel capitolo in cui la carta *inizia*.
 
 ---
 
 ## 5. Mappa della foliazione (carte 158r–168r)
 
+MC1 adotta un **modello facs-free**: nel testo non compare l'attributo `@facs` (le riproduzioni digitali del manoscritto non sono autorizzate alla pubblicazione). Lo schema ammette `@facs` su `<pb>`, ma questa edizione non lo utilizza; la carta è identificata da `@n` e `@xml:id`.
+
 ```xml
-<pb n="158r" facs="images/f158r.jpg" xml:id="f158r"/>
-<pb n="158v" facs="images/f158v.jpg" xml:id="f158v"/>
-<pb n="159r" facs="images/f159r.jpg" xml:id="f159r"/>
-<pb n="159v" facs="images/f159v.jpg" xml:id="f159v"/>
-<pb n="160r" facs="images/f160r.jpg" xml:id="f160r"/>
-<pb n="160v" facs="images/f160v.jpg" xml:id="f160v"/>
-<pb n="161r" facs="images/f161r.jpg" xml:id="f161r"/>
-<pb n="161v" facs="images/f161v.jpg" xml:id="f161v"/>
-<pb n="162r" facs="images/f162r.jpg" xml:id="f162r"/>
-<pb n="162v" facs="images/f162v.jpg" xml:id="f162v"/>
-<pb n="163r" facs="images/f163r.jpg" xml:id="f163r"/>
-<pb n="163v" facs="images/f163v.jpg" xml:id="f163v"/>
-<pb n="164r" facs="images/f164r.jpg" xml:id="f164r"/>
-<pb n="164v" facs="images/f164v.jpg" xml:id="f164v"/>
-<pb n="165r" facs="images/f165r.jpg" xml:id="f165r"/>
-<pb n="165v" facs="images/f165v.jpg" xml:id="f165v"/>
-<pb n="166r" facs="images/f166r.jpg" xml:id="f166r"/>
-<pb n="166v" facs="images/f166v.jpg" xml:id="f166v"/>
-<pb n="167r" facs="images/f167r.jpg" xml:id="f167r"/>
-<pb n="167v" facs="images/f167v.jpg" xml:id="f167v"/>
-<pb n="168r" facs="images/f168r.jpg" xml:id="f168r"/>
+<pb n="158r" xml:id="f158r"/>
+<pb n="158v" xml:id="f158v"/>
+<pb n="159r" xml:id="f159r"/>
+<pb n="159v" xml:id="f159v"/>
+<pb n="160r" xml:id="f160r"/>
+<pb n="160v" xml:id="f160v"/>
+<pb n="161r" xml:id="f161r"/>
+<pb n="161v" xml:id="f161v"/>
+<pb n="162r" xml:id="f162r"/>
+<pb n="162v" xml:id="f162v"/>
+<pb n="163r" xml:id="f163r"/>
+<pb n="163v" xml:id="f163v"/>
+<pb n="164r" xml:id="f164r"/>
+<pb n="164v" xml:id="f164v"/>
+<pb n="165r" xml:id="f165r"/>
+<pb n="165v" xml:id="f165v"/>
+<pb n="166r" xml:id="f166r"/>
+<pb n="166v" xml:id="f166v"/>
+<pb n="167r" xml:id="f167r"/>
+<pb n="167v" xml:id="f167v"/>
+<pb n="168r" xml:id="f168r"/>
 ```
 
 ---
@@ -120,4 +127,3 @@ Creative Commons Attribution 4.0 International (**CC BY 4.0**).
 - ORCID: <https://orcid.org/0009-0005-7557-7546> 
 - GitHub: <https://github.com/luciano-longo77>
 - Website: <https://luciano-longo77.github.io>
-
