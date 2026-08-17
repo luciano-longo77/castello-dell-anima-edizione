@@ -15,7 +15,7 @@ Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni
 - diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
 
 * **Modellazione TEI su tre layer:**
-  - **(1)** filologico‑grafico - struttura, trascrizione a due livelli e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `@varSeq`, `<add>`/`<del>`/`<subst>`);
+  - **(1)** filologico‑grafico - struttura (con `<lb>` per i cambi-riga, `@break="no"` a metà parola), trascrizione a due livelli (punteggiatura del ms su entrambi) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, con `<del>`/`<add>`/`<subst>` dentro l'apparato; `@varSeq` solo con più letture concorrenti);
   - **(2)** mistico‑dottrinale - lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
   - **(3)** intertestuale - `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
 
