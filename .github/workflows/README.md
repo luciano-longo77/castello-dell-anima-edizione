@@ -1,7 +1,8 @@
 # CI dell'edizione - validazione
 
-A ogni `push`/`pull_request` che tocca i dati (`Micro-commits/**/data/**`), GitHub Actions
-verifica che ciascun micro-commit resti **ben formato, valido e coerente**.
+A ogni `push`/`pull_request` che tocca i dati (`Micro-commits/**/data/**`), i modelli generici
+(`tei-model/**`) o il workflow, GitHub Actions verifica che ciascun micro-commit resti
+**ben formato, valido e coerente**.
 
 [![Validate MC](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml)
 
@@ -9,7 +10,7 @@ verifica che ciascun micro-commit resti **ben formato, valido e coerente**.
 
 | File | Nome | Quando parte |
 |---|---|---|
-| `validate.yml` | **Validate MC** | modifiche a `Micro-commits/**/data/**`, al workflow o agli script; avvio manuale (`workflow_dispatch`) |
+| `validate.yml` | **Validate MC** | modifiche a `Micro-commits/**/data/**`, a `tei-model/**`, al workflow o agli script; avvio manuale (`workflow_dispatch`) |
 
 Per ogni `Micro-commits/*/data/castello-anima-text.xml`, in sequenza:
 
@@ -25,6 +26,18 @@ Per ogni `Micro-commits/*/data/castello-anima-text.xml`, in sequenza:
 > **Perché sul documento risolto.** Header e testo sono file separati uniti via XInclude: la
 > validazione (schema e puntatori) ha senso solo dopo la risoluzione dell'include, quando i
 > puntatori del testo trovano gli `xml:id` dichiarati nel `teiHeader`.
+
+Infine, sui **modelli generici** (`tei-model/**/*.xml`) si esegue una verifica di **sola forma**
+(NFC + buona formazione `xmllint --noout`). I modelli **non** sono validati contro l'ODD di
+progetto: sono scheletri con placeholder (elementi vuoti, un solo `msItem` esemplificativo, ecc.)
+la cui conformità piena si controlla in oXygen, non in CI.
+
+## Lo schema è uno *snapshot* per micro-commit
+Ogni `Micro-commits/MC-<n>/data/castello-anima-odd.rng` è una **copia congelata** dello schema con
+cui quel micro-commit è stato validato e pubblicato: è parte della release, non un duplicato
+accidentale. La CI valida sempre ogni testo **contro l'RNG che sta nella sua stessa cartella**, così
+un MC già rilasciato resta riproducibile anche se lo schema evolve in un MC successivo. Lo schema è
+generato dall'ODD (`castello-anima-odd.odd` → `.rng`); l'ODD è la fonte normativa.
 
 ## Eseguire la validazione in locale (prima di committare)
 ```bash
