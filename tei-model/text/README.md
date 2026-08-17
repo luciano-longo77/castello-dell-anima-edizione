@@ -17,7 +17,7 @@
 
 Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articolato in tre layer:
 
-1. **Filologico-grafico** — struttura (`div`/`head`/`argument`/`p`, `pb`/`fw`), trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, `<add>`/`<del>`/`<subst>`, `<unclear>`/`<gap>`/`<supplied>`).
+1. **Filologico-grafico** — struttura (`div`/`head`/`argument`/`p`, `pb`/`lb`/`fw`), trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>` con `<del>`/`<add>`/`<subst>` dentro l'apparato), le rivergature a inchiostro (`<retrace>`) e i guasti materiali (`<unclear>`/`<gap>`/`<supplied>`).
 2. **Mistico-dottrinale** — lessico agganciato via `<term ref="…">` al **vocabolario controllato degli stati** dichiarato nel `teiHeader` (`taxonomy xml:id="stati-mistici"`).
 3. **Intertestuale** — citazioni e rimandi alle fonti (`<cit>`/`<quote>`/`<foreign>`/`<bibl>`, `<ref target="…">`).
 
@@ -37,7 +37,7 @@ Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articola
     ├── <div type="book" n="1"> (Libro I)
     ├── <div type="book" n="2"> (Libro II)
     └── <div type="book" n="3"> (Libro III — focus)
-        ├── <fw>, <pb> (segnaletica materiale e facsimili)
+        ├── <fw>, <pb>, <lb> (segnaletica materiale: foliazione e cambi-riga; edizione facs-free)
         ├── <head>
         ├── <div type="preface"> (protesta/prologo)
         │   ├── <head>
@@ -46,8 +46,8 @@ Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articola
             ├── <head>, <argument>
             └── <p n="*" xml:id="*">   ← unità di riferimento
                 ├── layer 1: <choice> (orig/reg, abbr/expan, sic/corr)
-                ├── layer 1: <add>/<del>/<subst>, <unclear>/<gap>/<supplied>
-                ├── layer 1: <app> (<lem wit="#txt-c"/>, <rdg wit="#txt-b0…"/>)
+                ├── layer 1: <lb>, <retrace>, <unclear>/<gap>/<supplied>
+                ├── layer 1: <app> (<lem wit="#txt-c"/>, <rdg wit="#txt-b0"> con <del>/<add>/<subst>)
                 ├── layer 2: <term ref="#…"/>
                 └── layer 3: <ref target="#…"/>, <cit>/<quote>/<foreign>/<bibl>
 ```
@@ -77,16 +77,20 @@ La lezione diplomatica e la sua regolarizzazione coesistono, senza che l'una sos
 ```
 
 ### Fenomeni materiali e correzioni autoriali
-`<add>` (aggiunte marginali/interlineari, con `@place`/`@hand`/`@resp`/`@type`), `<del>` (cancellature), `<subst>` (sostituzione come evento unico), `<unclear>`, `<gap>`, `<supplied>`.
+Dentro l'apparato (`<app>`): `<del>` (cancellature), `<add>` (aggiunte marginali/interlineari, con `@place`/`@hand`/`@resp`), `<subst>` (sostituzione come evento unico). Inline, **fuori** dall'apparato: `<retrace>` (rivergatura a inchiostro, mano `#ink_3-dark`, testo invariato), `<unclear>`, `<gap>`, `<supplied>`.
 
-### Apparato genetico (parallel segmentation)
+### Apparato genetico d'autrice (« currente calamo »)
+Ogni `<app>` ha un `<lem wit="#txt-c">` e **una sola** `<rdg wit="#txt-b0">`, con `<del>`/`<add>`/`<subst>` **dentro** la lettura; `@varSeq` si usa **solo** quando concorrono ≥2 `<rdg>` (0 casi in MC-1). I blocchi marginali sono una `<rdg>` con `<add>` senza `<subst>`.
+
 ```xml
 <app>
-  <lem wit="#txt-c">…</lem>          <!-- testo critico costituito (lemma) -->
-  <rdg wit="#txt-b0" varSeq="1">…</rdg>  <!-- Tb0, prima stesura -->
-  <rdg wit="#txt-1"  varSeq="2">…</rdg>  <!-- T1, riscrittura autoriale -->
-  <rdg wit="#txt-2"  varSeq="3">…</rdg>  <!-- T2, intervento correttivo-glossativo -->
-  <rdg wit="#txt-3"  varSeq="4">…</rdg>  <!-- T3, intervento successivo -->
+  <lem wit="#txt-c">…</lem>                       <!-- Tc: testo critico costituito (lemma) -->
+  <rdg wit="#txt-b0">                              <!-- Tb0: strato genetico d'autrice -->
+    <subst>
+      <del hand="#ink_1" resp="#s-teresa">…</del>
+      <add hand="#ink_1" resp="#s-teresa">…</add>
+    </subst>
+  </rdg>
 </app>
 ```
 
@@ -122,8 +126,8 @@ Questo consente di isolare *tutte* le occorrenze di uno stato (p. es. l'unione) 
 ## Layer 3 — intertestuale
 
 ```xml
-<ref target="#avila-castello" type="model"/>   <!-- rimando a fonte -->
-<cit type="bible">
+<ref target="#avila-castello"/>   <!-- rimando a fonte -->
+<cit>
   <quote xml:lang="la"><foreign xml:lang="la">…</foreign></quote>
   <bibl corresp="#bible-vulgate"/>
 </cit>
@@ -138,7 +142,7 @@ I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiara
 1. **Unità di riferimento = paragrafo**: il testo è strutturato in `<p n="…">`; non si usa `<seg>` come unità di annotazione interpretativa.
 2. **Trascrizione diplomatico-conservativa**: nessuna normalizzazione oltre quella dichiarata e reversibile via `<choice>`.
 3. **Apparato in situ**: le varianti genetiche sono codificate nel flusso testuale (parallel segmentation).
-4. **Fedeltà materiale**: posizione, mano e fase sono preservate tramite `@place`/`@hand`/`@resp` su `<add>`/`<del>`/`<subst>` e tramite `<pb>`/`<fw>` (`@facs` per i facsimili).
+4. **Fedeltà materiale**: posizione, mano e fase sono preservate tramite `@place`/`@hand`/`@resp` su `<del>`/`<add>`/`<subst>` (dentro `<app>`) e su `<retrace>`, e tramite `<pb>`/`<lb>`/`<fw>`. Edizione **facs-free**: nessun `@facs` (immagini non autorizzate).
 5. **Aggancio controllato**: `term/@ref` e `ref/@target` puntano solo a identificatori dichiarati nel `teiHeader`.
 
 ---
