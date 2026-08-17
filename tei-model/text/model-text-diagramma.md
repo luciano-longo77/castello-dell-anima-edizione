@@ -31,8 +31,8 @@ graph TD
   paragraphs1 --> L3[layer 3 intertestuale]
 
   L1 --> choice[choice: orig/reg, abbr/expan, sic/corr]
-  L1 --> genetic[add / del / subst / unclear / gap / supplied]
-  L1 --> app[app: lem wit=txt-c + rdg wit=Tb0..T4]
+  L1 --> material[inline: lb / retrace / unclear / gap / supplied]
+  L1 --> app[app currente calamo: lem wit=txt-c + rdg wit=Tb0 con del/add/subst]
   L2 --> term[term ref -> stati-mistici]
   L3 --> ref[ref target]
   L3 --> cit[cit / quote / foreign / bibl]
