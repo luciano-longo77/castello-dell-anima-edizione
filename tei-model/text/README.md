@@ -21,7 +21,7 @@ Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articola
 2. **Mistico-dottrinale** — lessico agganciato via `<term ref="…">` al **vocabolario controllato degli stati** dichiarato nel `teiHeader` (`taxonomy xml:id="stati-mistici"`).
 3. **Intertestuale** — citazioni e rimandi alle fonti (`<cit>`/`<quote>`/`<foreign>`/`<bibl>`, `<ref target="…">`).
 
-> **Nota sullo scope.** L'annotazione interpretativa multiassiale (`<seg>` con `@ana`, `<figure>`, `<spanGrp>`/`<span>`, `<rs>`, `<val>`, le catene semantiche `<linkGrp>`/`<link>` e l'indice d'impatto) **non** fa parte di questo modello: è sviluppata nel repository separato [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA). Qui **l'unità di riferimento è il paragrafo `<p n="…">`**, non il `<seg>`.
+> **Nota sullo scope.** L'annotazione interpretativa multiassiale (`<seg>` con `@ana`, `<figure>`, `<spanGrp>`/`<span>`, `<rs>`, `<val>`, le catene semantiche `<linkGrp>`/`<link>` e l'indice d'impatto) **non** fa parte di questo modello: l'edizione adotta un modello leggero e tiene fuori tale sperimentazione interpretativa e computazionale. Qui **l'unità di riferimento è il paragrafo `<p n="…">`**, non il `<seg>`.
 
 ---
 
