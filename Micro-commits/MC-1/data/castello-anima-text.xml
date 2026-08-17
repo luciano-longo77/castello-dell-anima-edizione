@@ -13,7 +13,7 @@
             <titlePage>
                 <docTitle>
                     <titlePart type="main">Il Castello dell’anima</titlePart>
-                    <titlePart type="sub">Libro terzo, per l’anime perfette. Edizione critica digitale — micro-commit MC-1 — III.1 (proemio e cap. I)</titlePart>
+                    <titlePart type="sub">Libro terzo, per l’anime perfette. Edizione critica digitale — micro-commit MC-1 (capp. I–V)</titlePart>
                 </docTitle>
                 <docAuthor ref="#s-teresa">Teresa di San Geronimo (Anna La Longa)</docAuthor>
             </titlePage>
@@ -434,6 +434,1398 @@
                          place="bottom-right">Cap.</fw><note place="foot" type="material" n="6">«Cap.»: richiamo
                          aggiunto in calce a destra (anticipa il «Capitolo» seguente).</note></p>
                 </div>
+
+             <div type="chapter" n="2" xml:id="III-cap2">
+                <pb n="159v" xml:id="f159v"/>
+                <head>Capitolo secondo</head>
+                <argument>
+                   <p>Si tratta del primo stato d'<term ref="#unione">unione</term>, ch'è di <term ref="#silentio">silentio</term>.</p>
+                </argument>
+
+                <p n="13" xml:id="III-cap2-p13">E per essere il nome di questo stato di <term ref="#silentio">silentio</term> sarebbe padre assai me<lb break="no"/>glio trattarne in <term ref="#silentio">silentio</term>, che pretendire dirne qualche cosa; <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> pure per<lb/>l'obedienza, che <choice><abbr>V. R.</abbr><expan resp="#editor">Vostra Reverenza</expan></choice> mi dà di scrivere tal cose, vuole lo <choice><orig>spirito</orig><reg resp="#editor">Spirito</reg></choice>. Santo re<lb break="no"/>germi la penna, altrimenti non posso con la mia <app><lem wit="#txt-c">rozza</lem><rdg wit="#txt-b0">rozz<subst><del hand="#ink_1" resp="#s-teresa">e</del><add hand="#ink_1" resp="#s-teresa">a</add></subst></rdg></app> penna trattarne.<lb/>E <choice><orig>per ciò</orig><reg resp="#editor">perciò</reg></choice> prego la <choice><orig>Bontà</orig><reg resp="#editor">bontà</reg></choice> <choice><orig>Vostra</orig><reg resp="#editor">vostra</reg></choice> mio Dio, <choice><orig>à</orig><reg resp="#editor">a</reg></choice> poter fare compitamente<lb/>l'obedienza, ch'è tanto grata alla <choice><orig>Maestà</orig><reg resp="#editor">Maesta</reg></choice> vostra.</p>
+
+                <p n="14" xml:id="III-cap2-p14">Dico <choice><abbr>dunq</abbr><expan resp="#editor">dunque</expan></choice>, che in questo<lb/>stato cessano le <term>potenze</term>, e sensi, e non intendo dire come prima, che <choice><orig>ne</orig><reg resp="#editor">né</reg></choice><lb/>meno operavano, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> il suo operare era in modo di ricevere l'altra <term ref="#contemplazione-infusa"><choice><orig>Con<lb break="no"/>templatione</orig><reg resp="#editor">contemplatione</reg></choice> infusa</term>, e cossì ricevevano, ed in questo modo operavano: <choice><orig>quì</orig><reg resp="#editor">qui</reg></choice><lb/>però non è cossì, ma di quanto l'anima riceve non più, <choice><orig>à</orig><reg resp="#editor">a</reg></choice> mio parere, per<lb/>mezzo delle <term>potenze</term>, e <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> sensi, ma tutto nasce dal <choice><sic>certo</sic><corr resp="#editor">centro</corr></choice>, e fondo dell'<lb break="no"/>anima, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> in questo stato demora Dio nel fondo dell'anima, e col <retrace hand="#ink_3-dark" resp="#s-teresa">tem</retrace><lb break="no"/>po s'anderà più internando, sì come poi si dirà.</p>
+
+                <p n="15" xml:id="III-cap2-p15">Hor come dico con le <term>potenze</term><lb/>voglio spiegarmi con una <choice><orig>Comperatione</orig><reg resp="#editor">comperatione</reg></choice>, non so s'è <choice><orig>à</orig><reg resp="#editor">a</reg></choice> proposito padre mio.<lb/>Chiama la nostra <name type="person" ref="#p-avila">Santa Madre Teresa</name> la <term ref="#contemplazione-infusa"><choice><orig>Contemplatione</orig><reg resp="#editor">contemplatione</reg></choice></term>, la <choice><sic>com<lb break="no"/>para</sic><corr resp="#editor">compera</corr></choice> dissi, alla <app><lem wit="#txt-c">pioggia</lem><rdg wit="#txt-b0">p<del hand="#ink_1" resp="#s-teresa">o</del>ioggia</rdg></app> che cade dal <choice><orig>Cielo</orig><reg resp="#editor">cielo</reg></choice>, e senza fatica alcuna del<lb break="no"/>l'anima, come infatti è, <choice><orig>ed'habbiamo</orig><reg resp="#editor">ed habbiamo</reg></choice> detto nel secondo libro: però non<lb/>è cossì in questo stato; la <choice><orig>Comperatione</orig><reg resp="#editor">comperatione</reg></choice> è questa: <choice><orig>Vi</orig><reg resp="#editor">vi</reg></choice> fosse un giardino,<lb/>che senza fatica alcuna del giardiniero, fosse <choice><orig>ad acquato</orig><reg resp="#editor">adacquato</reg></choice> con la copio<lb break="no"/>sa pioggia, che senza suo travaglio viene dal <choice><orig>Cielo</orig><reg resp="#editor">cielo</reg></choice>; hor voglio <choice><orig>quì</orig><reg resp="#editor">qui</reg></choice> dire,<lb/>che tutto senza suo travaglio intende però lo strepito della <app><lem wit="#txt-c">piog<lb break="no"/>gia</lem><rdg wit="#txt-b0">p<del hand="#ink_1" resp="#s-teresa">o</del>iog<lb break="no"/>gia</rdg></app>, e vede in che modo vengano <choice><orig>à</orig><reg resp="#editor">a</reg></choice> crescere i frutti, e fiori<app><lem wit="#txt-c"/><rdg wit="#txt-b0"> <del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" unit="word" quantity="1"/></del></rdg></app> di<lb/>quel giardino. Cossì è l'anima <choice><orig>Contemplativa</orig><reg resp="#editor">contemplativa</reg></choice>, cioè mentre <choice><orig>stà</orig><reg resp="#editor">sta</reg></choice> rice<lb break="no"/>vendo l'acqua di quella gratia e <term ref="#contemplazione-infusa"><choice><orig>Contemplatione</orig><reg resp="#editor">contemplatione</reg></choice> infusa</term>, intende lo stre<lb break="no"/>pito della pioggia, e questo nell'<term>intelletto</term>, ch'è la notitia <choice><orig>Confusa</orig><reg resp="#editor">confusa</reg></choice> di<lb/>Dio<note type="source" place="foot">S. Tommaso, Summa contra Gentiles, III, 38.</note>, viene questa pioggia ed <app><lem wit="#txt-c"><choice><orig>ad'acquar</orig><reg resp="#editor">adacquar</reg></choice></lem><rdg wit="#txt-b0">ad'acqua<add hand="#ink_3-dark" resp="#s-teresa" place="above">r</add></rdg></app> l'anima, ma ella tutto che non<lb/><fw type="catch" place="bottom-right">fatica</fw><note place="foot" type="material" n="4">«fatica»: richiamo aggiunto in calce a destra.</note><pb n="160r" xml:id="f160r"/>fatica, intende però lo strepito di quella pioggia, e questa è la <term ref="#contemplazione-infusa"><choice><orig>Contem<lb break="no"/>platione</orig><reg resp="#editor">contemplatione</reg></choice> infusa</term>.</p>
+
+                <p n="16" xml:id="III-cap2-p16">Andiamo di nuovo alla <choice><orig>Comperatione</orig><reg resp="#editor">comperatione</reg></choice>. E dico, <choice><sic>viene</sic><corr resp="#editor">che viene</corr></choice><lb/>lo giardino <choice><orig>à</orig><reg resp="#editor">a</reg></choice> <app><lem wit="#txt-c">fruttare</lem><rdg wit="#txt-b0">fr<del hand="#ink_1" resp="#s-teresa">o</del>uttare</rdg></app>, anzi meglio di prima, ma senza, che il giardiniero<lb/>veda pioggia, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> intenda strepito, ma con più <term ref="#quiete">quiete</term>, e senza sapere il come,<lb/>viene meglio di prima adacquato; hor questa non sarebbe più cosa perfetta<lb/>di prima? Certo padre. Cossì <choice><orig>à</orig><reg resp="#editor">a</reg></choice> punto è l'anima della quale <choice><orig>stiamo</orig><reg resp="#editor">stamo</reg></choice> noi<lb/>adesso trattando, ch'è questo stato di <term ref="#silentio">silentio</term>, senza, che intenda più strepito<lb/>d'<term>intelletto</term>, e veda l'acqua di donde viene, se vede di bel modo nascere l'<lb break="no"/>acqua nel fondo suo, e senza sapere il come.</p>
+
+                <p n="17" xml:id="III-cap2-p17">Tutto ciò è padre, che lo <term>sposo</term> già demora nell'anima, e va più, e più <choice><orig>interna dosi</orig><reg resp="#editor">internadosi</reg></choice> in lei. Demora Dio<lb/>nell'anima <choice><orig>à</orig><reg resp="#editor">a</reg></choice> questi tempi nel fondo suo <choice><sic>talmete</sic><corr resp="#editor">talmente</corr></choice>, che l'anima lo sente<lb/>godendo <choice><sic>con</sic><corr resp="#editor">in</corr></choice> gustoso raccoglimento, e dolce <term ref="#quiete">quiete</term>, e senza più operation<supplied reason="hole">e</supplied><lb/>di sensi, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> vero sospensione di <term>potenze</term>, non havendo più, che fare nell'anima<lb/>e godendo di questa <term ref="#quiete">quiete</term> nel centro suo, non v'è cosa, che la possi inquie<lb break="no"/>tare, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> principiando in lei l'<term ref="#unione">unione</term>, muta stato, onde se prima le per<lb break="no"/>sone di questo mondo gli potevano in qualche parte toglire la <term ref="#quiete">quiete</term> in<lb/>questo stato però non ponno più inquietarla, ma sempre se ne gode della<lb/>sua <term ref="#quiete">quiete</term>.</p>
+
+                <p n="18" xml:id="III-cap2-p18">A questi tempi non <choice><orig>hà</orig><reg resp="#editor">ha</reg></choice> più l'anima come prima l'hore attoale di<lb/>raccoglimento: <choice><sic>vogli</sic><corr resp="#editor">voglio</corr></choice> <choice><orig>quì</orig><reg resp="#editor">qui</reg></choice> dire, che prima quando riceveva gratie erano<lb/>sospese le <term>potenze</term>, alienati i sensi, talmente, che non poteva parlare, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice><lb/>far moto alcuno, se non vuoleva perdire la sua <term ref="#quiete">quiete</term>, e talvolta tutto<lb/>che havesse <choice><orig>voluto</orig><reg resp="#editor">vuoluto</reg></choice>, non haverebbe <app><lem wit="#txt-c">potuto</lem><rdg wit="#txt-b0">p<del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" unit="char" quantity="1"/></del>otuto</rdg></app>, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> veniva fortemente alie<lb break="no"/>nata <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> sensi, e quanto ella teneva.</p>
+
+                <p n="19" xml:id="III-cap2-p19">Poteva anche il Demonio <choice><orig>à</orig><reg resp="#editor">a</reg></choice> qualche<lb/>tempo inquietarla, servendosi per istromento delli medesimi sensi; gli pote<lb break="no"/>va qualche poco inquietar la <term ref="#quiete">pace</term> (qui intendo parlare di quando era in<lb/>stato di sposalitio) per mezzo di qualche specie communicata alli sensi, e fantasia, che tutto vuol dire una cosa.</p>
+
+                <p n="20" xml:id="III-cap2-p20">In questo tempo però non è cossì, <choice><orig>poi<lb break="no"/>che</orig><reg resp="#editor">poiché</reg></choice> può l'anima godere, <choice><orig>è</orig><reg resp="#editor">e</reg></choice> nell'attoale (cioè all'hore dell'oratione particolare)<lb/><choice><orig>è</orig><reg resp="#editor">e</reg></choice> nell'habituale, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> tutto è un tempo per lei, <gap reason="illegible" unit="word" quantity="1"/> per quel che s'è detto<lb/><fw type="catch" place="bottom-right">sopra</fw><note place="foot" type="material" n="5">«sopra»: richiamo aggiunto in calce a destra.</note><pb n="160v" xml:id="f160v"/>sopra.</p>
+
+                <p n="21" xml:id="III-cap2-p21">Hor <choice><sic>sopposta</sic><corr resp="#editor">sopposto</corr></choice> ciò che s'è detto, viene l'anima <choice><orig>à</orig><reg resp="#editor">a</reg></choice> godere la sua <term ref="#quiete">pa<lb break="no"/>ce</term>, senza, che niuno la possi inquietare come prima.</p>
+
+                <p n="22" xml:id="III-cap2-p22">A <app><lem wit="#txt-c">questi</lem><rdg wit="#txt-b0">quest<subst><del hand="#ink_1" resp="#s-teresa">e</del><add hand="#ink_1" resp="#s-teresa">i</add></subst></rdg></app> tempi <app><lem wit="#txt-c"/><rdg wit="#txt-b0"><del hand="#ink_1" resp="#s-teresa">d.</del> </rdg></app>Dio nel<lb break="no"/>l'anima <retrace hand="#ink_3-dark" resp="#s-teresa">è</retrace> molto di vicino, e gli parla d'un linguaggio tanto oscuro, ch'è neces<lb break="no"/>sario dirsi in <term ref="#silentio">silentio</term>, già che è cosa impossibile poter noi percepire questo par<lb break="no"/>lare, che fa Dio all'hora con l'anima; solamente padre posso dire, che v'è<lb/>una grandissima notitia di Dio, e una gran sapienza nell'anima, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> parla<lb/>Dio: quando è cossì intende l'anima in <choice><orig>se</orig><reg resp="#editor">sé</reg></choice> stesa in <term ref="#silentio">silentio</term> grandissim, e<lb/><choice><abbr>qualunq</abbr><expan resp="#editor">qualunque</expan></choice> romori del mondo, non può levarcelo. Vede l'anima, che quel trat<lb break="no"/>to di Dio gli dà fortezza grande, e <term ref="#quiete">pace</term> interiore; intendisi nel suo interno, <choice><orig>co<lb break="no"/>me</orig><reg resp="#editor">come</reg></choice> se fosse tutta <choice><orig>in balsamata</orig><reg resp="#editor">inbalsamata</reg></choice>, ed certa d'odorosissimi inguenti, senza saper<lb/>dir ciò che fosse, ma ben vede, che nasce di chi habita in lei, che gl'incomin<lb break="no"/>cia <choice><orig>à</orig><reg resp="#editor">a</reg></choice> dar sapore di vita eterna, ma non <choice><orig>sà</orig><reg resp="#editor">sa</reg></choice> dirlo.</p>
+
+                <p n="23" xml:id="III-cap2-p23">A mio parere sono <choice><orig>que<lb break="no"/>ste</orig><reg resp="#editor">queste</reg></choice> tutte dispositione del <term ref="#matrimonio-spirituale"><choice><orig>Divino</orig><reg resp="#editor">divino</reg></choice> matrimonio</term>, che farà Dio con l'anima, e queste<lb/>unsione sono più assai fine, di quanto l'andava unguendo per lo sposalitio, <choice><orig>gia</orig><reg resp="#editor">già</reg></choice><lb/>che l'opera che se deve fare è senza comperatione più perfetta, e <choice><orig>per ciò</orig><reg resp="#editor">perciò</reg></choice> ci<lb/>vogliono unguenti più pretiosi, per disponire la sposa, per celebrare il <term ref="#matrimonio-spirituale"><choice><orig>Divi<lb break="no"/>no</orig><reg resp="#editor">divino</reg></choice> matrimonio</term> <choice><orig>sì</orig><reg resp="#editor">sì</reg></choice> come in questo libro <choice><orig>sì</orig><reg resp="#editor">si</reg></choice> dirà con l'agiuto di Dio.</p>
+
+                <p n="24" xml:id="III-cap2-p24">Incomincia<lb/><choice><orig>gia</orig><reg resp="#editor">già</reg></choice> l'anima <choice><orig>à</orig><reg resp="#editor">a</reg></choice> provar ciò che vi è nel fondo del <term><choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice></term>, ch'è il<lb/>centro suo con l'amato ed è in questo modo; essendo l'anima libera, e<lb/>sciolta <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> sensi, e <term>potenze</term>, (cioè che <choice><sic>passano</sic><corr resp="#editor">possano</corr></choice> impedirla) e passione ed<lb/>avvicinandosi nel fondo suo, non è altro, che internarsi nel centro del<lb/><choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice> di cui dissimo, che l'anima (cioè lo dissimo al principio del <choice><orig>pri<lb break="no"/>mo</orig><reg resp="#editor">primo</reg></choice> libro) <gap reason="hole" unit="char" quantity="2"/>darsi che fa all'oratione, non fa altro, che dar principio ad<lb/><supplied reason="hole">u</supplied>n forte <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>, ch'è l'oratione, nel quale si possa difendire <choice><orig>de'<lb break="no"/>i</orig><reg resp="#editor">dei</reg></choice> pericoli, e tempeste del fiero <choice><orig>Mar</orig><reg resp="#editor">mar</reg></choice> di questo mondo; hor non tutte l'anime,<lb/>che danno principio <choice><orig>à</orig><reg resp="#editor">a</reg></choice> questo <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>, chiama Dio, e premia per lo fondo di<lb/>esso, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice>, <choice><orig>si</orig><reg resp="#editor">sì</reg></choice> come colà dissimo, non è altro questo fondo, che chiamar l'<choice><orig>ani<lb break="no"/>ma</orig><reg resp="#editor">anima</reg></choice> per la <term ref="#contemplazione-infusa"><choice><orig>Contemplatione</orig><reg resp="#editor">contemplatione</reg></choice></term>, <choice><orig>ed'</orig><reg resp="#editor">ed </reg></choice><term ref="#unione">unione</term>, che puoche anime v'arrivano,<lb/>essendo che molte se ne restano nella sopraficie di <choice><abbr>d</abbr><expan resp="#editor">detto</expan></choice> <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>,<lb/><fw type="catch" place="bottom-right">non</fw><note place="foot" type="material" n="8">«non»: richiamo aggiunto in calce a destra.</note><pb n="161r" xml:id="f161r"/>non mai provano queste la dolce <term ref="#quiete">quiete</term> del fondo, e <choice><sic>certo</sic><corr resp="#editor">centro</corr></choice> di questo <choice><orig>Castel<lb break="no"/>lo</orig><reg resp="#editor">castello</reg></choice>, ma se ne stanno <choice><orig>nela</orig><reg resp="#editor">nella</reg></choice> sopraficie combattendo sempre, cioè con la proprie<lb/>passioni, e queste sono l'anime meditative.</p>
+
+                <p n="25" xml:id="III-cap2-p25">Hor quella <choice><sic>anima</sic><corr resp="#editor">anime</corr></choice>, che Dio premia<lb/>per la <term ref="#contemplazione-infusa"><choice><orig>Contemplatione</orig><reg resp="#editor">contemplatione</reg></choice></term> fa, che se ne passino dalla sopraficie del <choice><abbr>d</abbr><expan resp="#editor">detto</expan></choice> <choice><orig>Ca<lb break="no"/>stello</orig><reg resp="#editor">castello</reg></choice> al fondo, e ciò per non combattire più con proprie passioni, e sensi, ma<lb/>per goder la dolce, e saporita <term ref="#quiete">quiete</term>, <choice><orig>poche</orig><reg resp="#editor">poiché</reg></choice> entrando nel fondo del <choice><orig>Castel<lb break="no"/>lo</orig><reg resp="#editor">castello</reg></choice> il <choice><orig>Castellano</orig><reg resp="#editor">castellano</reg></choice> <choice><orig>e</orig><reg resp="#editor">è</reg></choice> cosa certa, che si nasconde <choice><orig>da'i</orig><reg resp="#editor">dai</reg></choice> tomolti, e rumori del<lb/><choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>, se nasconde <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> colpi, quando v'è guerra, se nasconde <choice><orig>de'ì</orig><reg resp="#editor">dei</reg></choice> fi<supplied reason="hole">s</supplied><lb break="no"/>chi <choice><orig>de' i</orig><reg resp="#editor">dei</reg></choice> soldati, e gridi di <choice><abbr>qualunq</abbr><expan resp="#editor">qualunque</expan></choice> persona, e tutto <choice><orig>per che</orig><reg resp="#editor">perché</reg></choice> si ritira <choice><orig>à</orig><reg resp="#editor">a</reg></choice> parte<lb/>sotterranea, e molto secreta. Hor cossì <choice><orig>à</orig><reg resp="#editor">a</reg></choice> punto <choice><orig>e</orig><reg resp="#editor">è</reg></choice> <choice><orig>quì</orig><reg resp="#editor">qui</reg></choice> <choice><sic>lil</sic><corr resp="#editor">il</corr></choice> <choice><orig>Castellano</orig><reg resp="#editor">castellano</reg></choice> <choice><orig>Ce<lb break="no"/>leste</orig><reg resp="#editor">celeste</reg></choice>, quando si compiace chiamar l'anima per la <term ref="#contemplazione-infusa"><choice><orig>Contemplatione</orig><reg resp="#editor">contemplatione</reg></choice></term>, non è<lb/>altro all'hora, che incaminarla per il centro, e fondo del <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>, ch'è<lb/>il fondo dell'anima, dove poi in questo stato d'<term ref="#unione">unione</term>, di cui incominciamo<lb/><choice><orig>à</orig><reg resp="#editor">a</reg></choice> <choice><orig>trattar</orig><reg resp="#editor">trattare</reg></choice> fa, che s'interni in questo <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice> insieme con <choice><sic>lei</sic><corr resp="#editor">lui</corr></choice>, e ciò per goder la dolce <term ref="#quiete">quiete</term>; che può godere un'anima <term ref="#unione">unita</term> con Dio, non<lb/>v'è lingua humana che possa padre spiegarlo, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> meno <term>intelletto</term> p<supplied reason="hole">e</supplied>r<lb/>acuto che sia, che possa perciperlo. Ciò che dicevo, questo internarsi l'<choice><orig>ani<lb break="no"/>ma</orig><reg resp="#editor">anima</reg></choice> nel fondo detto del <choice><orig>Castello</orig><reg resp="#editor">castello</reg></choice>, ed uscir <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> <choice><sic>molti</sic><corr resp="#editor">tomolti</corr></choice>, e gridi <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> <choice><orig>solda<lb break="no"/>ti</orig><reg resp="#editor">soldati</reg></choice>, non è altro, che esser già libera, e sciolta delle <app><lem wit="#txt-c">proprie</lem><rdg wit="#txt-b0">p<del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" unit="char" quantity="1"/></del>roprie</rdg></app> passioni, e sensi, e<lb/>cossì, gode di Dio <choice><orig>à</orig><reg resp="#editor">a</reg></choice> suo gusto nel fondo suo, e di ciò si tratterà più <choice><orig>diffusa<lb break="no"/>mente</orig><reg resp="#editor">diffusamente</reg></choice> nel <term ref="#matrimonio-spirituale">matrimonio spirituale</term>, dove diremo della <term ref="#cella-secreta"><choice><orig>Cella</orig><reg resp="#editor">cella</reg></choice> secreta</term>, che <choice><orig>tie<lb break="no"/>ne</orig><reg resp="#editor">tiene</reg></choice> l'anima in <choice><orig>se</orig><reg resp="#editor">sé</reg></choice> stessa.</p>
+
+                <p n="26" xml:id="III-cap2-p26">Hor sopposto ciò che s'è detto viene l'anima <choice><orig>à</orig><reg resp="#editor">a</reg></choice> goder<lb/><term ref="#quiete">pace</term> di vita eterna, già che quanto prima pativa tutto era per mezzo di<lb/>quanto sopra s'è detto, <choice><orig>cioe</orig><reg resp="#editor">cioè</reg></choice> sensi, passioni, ed altre cose simili, oltre che <choice><orig>an<lb break="no"/>che</orig><reg resp="#editor">anche</reg></choice> era esposta alli <choice><sic>ire</sic><corr resp="#editor">tre</corr></choice> nemici del mondo, cioè mondo, carne, e Demonio,<lb/>e della sicurtà, e <term ref="#quiete">pace</term>, che gode circa questi nemici tratteremo doppo con<lb/>il <choice><orig>Divino</orig><reg resp="#editor">divino</reg></choice> agiuto, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> quanto più l'anima <choice><orig>à</orig><reg resp="#editor">a</reg></choice> questi tempi passa di grado<lb/>in grado non è altro, che nascondersi più, e più delli soi nemici ed <term ref="#unione">unirsi</term><lb/>più con Dio, e come conseguentemente goder più perfetta <term ref="#quiete">pace</term>.</p>
+
+                <p n="27" xml:id="III-cap2-p27">In questo stato<lb/>di cui stamo trattando, ch'è di <term ref="#silentio">silentio</term>, gode tanto l'anima, che gli viene<lb/>certa voglia di non trattar con persona alcuna, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> non fa altro Dio<lb/>all'hora, che communicarsi tutto <choice><orig>se</orig><reg resp="#editor">sé</reg></choice> stesso per tutta l'anima, e ciò non per mezzo più di <choice><orig>Creature</orig><reg resp="#editor">creature</reg></choice>, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> d'<app><lem wit="#txt-c"/><rdg wit="#txt-b0"><del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" unit="char" quantity="1"/></del></rdg></app><choice><sic>Angiolo</sic><corr resp="#editor">Angioli</corr></choice>, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> d'altra cosa <choice><orig>Creata</orig><reg resp="#editor">creata</reg></choice>, come <fw type="catch" place="bottom-right">forse</fw><pb n="161v" xml:id="f161v"/>forse prima sortiva, ma solamente per mezzo suo, mentre in questo <choice><orig>tem<lb break="no"/>po</orig><reg resp="#editor">tempo</reg></choice> <choice><orig>e</orig><reg resp="#editor">è</reg></choice> totale opera di Dio, che nella sostanza dell'anima per sua <choice><orig>miseri<lb break="no"/>cordia</orig><reg resp="#editor">misericordia</reg></choice> <choice><orig>fà</orig><reg resp="#editor">fa</reg></choice>; e cossì come dico, non è altra la communicatione, che un <choice><orig>dif<lb break="no"/>fondirsi</orig><reg resp="#editor">diffondirsi</reg></choice> Dio per tutta l'anima, e parlarci egli solo, ed ella non fa altro<lb/>che tacitamente ascoltare. <choice><orig>E</orig><reg resp="#editor">È</reg></choice> tale però la dolcezza, e godimento dell'<lb break="no"/>anima, che non fa altro, che <app><lem wit="#txt-c"/><rdg wit="#txt-b0"><del hand="#ink_1" resp="#s-teresa">diff</del> </rdg></app>disfarsi nel soavi fuoco dell'amore<lb/>e non farebbe altro, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> fa altro, che stare in <choice><orig>se</orig><reg resp="#editor">sé</reg></choice> stessa molto raccolta<lb/>ascoltando il suo <term>sposo</term>. A punto come chi ascolta una cosa mai <choice><orig>sapu<lb break="no"/>ta</orig><reg resp="#editor">saputa</reg></choice>, e <choice><orig>stà</orig><reg resp="#editor">sta</reg></choice> cossì attonita, quando non può dar l'orecchio <choice><orig>ad'altra</orig><reg resp="#editor">ad altra</reg></choice> cosa, che<lb/>gli venghi detto.</p>
+
+                <p n="28" xml:id="III-cap2-p28">E <choice><orig>per ciò</orig><reg resp="#editor">perciò</reg></choice> dico, che gli viene certa voglia di starsine in <choice><orig>si<lb break="no"/>lentio</orig><reg resp="#editor">silentio</reg></choice>, e <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> meno parlar di Dio, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> ciò che ella intende, e vede non può<lb/>darlo ad intendire, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> ponno i sensi <app><lem wit="#txt-c">percipere</lem><rdg wit="#txt-b0">perc<subst><del hand="#ink_1" resp="#s-teresa">e</del><add hand="#ink_1" resp="#s-teresa">i</add></subst>pere</rdg></app> cosa alcuna, e cossì non<lb/>potendo ella dire ciò che vorrebbe, se ne sta in <term ref="#silentio">silentio</term> gustando di<lb/>Dio: <choice><orig>E</orig><reg resp="#editor">È</reg></choice> cossì grande la voglia di starsine in <term ref="#silentio">silentio</term>, che <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> anche <choice><orig>vuo<lb break="no"/>le</orig><reg resp="#editor">vuole</reg></choice> parlar con il proprio padre che la guida, incominciando <choice><orig>gia</orig><reg resp="#editor">già</reg></choice> ella<lb/>a conoscere, che solamente in lei opera Dio, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> può più <choice><orig>Creatura</orig><reg resp="#editor">creatura</reg></choice> <choice><orig>al<lb break="no"/>cuna</orig><reg resp="#editor">alcuna</reg></choice> fare, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> disfare. Anche non <choice><orig>hà</orig><reg resp="#editor">ha</reg></choice> questa voglia di parlare, che<lb/>vede non trovar termini <choice><orig>à</orig><reg resp="#editor">a</reg></choice> <choice><orig>quelche</orig><reg resp="#editor">quel che</reg></choice> ella vorria dire, e <choice><orig>par ciò</orig><reg resp="#editor">perciò</reg></choice> si<lb/>contenta non dir niente.</p>
+
+                <p n="29" xml:id="III-cap2-p29">A questi tempi trovare, che il padre di quest'<lb break="no"/>anima non gode per ancora del frutto suo, cioè della dottrina, che<lb/><choice><orig>hà</orig><reg resp="#editor">ha</reg></choice> l'anima, ed anche dell'opere di Dio, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice>, sì come <choice><orig>hò</orig><reg resp="#editor">ho</reg></choice> detto sopra, non è tempo di parlare, come doppo sarà, ma solamente d'ascoltare<lb/>ciò che gli vien detto.</p>
+
+                <p n="30" xml:id="III-cap2-p30">In questo stato non v'è più amarezza per l'anima,<lb/>ma tutto dolcezza, e doppo che il mondo si voltasse contro di lei, non<lb/>può un tantino <choice><orig>in quietarla</orig><reg resp="#editor">inquietarla</reg></choice>, ma gode d'una continua <term ref="#quiete">pace</term> inter<supplied reason="hole">io</supplied>re.</p>
+
+                <p n="31" xml:id="III-cap2-p31">E non occorre di qua innanzi dar segni <choice><orig>de'i</orig><reg resp="#editor">dei</reg></choice> stati per <choice><orig>cono<lb break="no"/>scere</orig><reg resp="#editor">conoscere</reg></choice> l'affetti se sono di Dio, <choice><orig>ò</orig><reg resp="#editor">o</reg></choice> del Demonio, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice> mi lascio dire, che<lb/>se veramente è <term ref="#unione">unione</term>, come <app><lem wit="#txt-c">si</lem><rdg wit="#txt-b0">s<subst><del hand="#ink_1" resp="#s-teresa">e</del><add hand="#ink_1" resp="#s-teresa">i</add></subst></rdg></app> deve trattare in questo libro, <choice><orig>e</orig><reg resp="#editor">è</reg></choice> cosa<lb/>impossibile poterci entrare il Demonio, <choice><orig>poiche</orig><reg resp="#editor">poiché</reg></choice>, <choice><orig>si</orig><reg resp="#editor">sì</reg></choice> come dissi sopra, in<lb/>questi stati d'<term ref="#unione">unione</term> il tutto opera Dio nel fondo dell'anima, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> può<lb/>il Demonio <app><lem wit="#txt-c">fingere</lem><rdg wit="#txt-b0">fin<subst><del hand="#ink_3-dark" resp="#s-teresa">c</del><add hand="#ink_3-dark" resp="#s-teresa">g</add></subst>ere</rdg></app>, come poteva prima, e cossì sarebbe tempo perso<lb/><fw type="catch" place="bottom-right">dar</fw><note place="foot" type="material" n="12">«dar»: richiamo aggiunto in calce a destra.</note><pb n="162r" xml:id="f162r"/>dar più segni.</p>
+
+                <p n="32" xml:id="III-cap2-p32"><note place="foot" type="material" n="13">In corrispondenza del paragrafo vi è una linea verticale tracciata con inchiostro diverso a contrassegnarlo.</note>Anche non d<supplied reason="hole">a</supplied>rò più modo per guidar anime, essendo che<lb/>entrando l'anima in stato d'<term ref="#unione">unione</term>, non può più il <choice><orig>Padre</orig><reg resp="#editor">padre</reg></choice> impedirla,<lb/>poiché il motore di quest'anima è <choice><sic>solamente</sic><corr resp="#editor">totalmente</corr></choice> Dio, <choice><orig>ne</orig><reg resp="#editor">né</reg></choice> <choice><orig>à</orig><reg resp="#editor">a</reg></choice> questi tempi se<lb/>mancasse guida all'anima, potrebbe danneggiarla come prima, <choice><orig>guidan<lb break="no"/>dola</orig><reg resp="#editor">guidandola</reg></choice> Dio, e per dove vuole, e come vuole.</p>
+
+                <p n="33" xml:id="III-cap2-p33"><choice><orig>Hò</orig><reg resp="#editor">Ho</reg></choice> trattato padre dello stato di<lb/><term ref="#silentio">silentio</term> in <term ref="#silentio">silentio</term>, non potendo dire ciò vi sia, e conchiodo, che <choice><orig>que<lb break="no"/>sto</orig><reg resp="#editor">questo</reg></choice> <term ref="#silentio">silentio</term> non s'intende nelle <term>potenze</term>, come quando l'anima era <choice><orig>Contem<lb break="no"/>plativa</orig><reg resp="#editor">contemplativa</reg></choice>, ma è nelle <term>potenze</term>, è più nel fondo dell'anima, e cossì si <choice><orig>chia<lb break="no"/>ma</orig><reg resp="#editor">chiama</reg></choice> <term ref="#silentio">silentio</term> d'anima, e non di spirito solamente; e nel principio di questo<lb/>capitolo dissi <choice><orig>Io</orig><reg resp="#editor">io</reg></choice>, che non vi sono in questo stato le <term>potenze</term>, il come <choice><orig>inten<lb break="no"/>do</orig><reg resp="#editor">intendo</reg></choice> dire lo dirò <choice><orig>à</orig><reg resp="#editor">a</reg></choice> suo luogo.</p>
+             </div>
+
+             <div type="chapter" n="3" xml:id="III-cap3">
+                <head>Capitolo terzo</head>
+                <argument>
+                   <p>Si tratta di certo stato, che siegue doppo il <choice>
+                         <orig>sù</orig>
+                         <reg resp="#editor">su</reg>
+                      </choice> detto,<lb/>ch'è d'<term ref="#oblivione-sonno">oblivione</term>, <choice>
+                         <orig>ò</orig>
+                         <reg resp="#editor">o</reg>
+                      </choice> <term ref="#oblivione-sonno">sonno</term> come<lb/>voglio chiamarlo.</p>
+                </argument>
+                <p n="34" xml:id="III-cap3-p34">La pura obedienza è padre, che mi stimula a mover la penna, e<lb/>non che <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> ardisse trattare di cose tanto alte, <choice>
+                      <orig>poi che</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> queste cose orde<lb break="no"/>nariamente non si possono spiegare, hor quanto più <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice>, che sono povera don<lb break="no"/>necciola, e senza lettere? <choice>
+                      <orig>E</orig>
+                      <reg resp="#editor">È</reg>
+                   </choice> cosa certa <choice>
+                      <abbr>dun</abbr>
+                      <expan resp="#editor">dunque</expan>
+                   </choice>, che quanto <choice>
+                      <abbr>V</abbr>
+                      <expan resp="#editor">Vostra</expan>
+                   </choice> <choice>
+                      <abbr>R</abbr>
+                      <expan resp="#editor">Reverenza</expan>
+                   </choice> troverà di<lb/>buono è <choice>
+                      <sic>miracoloso</sic>
+                      <corr resp="#editor">miracolo</corr>
+                   </choice> d'obedienza; <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> padre per conoscere la mia <choice>
+                      <orig>Indegne<lb break="no"/>tà</orig>
+                      <reg resp="#editor">indegnetà</reg>
+                   </choice>, e dapocagine, <choice>
+                      <orig>hò</orig>
+                      <reg resp="#editor">ho</reg>
+                   </choice> havuto grandissima ripognanza <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> dar principio <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice><lb/>questo terzo libro, e non solamente, credo, sia stato per le due assegnate<lb/>raggione, ma anche perché mi trovo impatimenti <app>
+                      <lem wit="#txt-c">grandissimi</lem>
+                      <rdg wit="#txt-b0">grand<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>ssimi</rdg>
+                   </app>, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice><lb/>non posso spiegar con quanto repognanza prendo la penna, anche la<lb/>mia fragile natura si mostra debole per scrivere <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questi tempi di fred<lb break="no"/>do, <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> con tutto ciò m'abbraccio la <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice> e faccio l'obedienza sua pa<lb break="no"/>dre mio, e creda, che ciò che scrivo è miracolo, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> essendo <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> in sta<lb break="no"/>to di <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice>, e travagli non m'intendo il mio primo tratto ch'havevo nello<lb/>spirito, anzi trattando <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> con alcune persone di cose di spirito, mi dà te<lb break="no"/>dio di morte, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> posso <choice>
+                      <sic>trattare</sic>
+                      <corr resp="#editor">trattarne</corr>
+                   </choice> come vorrei; quando poi scrivo tutto<lb/><fw type="catch" place="bottom-right">che</fw><note place="foot" type="material" n="2">«che»: richiamo aggiunto in calce a destra.</note><pb n="162v" xml:id="f162v"/>che prendo la penna con repognanza, m'agiuta Dio contra meriti <app>
+                      <lem wit="#txt-c">miei</lem>
+                      <rdg wit="#txt-b0">m<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>ei</rdg>
+                   </app>.<lb/><choice>
+                      <orig>Hò</orig>
+                      <reg resp="#editor">Ho</reg>
+                   </choice> scritto tutto ciò padre, per dare ad intendire quando è grata <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> Dio<lb/>l'obedienza, ed esortare <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> tutte l'anime, che caminano per la perfet<lb break="no"/>tione, quando gli vien comandata cosa per obedienza, per difficolto<lb break="no"/>sa che fosse, abbraccino tutto con prontezza d'animo, e fede in Dio, che<lb/>egli farà riuscir il tutto con vittoria, e se prima vengono nostri <choice>
+                      <orig>dobij</orig>
+                      <reg resp="#editor">dobii</reg>
+                   </choice><lb/>non curino di ciò, <choice>
+                      <orig>poi che</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> dato principio all'hopera, il tutto facilita <choice>
+                      <sic>che</sic>
+                      <corr resp="#editor">chi</corr>
+                   </choice><lb/>può. <choice>
+                      <orig>Cossi</orig>
+                      <reg resp="#editor">Cossì</reg>
+                   </choice> son stata <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice>, che conoscendo la mia grande <choice>
+                      <orig>Ignoranza</orig>
+                      <reg resp="#editor">ignoranza</reg>
+                   </choice> ha<lb break="no"/>vevo gran ripugnanza ad incominciar quest'opera, con tutto ciò pro<lb break="no"/>curando di far l'<app>
+                      <lem wit="#txt-c">obedienza</lem>
+                      <rdg wit="#txt-b0">o<del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" quantity="1" unit="chars"/></del>bedienza</rdg>
+                   </app>, <choice>
+                      <orig>m'hà</orig>
+                      <reg resp="#editor">m'ha</reg>
+                   </choice> Dio, per sua misericordia, corres<lb break="no"/>posto. Tutto che <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> sia imperfetta, stimo però questa virtù dell'obedien<lb break="no"/>za, e vorrei in ciò emitar la mia <choice>
+                      <orig>Santa</orig>
+                      <reg resp="#editor">santa</reg>
+                   </choice> Madre, e non l'osservo perfet<lb break="no"/>tamente come lei, <choice>
+                      <orig>perche</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> tutta <choice>
+                      <orig>mì</orig>
+                      <reg resp="#editor">mi</reg>
+                   </choice> conosco imperfetta. Accettane voi<lb/>Maestà infinita quel che fa la vostra <choice>
+                      <orig>Indegna</orig>
+                      <reg resp="#editor">indegna</reg>
+                   </choice> serva, e conoscene la <supplied reason="hole">m</supplied>ia bassezza, che niente posso.</p>
+                <p n="35" xml:id="III-cap3-p35">Hor per trattare <choice>
+                      <sic>detto</sic>
+                      <corr resp="#editor">dello</corr>
+                   </choice> <app>
+                      <lem wit="#txt-c">stato che</lem>
+                      <rdg wit="#txt-b0">stato <del hand="#ink_1" resp="#s-teresa">,</del> che</rdg>
+                   </app> preten<lb break="no"/>do in questo libro, cioè d'<term ref="#oblivione-sonno">oblivione</term>, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> <term ref="#oblivione-sonno">sonno</term> come vogliamo chiamarlo, dico,<lb/>che dal continuo, ed habituato <term ref="#silentio">silentio</term>, che nel trascorso capitolo tratta<lb break="no"/>mo, viene l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> ponersi in uno santo <term ref="#oblivione-sonno">oblio</term>, viene <choice>
+                      <orig>ad'</orig>
+                      <reg resp="#editor">ad</reg>
+                   </choice> <choice>
+                      <orig>addormentarsi</orig>
+                      <reg resp="#editor">adormentarsi</reg>
+                   </choice><lb/>dolcemente nel petto del suo sposo, per intendire le sue meraviglie.<lb/><choice>
+                      <orig>Siccome</orig>
+                      <reg resp="#editor">Sì come</reg>
+                   </choice> <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> chi sta in <term ref="#otio">otio</term>, in <term ref="#silentio">silentio</term> gli viene facilmente il <term ref="#oblivione-sonno">sonno</term>, cossì<lb/>all'anima di quel <term ref="#silentio">silentio</term> gli viene il <term ref="#oblivione-sonno">sonno</term>: e credo la distanza<lb/>che v'è da questo stato al passato esser molto grande, tutto che<lb/>pare si somigliassero, e quasi fossero tutti una cosa, che si somigliano<lb/>molto non nego, però questo è cosa più perfetta, e stato più alto.</p>
+                <p n="36" xml:id="III-cap3-p36">Si differiscono <choice>
+                      <abbr>dunq</abbr>
+                      <expan resp="#editor">dunque</expan>
+                   </choice> questi doi stati, alla diffirenza che <choice>
+                      <sic>n'è</sic>
+                      <corr resp="#editor">v'è</corr>
+                   </choice> dal<lb/><term ref="#oblivione-sonno">sonno</term> al <term ref="#silentio">silentio</term>, poiché il <term ref="#silentio">silentio</term> fa, che non si tratti, ma s'ascolti<lb/>ciò che viene detto, però con i sensi perfetti. <choice>
+                      <sic>Al</sic>
+                      <corr resp="#editor">Il</corr>
+                   </choice> <term ref="#oblivione-sonno">sonno</term> poi fa, che<lb/>si perdino i sensi, s'alienano dal tutto, e non si pensi <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> cosa alcuna.<lb/><choice>
+                      <orig>Cossi</orig>
+                      <reg resp="#editor">Cossì</reg>
+                   </choice> è padre qui l'anima, che passando dal <app>
+                      <lem wit="#txt-c"><term ref="#silentio">silentio</term></lem>
+                      <rdg wit="#txt-b0"><subst>
+                            <del hand="#ink_1" resp="#s-teresa">sonno</del>
+                            <add hand="#ink_1" resp="#s-teresa" place="supralinear">silentio</add>
+                         </subst></rdg>
+                   </app> <choice>
+                      <sic>ne</sic>
+                      <corr resp="#editor">se ne</corr>
+                   </choice> entra più nel suo<lb/>raccoglimento per godere del suo amato, e <choice>
+                      <orig>cossi</orig>
+                      <reg resp="#editor">cossì</reg>
+                   </choice> s'adormenta, e <choice>
+                      <orig>per<lb/>ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> come fuor <choice>
+                      <orig>de'i</orig>
+                      <reg resp="#editor">dei</reg>
+                   </choice> sensi, ed aliena dal tutto viene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> mescere più di<lb/>prima lo godimento, e la <term ref="#quiete">pace</term>, e senza comperatione alcuna, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice><lb/>Dio si va più, e più internandosi nell'anima, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> gode più nel<lb/><fw type="catch" place="bottom-right">fondo</fw><note place="foot" type="material" n="5">«fondo»: richiamo aggiunto in calce.</note><pb n="163r" xml:id="f163r"/>fondo suo, cresce la communicazione di Dio nell'anima, ed anche la mani<lb break="no"/>festatione dello sposo, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> se prima non tanto godiva di lui di continuo, ma c'era qualche interpellatione, cioè di scoprirsi, non che s'havesse mai<lb/>allontanato dell'anima, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> che s'havesse inteso fuor di Dio, e cossì la <choice>
+                      <orig>inter<lb break="no"/>pellazione</orig>
+                      <reg resp="#editor">interpellatione</reg>
+                   </choice> posso dire, ch'era al godimento: e ciò <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> distanza dello stato, che<lb/>stamo trattando, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> mescendo l'abbraccio, che tiene Dio con l'anima, cre<lb break="no"/>sce anche il godimento, e la continua <choice>
+                      <orig>Compagnia</orig>
+                      <reg resp="#editor">compagnia</reg>
+                   </choice> dello Sposo.</p>
+                <p n="37" xml:id="III-cap3-p37">Hor padre è<lb/>cosa impossibile poter dire, ciò che <app>
+                      <lem wit="#txt-c">opera Dio</lem>
+                      <rdg wit="#txt-b0">opera <del hand="#ink_1" resp="#s-teresa">di</del> Dio</rdg>
+                   </app> in questo <term ref="#oblivione-sonno">sonno</term>, non di poten<lb break="no"/>za, ma d'anima, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questi tempi tutto che l'anima vadi con le po<lb break="no"/>tenze distratte, e parli, ed intenda <choice>
+                      <abbr>qualunq</abbr>
+                      <expan resp="#editor">qualunque</expan>
+                   </choice> <retrace hand="#ink_3-dark" resp="#s-teresa">tom</retrace>olto, il fondo però suo sem<lb break="no"/>pre è molto raccolto; e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> dico non di potenza come prima, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> sensi, ma<lb/><term ref="#oblivione-sonno">sonno</term> di tutta l'anima, ed è questo di continuo. L'abbraccio <choice>
+                      <orig>e</orig>
+                      <reg resp="#editor">è</reg>
+                   </choice> di continuo<lb/>di Dio con l'anima, ma il godimento è quando più, quando meno, talmente, che<lb/>nell'abbraccio non v'è interpellatione, nel godimento però v'è, e non che vi<lb/>fosse tempo che l'anima non godesse, però v'è il maggiore et il menore.</p>
+                <p n="38" xml:id="III-cap3-p38">A questi <retrace hand="#ink_3-dark" resp="#s-teresa">te</retrace>mpi cresce più la chiarezza di Dio per l'anima, cioè lo cono<lb break="no"/>sce più assai di prima, e con più alto intendire di Lui, e più ch'egli s'accosta<lb/>più questo cresce, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> fa Dio con l'anima, <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> punto come il sole, che più che<lb/>batte fortemente sopra una pietra diamantina più la rischiara e la so<lb break="no"/>miglia <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> lui. Hor cossì è Dio con l'anima in questi stati d'<term ref="#unione">unione</term>, vi <choice>
+                      <orig>stà</orig>
+                      <reg resp="#editor">sta</reg>
+                   </choice><lb/><choice>
+                      <orig>cossi</orig>
+                      <reg resp="#editor">cossì</reg>
+                   </choice> da vicino, anzi tutto unito con lei, e <choice>
+                      <orig>perche</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> col tempo si <app>
+                      <lem wit="#txt-c">va</lem>
+                      <rdg wit="#txt-b0"><add hand="#ink_1" resp="#s-teresa" place="supralinear">va</add></rdg>
+                   </app> più internando<lb/>più, e più la rischiara; <choice>
+                      <orig>ed'essendo</orig>
+                      <reg resp="#editor">ed essendo</reg>
+                   </choice> egli <choice>
+                      <sic>Divino</sic>
+                      <corr resp="#editor">il divino</corr>
+                   </choice> sole, che <choice>
+                      <sic>possa</sic>
+                      <corr resp="#editor">porta</corr>
+                   </choice> seco verità<lb/>eterna, cossì più che l'anima s'avvicina <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questo sole, più conosce la veri<lb break="no"/>tà di ciò che sia Dio (per quanto si può in questa vita) e ciò che sia ella: qui padre vorrei darmi ad intendire, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> è cosa, che molto importa, essendo<lb/>che potrà dobitare <app>
+                      <lem wit="#txt-c">chi non</lem>
+                      <rdg wit="#txt-b0">chi <del hand="#ink_1" resp="#s-teresa">s.</del> non</rdg>
+                   </app> s'intenda di questo stato, che l'anima vedendo<lb break="no"/>si tanto alta gli può nascere qualche propria stima, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> vorrei darmi<lb/>ad i<supplied reason="hole">nt</supplied>endire e dico padre che <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> come chi vi fosse nascosta la luce sareb<lb break="no"/>be impossibile <choice>
+                      <orig>conoscerela</orig>
+                      <reg resp="#editor">conoscere la</reg>
+                   </choice> verità, e per contrario poi <choice>
+                      <orig>invener</orig>
+                      <reg resp="#editor">in vener</reg>
+                   </choice> la luce il<lb/>tutto scuopri, e fa veder la verità.</p>
+                <p n="39" xml:id="III-cap3-p39">Hor sappia <choice>
+                      <abbr>V</abbr>
+                      <expan resp="#editor">Vostra</expan>
+                   </choice> <choice>
+                      <abbr>R</abbr>
+                      <expan resp="#editor">Reverenza</expan>
+                   </choice> che noi giacemo nella igno<lb break="no"/>ranza delle tenebre, e con la luce solamente naturale, potrebbe sortire,<lb/>che il nero paresse bianco, e venendo nell'anima la luce sopernaturale, ch'è Dio, vede la verità, che prima di ricevere <choice>
+                      <sic>questà</sic>
+                      <corr resp="#editor">quella</corr>
+                   </choice> sì chiara luce<lb/>era impossibile poter vedere come adesso vede. Hor <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> voglio dire,<lb/>che accostandosi l'anima più <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> Dio, e vedendosi da lui, e per sua misericordia<lb/><fw type="catch" place="bottom-right">posta</fw><note place="foot" type="material" n="7">«posta»: richiamo aggiunto in calce a destra.</note><pb n="163v" xml:id="f163v"/>posta in stato cossì soblime, vede doi estremi, uno è la grandezza che co<lb break="no"/>nosce havere Dio in <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stesso, è lo stato grande, e l'abbellimento, che si tro<lb break="no"/>va in lei. L'altro è un perfetto conoscemento del suo niente, e questo<lb/>dire “<choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> niente”, mi par cosa treviale, rispetto alla verità grande, che l'<lb break="no"/>anima conosce con quella luce supernaturale, e <choice>
+                      <orig>Divina</orig>
+                      <reg resp="#editor">divina</reg>
+                   </choice>, e si debbia sape<lb break="no"/>re che quanto più l'anima salirà in stati più soblime <app>
+                      <lem wit="#txt-c">altritanto</lem>
+                      <rdg wit="#txt-b0">altr<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>tanto</rdg>
+                   </app> cresce la<lb/>detta verità, e cossì chi di ciò dobita <app>
+                      <lem wit="#txt-c">facciani</lem>
+                      <rdg wit="#txt-b0">faccian<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst></rdg>
+                   </app> di meno, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> ciò che<lb/>questi tali dobitano pare <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> me cosa impossibile, sopposto che la gratia<lb/>di Dio demora nell'anima, <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> che conch<retrace hand="#ink_3-dark" resp="#s-teresa">i</retrace>udo che non <choice>
+                      <orig>voler</orig>
+                      <reg resp="#editor">vuoler</reg>
+                   </choice> conoscere l'ani<lb break="no"/>ma questa verità, <choice>
+                      <orig>vuol'essere</orig>
+                      <reg resp="#editor">vuol essere</reg>
+                   </choice> un lasciarla Dio, altrimenti è cosa impos<lb break="no"/>sibile.</p>
+                <p n="40" xml:id="III-cap3-p40">Hor qui voglio spiegare al quanto in che modo demora Dio nell'anima<lb/>in questo <app>
+                      <lem wit="#txt-c">stato d'<term ref="#oblivione-sonno">oblivione</term></lem>
+                      <rdg wit="#txt-b0">stato <del hand="#ink_1" resp="#s-teresa">di silen</del> d'oblivione</rdg>
+                   </app>, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> <term ref="#oblivione-sonno">sonno</term>. Con questa comperatione, che<lb/>dirò mi pare spiegarla d'un certo modo; vi fossero, verbigratia, due statuet<lb break="no"/>te di cera molle, e calda, e queste stassero abbracciate strettamente<lb/>insieme, e per la loro mollezza, e caldezza s'andassero col tempo, più, e più<lb/><supplied reason="hole">a</supplied>bbracciando talmente, che venessero ad <choice>
+                      <orig>in concentrarsi</orig>
+                      <reg resp="#editor">inconcentrarsi</reg>
+                   </choice> l'una con l'altra,<lb/>e farsi tutte due una figura. Questo è nell'<term ref="#unione">unione</term>, talmente, che le due sostanze, cioè quella di Dio, e quella dell'anima, stando nell'<term ref="#unione">unione</term> <choice>
+                      <orig>cossi</orig>
+                      <reg resp="#editor">cossì</reg>
+                   </choice><lb/>unite insieme, che venno <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> darsi un continuo abbraccio, e questo abbraccio vede l'anima crescere più, e più, talmente, che venno le due sostanze ad<lb/>inconcentrarsi insieme, come le dette statuette; hor queste due statu<lb break="no"/>ette venessero col tempo <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> liquefarsi insieme per la caldezza talmen<lb break="no"/>te, che di due devenesse una; e <choice>
+                      <orig>cossi</orig>
+                      <reg resp="#editor">cossì</reg>
+                   </choice> farà Dio con l'anima nel <term ref="#matrimonio-spirituale">matri<lb break="no"/>monio spirituale</term>, all'hora quando le due sostanze si liquefaranno insie<lb break="no"/>me, che pare fossero una sola sostanza, senza però confondersi talmen<lb break="no"/>te che l'anima non havesse più sostanza, <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> che due sostanze distinte, ma<lb/>tanto liquiefatte insieme, che pare fosse una sola, e di ciò tratteremo con<lb/>l'agiuto di Dio <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> suo luogo, per maggiormente magnificar l'opere di <supplied reason="hole">D</supplied>io e<lb/>cantar le sue misericordie, <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> veder quanto opera con un'anima, che<lb/><choice>
+                      <orig>sì</orig>
+                      <reg resp="#editor">si</reg>
+                   </choice> compiace, per sua <choice>
+                      <orig>Bontà</orig>
+                      <reg resp="#editor">bontà</reg>
+                   </choice>, unirla seco.</p>
+                <p n="41" xml:id="III-cap3-p41">Hor lascio consederare, se può<lb/>il nostro intelletto percepire, ciò che può godere un'anima cossì abbracciata<lb/>con Dio nel fondo suo, come gode la perfetta <term ref="#quiete">pace</term>, talmente, che se vede cossì<lb/>internata nel fondo del <choice>
+                      <orig>Castello</orig>
+                      <reg resp="#editor">castello</reg>
+                   </choice>, di cui habbiamo fatta la nostra <choice>
+                      <orig>Compe<lb break="no"/>ratione</orig>
+                      <reg resp="#editor">comperatione</reg>
+                   </choice>, che s'accorge non gli poter cosa alcuna per toglierci un tantino la<lb/>sua dolce <term ref="#quiete">quiete</term>, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> gode un perfetto <term ref="#oblivione-sonno">sonno</term>, un dolce <term ref="#oblivione-sonno">oblio</term> sopra il<lb/>petto del suo amato, il quale sarà talamo notiale per lei, all'hora quando<lb/><fw type="catch" place="bottom-right">si</fw><note place="foot" type="material" n="10">«si»: richiamo aggiunto in calce a destra.</note><pb n="164r" xml:id="f164r"/>si farà il <choice>
+                      <orig>Divino</orig>
+                      <reg resp="#editor">divino</reg>
+                   </choice> <term ref="#matrimonio-spirituale">matrimonio</term>.</p>
+                <p n="42" xml:id="III-cap3-p42">Non posso poi dare ad intendire la fortezza gran<lb break="no"/>de, che intende l'anima in <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stessa, solo dico, che basti sopponervi, che <choice>
+                      <orig>stà</orig>
+                      <reg resp="#editor">sta</reg>
+                   </choice> cossì<lb/>unita con la medesima fortezza di Dio, talmente, che la fortezza di Dio e <choice>
+                      <orig>gia</orig>
+                      <reg resp="#editor">già</reg>
+                   </choice><lb/>anche dell'anima, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> intende il suo <choice>
+                      <orig>Castello</orig>
+                      <reg resp="#editor">castello</reg>
+                   </choice> tanto fortificato, che gli<lb/>par cosa impossibile, poterci cosa alcuna per <retrace hand="#ink_3-dark" resp="#s-teresa">e</retrace>spognar la sua fortezza.<lb/>Se vede tanto immersa nell'amore, <choice>
+                      <orig>ed'habituata</orig>
+                      <reg resp="#editor">ed habituata</reg>
+                   </choice> ad amare, ed alle virtù, che<lb/>gli pare cosa impossibile poter più peccare; tiene però la capacetà perfetta<lb/>di conoscere, che <choice>
+                      <orig>hà</orig>
+                      <reg resp="#editor">ha</reg>
+                   </choice> la potenza di peccari, e, che se Dio la lasciasse potrebbe<lb/>di nuovo cadere nel fango di questo mondo, ma però <choice>
+                      <orig>e</orig>
+                      <reg resp="#editor">è</reg>
+                   </choice> cossì grande la certezza,<lb/>che Dio si compiace darci di non partirsi <choice>
+                      <sic>poi</sic>
+                      <corr resp="#editor">più</corr>
+                   </choice> di lei, anzi più internarsi col tempo,<lb/>che gli pare cosa non solamente impossibile poter peccare, ma strana per lei.<lb/>Qui son quasi massiccie le virtù, ed adormentate le passione; qui cresce un<lb/>distacco, che mai l'anima haveva <choice>
+                      <orig>intempo</orig>
+                      <reg resp="#editor">in tempo</reg>
+                   </choice> di sua vita provato; mancano più<lb/>e più tutti <choice>
+                      <orig>desiderij</orig>
+                      <reg resp="#editor">desiderii</reg>
+                   </choice>, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> andandosi l'anima più abbracciando con Dio, e più <choice>
+                      <sic>pos<lb break="no"/>sedendo</sic>
+                      <corr resp="#editor">possedendolo</corr>
+                   </choice> non gli resta più, che desiderare, e tutto che habbia notitia d'andar più<lb/>oltre, ed <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> magiore altezza di stati, non è però con desiderio, ma con certa <term ref="#quiete">quie<lb break="no"/>te</term>, e <term ref="#quiete">pace</term>, <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> che viene <choice>
+                      <orig>ad'essere</orig>
+                      <reg resp="#editor">ad essere</reg>
+                   </choice> un desiderio senza desiderio, e non più come<lb/>prima, che altro non desiderava, che d'arrivare, adesso per l'<term ref="#unione">unione</term> che <choice>
+                      <sic>viene</sic>
+                      <corr resp="#editor">tiene</corr>
+                   </choice> con<lb/>l'amato suo resta già sodisfatta, e satia, la quale satietà non haveva mai<lb/>ella provato, <choice>
+                      <orig>perche</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> mai haveva posseduto con totale <choice>
+                      <orig>possesso</orig>
+                      <reg resp="#editor">posesso</reg>
+                   </choice>.</p>
+                <p n="43" xml:id="III-cap3-p43">L'<term ref="#unione">unione</term> delle<lb/>sostanze, che dissi sopra, haver l'anima con Dio, s'intende con chiarezza<lb/>sì grande, che non basto per dirla, basta dire ch'è un contatto, come se fos<lb break="no"/>se di cosa corporea, e materiale tutto che sia totalmente spirito, e non vi<lb/>sia specie di corpo, e forme, e cosa materiale.</p>
+                <p n="44" xml:id="III-cap3-p44">La communicatione è il diffon<lb break="no"/>dersi Dio per tutta l'anima, talmente, che s'intende tutta rec<retrace hand="#ink_3-dark" resp="#s-teresa">r</retrace>eata, ed indol<lb break="no"/>cita, di modo tale, che diffundendosi Dio per tutta l'anima, intende ella di<lb/>tutto Dio comunicarsi in lei per sostanza.</p>
+                <p n="45" xml:id="III-cap3-p45">Il linguaggio oscuro è l'altezza<lb/>grande, che lo <app>
+                      <lem wit="#txt-c">sposo</lem>
+                      <rdg wit="#txt-b0">s<del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" quantity="1" unit="chars"/></del>poso</rdg>
+                   </app> gli communica nella sua sostanza, nascostamente <choice>
+                      <orig>de'i</orig>
+                      <reg resp="#editor">dei</reg>
+                   </choice><lb/>sensi, talmente, che ciò che intende non può <choice>
+                      <orig>in</orig>
+                      <reg resp="#editor">im</reg>
+                   </choice> modo alcuno ridirlo, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> trova<lb/>termini per poter dire cosa alcuna, e quanto più cresce l'altezza dell'in<lb break="no"/>tendire, altritanto vien nascosto alli sensi. Hor non <choice>
+                      <sic>questa</sic>
+                      <corr resp="#editor">creda</corr>
+                   </choice> <choice>
+                      <abbr>V</abbr>
+                      <expan resp="#editor">Vostra</expan>
+                   </choice> <choice>
+                      <abbr>R</abbr>
+                      <expan resp="#editor">Reverenza</expan>
+                   </choice> padre mio<lb/>che ciò caggioni nell'anima confusione, anzi hessene il tutto nascosto alli<lb/><choice>
+                      <orig>proprij</orig>
+                      <reg resp="#editor">proprii</reg>
+                   </choice> sensi più cresce il suo godimento, e meno può intendire, e spiegarsi; hor<lb/>pare linguaggio troppo oscuro questo, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> noi naturalmente siemo inclinati<lb/><fw type="catch" place="bottom-right">al</fw><note place="foot" type="material" n="12">«al»: richiamo aggiunto in calce a destra.</note><pb n="164v" xml:id="f164v"/>al sensibile, il come poi si compiace l'anima di questa oscurità <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> non lo <choice>
+                      <orig>sò</orig>
+                      <reg resp="#editor">so</reg>
+                   </choice>,<lb/>lo <choice>
+                      <orig>sà</orig>
+                      <reg resp="#editor">sa</reg>
+                   </choice> <choice>
+                      <abbr>dunq</abbr>
+                      <expan resp="#editor">dunque</expan>
+                   </choice> chi fa l'opera, che <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> sono al tutto ignorante per darlo ad inten<lb break="no"/>dire.</p>
+                <p n="46" xml:id="III-cap3-p46">Hor questa communicatione della due sostanze, e <choice>
+                      <sic>par</sic>
+                      <corr resp="#editor">per</corr>
+                   </choice> l'altezza dell'<lb break="no"/>intendire, viene l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> ri<retrace hand="#ink_3-dark" resp="#s-teresa">m</retrace>a<retrace hand="#ink_3-dark" resp="#s-teresa">n</retrace>errene in <choice>
+                      <sic>sant'otio</sic>
+                      <corr resp="#editor">un sant'<term ref="#otio">otio</term></corr>
+                   </choice>, in un dolce <term ref="#oblivione-sonno">sonno</term>, in<lb/>un dolce <term ref="#oblivione-sonno">oblio</term>.</p>
+                <p n="47" xml:id="III-cap3-p47">Lui per demorare il fonte di vita eterna nel fondo dell'ani<lb break="no"/>ma, e non come prima, che v'era unito per sostanza, e non demorava<lb/>nel centro suo, <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> se serviva <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> <app>
+                      <lem wit="#txt-c">benificarla</lem>
+                      <rdg wit="#txt-b0">ben<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>ficarla</rdg>
+                   </app> delle potenze, <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> non più<lb/>cossì, ma scatorisce l'anqua molto ad <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> bondanza di <retrace hand="#ink_3-dark" resp="#s-teresa">q</retrace>uel medesimo fondo<lb/>dell'anima, e <choice>
+                      <orig>vedesi</orig>
+                      <reg resp="#editor">vedesì</reg>
+                   </choice> come una cisterna piena d'acqua senza veder di don<lb break="no"/>de sorge. <choice>
+                      <orig>Ò</orig>
+                      <reg resp="#editor">O</reg>
+                   </choice> padre <choice>
+                      <orig>chevoglio</orig>
+                      <reg resp="#editor">che voglio</reg>
+                   </choice> dire, quando non trovo ter<retrace hand="#ink_3-dark" resp="#s-teresa">mino</retrace> nella mia pen<lb break="no"/>na per potermi spiegare, e <choice>
+                      <sic>quando</sic>
+                      <corr resp="#editor">quanto</corr>
+                   </choice> <choice>
+                      <orig>hò</orig>
+                      <reg resp="#editor">ho</reg>
+                   </choice> detto, non è quel che rialmente è, ma<lb/><choice>
+                      <orig>quelche</orig>
+                      <reg resp="#editor">quel che</reg>
+                   </choice> non è, <app>
+                      <lem wit="#txt-c">dico ciò non<lb/>perché non s'ha<lb/>detto la veri<lb break="no"/>tà del fatto, ma<lb/><choice>
+                            <orig>perche</orig>
+                            <reg resp="#editor">perché</reg>
+                         </choice> son co<lb break="no"/>se da non poter<lb break="no"/>si in <supplied reason="hole">modo</supplied> alcu<lb break="no"/>no spieg<supplied reason="hole">arse</supplied></lem>
+                      <rdg wit="#txt-b0"><add hand="#ink_3-dark" resp="#s-teresa" place="margin-left">dico ciò non perché non s'ha detto la verità del fatto, ma perché son cose da non potersi in modo alcuno spiegarse</add></rdg>
+                   </app> e con una parola direi il tutto, <foreign xml:lang="lat">mirabilia magna</foreign>.</p>
+             </div>
+
+             <div type="chapter" n="4" xml:id="III-cap4">
+                <head>Capitolo quarto</head>
+                <argument>
+                   <p>Siegue un stato di <term ref="#scordanza">scordanza</term>, che tiene l'ani<lb break="no"/>ma
+                      di tutto il <choice>
+                         <orig>Creato</orig>
+                         <reg resp="#editor">creato</reg>
+                      </choice>, e <choice>
+                         <orig>se</orig>
+                         <reg resp="#editor">sé</reg>
+                      </choice><lb/><choice>
+                         <orig>Stessa</orig>
+                         <reg resp="#editor">stessa</reg>
+                      </choice>.</p>
+                </argument>
+
+                <p n="48" xml:id="III-cap4-p48"><choice>
+                      <orig>Si</orig>
+                      <reg resp="#editor">Sì</reg>
+                   </choice> come il sonno naturale fa perdire i sensi, e totalmente scordarci<lb/>di noi stessi, e
+                   senza ricordarci più cosa alcuna, cossì anche padre<lb/>il sopra detto sonno, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> oblio facendosi habituato nel <choice>
+                      <sic>fono</sic>
+                      <corr resp="#editor">fondo</corr>
+                   </choice> dell'anima<lb/>e senza impedirci l'operatione esterne, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> vero le potenze; <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> diffirenza<lb/>di quando era l'anima in sposalitio, che havendo altissima <choice>
+                      <orig>Contempla<lb break="no"/>tione</orig>
+                      <reg resp="#editor">contemplatione</reg>
+                   </choice> veniva <app>
+                      <lem wit="#txt-c">in</lem>
+                      <rdg wit="#txt-b0"><subst>
+                            <del hand="#ink_1" resp="#s-teresa">u</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>n</rdg>
+                   </app> <choice>
+                      <orig>uni estasi</orig>
+                      <reg resp="#editor">un'estasi</reg>
+                   </choice> di potenze, e per il tiro interiore venevano<lb/>totalmente escluse l'operatione
+                   naturale, cioè <choice>
+                      <orig>de'i</orig>
+                      <reg resp="#editor">dei</reg>
+                   </choice> sensi ester<supplied reason="hole">n</supplied>i, <choice>
+                      <orig>tal<lb break="no"/>mente</orig>
+                      <reg resp="#editor">talmente</reg>
+                   </choice>, che per quell'atto era impossibile il corpo parer vivo.</p>
+
+                <p n="49" xml:id="III-cap4-p49">Dio tutto<lb/>ciò spiegando con chiarezza il tutto per chi legge,
+                   <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> essendovi<lb/>questo stato di scordanza anche nello sposalitio per altissima <choice>
+                      <orig>Contem<lb break="no"/>platione</orig>
+                      <reg resp="#editor">contemplatione</reg>
+                   </choice>, <choice>
+                      <orig>ed'</orig>
+                      <reg resp="#editor">ed</reg>
+                   </choice> assorbimento, che fa Dio nell'anima, potria essene credere<lb/>dico, che fosse quello
+                   stato, <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> dico, che v'è gran distanza, ma<lb/>si somiglia il come. Primieramente si differiscono
+                   questi doi stati<lb/>nell'attoa<retrace hand="#ink_3-dark" resp="#s-teresa">l</retrace>e, e nell'habituale, essendo quello dello sposalitio per<lb/><fw type="catch"
+                      place="bottom-right">breve</fw><note place="foot" type="material" n="3">«breve»: richiamo
+                      aggiunto in calce a destra.</note><pb n="165r" xml:id="f165r"/>breve tempo, non passandovi alle
+                   volte più d'un'hora, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> quanto vuole Dio<lb/>basti, che non è habituale; questo del quale stamo noi trattando,
+                   cioè questa<lb/>scordanza, è habituale nell'anima, anzi col tempo crescerà più assai.<lb/>Altra
+                   differenza vi è, che quella scordanza <choice>
+                      <orig>e</orig>
+                      <reg resp="#editor">è</reg>
+                   </choice> nelle potenze, (ed anche per quest'atto nell'anima) e questa di cui stamo trattando è nel
+                   fondo dell'<lb break="no"/>anima. L'altre diffirenze son grande per l'<choice>
+                      <sic>atezza</sic>
+                      <corr resp="#editor">altezza</corr>
+                   </choice> dello stato, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> qui<lb/>so dirle, ma bene intenderle, passo <choice>
+                      <abbr>dunq</abbr>
+                      <expan resp="#editor">dunque</expan>
+                   </choice> il tutto in silentio.</p>
+
+                <p n="50" xml:id="III-cap4-p50">Hor <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> come dis<lb break="no"/>si sopra, dal sonno continuo, <choice>
+                      <orig>ed'abbraccio</orig>
+                      <reg resp="#editor">ed abbraccio</reg>
+                   </choice>, che l'anima tiene in Dio gli na<lb break="no"/>sce la <term ref="#scordanza"
+                      >scordanza</term>, talmente, che non solamente è scordata da tutto il <choice>
+                      <orig>Cre<lb break="no"/>ato</orig>
+                      <reg resp="#editor">creato</reg>
+                   </choice>, essendo che quest'anima non è più di questa vita, ma dell'altra, ma <choice>
+                      <orig>an<lb break="no"/>che</orig>
+                      <reg resp="#editor">anche</reg>
+                   </choice> di tutta <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stessa, e solamente pensa per l'amato. <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> padre non mi <choice>
+                      <orig>me<lb break="no"/>raviglio</orig>
+                      <reg resp="#editor">meraviglio</reg>
+                   </choice>, che l'anima entri in questa sì grande scordanza, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> vede tanto,<lb/>ed intende tanto nel centro suo, che resta attonita. Per <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> punto, come<lb/>chi guardasse molte <choice>
+                      <sic>meraviglia</sic>
+                      <corr resp="#editor">meraviglie</corr>
+                   </choice>, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> per dir meglio per l'oggetto, che <choice>
+                      <orig>stà</orig>
+                      <reg resp="#editor">sta</reg>
+                   </choice><lb/>godendo, <choice>
+                      <orig>ed'amando</orig>
+                      <reg resp="#editor">ed amando</reg>
+                   </choice> fosse cossì la spinta dell'amore, che non <choice>
+                      <orig>sì</orig>
+                      <reg resp="#editor">si</reg>
+                   </choice> <choice>
+                      <orig>ricordas<lb break="no"/>se</orig>
+                      <reg resp="#editor">ricordasse</reg>
+                   </choice> più di <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stesso. Hor cossì qui l'anima ama tanto, che anche si <choice>
+                      <orig>scor<lb break="no"/>da</orig>
+                      <reg resp="#editor">scorda</reg>
+                   </choice> di <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stessa; e qui resta l'anima sommersa in un profondissimo <choice>
+                      <orig>Ocea<lb break="no"/>no</orig>
+                      <reg resp="#editor">oceano</reg>
+                   </choice> d'amore, e senza poter dare ad intendire ciò vede, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> gode.<lb/>Scrivendo questi stati <choice>
+                      <orig>Padre</orig>
+                      <reg resp="#editor">padre</reg>
+                   </choice>, mi viene un profondissimo silentio nell'anima<lb/>mia, ed altro non faccio, che resto
+                   attonita di quanto vorrei dire, se però <choice>
+                      <orig>tro<lb break="no"/>vasse</orig>
+                      <reg resp="#editor">trovasse</reg>
+                   </choice> termini opportuni per spiegarmi; ma che padre, che niente dico di <choice>
+                      <orig>quan<lb break="no"/>to</orig>
+                      <reg resp="#editor">quanto</reg>
+                   </choice> intendo, e mi viene certa confosione gustosa di vedermi in un labirinto<lb/>cossì confuso,
+                   mi vedo per certo imbrogliata, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> di quanto <choice>
+                      <orig>hò</orig>
+                      <reg resp="#editor">ho</reg>
+                   </choice> detto non è<lb/>altro, che dare <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> gustare dal granato la sola scorcia, il cibo non <choice>
+                      <orig>sò</orig>
+                      <reg resp="#editor">so</reg>
+                   </choice> chi<lb/>mi trattene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> communicarlo; non sarei <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> tanto scortese, se la mia <app>
+                      <lem wit="#txt-c">ca<lb break="no"/>pacità</lem>
+                      <rdg wit="#txt-b0"><del hand="#ink_1" resp="#s-teresa">pa</del> ca<lb break="no"/>pacità</rdg>
+                   </app> mi dasse li<retrace hand="#ink_3-dark" resp="#s-teresa">c</retrace>e<retrace hand="#ink_3-dark" resp="#s-teresa">n</retrace>za di dire il tutto: e <choice>
+                      <orig>per cio</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> <choice>
+                      <abbr>V</abbr>
+                      <expan resp="#editor">Vostra</expan>
+                   </choice> <choice>
+                      <abbr>R</abbr>
+                      <expan resp="#editor">Reverenza</expan>
+                   </choice> mi compatisca di<lb/>quanto saccio.</p>
+
+                <p n="51" xml:id="III-cap4-p51">Torno al mio dire. <choice>
+                      <orig>Quì</orig>
+                      <reg resp="#editor">Qui</reg>
+                   </choice> l'anima sta, per lo più, in un estasi d'<lb break="no"/>amore, talmente, che viene alle
+                   volte <choice>
+                      <orig>ad'alienarsi</orig>
+                      <reg resp="#editor">ad alienarsi</reg>
+                   </choice> <choice>
+                      <orig>de'i</orig>
+                      <reg resp="#editor">dei</reg>
+                   </choice> sensi esteriori, ma per<lb/>poco spatio di tempo; dico ciò, ch'è tanto lo raccoglimento,
+                   che tiene in <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> <choice>
+                      <orig>stes<lb break="no"/>sa</orig>
+                      <reg resp="#editor">stessa</reg>
+                   </choice>, che <choice>
+                      <sic>tovandosi</sic>
+                      <corr resp="#editor">trovandosi</corr>
+                   </choice> nel mezzo di chi si sia, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> <choice>
+                      <abbr>qualunq</abbr>
+                      <expan resp="#editor">qualunque</expan>
+                   </choice> tratto, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> che se gli parli,<lb/>non ode ciò che gli vien detto, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> ciò che si facci, e ciò per la profonda <choice>
+                      <orig>distrat<lb break="no"/>tione</orig>
+                      <reg resp="#editor">distrattione</reg>
+                   </choice>, che tiene di tutto il <choice>
+                      <orig>Creato</orig>
+                      <reg resp="#editor">creato</reg>
+                   </choice>, e per la compagnia di Dio, e <choice>
+                      <orig>communicatio<lb break="no"/>ne</orig>
+                      <reg resp="#editor">communicatione</reg>
+                   </choice>, che riceve, e cossì posso chiamar questo stato, quasi un continuo estasi,<lb/>senza però
+                   detrimento di corpo.</p>
+
+                <p n="52" xml:id="III-cap4-p52"><fw type="catch" place="bottom-right">E</fw><note place="foot"
+                      type="material" n="4">«E»: richiamo aggiunto in calce a destra.</note><pb n="165v"
+                      xml:id="f165v"/>E qui pare mi disdicesse di quanto <choice>
+                      <orig>hò</orig>
+                      <reg resp="#editor">ho</reg>
+                   </choice> detto sopra, cioè che nello stato d'<lb break="no"/><term ref="#unione">unione</term> non
+                   vi sono le potenze, ed alienatione di sensi, e dico, ch'è per poco<lb/>spatio di tempo tornando
+                   doppo li sensi in <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice>, e l'esterni, e li <choice>
+                      <sic>intermi</sic>
+                      <corr resp="#editor">interni</corr>
+                   </choice>, che per<lb/>la spinta dell'amore stanno <app>
+                      <lem wit="#txt-c">sospesi</lem>
+                      <rdg wit="#txt-b0">sospes<subst>
+                            <del hand="#ink_1" resp="#s-teresa">e</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst></rdg>
+                   </app>, ma non cessa però l'estasi dell'anima<lb/>e lo raccoglimento che tiene, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> la sospensione di questi tempi, non è <choice>
+                      <orig>al<lb break="no"/>tro</orig>
+                      <reg resp="#editor">altro</reg>
+                   </choice>, che di quando in quando restano attoniti di ciò che non sanno <choice>
+                      <orig>perce<lb break="no"/>pire</orig>
+                      <reg resp="#editor">percepire</reg>
+                   </choice>, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> sortisce quanto <choice>
+                      <orig>hò</orig>
+                      <reg resp="#editor">ho</reg>
+                   </choice> detto. Il come poi è l'operatione delle<lb/>potenze, se ne tratterà nel <term
+                      ref="#matrimonio-spirituale">matrimonio spirituale</term>.</p>
+
+                <p n="53" xml:id="III-cap4-p53">Qui è più fortificato il<lb/>muro della <term ref="#quiete"
+                      >pace</term>; <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> il godimento è maggiore, poiché di grado in grado<lb/>va <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> salendo l'anima più <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> Dio, e cossì al godimento, e sodisfattione <choice>
+                      <orig>inte<lb break="no"/>riore</orig>
+                      <reg resp="#editor">interiore</reg>
+                   </choice>; <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> non si trovino punto le passioni per inquietarla; e sopra tutto <choice>
+                      <orig>in<lb break="no"/>tende</orig>
+                      <reg resp="#editor">intende</reg>
+                   </choice> una nuova cosa, la quale vorrei darla ad intendire, se potesse;<lb/><app>
+                      <lem wit="#txt-c">e</lem>
+                      <rdg wit="#txt-b0"><subst>
+                            <del hand="#ink_1" resp="#s-teresa">E</del>
+                            <add hand="#ink_1" resp="#s-teresa">e</add>
+                         </subst></rdg>
+                   </app> dico, che questa nuova vita, che va sentendo l'anima in questo stato d'<lb break="no"/><term
+                      ref="#unione">unione</term>, gliela diede quella morte, che dissimo eserci nella <term
+                      ref="#notte">notte</term> oscura,<lb/>la quale la fe morire alla vecchia, per adesso vivere alla
+                   nuova, la<lb/>quale non è più di lei, ma di Dio; e questa nella <term ref="#trasformazione"
+                      >trasformatione</term>, e <term ref="#matrimonio-spirituale">matri<lb break="no"/>monio
+                      spirituale</term>, crescerà più al magior segno.</p>
+
+                <p n="54" xml:id="III-cap4-p54">Hor la nuova vita caccia<lb/>la vecchia, distrutte tutte <app>
+                      <lem wit="#txt-c">le</lem>
+                      <rdg wit="#txt-b0"><add place="above" hand="#ink_3-dark" resp="#s-teresa">le</add></rdg>
+                   </app> passioni, e mancata ogni sorte di <choice>
+                      <orig>desiderij</orig>
+                      <reg resp="#editor">desiderii</reg>
+                   </choice>, e<lb/>l'abbraccio, che l'anima tiene con Dio, fa, che dorma in un tranquillo <choice>
+                      <orig>Mar</orig>
+                      <reg resp="#editor">mar</reg>
+                   </choice><lb/>di sua <term ref="#quiete">quiete</term>, e canti felicemente la sua trovata sorte, e
+                   del trovato<lb/>te<retrace hand="#ink_3-dark" resp="#s-teresa">s</retrace>oro; qui vede, che lo stato soblime, vede, che non se separerà più di Dio,<lb/>e conosce ciò che
+                   prima non conosceva.</p>
+
+                <p n="55" xml:id="III-cap4-p55">Hor <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> conchiodo questo <choice>
+                      <orig>capito<lb break="no"/>lo</orig>
+                      <reg resp="#editor">capitolo</reg>
+                   </choice> con dire, che questo stato di <term ref="#scordanza">scordanza</term> vuol dire, non
+                   <choice>
+                      <orig>solamen<lb break="no"/>te</orig>
+                      <reg resp="#editor">solamente</reg>
+                   </choice> esser l'anima scordata da tutto il <choice>
+                      <orig>Creato</orig>
+                      <reg resp="#editor">creato</reg>
+                   </choice>, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> anche <choice>
+                      <sic>cordata</sic>
+                      <corr resp="#editor">scordata</corr>
+                   </choice><lb/>dal sensibile, e corporeo, che di ciò era anche scordata prima <choice>
+                      <orig>d'ar<lb break="no"/>rivare</orig>
+                      <reg resp="#editor">d'arrivare</reg>
+                   </choice> all'<term ref="#unione">unione</term> con Dio, poiché un'anima <choice>
+                      <orig>Contemplativa</orig>
+                      <reg resp="#editor">contemplativa</reg>
+                   </choice> <choice>
+                      <orig>gi<supplied reason="hole">a</supplied></orig>
+                      <reg resp="#editor">già</reg>
+                   </choice> si <choice>
+                      <orig>sop<lb break="no"/>pone</orig>
+                      <reg resp="#editor">soppone</reg>
+                   </choice> esser tutto il sensibile alienata; hor <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> non solamente<lb/>di ciò, ma anche di se stessa, essendo abbissata, e sprofondata nell'<lb
+                      break="no"/>amor del suo amato.<fw type="catch" place="bottom-right">Cap</fw><note place="foot"
+                      type="material" n="8">«Cap»: richiamo aggiunto in calce a destra (anticipa il «Capitolo»
+                      seguente).</note></p>
+             </div>
+
+             <div type="chapter" n="5" xml:id="III-cap5">
+                <pb n="166r" xml:id="f166r"/>
+                <head>Capitolo quinto</head>
+                <argument>
+                   <p>Si tratta <choice>
+                         <orig>dun</orig>
+                         <reg resp="#editor">di un</reg>
+                      </choice> stato d'<term ref="#indifferenza">indiffirenza</term>, che siegue<lb/>doppo il <choice>
+                         <orig>sù</orig>
+                         <reg resp="#editor">suù</reg>
+                      </choice> detto di <term ref="#scordanza">scordanza</term>.</p>
+                </argument>
+
+                <p n="56" xml:id="III-cap5-p56">In questo stato d'<term ref="#indifferenza">indiffirenza</term> viene l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> non havere più<lb/>propria volontà, ma quella di Dio è in lei talmente, che opera con<lb/>la volontà di Dio, e facendo adimpire Dio nell'anima la volontà sua<lb/>intende ella un godimento cossì grande, che come facesse la sua pro<lb break="no"/>pria, e questa per l'<term ref="#unione">unione</term> grande, che tiene l'anima con Dio talmen<lb break="no"/>te, che vengono due volontà <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> farsi una, cioè quella di Dio.</p>
+
+                <p n="57" xml:id="III-cap5-p57">Non creda<lb/><choice>
+                      <abbr>V</abbr>
+                      <expan resp="#editor">Vostra</expan>
+                   </choice> <choice>
+                      <abbr>R</abbr>
+                      <expan resp="#editor">Reverenza</expan>
+                   </choice>, che questo sia come fanno alcuni, che cerchino da canto suo unirsi<lb/>con il vuoler <choice>
+                      <orig>Divino</orig>
+                      <reg resp="#editor">divino</reg>
+                   </choice>, e tutto che intendano ripognanza al soffrire, pro<lb break="no"/>curano resistere; questi tali fanno bene, e credo, sono molto accetti <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice><lb/>sua <choice>
+                      <orig>Divina</orig>
+                      <reg resp="#editor">divina</reg>
+                   </choice> Maestà, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> nolo vuole, che noi ci conformiamo con la<lb/>sua volontà per quanto potemo; e questa sorte d'<term ref="#unione">unione</term> con la volon<lb break="no"/>tà di Dio è naturale, <choice>
+                      <sic>essendoci</sic>
+                      <corr resp="#editor">essendovi</corr>
+                   </choice> però l'agiuto speciale di Dio, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> noi<lb/>naturalmente siemo mali inclinati, e vorressimo fare in tutto la nostra<lb/>volontà per esser noi pieni d'amor proprio; ma dando Dio il suo <choice>
+                      <orig>Santo</orig>
+                      <reg resp="#editor">santo</reg>
+                   </choice> agiu<lb break="no"/>to, potemo noi agiutarci con le forze naturale atteggiare, e procurare<lb/>questa conformetà, e ciò non esclude la pena, che naturalmente noi<lb/>intendemo, quando ci vengono le cose contrarie.</p>
+
+                <p n="58" xml:id="III-cap5-p58">Non però è cossì questa<lb/><choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> è opera totalmente fatta da Dio, <choice>
+                      <orig>ed'è totalmete</orig>
+                      <reg resp="#editor">ed è totalmente</reg>
+                   </choice> supernaturale: e cossì padre viene l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> godere <term ref="#quiete">pace</term> d'anime beati, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> reggen<lb break="no"/>do, e facendo il tutto Dio, ed essendovi il gusto suo come se lei reggesse<lb/>ed operasse viene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> godere la medesima <term ref="#quiete">pace</term> di Dio, e questo non sola<lb break="no"/>mente <choice>
+                      <sic>nella</sic>
+                      <corr resp="#editor">nelle</corr>
+                   </choice> volontà unite insieme, ma per le sostanze unite insieme,<lb/>cioè quella di Dio con quella dell'anima, viene l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> godere<lb/>senza fine; <choice>
+                      <orig>ed'essendo</orig>
+                      <reg resp="#editor">ed essendo</reg>
+                   </choice> in questo stato d'<term ref="#indifferenza">indiffirenza</term>, gode di quanto nel<lb/>mondo di contrario sortisce, e di quanto Dio opera in lei. <choice>
+                      <orig>Ò</orig>
+                      <reg resp="#editor">O</reg>
+                   </choice> padre che<lb/>voglio dire, quando è impossibile poter trattare parte di questo stato,<lb/><fw type="catch" place="bottom-right">essendo</fw><note place="foot" type="material" n="1">«essendo»: richiamo aggiunto in calce a destra.</note><pb n="166v" xml:id="f166v"/><choice>
+                      <sic>essendo</sic>
+                      <corr resp="#editor"/>
+                   </choice> <choice>
+                      <orig>gia</orig>
+                      <reg resp="#editor">già</reg>
+                   </choice> <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> l'anima in stato di perfetta <term ref="#unione">unione</term>.</p>
+
+                <p n="59" xml:id="III-cap5-p59"><choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice> padre faccio gran<lb break="no"/>dissima distanza dallo stato d'<term ref="#unione">unione</term>, <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> quello del <term ref="#matrimonio-spirituale">matrimonio spiritua<lb break="no"/>le</term>; vero è, che <app>
+                      <lem wit="#txt-c">tutti</lem>
+                      <rdg wit="#txt-b0">tutt<subst>
+                            <del hand="#ink_1" resp="#s-teresa">a</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst></rdg>
+                   </app> possiamo chiamarli stati d'<term ref="#unione">unione</term>, il più intimo ed<lb/>il meno intimo; però per l'operatione, che fa Dio nell'anima, e per la<lb/>consomatione di tutta <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stessa in lei, <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> come si dirà, mi pare (e vedo<lb/>esserci) distinguere l'<term ref="#unione">unione</term>, dal <term ref="#matrimonio-spirituale">matrimonio spirituale</term>, il quale è più<lb/>assai stato soblime.</p>
+
+                <p n="60" xml:id="III-cap5-p60">Hor dico, che in questo stato sta l'anima <term ref="#indifferenza">indif<lb break="no"/>ferente</term> al tutto, talmente, che non desidera più <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> morte, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> vita<lb/><choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice>, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> godere, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> paradiso, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> cosa alcuna per <choice>
+                      <orig>Santa</orig>
+                      <reg resp="#editor">santa</reg>
+                   </choice> che <choice>
+                      <orig>sij</orig>
+                      <reg resp="#editor">sii</reg>
+                   </choice>; <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> che sta ben disposta per ricevere qualsivoglia cosa che piaccia <choice>
+                      <orig>al<lb break="no"/>la</orig>
+                      <reg resp="#editor">alla</reg>
+                   </choice> Maestà di Dio.</p>
+
+                <p n="61" xml:id="III-cap5-p61">Qui cessano li <retrace hand="#ink_3-dark" resp="#s-teresa">z</retrace>eli di prima: verbigratia, se pri<lb break="no"/>ma vedeva offendire lo sposo suo pativa per l'amor, che vi porta<lb break="no"/>va; se vedeva patire il prossimo pativa, ed queste, <choice>
+                      <orig>ed'altre</orig>
+                      <reg resp="#editor">ed altre</reg>
+                   </choice> cose si<lb break="no"/>mili ne pativa molte; in questo stato però cessano queste pene, <choice>
+                      <orig>poi<lb break="no"/>che</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> sì come Dio non è capace di pena tutto che sia offeso nel mon<lb break="no"/>do, e sortisca <choice>
+                      <abbr>qualunq</abbr>
+                      <expan resp="#editor">qualunque</expan>
+                   </choice> cosa, cossì anche quest'anima non è più ca<lb break="no"/>pace di pena, e ciò per l'<term ref="#unione">unione</term>, che tiene con l'amato: <choice>
+                      <orig>e</orig>
+                      <reg resp="#editor">è</reg>
+                   </choice> questo <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> somiglianza dell'anime beati, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> non possono haver pena del<lb break="no"/>l'offese di Dio, e ciò non che fosse mancamento d'amore, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> poca cono<lb break="no"/>scenza di Dio, ma <choice>
+                      <orig>per che</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> non tengono la capacetà di patire, non<lb/>accordandosi patimenti nella gloria. Hor cossì è <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice> l'anima, che<lb/>godendo d'una perfetta <term ref="#quiete">pace</term>, <choice>
+                      <orig>ed'indiffirenza</orig>
+                      <reg resp="#editor">ed indiffirenza</reg>
+                   </choice>, <choice>
+                      <orig>ed'una</orig>
+                      <reg resp="#editor">ed una</reg>
+                   </choice> nuova vi<lb break="no"/>ta, talmente, che la posso rassomigliare al godere dell'altra vita, la<lb/>quale vita non è più sua, ma di Dio, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> vive in lei per sostan<lb break="no"/>siale <term ref="#unione">unione</term>, e cosa, che non accorda esserci meschiato patir<supplied reason="hole">e</supplied> in<lb/>tanta dolcezza.</p>
+
+                <p n="62" xml:id="III-cap5-p62">Similmente dico della prima carità del prossimo,<lb/>che pare non dolersi più delle sue pene; e ciò nasce della perfet<lb break="no"/>ta <term ref="#unione">unione</term> delle due volontà, e sapendo l'anima, che quanto Dio ope<lb break="no"/>ra tutto fa per nostra salute, e non potendo ella vuolere il con<lb break="no"/>trario, non tiene più questa carità di modo che gli dia pena. <choice>
+                      <orig>Io</orig>
+                      <reg resp="#editor">io</reg>
+                   </choice><lb/>padre però m'accorgio, che in questo stato v'è un perfetto amor<lb/>del prossimo, però assai <choice>
+                      <orig>differente</orig>
+                      <reg resp="#editor">diffirente</reg>
+                   </choice> di prima, talmente che può <choice>
+                      <orig>l'</orig>
+                      <reg resp="#editor"/>
+                   </choice><lb/><fw type="catch" place="bottom-right">anima</fw><note place="foot" type="material" n="3">«anima»: richiamo aggiunto in calce a destra.</note><pb n="167r" xml:id="f167r"/>l'anima ag<supplied reason="hole">i</supplied>utando senza la prima pena: e questo sì grande amor del<lb/>prossimo nasce, che l'anima è molto unita con Dio, ed amando Dio al<lb/>prossimo quanto <choice>
+                      <orig>se</orig>
+                      <reg resp="#editor">sé</reg>
+                   </choice> stesso, pare, l'amasse l'anima col medesimo amo<lb break="no"/>re di Dio; e di ciò nasce, che un'anima di queste spargirebbe il pro<lb break="no"/>prio sangue, per la salute dell'anime, e come che in questo stato gli<lb/>dimostra lo sposo vuolerla favorire, altro non domanda, che la salu<lb break="no"/>te dell'<app>
+                      <lem wit="#txt-c">anime</lem>
+                      <rdg wit="#txt-b0">anim<subst>
+                            <del hand="#ink_3-dark" resp="#s-teresa">a</del>
+                            <add hand="#ink_3-dark" resp="#s-teresa">e</add>
+                         </subst></rdg>
+                   </app>: <choice>
+                      <orig>e</orig>
+                      <reg resp="#editor">è</reg>
+                   </choice> questo però senza inquetitudine, e perdimento di<lb/><term ref="#quiete">pace</term>, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questi tempi può l'anima dar sollievo <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> molte, senza<lb/>perdire ella niente del suo.</p>
+
+                <p n="63" xml:id="III-cap5-p63">Anche il non <app>
+                      <lem wit="#txt-c">desiderar</lem>
+                      <rdg wit="#txt-b0">desider<add place="supralinear" hand="#ink_1" resp="#s-teresa">ar</add></rdg>
+                   </app> più <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice> nasce di<lb/>quanto s'è detto della carità del prossimo, e cossì non occorre spiegar<lb break="no"/>mi più, e questo non desiderar <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice> non s'intende in modo, che l'anima<lb/>non vuole più patire, anzi questa brama, e questo non certo desiderio sen<lb break="no"/>za desiderio, ed havendo quest'anima patimenti, il tutto abbraccia con<lb/>pace, e godimento <app>
+                      <lem wit="#txt-c">interiore</lem>
+                      <rdg wit="#txt-b0">interior<subst>
+                            <del hand="#ink_1" resp="#s-teresa">a</del>
+                            <add hand="#ink_1" resp="#s-teresa">e</add>
+                         </subst></rdg>
+                   </app>, ed anzi giubila del patire.</p>
+
+                <p n="64" xml:id="III-cap5-p64">Anche, che non d<supplied reason="hole">e</supplied><lb break="no"/>sidera più <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> vita, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> morte, e prima poteva desiderar la morte per<lb/>sciogliersi dalla carne e godere di Dio nell'altra vita, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> in questa<lb/>vita, per <choice>
+                      <sic>altra</sic>
+                      <corr resp="#editor">alta</corr>
+                   </choice> <choice>
+                      <orig>Contemplatione</orig>
+                      <reg resp="#editor">contemplatione</reg>
+                   </choice>, che vi sia, non può mai l'anima godire<lb/><choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> Dio come nell'altra vita, dove senza velo di fede, lo gode da fac<lb break="no"/>cia, <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> faccia<app>
+                      <lem wit="#txt-c"/>
+                      <rdg wit="#txt-b0"> <del hand="#ink_1" resp="#s-teresa">,</del></rdg>
+                   </app> e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> desidera perdire questa vita; qui però cessa<lb/><choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> possedendo l'anima <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> Dio non tiene più che desiderare, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> che vuo<lb break="no"/>lere, non lasciando Dio in lei luogo vacuo, e cossì niente brama<lb/>niente cerca, e niente desidera, e gode in essa una satietà di vi<lb break="no"/>ta eterna. <app>
+                      <lem wit="#txt-c"><choice>
+                            <orig>ciò s'in<lb break="no"/>tende <gap reason="illegible"/>er<gap reason="illegible"/><lb/>tempo di<lb break="no"/>ra questo<lb/>stato d'in<lb break="no"/>diffirenza,<lb/>che doppo<lb/>crerrà temp<supplied reason="hole">e</supplied><lb break="no"/>sta franie<lb break="no"/>rà la pa<lb/>ria come<lb/>suo cen<gap reason="illegible"/><lb/>si come si<lb/>dirà in quest<supplied reason="hole">o</supplied><lb/>libro ter<lb break="no"/>zo.</orig>
+                            <reg resp="#editor">Ciò s'intende per non <gap reason="illegible"/> tempo dirà questo stato d'indiffirenza, che doppo verrà tempo bramerà la patria come suo centro sì come si dirà in questo libro terzo.</reg>
+                         </choice></lem>
+                      <rdg wit="#txt-b0"><add hand="#ink_3-dark" resp="#s-teresa">ciò s'intende <gap reason="illegible"/>er<gap reason="illegible"/> tempo dira questo stato d'indiffirenza, che doppo crerrà temp<supplied reason="hole">e</supplied>sta franierà la paria come suo cen<gap reason="illegible"/> si come si dirà in quest<supplied reason="hole">o</supplied> libro terzo.</add></rdg>
+                   </app><note place="foot" type="material" n="5">«ciò … terzo»: aggiunta sul margine sinistro, vergata con inchiostro diverso dalla stesura base.</note></p>
+
+                <p n="65" xml:id="III-cap5-p65">E <choice>
+                      <orig>si</orig>
+                      <reg resp="#editor">sì</reg>
+                   </choice> come tiene la conformetà con il vuoler <choice>
+                      <orig>Divino</orig>
+                      <reg resp="#editor">divino</reg>
+                   </choice>, e di quan<lb break="no"/>to sortisce in lei resta contenta, cossì ancora tiene una perfetta confor<lb break="no"/>metà col padre spirituale, talmente, che in questo stato fa la volontà del<lb/>padre, come se fosse la sua propria, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> di tutto gode, e gusta; <choice>
+                      <orig>per<lb break="no"/>ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> viene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> possedire una perfetta obedienza, <choice>
+                      <orig>ne</orig>
+                      <reg resp="#editor">né</reg>
+                   </choice> tiene ripognanza<lb/>di far quanto gli vien comandato: e tutto ciò nasce per lo stato d'<lb break="no"/>indiffirenza; nasce anche per la <term ref="#quiete">pace</term>, che gode, ed acquisto delle mas<lb break="no"/>sicie virtù, e totale <app>
+                      <lem wit="#txt-c">mortificatione</lem>
+                      <rdg wit="#txt-b0">mort<subst>
+                            <del hand="#ink_1" resp="#s-teresa">a</del>
+                            <add hand="#ink_1" resp="#s-teresa">i</add>
+                         </subst>ficatione</rdg>
+                   </app> delle passioni, talmente che l'anima<lb/>viene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questi tempi <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> somigliarsi <choice>
+                      <orig>ad'una</orig>
+                      <reg resp="#editor">ad una</reg>
+                   </choice> palla di cera, che ciò che vo<lb break="no"/>gliano ne fanno. Cossì è qui l'anima ciò che vogliano ne possono fare,<lb/>non havendo più sua volontà. <app>
+                      <lem wit="#txt-c">Ciò non s'intende <choice><orig>à</orig><reg resp="#editor">a</reg></choice> <supplied reason="hole">c</supplied>ose di <choice><sic>mole</sic><corr resp="#editor">male</corr></choice>, ma<lb/>che <unclear reason="abrasion">sta</unclear> <choice><orig>subordinata</orig><reg resp="#editor">subordenata</reg></choice> all'obedienza.</lem>
+                      <rdg wit="#txt-b0"><add hand="#ink_3-dark" resp="#s-teresa">Ciò non s'intende à <supplied reason="hole">c</supplied>ose di mole, ma che sta subordinata all'obedienza.</add></rdg>
+                   </app><lb/><fw type="catch" place="bottom-right">E</fw><note place="foot" type="material" n="8">«E»: richiamo aggiunto in calce a destra.</note><pb n="167v" xml:id="f167v"/></p>
+
+                <p n="66" xml:id="III-cap5-p66">E qui cresce, e prova un perfetto distacco, che prima d'arrivare in que<lb break="no"/>sto stato, era impossibile poterlo possedere, e questo senza più spiegarmi è per la pos<supplied reason="hole">se</supplied>ssione che tiene l'anima di Dio, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> è tanto unita, ed ab<lb break="no"/>bracciata con lui, <choice>
+                      <orig>ed'è</orig>
+                      <reg resp="#editor">ed è</reg>
+                   </choice> cossì perfetto l'amore, che non vi resta <choice>
+                      <orig>Croce</orig>
+                      <reg resp="#editor">croce</reg>
+                   </choice><lb/>per amare altre cose create, ed altri oggetti.</p>
+
+                <p n="67" xml:id="III-cap5-p67">Anche se prima teneva<lb/>altri <retrace hand="#ink_3-dark" resp="#s-teresa">a</retrace>ffetti spirituale, in questo stato viene <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> perderli, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> Dio non gli<lb/>lascia luoghi vacui<app>
+                      <lem wit="#txt-c"/>
+                      <rdg wit="#txt-b0"> <del hand="#ink_1" resp="#s-teresa">che</del></rdg>
+                   </app>, ma tutta l'anima di lui stesso occupa.</p>
+
+                <p n="68" xml:id="III-cap5-p68">Qui si vede l'anima in un labirinto gustoso, e <choice>
+                      <sic>correbbe</sic>
+                      <corr resp="#editor">vorrebbe</corr>
+                   </choice> dire <choice>
+                      <orig>è</orig>
+                      <reg resp="#editor">e</reg>
+                   </choice> non può,<lb/>poiché di quanto ella riceve nel fondo suo, non partecipano niente <retrace hand="#ink_3-dark" resp="#s-teresa">l</retrace>i<lb/>sensi, e <choice>
+                      <orig>per ciò</orig>
+                      <reg resp="#editor">perciò</reg>
+                   </choice> gode molto, e niente dice. Tiene certa oscurità gustosa<lb/>che non <choice>
+                      <orig>sà</orig>
+                      <reg resp="#editor">sa</reg>
+                   </choice> dir che sia, e ben vede, che quella sua oscurità è l'<choice>
+                      <sic>ebrezza</sic>
+                      <corr resp="#editor">altezza</corr>
+                   </choice><lb/>dalla <choice>
+                      <orig>Communicatione</orig>
+                      <reg resp="#editor">communicatione</reg>
+                   </choice>, che Dio <choice>
+                      <orig>fà</orig>
+                      <reg resp="#editor">fa</reg>
+                   </choice> nel fondo suo; hor quanto più intima<lb/>è questa communicatione, altritanto cresce l'oscurità, ma però v'è in<lb/>mezzo <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> questa oscurità una luce tanto perfetta, quanto non posso in<lb/>modo alcuno spiegarla. Vede certa luce, come se fosse sotterranea<lb/>e ciò è <choice>
+                      <orig>perche</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> la luce non viene più per l'altro, ma per il <choice>
+                      <sic>certo</sic>
+                      <corr resp="#editor">centro</corr>
+                   </choice> dell'<lb break="no"/>anima.</p>
+
+                <p n="69" xml:id="III-cap5-p69">Come se in una camera non entrasse più la luce per le fi<lb break="no"/>nestre, ma per il mezzo di <choice>
+                      <abbr>da</abbr>
+                      <expan resp="#editor">detta</expan>
+                   </choice> camera. Hor cossì è qui l'anima, che tut<lb break="no"/>ta la sua luce proviene dal suo interno e non più per li sensi, <choice>
+                      <orig>ò</orig>
+                      <reg resp="#editor">o</reg>
+                   </choice> potenze,<lb/>e ciò <choice>
+                      <orig>perche</orig>
+                      <reg resp="#editor">perché</reg>
+                   </choice> lo sposo demora nel centro suo.</p>
+
+                <p n="70" xml:id="III-cap5-p70">Cresce in questo stato più di<lb/>prima l'abbraccio di Dio, talmente, che pare puoco vi vuolesse <choice>
+                      <orig>à</orig>
+                      <reg resp="#editor">a</reg>
+                   </choice> lique<lb break="no"/>farsi insieme le due sostanze per <term ref="#matrimonio-spirituale">matrimonio spirituale</term>, e se vede<lb/>l'anima andar più <term ref="#deificazione">divinizzando</term>, e tener <choice>
+                      <orig/>
+                      <reg resp="#editor">vita </reg>
+                   </choice>mai da lei esperimen<lb break="no"/>tata, <choice>
+                      <orig>poiche</orig>
+                      <reg resp="#editor">poiché</reg>
+                   </choice> all'hora gode una vita di Dio.</p>
+
+                <p n="71" xml:id="III-cap5-p71">La communicatione <choice>
+                      <orig>quì</orig>
+                      <reg resp="#editor">qui</reg>
+                   </choice><lb/>anche cresce, più, non è altro l'abbraccio di Dio con l'anima, che andarsi<lb/>più, e più diffondendosi Dio nell'anima, e questo caggiona all'anima<lb/>godimento cossì grande, quanto è l'andarsi facendo un altro Dio per<lb/><app>
+                      <lem wit="#txt-c">particepatione</lem>
+                      <rdg wit="#txt-b0">par<del hand="#ink_1" resp="#s-teresa"><gap reason="illegible" unit="chars" quantity="2"/></del>ticepatione</rdg>
+                   </app>. Hor questi padre son <app>
+                      <lem wit="#txt-c"/>
+                      <rdg wit="#txt-b0"><del hand="#ink_1" resp="#s-teresa">vecchi</del></rdg>
+                   </app> tocchi di sostanza, <choice>
+                      <sic>e</sic>
+                      <corr resp="#editor"/>
+                   </choice><lb/>e sostanza, cioè quella di Dio, con quella dell'anima, e cossì è cosa im<lb break="no"/>possibile potersene discorrire sì come passa questo abbraccio nel <choice>
+                      <orig>cen</orig>
+                      <reg resp="#editor"/>
+                   </choice><lb/><fw type="catch" place="bottom-right">tro</fw><note place="foot" type="material" n="10">«tro»: richiamo aggiunto in calce a destra.</note><pb n="168r" xml:id="f168r"/>centro, e fondo dell'anima, e cossì non dico altro, che l'anima gode una<lb/><term ref="#quiete">pace</term>, e gloria d'anime beati.</p>
+
+                <p n="72" xml:id="III-cap5-p72">Hor in questo stato viene l'anima <choice>
+                      <sic>ha</sic>
+                      <corr resp="#editor">a</corr>
+                   </choice><lb/>possedire tutti li stati, che habbiamo trattati <choice>
+                      <orig>ne'i</orig>
+                      <reg resp="#editor">nei</reg>
+                   </choice> trascorsi capitoli, e li pos<lb break="no"/>siede in perfettissimo grado, e cossì non tratto più di questo stato <choice>
+                      <orig>d'indiffi<lb break="no"/>renza</orig>
+                      <reg resp="#editor">d'indiffirenza</reg>
+                   </choice>, ma passo al siguente capitolo.</p>
+             </div>
             </div>
         </body>
     </text>
