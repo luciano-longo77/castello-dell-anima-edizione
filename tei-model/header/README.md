@@ -86,7 +86,6 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
     │   └── <particDesc>
     │       ├── <listPerson> (<person xml:id="Anna-La-Longa"> + fonti, direttore, curatore)
     │       └── <listOrg>    (BCP, Carmelo, Sant'Uffizio)
-    ├── <xenoData n="mets">  (puntatore a pacchetto METS)
     └── <revisionDesc status="consolidated">
         └── <change when="" who="" ana="#fase-…">
 ```
@@ -133,8 +132,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 - **Persone (`listPerson`)**: autrice storica, fonti dottrinali (Ávila, Giovanni della Croce, Molinos), direttore spirituale, mano esterna, curatore.
 - **Organizzazioni (`listOrg`)**: Biblioteca Comunale di Palermo (`BCP`), Ordine del Carmelo (`Carmelo`), Sant'Uffizio (`SantUffizio`).
 
-### 4. `<xenoData>` & `<revisionDesc>`
-- `xenoData n="mets"`: puntatore ai metadati strutturali del pacchetto METS.
+### 4. `<revisionDesc>`
 - `revisionDesc status="consolidated"`: registro cronologico degli interventi editoriali, ciascuno classificato secondo la tassonomia di lavoro `fase`.
 
 ---
@@ -194,7 +192,6 @@ e consultabili solo in modalità off-line autorizzata.
 
 - [Linee guida TEI P5](https://tei-c.org/release/doc/tei-p5-doc/it/html/)
 - [Scheda manoscritto](https://opac.comune.palermo.it) (Biblioteca Comunale di Palermo)
-- [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA) — sperimentazione multiassiale e IA (fuori scope di questo header)
 
 ---
 
