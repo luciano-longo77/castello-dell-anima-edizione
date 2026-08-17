@@ -16,7 +16,7 @@ L'edizione è *leggera*: un solo asse interpretativo (gli stati mistici), niente
 
 | Layer | Scopo | Elementi nel `<text>` | Ancora nel `teiHeader` |
 |---|---|---|---|
-| **L1 · filologico-grafico** | struttura, trascrizione a **due livelli**, apparato genetico d'autrice | `div`/`head`/`argument`/`p`/`pb`/`fw`; `choice` (`orig`/`reg`, `abbr`/`expan`, `sic`/`corr`); `app`/`lem`/`rdg` (`@wit`,`@varSeq`); `add`/`del`/`subst` (`@place`,`@hand`,`@resp`,`@type`); `unclear`/`gap`/`supplied` | `listWit` (7 testimoni `#txt-*`) · `handDesc` (5 mani `#ink_*`/`#pencil_1`) |
+| **L1 · filologico-grafico** | struttura, trascrizione a **due livelli**, apparato genetico d'autrice | `div`/`head`/`argument`/`p`/`pb`/`fw`; `choice` (`orig`/`reg`, `abbr`/`expan`, `sic`/`corr`); `app`/`lem`/`rdg` (`@wit`; `@varSeq` solo con ≥2 `rdg` concorrenti); `add`/`del`/`subst` (`@place`,`@hand`,`@resp`,`@type`); `retrace` (`@hand`,`@resp`); `unclear`/`gap`/`supplied` | `listWit` (7 testimoni `#txt-*`) · `handDesc` (5 mani `#ink_*`/`#pencil_1`) |
 | **L2 · mistico-dottrinale** | lessico degli stati dell'unione | `term` con `@ref` | `taxonomy xml:id="stati-mistici"` (17 categorie) |
 | **L3 · intertestuale** | citazioni e rimandi alle fonti | `cit`/`quote`/`foreign`/`bibl` · `ref` con `@target` | `listBibl type="fontes"` (Vulgata, Molinos, Ávila) |
 
@@ -39,7 +39,7 @@ graph LR
 
   subgraph T["text — APPLICA"]
     P["p n=… · unità di riferimento"]
-    L1["L1 filologico-grafico<br/>choice · app/lem/rdg · add/del/subst"]
+    L1["L1 filologico-grafico<br/>choice · app/lem/rdg · add/del/subst · retrace"]
     L2["L2 mistico-dottrinale<br/>term/@ref"]
     L3["L3 intertestuale<br/>cit/quote/bibl · ref/@target"]
     P --> L1
@@ -47,7 +47,7 @@ graph LR
     P --> L3
   end
 
-  L1 -. "@wit / @varSeq" .-> LW
+  L1 -. "@wit" .-> LW
   L1 -. "@hand / @resp" .-> HD
   L2 -. "@ref" .-> TX
   L3 -. "@target / corresp" .-> FB
@@ -59,8 +59,8 @@ graph LR
 
 | | Modello (macro-struttura) | Guida | Diagramma | Viewer |
 |---|---|---|---|---|
-| **Header** | [`header/teiHeader-model.xml`](header/teiHeader-model.xml) | [`header/readme-model-Header.md`](header/readme-model-Header.md) | [`header/model-Header-diagramma.md`](header/model-Header-diagramma.md) | [`header/output/teiHeadermodel_viewer.html`](header/output/teiHeadermodel_viewer.html) |
-| **Text** | [`text/text-model.xml`](text/text-model.xml) | [`text/readme-model-text.md`](text/readme-model-text.md) | [`text/model-text-diagramma.md`](text/model-text-diagramma.md) | [`text/output/textmodel_viewer.html`](text/output/textmodel_viewer.html) |
+| **Header** | [`header/teiHeader-model.xml`](header/teiHeader-model.xml) | [`header/README.md`](header/README.md) | [`header/model-Header-diagramma.md`](header/model-Header-diagramma.md) | [`header/output/teiHeadermodel_viewer.html`](header/output/teiHeadermodel_viewer.html) |
+| **Text** | [`text/text-model.xml`](text/text-model.xml) | [`text/README.md`](text/README.md) | [`text/model-text-diagramma.md`](text/model-text-diagramma.md) | [`text/output/textmodel_viewer.html`](text/output/textmodel_viewer.html) |
 
 > I modelli XML sono **scheletri**: elementi a contenuto vuoto che fissano la struttura e le dichiarazioni. Validano contro lo schema ODD di progetto (`castello-anima-odd.rng`).
 
