@@ -10,11 +10,11 @@
 ## Indice
 
 - [Obiettivo principale](#obiettivo-principale)
-- [Fase 1: Edizione critica del terzo libro](#fase-1-edizione-critica-del-terzo-libro)
+- [Fase 1: Edizione critica del III libro](#fase-1-edizione-critica-del-iii-libro)
   - [Introduzione al progetto](#introduzione-al-progetto)
     - [Contesto storico e teologico](#contesto-storico-e-teologico)
     - [Struttura del trattato](#struttura-del-trattato)
-  - [Edizione digitale del terzo libro](#edizione-digitale-del-terzo-libro)
+  - [Edizione digitale del III libro](#edizione-digitale-del-iii-libro)
     - [Trascrizione e digitalizzazione](#trascrizione-e-digitalizzazione)
     - [Elementi TEI utilizzati nella trascrizione](#elementi-tei-utilizzati-nella-trascrizione)
     - [Criteri editoriali](#criteri-editoriali)
@@ -145,10 +145,10 @@ Le mani descritte sono **cinque**: quattro autografe di Teresa
 ```xml
 <app>
   <lem wit="#txt-c">lezione critica costituita</lem>
-  <rdg wit="#txt-b0">prima stesura</rdg>
-  <rdg wit="#txt-1">riscrittura autoriale</rdg>
-  <rdg wit="#txt-2">intervento correttivo‑glossativo</rdg>
-  <rdg wit="#txt-3">intervento correttivo successivo</rdg>
+  <rdg wit="#txt-b0"><subst><del hand="#ink_1" resp="#s-teresa">prima lezione</del><add hand="#ink_1" resp="#s-teresa">lezione corretta</add></subst></rdg>
+  <!-- correzione immediata "currente calamo": una sola <rdg> con <subst>, senza @varSeq;
+       @varSeq si aggiunge solo quando concorrono più letture di campagne distinte -->
+
 </app>
 
 <listWit>
@@ -223,8 +223,8 @@ L’edizione è pubblicata in open access nei seguenti formati:
 2. Trascrizione diplomatico‑conservativa
 3. Definizione delle mani (`<handDesc>`)
 4. Strutturazione del testo (`<div>`, `<p>`) e trascrizione a due livelli (`<choice>`)
-5. Codifica delle varianti (`<app>`, `<lem>`, `<rdg>`)
-6. Collegamento ai facsimili (`<pb>`)
+5. Codifica delle varianti d'autrice in apparato (`<app>`, `<lem>`, `<rdg>` con `<subst>`)
+6. Segnaletica materiale: foliazione e cambi-riga (`<pb>`, `<lb>`, `<fw>`) — senza `@facs` (immagini non autorizzate)
 7. Revisione filologica e validazione XML
 8. Pubblicazione e documentazione metodologica
 
