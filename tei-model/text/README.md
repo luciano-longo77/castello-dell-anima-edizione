@@ -79,7 +79,7 @@ La lezione diplomatica e la sua regolarizzazione coesistono, senza che l'una sos
 ### Fenomeni materiali e correzioni autoriali
 Dentro l'apparato (`<app>`): `<del>` (cancellature), `<add>` (aggiunte marginali/interlineari, con `@place`/`@hand`/`@resp`), `<subst>` (sostituzione come evento unico). Inline, **fuori** dall'apparato: `<retrace>` (rivergatura a inchiostro, mano `#ink_3-dark`, testo invariato), `<unclear>`, `<gap>`, `<supplied>`.
 
-### Apparato genetico d'autrice (« currente calamo »)
+### Apparato genetico d'autrice
 Ogni `<app>` ha un `<lem wit="#txt-c">` e **una sola** `<rdg wit="#txt-b0">`, con `<del>`/`<add>`/`<subst>` **dentro** la lettura; `@varSeq` si usa **solo** quando concorrono ≥2 `<rdg>` (0 casi in MC-1). I blocchi marginali sono una `<rdg>` con `<add>` senza `<subst>`.
 
 ```xml
