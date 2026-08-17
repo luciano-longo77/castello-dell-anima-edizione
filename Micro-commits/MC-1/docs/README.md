@@ -1,5 +1,5 @@
 # (MC1) Micro‑progetto di Edizione Critica Digitale
-## `docs/` — Documentazione critica e metodologica del MC1
+## `docs/` - Documentazione critica e metodologica del MC1
 ### Libro III, capp. I–V · ms. Palermo, BCP, 2 Qq E 29
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons)](https://creativecommons.org/licenses/by/4.0/)
