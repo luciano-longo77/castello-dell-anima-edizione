@@ -17,8 +17,8 @@
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <publisher>Prototipo DH. Proof-of-concept</publisher>
-                <date when="2026-01-28"/>
+                <publisher>Luciano Longo</publisher>
+                <date when="2026-08-16"/>
                 <idno type="digital_edition">Edizione digitale con annotazione semantica</idno>
                 <availability status="free">
                     <p>Le riproduzioni digitali degli autografi possono essere consultate solo in
@@ -687,7 +687,7 @@
                     <tagUsage gi="rdg">Varianti d’autore (Tb0, Tb1, T1…).</tagUsage>
 
                     <!-- SEGMENTAZIONE E RETORICA -->
-                    <tagUsage gi="seg">Unità di struttura/unità interpretativa retorica.</tagUsage>
+                    <tagUsage gi="seg">Impiegato solo nell'header per incipit/explicit del msDesc e per i blocchi dell'abstract; non è usato come unità di segmentazione o annotazione del testo.</tagUsage>
                     <tagUsage gi="term">Termini tecnici o mistici.</tagUsage>
                     <tagUsage gi="ref">Rinvii interni, esterni, intertestuali.</tagUsage>
                     <tagUsage gi="note">Note editoriali, dottrinali, contestuali, glosse
@@ -981,7 +981,7 @@
 
         </profileDesc>
 
-<revisionDesc status="draft">
+<revisionDesc status="candidate">
     <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
     <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
     <change when="2026-07-15" who="#editor" ana="#fase-validazione">Separazione di teiHeader e testo in file distinti, uniti tramite XInclude, e validazione dell'edizione: jing contro lo schema ODD, guardie di forma NFC e di integrità dei puntatori.</change>
