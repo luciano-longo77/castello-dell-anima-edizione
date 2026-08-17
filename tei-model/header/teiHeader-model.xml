@@ -157,6 +157,7 @@
           <tagUsage gi="argument"/>
           <tagUsage gi="p"/>
           <tagUsage gi="pb"/>
+          <tagUsage gi="lb"/>
           <tagUsage gi="fw"/>
           
           <!-- Front matter -->
@@ -187,6 +188,7 @@
           <tagUsage gi="add"/>
           <tagUsage gi="del"/>
           <tagUsage gi="subst"/>
+          <tagUsage gi="retrace"/>
           <tagUsage gi="unclear"/>
           <tagUsage gi="gap"/>
           <tagUsage gi="supplied"/>
