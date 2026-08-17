@@ -19,7 +19,7 @@ Il *Castello dell'anima* è l'unica opera pervenutaci della terziaria carmelitan
 
 Questo file descrive il **modello del `teiHeader`**: non il testo trascritto capitolo per capitolo, ma la struttura formale che lo sostiene. Il modello adotta un'architettura **leggera a tre layer**:
 
-- **Layer filologico-grafico** — struttura, trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>`)
+- **Layer filologico-grafico** — struttura, trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, `<retrace>`)
 - **Layer mistico-dottrinale** — lessico agganciato via `<term ref>` a un **vocabolario controllato degli stati mistici**
 - **Layer intertestuale** — citazioni e rimandi alle fonti (`<cit>`/`<quote>`/`<bibl>`, `<ref>`)
 
@@ -58,7 +58,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
     │       │   │   └── <handDesc>   (5 mani, vedi sotto)
     │       │   │       ├── <handNote xml:id="ink_1"/>          (bruno, stesura base)
     │       │   │       ├── <handNote xml:id="ink_2"/>          (bruno, glosse Libro III)
-    │       │   │       ├── <handNote xml:id="ink_3-dark"/>     (scuro, interventi tardivi)
+    │       │   │       ├── <handNote xml:id="ink_3-dark"/>     (scuro, rivergature <retrace> e glosse tardive)
     │       │   │       ├── <handNote xml:id="pencil_1"/>       (matita, stessa fase T3)
     │       │   │       └── <handNote xml:id="ink_4-external"/> (mano esterna non autografa)
     │       │   ├── <history> (<origin>)
@@ -71,7 +71,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
     │   ├── <projectDesc>            (i tre layer: filologico-grafico, mistico-dottrinale, intertestuale)
     │   ├── <refsDecl> (<p/>)
     │   ├── <editorialDecl>
-    │   │   ├── <p/>  (trascrizione semidiplomatica a due livelli via <choice>)
+    │   │   ├── <p/>  (trascrizione diplomatico-conservativa a due livelli via <choice>)
     │   │   ├── <correction><p/></correction>
     │   │   ├── <hyphenation><p/></hyphenation>
     │   │   └── <normalization><p/></normalization>
@@ -108,7 +108,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 
 ### 2. `<encodingDesc>` — dichiarazione di codifica
 - **Tre layer (`projectDesc`)**: (1) filologico-grafico — struttura, trascrizione a due livelli, apparato genetico; (2) mistico-dottrinale — `term/@ref` al vocabolario controllato; (3) intertestuale — `cit`/`quote`/`bibl` e `ref`.
-- **Principi editoriali (`editorialDecl`)**: trascrizione semidiplomatica, conservazione di oscillazioni grafiche e interpunzione; nessuna normalizzazione oltre quella dichiarata e reversibile via `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`). Apparato critico in *parallel segmentation* (`<app>`/`<lem>`/`<rdg>` con `@varSeq`).
+- **Principi editoriali (`editorialDecl`)**: trascrizione diplomatico-conservativa a due livelli, conservazione di oscillazioni grafiche e interpunzione; nessuna normalizzazione oltre quella dichiarata e reversibile via `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`). Apparato critico in *parallel segmentation* interna, «currente calamo» (`<app>`/`<lem>`/`<rdg>`; `@varSeq` solo con ≥2 `<rdg>` concorrenti); le rivergature a inchiostro sono rese con `<retrace>` (mano `#ink_3-dark`, testo invariato).
 - **Tag set core (`tagsDecl`)**: elenca **esattamente** gli elementi impiegati, raggruppati per layer (struttura, front matter, trascrizione a due livelli, apparato genetico, lessico mistico, intertesto, nomi/identificatori). Sono **fuori** dal tag set gli elementi dell'annotazione interpretativa multiassiale — `figure`, `interp`/`interpGrp`, `rs`, il linking stand-off `span`/`link` — e l'uso *analitico* di `@ana` sul testo. Restano invece ammessi, nel loro **uso standard**, `seg` (dentro `incipit`/`explicit` del `msDesc` e come blocco dell'abstract in `encodingDesc`) e `@ana` limitato ai `<change>` del `revisionDesc` (tassonomia `fase`); l'associazione di un elemento a un'entità dichiarata (`msContents`/`msItem` → opera/voce bibliografica, `idno` → manoscritto) usa `@corresp`, non `@ana`.
 - **Vocabolario controllato (`classDecl`)**: un solo asse per il testo, `taxonomy xml:id="stati-mistici"`, i cui `@xml:id` sono i bersagli di `term/@ref`. Accanto, la sola tassonomia di lavoro `taxonomy xml:id="fase"`, che descrive il **workflow editoriale** ed è usata da `revisionDesc`.
 
@@ -130,7 +130,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 ### 3. `<profileDesc>` — profilo linguistico e partecipanti
 - **Lingue**: `it-reg-sic` (italiano regionale siciliano XVII sec.) e `la` (latino liturgico e biblico per citazioni e formule).
 - **Persone (`listPerson`)**: autrice storica, fonti dottrinali (Ávila, Giovanni della Croce, Molinos), direttore spirituale, mano esterna, curatore.
-- **Organizzazioni (`listOrg`)**: Biblioteca Comunale di Palermo (`BCP`), Ordine del Carmelo (`Carmelo`), Sant'Uffizio (`SantUffizio`).
+- **Organizzazioni (`listOrg`)**: Biblioteca Comunale di Palermo (`BCP`), Ordine del Carmelo (`Carmelo`), Sant'Uffizio / Inquisizione (`Inquisizione`).
 
 ### 4. `<revisionDesc>`
 - `revisionDesc status="consolidated"`: registro cronologico degli interventi editoriali, ciascuno classificato secondo la tassonomia di lavoro `fase`.
