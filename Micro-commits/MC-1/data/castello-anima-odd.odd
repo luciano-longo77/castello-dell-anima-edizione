@@ -18,7 +18,7 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <publisher>Prototipo DH — Proof-of-concept</publisher>
+            <publisher>Luciano Longo</publisher>
             <availability status="free">
                <licence target="https://creativecommons.org/licenses/by/4.0/">La presente specifica
                   di codifica è rilasciata con licenza Creative Commons BY 4.0: uso consentito con
@@ -38,6 +38,9 @@
             Schema</hi>, oppure <hi rend="italic">romajs</hi>/<hi rend="italic">oddc</hi>).</p>
       </encodingDesc>
       <revisionDesc status="draft">
+         <change when="2026-08-17" who="#editor">Riammesso <gi>lb</gi> per marcare i cambi-riga del
+            livello diplomatico (con <att>break</att>='no' a metà parola): rimosso il relativo
+            <gi>elementSpec</gi> di esclusione e aggiornata la prosa del confine del tag set (§3).</change>
          <change when="2026-08-16" who="#editor">Allineamento al modello leggero: esclusi gli
             elementi dell'annotazione multiassiale realmente non usati (<gi>interp</gi>,
             <gi>interpGrp</gi>, <gi>figure</gi>, <gi>rs</gi>) e rimosso il modulo <ident>figures</ident>;
@@ -71,9 +74,7 @@
                intertestuale (<gi>cit</gi>/<gi>quote</gi>/<gi>bibl</gi>, <gi>ref</gi>) — su due
                livelli di trascrizione resi con <gi>choice</gi>. L'annotazione interpretativa
                multiassiale (segmentazione con <att>ana</att> su unità del testo, figure retoriche,
-               indice d'impatto) è sviluppata nel repository separato
-               <ref target="https://github.com/luciano-longo77/castello-anima-TEI-IA">castello-anima-TEI-IA</ref>
-               e resta fuori da questo schema.</p>
+               indice d'impatto) resta fuori da questo schema, che adotta il modello leggero.</p>
          </div>
 
          <div xml:id="moduli">
@@ -89,7 +90,7 @@
                <label>core</label>
                <item>elementi comuni: <gi>p</gi>, <gi>head</gi>, <gi>note</gi>, <gi>term</gi>,
                   <gi>ref</gi>, <gi>quote</gi>, <gi>cit</gi>, <gi>bibl</gi>, <gi>add</gi>,
-                  <gi>del</gi>, <gi>pb</gi>, <gi>choice</gi> e correlati.</item>
+                  <gi>del</gi>, <gi>pb</gi>, <gi>lb</gi>, <gi>choice</gi> e correlati.</item>
                <label>textstructure</label>
                <item>macrostruttura: <gi>text</gi>, <gi>body</gi>, <gi>front</gi>, <gi>div</gi>,
                   <gi>argument</gi>, <gi>titlePage</gi>.</item>
@@ -136,21 +137,21 @@
                <item><gi>facsimile</gi>, <gi>surface</gi>, <gi>graphic</gi> — zona facsimilare non
                   implementata in questa fase.</item>
                <item><gi>milestone</gi> — sostituito da <gi>pb</gi> per la foliazione.</item>
-               <item><gi>lb</gi>, <gi>ptr</gi> — non pertinenti al livello di trascrizione
-                  adottato.</item>
+               <item><gi>ptr</gi> — non pertinente al livello di trascrizione adottato.</item>
                <item><gi>link</gi>, <gi>linkGrp</gi>, <gi>span</gi>, <gi>spanGrp</gi> — le relazioni
                   sono espresse tramite <att>corresp</att>/<att>target</att>, non con linking
                   stand-off.</item>
                <item><gi>interp</gi>, <gi>interpGrp</gi>, <gi>figure</gi>, <gi>rs</gi> — costrutti
                   dell'annotazione interpretativa multiassiale (segmentazione analitica, figure
-                  retoriche, stringhe referenziali): la loro sede è il progetto separato
-                  <ref target="https://github.com/luciano-longo77/castello-anima-TEI-IA">castello-anima-TEI-IA</ref>.
-                  Con essi è rimosso il modulo <ident>figures</ident>.</item>
+                  retoriche, stringhe referenziali), estranei al modello leggero. Con essi è rimosso
+                  il modulo <ident>figures</ident>.</item>
             </list>
-            <p><hi rend="italic">Nota.</hi> <gi>seg</gi> resta ammesso perché usato nell'accezione
-               standard dentro <gi>incipit</gi>/<gi>explicit</gi> del <gi>msDesc</gi>, non come unità
-               di segmentazione interpretativa del testo; <att>ana</att> resta ammesso perché usato
-               solo su <gi>change</gi> (vincolo 2).</p>
+            <p><hi rend="italic">Nota.</hi> <gi>lb</gi> è invece <hi rend="italic">ammesso</hi>: marca
+               i cambi-riga del livello diplomatico (con <att>break</att>='no' a metà parola) e viene
+               ignorato nella ricostruzione del livello interpretativo. <gi>seg</gi> resta ammesso
+               perché usato nell'accezione standard dentro <gi>incipit</gi>/<gi>explicit</gi> del
+               <gi>msDesc</gi>, non come unità di segmentazione interpretativa del testo;
+               <att>ana</att> resta ammesso perché usato solo su <gi>change</gi> (vincolo 2).</p>
          </div>
 
          <div xml:id="vincoli">
@@ -198,7 +199,6 @@
                <elementSpec ident="surface" mode="delete"/>
                <elementSpec ident="graphic" mode="delete"/>
                <elementSpec ident="milestone" mode="delete"/>
-               <elementSpec ident="lb" mode="delete"/>
                <elementSpec ident="ptr" mode="delete"/>
                <elementSpec ident="link" mode="delete"/>
                <elementSpec ident="linkGrp" mode="delete"/>
