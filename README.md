@@ -195,7 +195,7 @@ L'unità testuale di riferimento è il paragrafo **`<p n="…">`**, mentre il le
 ### Note filologiche
 L’edizione include:
 
-* note filologiche ed esplicative:
+* note materiali e indicazioni di fonte:
   
   ```xml
   <note type="material">...</note>
