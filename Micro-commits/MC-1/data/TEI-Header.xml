@@ -392,7 +392,11 @@
                                     margini o nelle righe bianche. Si tratta di aggiunte di natura prudenziale,
                                     volte ad attenuare, precisare o dichiarare l’ortodossia dei passaggi
                                     dottrinalmente più delicati. La grafia appare più compressa e talvolta
-                                    affrettata, con cancellature e sovrascritture. </p>
+                                    affrettata, con cancellature e sovrascritture. A questa stessa mano è
+                                    ricondotto il fenomeno delle rivergature — ripasso a inchiostro di porzioni
+                                    già scritte, a testo invariato —, registrato nell’apparato con l’elemento
+                                    &lt;retrace&gt; (@hand="#ink_3-dark", @resp="#s-teresa"), distinto dalle
+                                    aggiunte genuine (&lt;add&gt;) e dalle sostituzioni (&lt;subst&gt;). </p>
                             </handNote>
                             
                             <!-- mano originale #4 — Teresa, interventi a matita (stessa fase di T3, medium diverso) -->
@@ -556,15 +560,15 @@
         <encodingDesc>
             <ab type="abstract">
                 <seg n="1"> Questo teiHeader descrive il primo micro-commit (MC-1, Libro III, capp. I–V) dell'edizione critica digitale del <title ref="#castello-anima">Castello dell'anima</title> di Teresa di San Geronimo (Anna La Longa), condotta sull'autografo unico — Palermo, Biblioteca Comunale, ms. 2 Qq E 29 — trattato come sola tradizione diretta. L'edizione adotta un modello leggero a tre layer su due livelli di trascrizione: (1) filologico-grafico, con struttura div/head/argument/p/pb/fw e trascrizione a due livelli, diplomatica ⇄ interpretativa, resa con &lt;choice&gt; (orig/reg, abbr/expan, sic/corr), più l'apparato genetico d'autrice; (2) mistico-dottrinale, con &lt;term&gt;/@ref agganciato al vocabolario controllato degli stati (taxonomy #stati-mistici); (3) intertestuale, con &lt;cit&gt;/&lt;quote&gt;/&lt;bibl&gt; e &lt;ref&gt;. </seg>
-                <seg n="2"> Le varianti d'autrice sono rappresentate in apparato in situ (segmentazione parallela) con &lt;app&gt;/&lt;lem&gt;/&lt;rdg&gt; ordinati da @varSeq e non gerarchizzati, e con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; per la fenomenologia materiale (mano, luogo, tipo); i livelli-testimone sono Tb0–T4 più il testo critico costituito Tc (lemma, @resp="#editor"). L'unità testuale di riferimento è il paragrafo &lt;p&gt;, non &lt;seg&gt;. L'annotazione interpretativa multiassiale (seg/@ana, indice d'impatto, feature structures, standOff) non fa parte di questa edizione. </seg>
+                <seg n="2"> Le varianti d'autrice sono rappresentate in apparato in situ (segmentazione parallela) con &lt;app&gt;/&lt;lem&gt; (wit="#txt-c")/&lt;rdg&gt; (wit="#txt-b0") secondo il modello «currente calamo» — @varSeq è opzionale e riservato ai soli casi di più &lt;rdg&gt; concorrenti, non tratto ordinario dell'apparato —, con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; sempre entro &lt;app&gt; per la fenomenologia materiale (mano, luogo); le rivergature a inchiostro diverso (ripasso a inchiostro a testo invariato, mano #ink_3-dark) sono registrate con &lt;retrace&gt;, elemento inline distinto da &lt;add&gt; (aggiunta genuina) e da &lt;subst&gt; (correzione di lettera) e non incluso in &lt;app&gt;. I livelli-testimone sono Tb0–T4 più il testo critico costituito Tc (lemma, @resp="#editor"). L'unità testuale di riferimento è il paragrafo &lt;p&gt;, non &lt;seg&gt;. L'annotazione interpretativa multiassiale (seg/@ana, indice d'impatto, feature structures, standOff) non fa parte di questa edizione. </seg>
             </ab>
 
             <projectDesc>
                 <p n="1"> Edizione critica digitale TEI P5 del Libro III del <title ref="#castello-anima">Castello dell'anima</title>, incentrata sulla dimensione genetica (stratificazione scrittoria, correzioni, glosse prudenziali) e sul controllo dottrinale anti-quietista esercitato dall'autrice su un testo esposto al sospetto di quietismo. Il Libro III è rilasciato in otto micro-commit (MC-1…MC-8) secondo i principi FAIR: ogni MC è un'unità dottrinale e materiale coerente, validabile e citabile per sé. </p>
-                <p n="2"> Il modello è leggero, a tre layer su due livelli di trascrizione. Layer 1 (filologico-grafico): struttura &lt;div&gt; (book/preface/chapter)/&lt;head&gt;/&lt;argument&gt;/&lt;p&gt;/&lt;pb&gt;/&lt;fw&gt;; trascrizione diplomatico-conservativa a due livelli con &lt;choice&gt; (orig/reg, abbr/expan, sic/corr, con @resp/@cert sul livello editoriale); apparato genetico &lt;app&gt;/&lt;lem&gt; (wit="#txt-c")/&lt;rdg&gt; (@wit,@varSeq) con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; (@place,@hand,@resp,@type), &lt;gap&gt;/&lt;supplied&gt;/&lt;unclear&gt;. Layer 2 (mistico-dottrinale): &lt;term&gt;/@ref al vocabolario controllato degli stati (taxonomy #stati-mistici). Layer 3 (intertestuale): &lt;cit&gt;/&lt;quote&gt; (@xml:lang)/&lt;bibl&gt; e &lt;ref&gt;, con le fonti dichiarate in &lt;listBibl type="fontes"&gt;. </p>
+                <p n="2"> Il modello è leggero, a tre layer su due livelli di trascrizione. Layer 1 (filologico-grafico): struttura &lt;div&gt; (book/preface/chapter)/&lt;head&gt;/&lt;argument&gt;/&lt;p&gt;/&lt;pb&gt;/&lt;fw&gt;; trascrizione diplomatico-conservativa a due livelli con &lt;choice&gt; (orig/reg, abbr/expan, sic/corr, con @resp/@cert sul livello editoriale); apparato genetico &lt;app&gt;/&lt;lem&gt; (wit="#txt-c")/&lt;rdg&gt; (@wit; @varSeq opzionale, riservato ai soli casi di più &lt;rdg&gt; concorrenti) con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; (@place,@hand,@resp) sempre entro &lt;app&gt;, secondo il modello «currente calamo», e &lt;retrace&gt; (@hand="#ink_3-dark", @resp) per le rivergature a inchiostro diverso a testo invariato, &lt;gap&gt;/&lt;supplied&gt;/&lt;unclear&gt;. Layer 2 (mistico-dottrinale): &lt;term&gt;/@ref al vocabolario controllato degli stati (taxonomy #stati-mistici). Layer 3 (intertestuale): &lt;cit&gt;/&lt;quote&gt; (@xml:lang)/&lt;bibl&gt; e &lt;ref&gt;, con le fonti dichiarate in &lt;listBibl type="fontes"&gt;. </p>
                 <p n="3"> Rappresentazione genetica: sette livelli-testimone (Tb0 stesura base; Tb1 ripensamenti immediati; T1–T2 riscritture e glosse correttive-attenuative; T3 glosse prudenziali tardive a inchiostro scuro; T4 interventi esterni; Tc testo critico costituito, lemma dell'edizione). Cinque mani scriventi (ink_1, ink_2 a inchiostro bruno; ink_3-dark a inchiostro scuro; pencil_1 a matita; ink_4-external esterna). L'unità testuale è il paragrafo &lt;p&gt;, numerato editorialmente quando necessario. </p>
                 <p n="4"> Confine del modello: nulla dell'annotazione interpretativa multiassiale (seg/@ana a otto assi, indice d'impatto, feature structures, standOff, figure/interp, rs, span/link) entra in questa edizione; tale sperimentazione interpretativa e computazionale, inclusa la componente IA, resta fuori dall'edizione critica. </p>
-                <p n="5"> Gate di accettazione per capitolo e micro-commit: XML ben formato e valido contro lo schema ODD di progetto (castello-anima-odd.rng), 0 errori; 0 puntatori pendenti (@wit/@hand/@resp/@ref/@target risolti a id dichiarati; term/@ref a categoria di #stati-mistici); testo trascritto immutato rispetto alla fonte, con ogni regolarizzazione reversibile via &lt;choice&gt;; varianti d'autrice ordinate da @varSeq e non gerarchizzate; cartulazione e conteggio dei paragrafi coerenti con la documentazione di struttura; commit atomico. </p>
+                <p n="5"> Gate di accettazione per capitolo e micro-commit: XML ben formato e valido contro lo schema ODD di progetto (castello-anima-odd.rng), 0 errori; 0 puntatori pendenti (@wit/@hand/@resp/@ref/@target risolti a id dichiarati; term/@ref a categoria di #stati-mistici); testo trascritto immutato rispetto alla fonte, con ogni regolarizzazione reversibile via &lt;choice&gt;; varianti d'autrice secondo il modello «currente calamo» e non gerarchizzate (@varSeq opzionale, riservato ai soli casi di più letture concorrenti); cartulazione e conteggio dei paragrafi coerenti con la documentazione di struttura; commit atomico. </p>
             </projectDesc>
 
             <refsDecl>
@@ -573,9 +577,11 @@
                     &lt;pb&gt; secondo la foliazione originale (es. “158r”, “158v”). I riferimenti
                     ai capitoli si basano su &lt;div type="chapter"&gt; e quelli ai paragrafi su
                     &lt;p&gt;, numerati editorialmente quando necessario. </p>
-                <p> La corrispondenza fra testo e immagini del manoscritto è dichiarata tramite
-                    l’attributo @facs sugli elementi &lt;pb&gt;, che rinviano alle riproduzioni
-                    digitali delle carte; i rinvii interni utilizzano l’attributo @target per
+                <p> In questo micro-commit l’edizione è facs-free: gli elementi &lt;pb&gt; recano
+                    soltanto @n (foliazione originale, es. “158r”, “158v”) e @xml:id, senza
+                    l’attributo @facs. Il collegamento fra testo e riproduzioni digitali del
+                    manoscritto, pur previsto dal modello tramite @facs su &lt;pb&gt;, non è
+                    codificato in MC-1. I rinvii interni utilizzano l’attributo @target per
                     puntare a identificatori univoci all’interno del documento. </p>
 
             </refsDecl>
@@ -589,11 +595,19 @@
                     &lt;gap&gt; e &lt;supplied&gt;. </p>
 
                 <p> L’apparato critico è rappresentato in situ secondo la metodologia della
-                    “parallel segmentation”, mediante &lt;app&gt;, &lt;lem&gt; e &lt;rdg&gt;, ed è
-                    dedicato a cancellature, sostituzioni, aggiunte interlineari e interventi
-                    d’autrice nei punti teologicamente sensibili. Le varianti sono classificate
-                    secondo le categorie: interlinear, margin, deleted, corrected, abbreviation,
-                    orthographic, lost. </p>
+                    “parallel segmentation”, mediante &lt;app&gt;, &lt;lem&gt; (wit="#txt-c") e
+                    &lt;rdg&gt; (wit="#txt-b0"), secondo il modello «currente calamo»:
+                    &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; stanno sempre entro &lt;app&gt; e
+                    l’attributo @varSeq è opzionale, riservato ai soli casi di più &lt;rdg&gt;
+                    concorrenti e non tratto ordinario dell’apparato. È dedicato a cancellature,
+                    sostituzioni, aggiunte interlineari e interventi d’autrice nei punti
+                    teologicamente sensibili, compresi i blocchi marginali (resi entro &lt;app&gt;).
+                    Le rivergature a inchiostro diverso — ripasso a inchiostro a testo invariato,
+                    mano #ink_3-dark (T3) — sono registrate con l’elemento &lt;retrace&gt; (@hand,
+                    @resp), distinto da &lt;add&gt; (aggiunta genuina) e da &lt;subst&gt; (correzione
+                    di lettera) e non incluso nell’apparato. Le varianti sono classificate secondo le
+                    categorie: interlinear, margin, deleted, corrected, abbreviation, orthographic,
+                    lost. </p>
 
                 <p> La DTD e il modello adottato integrano i moduli TEI relativi a linking,
                     analysis, transcrizione e critica del testo, in accordo con il tagset TEI P5. </p>
@@ -604,7 +618,9 @@
 
                 <correction>
                     <p> Le correzioni autoriali sono rappresentate tramite &lt;del&gt;, &lt;add&gt;
-                        e &lt;subst&gt;. Eventuali interventi editoriali sono dichiarati
+                        e &lt;subst&gt; entro &lt;app&gt;; le rivergature a inchiostro diverso, che
+                        non alterano il testo, sono invece registrate con &lt;retrace&gt; (mano
+                        #ink_3-dark) e non costituiscono correzione. Eventuali interventi editoriali sono dichiarati
                         esplicitamente attraverso &lt;corr&gt; all’interno di &lt;sic&gt;, o
                         documentati in note di chiarimento quando necessario. </p>
                 </correction>
@@ -717,7 +733,11 @@
                 commit l'apparato comprende esclusivamente varianti genetiche autoriali; l'
                 integrazione di varianti sperimentali generate da IA controllata è rimandata a una
                 fase separata e successiva del progetto. Tutti i fenomeni grafici (del, add, subst)
-                sono riportati in situ. -->
+                sono riportati in situ entro app, secondo il modello «currente calamo»: @varSeq è
+                opzionale e riservato ai soli casi di più rdg concorrenti, non tratto ordinario
+                dell'apparato. Le rivergature a inchiostro diverso a testo invariato sono registrate
+                con retrace (mano #ink_3-dark), elemento inline distinto da add e subst. In MC-1
+                l'edizione è facs-free: i pb non recano @facs. -->
 
             <classDecl>
                 <!-- Layer 2: vocabolario controllato degli stati mistici -->
@@ -982,12 +1002,13 @@
         </profileDesc>
 
 <revisionDesc status="candidate">
+    <change when="2026-08-17" who="#editor" ana="#fase-apparato">Stabilizzazione del testo di MC-1 (proemio + capp. I-V): introduzione dell'elemento retrace per le 18 rivergature «inchiostro diverso» (mano T3, #ink_3-dark; ripasso a inchiostro di porzioni già scritte, a testo invariato, distinto da add e subst e fuori dall'apparato); adozione dell'apparato «currente calamo» (lem wit="#txt-c", rdg wit="#txt-b0"; @varSeq riservato ai soli casi di più letture concorrenti); normalizzazioni assestate (perché, diffirenze e termino lasciati piani); blocchi marginali resi entro app; edizione facs-free (pb senza @facs); validazione finale (jing 0 errori, guardia dei puntatori, NFC, foliazione 158r-168r).</change>
     <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
     <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
     <change when="2026-07-15" who="#editor" ana="#fase-validazione">Separazione di teiHeader e testo in file distinti, uniti tramite XInclude, e validazione dell'edizione: jing contro lo schema ODD, guardie di forma NFC e di integrità dei puntatori.</change>
     <change when="2026-06-12" who="#editor" ana="#fase-modellazione">Stesura dello schema ODD di progetto (castello-anima-odd) e compilazione in RELAX NG, ristretto al modello leggero (esclusione dell'annotazione interpretativa multiassiale e dello stand-off).</change>
     <change when="2026-05-08" who="#editor" ana="#fase-trascrizione">Aggancio del lessico mistico al vocabolario controllato degli stati (term/@ref alla taxonomy <ref target="#stati-mistici">stati-mistici</ref>, layer 2) e codifica dell'intertesto (cit/quote/bibl e ref, layer 3).</change>
-    <change when="2026-04-10" who="#editor" ana="#fase-apparato">Codifica dell'apparato genetico d'autrice (app/lem/rdg con @varSeq; del/add/subst con @place, @hand, @resp) e dei guasti materiali (gap/supplied/unclear).</change>
+    <change when="2026-04-10" who="#editor" ana="#fase-apparato">Codifica dell'apparato genetico d'autrice secondo il modello «currente calamo» (app/lem con wit="#txt-c" e rdg con wit="#txt-b0"; del/add/subst sempre entro app, con @place, @hand, @resp; @varSeq riservato ai soli casi di più letture concorrenti e non tratto ordinario dell'apparato), registrazione delle rivergature a inchiostro diverso tramite retrace (ripasso a inchiostro, mano #ink_3-dark, testo invariato; distinto da add e subst, fuori dall'apparato) e dei guasti materiali (gap/supplied/unclear).</change>
     <change when="2026-03-06" who="#editor" ana="#fase-trascrizione">Trascrizione diplomatico-conservativa a due livelli dei capp. I-V (choice: orig/reg, abbr/expan, sic/corr), con struttura div/head/argument/p e cartulazione (pb 158r-168r, fw).</change>
     <change when="2026-02-05" who="#editor" ana="#fase-modellazione">Completamento del teiHeader leggero: dichiarazione dei sette testimoni (listWit, incluso il costituito <ref target="#txt-c">txt-c</ref>), delle cinque mani (handDesc), del vocabolario controllato dei diciassette stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>) e della tassonomia di lavoro fase; listBibl delle fonti.</change>
     <change when="2026-01-14" who="#editor" ana="#fase-modellazione">Definizione dei criteri ecdotici (trascrizione diplomatico-conservativa a due livelli, apparato genetico) e impostazione del teiHeader sull'autografo unico, Palermo, Biblioteca Comunale, ms. 2 Qq E 29.</change>
