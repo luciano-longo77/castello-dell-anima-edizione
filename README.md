@@ -147,7 +147,7 @@ Le mani descritte sono **cinque**: quattro autografe di Teresa
 <app>
   <lem wit="#txt-c">lezione critica costituita</lem>
   <rdg wit="#txt-b0"><subst><del hand="#ink_1" resp="#s-teresa">prima lezione</del><add hand="#ink_1" resp="#s-teresa">lezione corretta</add></subst></rdg>
-  <!-- correzione immediata "currente calamo": una sola <rdg> con <subst>, senza @varSeq;
+  <!-- correzione immediata: una sola <rdg> con <subst>, senza @varSeq;
        @varSeq si aggiunge solo quando concorrono più letture di campagne distinte -->
 
 </app>
