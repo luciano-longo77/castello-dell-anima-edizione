@@ -78,8 +78,7 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
 </head>
 <body>
 
-<script id="tei-source" type="application/xml">
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+<script id="tei-source" type="application/xml"><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -163,6 +162,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
                 <layout><p/></layout>
               </layoutDesc>
             </objectDesc>
+            
+            <!-- cfr. con witness e con ricostruzioni genetica del ms. -->
             <handDesc>
               <handNote xml:id="ink_1" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-b0 #txt-b1"><p/></handNote>
               <handNote xml:id="ink_2" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-1 #txt-2"><p/></handNote>
@@ -185,6 +186,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           </additional>
         </msDesc>
         <listBibl type="fontes">
+          
+          <!-- Fonti layer 3: intertestualità -->
           <bibl xml:id="bible-vulgate"><title/></bibl>
           <bibl xml:id="molinos-guida"><author/><title/><date/></bibl>
           <bibl xml:id="avila-castello"><author/><title/><date/></bibl>
@@ -193,6 +196,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <bibl/>
         </listBibl>
         <listWit>
+          
+          <!-- Ricostruzioni genetica del ms. -->
           <witness xml:id="txt-b0"/>
           <witness xml:id="txt-b1"/>
           <witness xml:id="txt-1"/>
@@ -217,12 +222,14 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
       </refsDecl>
       <editorialDecl>
         <p/>
+        <!-- indicazioni su azioni di intervento editoriale layer 1: filologico-grafico -->
         <correction><p/></correction>
         <hyphenation><p/></hyphenation>
         <normalization><p/></normalization>
       </editorialDecl>
       <tagsDecl>
         <namespace name="http://www.tei-c.org/ns/1.0">
+          <!-- layer 1: filologico-grafico -->
           <tagUsage gi="text"/>
           <tagUsage gi="body"/>
           <tagUsage gi="div"/>
@@ -231,6 +238,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <tagUsage gi="p"/>
           <tagUsage gi="pb"/>
           <tagUsage gi="fw"/>
+          
+          <!-- Front matter -->
           <tagUsage gi="front"/>
           <tagUsage gi="listWit"/>
           <tagUsage gi="witness"/>
@@ -241,6 +250,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <tagUsage gi="docTitle"/>
           <tagUsage gi="titlePart"/>
           <tagUsage gi="docAuthor"/>
+          
+          <!-- layer 1: trascrizione a due livelli diplomatico e interpretativo -->
           <tagUsage gi="choice"/>
           <tagUsage gi="orig"/>
           <tagUsage gi="reg"/>
@@ -248,6 +259,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <tagUsage gi="expan"/>
           <tagUsage gi="sic"/>
           <tagUsage gi="corr"/>
+          
+          <!-- layer 1: apparato genetico -->
           <tagUsage gi="app"/>
           <tagUsage gi="lem"/>
           <tagUsage gi="rdg"/>
@@ -257,12 +270,18 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <tagUsage gi="unclear"/>
           <tagUsage gi="gap"/>
           <tagUsage gi="supplied"/>
+          
+          <!-- layer 2: mistico-dottrinale -->
           <tagUsage gi="term"/>
+          
+          <!-- layer 3 intertestuale -->
           <tagUsage gi="ref"/>
           <tagUsage gi="cit"/>
           <tagUsage gi="quote"/>
           <tagUsage gi="bibl"/>
           <tagUsage gi="foreign"/>
+          
+          <!-- Nome, date, identificatori, note -->
           <tagUsage gi="persName"/>
           <tagUsage gi="placeName"/>
           <tagUsage gi="orgName"/>
@@ -272,7 +291,9 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
         </namespace>
       </tagsDecl>
       <variantEncoding method="parallel-segmentation" location="internal"/>
+      
       <classDecl>
+        <!-- tassonomia legata a layer 2: mistico-dottrinale -->
         <taxonomy xml:id="stati-mistici">
           <category xml:id="silentio"><catDesc/></category>
           <category xml:id="otio"><catDesc/></category>
@@ -292,6 +313,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <category xml:id="trasformazione"><catDesc/></category>
           <category xml:id="deificazione"><catDesc/></category>
         </taxonomy>
+        
+        <!-- tassonomia per documentare i change-log -->
         <taxonomy xml:id="fase">
           <category xml:id="fase-modellazione"><catDesc/></category>
           <category xml:id="fase-trascrizione"><catDesc/></category>
@@ -307,6 +330,7 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
         <language ident="it-reg-sic"/>
         <language ident="la"/>
       </langUsage>
+      
       <particDesc>
         <listPerson>
           <person xml:id="Anna-La-Longa">
@@ -318,7 +342,10 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
             <trait><note/></trait>
             <note/>
           </person>
+          <!-- eventuali fonti dottrinali -->
         </listPerson>
+        
+        <!-- Istituzioni storiche del contesto di produzione e conservazione -->
         <listOrg>
           <org xml:id="BCP">
             <orgName/>
@@ -333,16 +360,17 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
         </listOrg>
       </particDesc>
     </profileDesc>
-    <xenoData n="mets"/>
+
+    <!-- Descrizione del change-log, classificato secondo la tassonomia di lavoro fase -->
     <revisionDesc status="consolidated">
       <change ana="#fase-modellazione"/>
+      <!-- altri change -->
     </revisionDesc>
   </teiHeader>
   <sourceDoc>
     <note/>
   </sourceDoc>
-</TEI>
-</script>
+</TEI></script>
 
 <nav class="sidebar">
   <div class="sb-head">
