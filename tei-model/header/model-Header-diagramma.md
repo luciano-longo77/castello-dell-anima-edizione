@@ -74,5 +74,5 @@ graph LR
   PD --> PART[particDesc]
 
   PART --> PER[listPerson]
-  PART --> ORG[listOrg: BCP, Carmelo, Sant'Uffizio]
+  PART --> ORG[listOrg: BCP, Carmelo, Inquisizione]
 ```
