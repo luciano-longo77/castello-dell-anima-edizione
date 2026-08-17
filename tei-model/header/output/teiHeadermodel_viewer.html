@@ -167,6 +167,7 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
             <handDesc>
               <handNote xml:id="ink_1" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-b0 #txt-b1"><p/></handNote>
               <handNote xml:id="ink_2" scribeRef="#s-teresa" medium="brown-ink" corresp="#txt-1 #txt-2"><p/></handNote>
+              <!-- ink_3-dark = mano T3 (inchiostro scuro): ripasso <retrace> e glosse prudenziali -->
               <handNote xml:id="ink_3-dark" scribeRef="#s-teresa" medium="dark-ink" corresp="#txt-3"><p/></handNote>
               <handNote xml:id="pencil_1" scribeRef="#s-teresa" medium="pencil" corresp="#txt-3"><p/></handNote>
               <handNote xml:id="ink_4-external" scribeRef="#esterno" medium="ink" corresp="#txt-4"><p/></handNote>
@@ -260,13 +261,15 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
           <tagUsage gi="sic"/>
           <tagUsage gi="corr"/>
           
-          <!-- layer 1: apparato genetico -->
+          <!-- layer 1: apparato genetico «currente calamo» (del/add/subst dentro app) -->
           <tagUsage gi="app"/>
           <tagUsage gi="lem"/>
           <tagUsage gi="rdg"/>
           <tagUsage gi="add"/>
           <tagUsage gi="del"/>
           <tagUsage gi="subst"/>
+          <!-- retrace = ripasso a inchiostro (mano T3 #ink_3-dark): testo invariato, fuori da app -->
+          <tagUsage gi="retrace"/>
           <tagUsage gi="unclear"/>
           <tagUsage gi="gap"/>
           <tagUsage gi="supplied"/>
@@ -458,7 +461,7 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
     ['Struttura (layer 1)',['text','body','div','head','argument','p','pb','fw']],
     ['Front matter',['front','listWit','witness','listPerson','person','listBibl','titlePage','docTitle','titlePart','docAuthor']],
     ['Trascrizione due livelli (layer 1)',['choice','orig','reg','abbr','expan','sic','corr']],
-    ['Apparato genetico (layer 1)',['app','lem','rdg','add','del','subst','unclear','gap','supplied']],
+    ['Apparato genetico (layer 1)',['app','lem','rdg','add','del','subst','retrace','unclear','gap','supplied']],
     ['Lessico mistico (layer 2)',['term']],
     ['Intertesto (layer 3)',['ref','cit','quote','bibl','foreign']],
     ['Nomi, date, id, note',['persName','placeName','orgName','date','idno','note']],
