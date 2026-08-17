@@ -1,7 +1,7 @@
 # Edizione Critica Digitale *Il Castello dell'anima* (Libro III)
 ## Introduzione
 
-[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) [![Castello dell'anima](https://img.shields.io/badge/Castello%20dell%27anima-7b2d3b)](https://github.com/luciano-longo77/castello-anima-TEI-IA)
+[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b)
 
 **Autrice**: Teresa di San Geronimo (Anna La Longa, 1670–post 1703)  
 **Editor**: Luciano Longo  
@@ -60,7 +60,7 @@ Il **III libro** è dedicato allo stadio delle **anime perfette** e rappresenta 
 
 Il lavoro editoriale si articola in due passaggi principali:
 
-1. **Trascrizione diplomatico-interpretativa** del manoscritto autografo, condotta senza operare alcuna normalizzazione grafica, ortografica o morfosintattica. La trascrizione conserva integralmente la patina linguistica del testo, incluse oscillazioni diacritiche, grafiche e sintattiche, considerate parte costitutiva del dato autografo. Le abbreviazioni materiali che comprometterebbero la leggibilità (ad es. dunq., total.te, V.R.) sono sciolte per esteso.
+1. **Trascrizione diplomatico-conservativa a due livelli** del manoscritto autografo. Il *livello documentario* conserva integralmente la patina linguistica del testo (oscillazioni diacritiche, grafiche e sintattiche, considerate parte costitutiva del dato autografo); accanto ad esso, un *livello editoriale* — regolarizzazione grafica, scioglimento delle abbreviazioni, correzione degli errori materiali — è codificato **in parallelo** tramite `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), reversibile e attribuito (`@resp`/`@cert`), **senza mai sostituire** la lezione documentaria. Le due lezioni coesistono sullo stesso piano: la scelta del livello è demandata alla lettura o all'elaborazione a valle.
 
 2. **Codifica in XML‑TEI** (P5), finalizzata alla strutturazione, interrogabilità e versionabilità del testo, senza sovrapporre al testo base livelli interpretativi o normalizzanti.
 
@@ -109,7 +109,7 @@ citazione con fonte
                 
 ```
 
-La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, è tenuta distinta dalla *trascrizione interpretativa* ampiamente regolarizzata, sviluppata nel repository separato **`castello-anima-TEI-IA`**: quest'ultima è un livello *derivato*, prodotto a soli fini computazionali, e non fa parte del testo dell'edizione.
+La trascrizione a **due livelli**, in cui la *lezione diplomatica* e la sua *regolarizzazione* coesistono via `<choice>`, non va confusa con un'eventuale trascrizione ampiamente regolarizzata a soli fini di leggibilità o di elaborazione computazionale: quest'ultima sarebbe un livello *derivato* e non fa parte del testo dell'edizione.
 
 ### Criteri editoriali
 L’edizione adotta un approccio diplomatico‑conservativo, che:
@@ -233,7 +233,9 @@ L’edizione critica digitale del III del *Castello dell’anima* mira a restitu
 
 ## Struttura del repository
 
-Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizione (`tei-model/`) e i **micro-commit** che rilasciano il testo capitolo per capitolo (`Micro-commits/`, MC-1…MC-8). La validazione automatica del modello leggero è in `.github/workflows/`. L'annotazione multiassiale sperimentale (indice d'impatto, `seg`/`@ana`, standOff) vive nel repository gemello [`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA), non qui.
+Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizione (`tei-model/`) e i **micro-commit** che rilasciano il testo capitolo per capitolo (`Micro-commits/`, MC-1…MC-8). La validazione automatica del modello leggero è in `.github/workflows/`. L'annotazione multiassiale sperimentale (indice d'impatto, `seg`/`@ana`, standOff) e l'elaborazione computazionale/IA non fanno parte di questa edizione.
+
+**Gerarchia di autorità.** La fonte autorevole dell'edizione è il **TEI conforme allo schema ODD** (`data/*.xml` validati); lo schema (`.odd` → `.rng`) è normativo, la documentazione lo *descrive*, e i viewer HTML in `output/`/`tool/` sono **artefatti derivati**, non rappresentazioni normative del testo.
 
 ```text
 .
