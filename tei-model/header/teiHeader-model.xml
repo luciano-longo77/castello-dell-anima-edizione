@@ -280,11 +280,7 @@
         </listOrg>
       </particDesc>
     </profileDesc>
-    
-    <xenoData n="mets">
-      <!-- puntatore al pacchetto METS -->
-    </xenoData>
-    
+
     <!-- Descrizione del change-log, classificato secondo la tassonomia di lavoro fase -->
     <revisionDesc status="consolidated">
       <change ana="#fase-modellazione"/>
