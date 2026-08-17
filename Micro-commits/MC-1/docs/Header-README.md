@@ -39,7 +39,7 @@ A differenza di un'edizione digitale minima, dove l'**header** si limita a pochi
 1. **Funzione descrittiva**: chi ha scritto cosa, quando, su quale supporto, con quali mani, sotto quale licenza.
 2. **Funzione interpretativa (leggera)**: dichiarare in modo esplicito e verificabile il **vocabolario controllato degli stati mistici** (`<classDecl>`) e le **fonti** (`<listBibl>`), così che l'attributo `@ref` sui `<term>` del testo e i rimandi intertestuali non siano stringhe libere non controllabili, ma puntino a categorie e a voci bibliografiche formalmente definite.
 
-Questa seconda funzione è ciò che rende l'edizione più di una semplice trascrizione: permette di interrogare il testo per *stato mistico* e di collegare ogni citazione alla sua fonte, in modo sistematico e riproducibile da altri. Rispetto al modello del repo `castello-anima-TEI-IA` — dove lo stesso fenomeno è annotato con un sistema multiassiale a otto tassonomie e `@ana` sui `<seg>` — il commit 1 adotta la forma leggera: un solo asse (`term/@ref` → stati), senza indice di impatto né segmentazione retorica.
+Questa seconda funzione è ciò che rende l'edizione più di una semplice trascrizione: permette di interrogare il testo per *stato mistico* e di collegare ogni citazione alla sua fonte, in modo sistematico e riproducibile da altri. Il commit 1 adotta una forma leggera: un solo asse interpretativo (`term/@ref` → stati), senza indice di impatto né segmentazione retorica multiassiale.
 
 ## Struttura del `teiHeader` e cosa fa ciascuna sezione
 
@@ -53,7 +53,7 @@ Qui si dichiara **come** il testo viene codificato:
 - `projectDesc` descrive gli obiettivi del modello (tre layer: filologico‑grafico, mistico‑dottrinale, intertestuale; trascrizione a due livelli; apparato genetico) e la fase in cui si trova il progetto.
 - `editorialDecl` fissa i criteri editoriali e in particolare la **trascrizione a due livelli**: la lezione diplomatica e la sua regolarizzazione coesistono nel file, affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`); apparato critico in *parallel segmentation* con `@varSeq`; nessuna normalizzazione del testo trascritto se non quella dichiarata e reversibile via `<choice>`.
 - `tagsDecl` elenca **esattamente** gli elementi TEI usati nel testo — il "tag set core" di questo commit (vedi sotto).
-- `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#annichilimento`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header: restano nel progetto `castello-anima-TEI-IA`.
+- `classDecl` contiene il **vocabolario controllato degli stati mistici** (`taxonomy xml:id="stati-mistici"`): le categorie (`#silentio`, `#otio`, `#annichilimento`, `#oblivione-sonno`, `#scordanza`, `#indifferenza`, `#nudita-anima`, `#bacio`, `#matrimonio-spirituale`, `#cella-secreta`, `#contemplazione-infusa`, `#trasformazione`, `#deificazione`, `#notte`, `#purga`, `#unione`, `#quiete`, ecc.) sono i bersagli di `term/@ref` nel testo. Le otto tassonomie interpretative multiassiali e l'indice di impatto **non** fanno parte di questo header.
 
 ### `profileDesc`
 Descrive la lingua del testo (italiano regionale siciliano di fine Seicento, con fenomeni fonetici, morfologici, lessicali e sintattici dettagliati) e le persone/organizzazioni coinvolte: l'autrice, le fonti dottrinali (Santa Teresa d'Ávila, Giovanni della Croce, Miguel de Molinos), il direttore spirituale, l'editore, e le istituzioni storiche (Carmelo, Inquisizione).
@@ -66,14 +66,14 @@ Registra la cronologia sintetica degli interventi editoriali (voci proforma), ci
 Il `tagsDecl` di questo `teiHeader` non è un elenco esaustivo di tutto ciò che TEI permette, ma il **tag set minimo** deciso per MC1, coerente con quanto dichiarato nel README narrativo del micro-commit. Include:
 
 - **Struttura** (layer filologico‑grafico): `div`, `head`, `argument`, `p`, `pb` (`@n`/`@xml:id`/`@facs`), `fw`, `text`, `body`
-- **Front matter**: `front`, `listWit`/`witness` (sette testimoni, incl. `txt-c`), `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
+- **Front matter**: `front`, `listWit`/`witness` (sette **stati testuali di un unico autografo** — non sette manoscritti — incluso il testo critico costituito `txt-c` con `@resp="#editor"`), `listPerson`/`person`, `listBibl`/`title`/`author`, `titlePage`/`docTitle`/`titlePart`/`docAuthor`
 - **Trascrizione a due livelli** (layer filologico‑grafico): `choice` con `orig`/`reg`, `abbr`/`expan`, `sic`/`corr`
 - **Apparato genetico**: `app`/`lem`/`rdg` (`@wit`, `@varSeq`), `del`/`add`/`subst` (`@place`/`@hand`/`@resp`/`@type`), `unclear`/`gap`/`supplied`
 - **Lessico mistico** (layer mistico‑dottrinale): `term` con `@ref` al vocabolario degli stati
 - **Intertesto** (layer intertestuale): `ref` (`@target`), `cit`/`quote`/`bibl`/`foreign`
 - **Identificatori e fonti**: `idno` (in particolare per VIAF), `listBibl type="fontes"` (Vulgata, Molinos, Ávila)
 
-Sono **fuori** dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale — `figure`, `interp`/`interpGrp`, `rs` e il linking stand-off `span`/`link` — che lo schema ODD rimuove: la loro sede è il progetto separato `castello-anima-TEI-IA`. Restano invece ammessi, nel loro **uso standard**, `seg` (dentro `incipit`/`explicit` del `msDesc`) e l'attributo `@ana`, quest'ultimo limitato ai `<change>` del `revisionDesc` (aggancio alla tassonomia `fase`): non sono quindi il perno di un'annotazione multiassiale, ma servizi puntuali dell'header.
+Sono **fuori** dal tag set di questo commit gli elementi dell'annotazione interpretativa multiassiale — `figure`, `interp`/`interpGrp`, `rs` e il linking stand-off `span`/`link` — che lo schema ODD rimuove. Restano invece ammessi, nel loro **uso standard**, `seg` (dentro `incipit`/`explicit` del `msDesc`) e l'attributo `@ana`, quest'ultimo limitato ai `<change>` del `revisionDesc` (aggancio alla tassonomia `fase`): non sono quindi il perno di un'annotazione multiassiale, ma servizi puntuali dell'header.
 
 ## Il vocabolario controllato degli stati e le fonti
 
@@ -94,7 +94,7 @@ Nel commit 1 il `classDecl` non ospita più le otto tassonomie interpretative, m
 | `contemplazione-infusa` | Contemplazione infusa |
 | `nudita-anima`, `bacio`, `matrimonio-spirituale`, `cella-secreta`, `trasformazione`, `deificazione` | Stati delle celle superiori del Libro III |
 
-Un `<term ref="#unione">unione</term>` nel testo risolve così a una categoria dichiarata una sola volta nell'header: questo è ciò che rende possibile isolare *tutte* le occorrenze di uno stato (p. es. l'unione) indipendentemente dal capitolo, senza importare l'apparato multiassiale a otto tassonomie né l'indice di impatto (che restano nel repo `castello-anima-TEI-IA`). I termini di lessico non‑stato restano `<term>` nudi.
+Un `<term ref="#unione">unione</term>` nel testo risolve così a una categoria dichiarata una sola volta nell'header: questo è ciò che rende possibile isolare *tutte* le occorrenze di uno stato (p. es. l'unione) indipendentemente dal capitolo, senza importare l'apparato multiassiale a otto tassonomie né l'indice di impatto. I termini di lessico non‑stato restano `<term>` nudi.
 
 Accanto al vocabolario, il `<listBibl type="fontes">` dichiara le **fonti** richiamate dall'intertesto — la Vulgata (`#bible-vulgate`), la *Guida spirituale* di Molinos (`#molinos-guida`), il *Castello interiore* di Ávila (`#avila-castello`) — bersagli dei rimandi `<ref target="…">` e delle `<bibl>` interne alle citazioni `<cit>`.
 
