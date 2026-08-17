@@ -81,9 +81,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <publisher>Prototipo DH. Proof-of-concept</publisher>
-                <date when="2026-01-28"/>
-                <idno type="METS">mets.xml</idno>
+                <publisher>Luciano Longo</publisher>
+                <date when="2026-08-16"/>
                 <idno type="digital_edition">Edizione digitale con annotazione semantica</idno>
                 <availability status="free">
                     <p>Le riproduzioni digitali degli autografi possono essere consultate solo in
@@ -254,13 +253,13 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                 <bibl type="ms" xml:id="ms-Palermo-2QqE29">
                     <settlement ref="#Palermo">Palermo</settlement>
                     <affiliation ref="#BCP">Biblioteca Comunale</affiliation>
-                    <idno ana="#ms-Palermo-2QqE29">ms. 2 Qq E 29</idno>
+                    <idno>ms. 2 Qq E 29</idno>
                     <date notBefore="1692" notAfter="1703">sec. XVII ex.</date>
                     <title level="m" ref="#castello-anima">Il Castello dell’anima</title>
                 </bibl>
 
                 <!-- Origine dei loci e delle citazioni: edizione e introduzione -->
-                <msDesc xml:lang="ita" corresp="#castello-anima">
+                <msDesc xml:lang="it" corresp="#castello-anima">
                     <msIdentifier>
                         <country>
                             <name type="place" ref="https://www.geonames.org/3175395">Italia</name>
@@ -275,12 +274,12 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                             Comunale</institution>
                         <repository ref="#BCP">Casa Professa</repository>
                         <altIdentifier>
-                            <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                            <idno corresp="#ms-Palermo-2QqE29">2 Qq E 29</idno>
                         </altIdentifier>
                     </msIdentifier>
 
-                    <msContents ana="#castello-anima">
-                        <msItem n="I" xml:id="msItem-I" ana="#bibl-diario-mistico-I">
+                    <msContents corresp="#castello-anima">
+                        <msItem n="I" xml:id="msItem-I" corresp="#bibl-diario-mistico-I">
                             <author cert="high" ref="http://viaf.org/viaf/39222032" corresp="#s-teresa"> Teresa di San Geronimo </author>
                             <title>Libro primo del Castello dell’anima per l’anime
                                 principianti</title>
@@ -298,9 +297,9 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                                     contemplativa, che sono l’anime proficienti. Iddio sia quello,
                                     che la conceda per sola sua gloria, et honore, amen. </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
-                        <msItem n="II" xml:id="msItem-II" ana="#bibl-diario-mistico-II">
+                        <msItem n="II" xml:id="msItem-II" corresp="#bibl-diario-mistico-II">
 
                             <author cert="high" ref="http://viaf.org/viaf/39222032" corresp="#s-teresa"> Teresa di San Geronimo </author>
                             <title>Libro secondo del Castello dell’anima per l’a- nime proficienti,
@@ -335,9 +334,9 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                                     bontà divina, faccio, non potendo più con le mie debo- le forze,
                                     e finisco. </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
-                        <msItem n="III" xml:id="msItem-III" ana="#bibl-diario-mistico-III">
+                        <msItem n="III" xml:id="msItem-III" corresp="#bibl-diario-mistico-III">
 
                             <author cert="high" ref="http://viaf.org/viaf/39222032" corresp="#s-teresa"> Teresa di San Geronimo </author>
                             <title>Libro terzo Del castello dell’anima per l’anime perfette, nel
@@ -373,7 +372,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                                     d’haver fatto quanto l’obe- dienza m’ha comandato. Soli Deo
                                     honor, et gloria </seg>
                             </explicit>
-                            <textLang mainLang="ita" otherLangs="la"/>
+                            <textLang mainLang="it" otherLangs="la"/>
                         </msItem>
                     </msContents>
 
@@ -528,7 +527,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                     <additional>
                         <surrogates>
                             <p> L’autografo del <title level="m">Castello dell’anima</title>,
-                                conservato nel ms. <idno ana="#ms-Palermo-2QqE29">2 Qq E 29</idno>
+                                conservato nel ms. <idno corresp="#ms-Palermo-2QqE29">2 Qq E 29</idno>
                                 presso la <orgName ref="http://viaf.org/viaf/133691077">Biblioteca
                                     Comunale di Palermo</orgName>, è consultabile in riproduzione
                                 digitale (formato JPEG) presso l’ente conservatore, laddove
@@ -592,14 +591,14 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
         <encodingDesc>
             <ab type="abstract">
                 <seg n="1"> Questo teiHeader descrive il primo micro-commit (MC-1, Libro III, capp. I–V) dell'edizione critica digitale del <title ref="#castello-anima">Castello dell'anima</title> di Teresa di San Geronimo (Anna La Longa), condotta sull'autografo unico — Palermo, Biblioteca Comunale, ms. 2 Qq E 29 — trattato come sola tradizione diretta. L'edizione adotta un modello leggero a tre layer su due livelli di trascrizione: (1) filologico-grafico, con struttura div/head/argument/p/pb/fw e trascrizione a due livelli, diplomatica ⇄ interpretativa, resa con &lt;choice&gt; (orig/reg, abbr/expan, sic/corr), più l'apparato genetico d'autrice; (2) mistico-dottrinale, con &lt;term&gt;/@ref agganciato al vocabolario controllato degli stati (taxonomy #stati-mistici); (3) intertestuale, con &lt;cit&gt;/&lt;quote&gt;/&lt;bibl&gt; e &lt;ref&gt;. </seg>
-                <seg n="2"> Le varianti d'autrice sono rappresentate in apparato in situ (segmentazione parallela) con &lt;app&gt;/&lt;lem&gt;/&lt;rdg&gt; ordinati da @varSeq e non gerarchizzati, e con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; per la fenomenologia materiale (mano, luogo, tipo); i livelli-testimone sono Tb0–T4 più il testo critico costituito Tc (lemma, @resp="#editor"). L'unità testuale di riferimento è il paragrafo &lt;p&gt;, non &lt;seg&gt;. L'annotazione interpretativa multiassiale (seg/@ana, indice d'impatto, feature structures, standOff) non fa parte di questa edizione: è sviluppata a parte nel repository gemello <ref target="https://github.com/luciano-longo77/castello-anima-TEI-IA">castello-anima-TEI-IA</ref> (cfr. project-readme, sez. "Testi derivati e sperimentazione TEI + AI"). </seg>
+                <seg n="2"> Le varianti d'autrice sono rappresentate in apparato in situ (segmentazione parallela) con &lt;app&gt;/&lt;lem&gt;/&lt;rdg&gt; ordinati da @varSeq e non gerarchizzati, e con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; per la fenomenologia materiale (mano, luogo, tipo); i livelli-testimone sono Tb0–T4 più il testo critico costituito Tc (lemma, @resp="#editor"). L'unità testuale di riferimento è il paragrafo &lt;p&gt;, non &lt;seg&gt;. L'annotazione interpretativa multiassiale (seg/@ana, indice d'impatto, feature structures, standOff) non fa parte di questa edizione. </seg>
             </ab>
 
             <projectDesc>
                 <p n="1"> Edizione critica digitale TEI P5 del Libro III del <title ref="#castello-anima">Castello dell'anima</title>, incentrata sulla dimensione genetica (stratificazione scrittoria, correzioni, glosse prudenziali) e sul controllo dottrinale anti-quietista esercitato dall'autrice su un testo esposto al sospetto di quietismo. Il Libro III è rilasciato in otto micro-commit (MC-1…MC-8) secondo i principi FAIR: ogni MC è un'unità dottrinale e materiale coerente, validabile e citabile per sé. </p>
                 <p n="2"> Il modello è leggero, a tre layer su due livelli di trascrizione. Layer 1 (filologico-grafico): struttura &lt;div&gt; (book/preface/chapter)/&lt;head&gt;/&lt;argument&gt;/&lt;p&gt;/&lt;pb&gt;/&lt;fw&gt;; trascrizione diplomatico-conservativa a due livelli con &lt;choice&gt; (orig/reg, abbr/expan, sic/corr, con @resp/@cert sul livello editoriale); apparato genetico &lt;app&gt;/&lt;lem&gt; (wit="#txt-c")/&lt;rdg&gt; (@wit,@varSeq) con &lt;del&gt;/&lt;add&gt;/&lt;subst&gt; (@place,@hand,@resp,@type), &lt;gap&gt;/&lt;supplied&gt;/&lt;unclear&gt;. Layer 2 (mistico-dottrinale): &lt;term&gt;/@ref al vocabolario controllato degli stati (taxonomy #stati-mistici). Layer 3 (intertestuale): &lt;cit&gt;/&lt;quote&gt; (@xml:lang)/&lt;bibl&gt; e &lt;ref&gt;, con le fonti dichiarate in &lt;listBibl type="fontes"&gt;. </p>
                 <p n="3"> Rappresentazione genetica: sette livelli-testimone (Tb0 stesura base; Tb1 ripensamenti immediati; T1–T2 riscritture e glosse correttive-attenuative; T3 glosse prudenziali tardive a inchiostro scuro; T4 interventi esterni; Tc testo critico costituito, lemma dell'edizione). Cinque mani scriventi (ink_1, ink_2 a inchiostro bruno; ink_3-dark a inchiostro scuro; pencil_1 a matita; ink_4-external esterna). L'unità testuale è il paragrafo &lt;p&gt;, numerato editorialmente quando necessario. </p>
-                <p n="4"> Confine col progetto gemello: nulla del modello multiassiale (seg/@ana a otto assi, indice d'impatto, feature structures, standOff, figure/interp, rs, span/link) entra in questa edizione; tale sperimentazione interpretativa e computazionale, inclusa la componente IA, vive esclusivamente nel repository castello-anima-TEI-IA. </p>
+                <p n="4"> Confine del modello: nulla dell'annotazione interpretativa multiassiale (seg/@ana a otto assi, indice d'impatto, feature structures, standOff, figure/interp, rs, span/link) entra in questa edizione; tale sperimentazione interpretativa e computazionale, inclusa la componente IA, resta fuori dall'edizione critica. </p>
                 <p n="5"> Gate di accettazione per capitolo e micro-commit: XML ben formato e valido contro lo schema ODD di progetto (castello-anima-odd.rng), 0 errori; 0 puntatori pendenti (@wit/@hand/@resp/@ref/@target risolti a id dichiarati; term/@ref a categoria di #stati-mistici); testo trascritto immutato rispetto alla fonte, con ogni regolarizzazione reversibile via &lt;choice&gt;; varianti d'autrice ordinate da @varSeq e non gerarchizzate; cartulazione e conteggio dei paragrafi coerenti con la documentazione di struttura; commit atomico. </p>
             </projectDesc>
 
@@ -723,7 +722,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
                     <tagUsage gi="rdg">Varianti d’autore (Tb0, Tb1, T1…).</tagUsage>
 
                     <!-- SEGMENTAZIONE E RETORICA -->
-                    <tagUsage gi="seg">Unità di struttura/unità interpretativa retorica.</tagUsage>
+                    <tagUsage gi="seg">Impiegato solo nell'header per incipit/explicit del msDesc e per i blocchi dell'abstract; non è usato come unità di segmentazione o annotazione del testo.</tagUsage>
                     <tagUsage gi="term">Termini tecnici o mistici.</tagUsage>
                     <tagUsage gi="ref">Rinvii interni, esterni, intertestuali.</tagUsage>
                     <tagUsage gi="note">Note editoriali, dottrinali, contestuali, glosse
@@ -1009,16 +1008,19 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
             </particDesc>
 
         </profileDesc>
-        <xenoData n="mets">
-            <mets:metsPtr xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mets.xml"/>
-        </xenoData>
 
-        <revisionDesc status="draft">
-            <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche del gemello con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
-            <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
-            <change when="2026-01-14" who="#editor" ana="#fase-modellazione">Definizione dei criteri ecdotici (trascrizione diplomatico-conservativa a due livelli, apparato genetico) e impostazione del teiHeader sull'autografo unico, Palermo, Biblioteca Comunale, ms. 2 Qq E 29.</change>
-            <change when="2026-01-10" who="#editor" ana="#fase-modellazione">Avvio del progetto di edizione critica digitale del Libro III del Castello dell'anima.</change>
-        </revisionDesc>
+<revisionDesc status="candidate">
+    <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
+    <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>
+    <change when="2026-07-15" who="#editor" ana="#fase-validazione">Separazione di teiHeader e testo in file distinti, uniti tramite XInclude, e validazione dell'edizione: jing contro lo schema ODD, guardie di forma NFC e di integrità dei puntatori.</change>
+    <change when="2026-06-12" who="#editor" ana="#fase-modellazione">Stesura dello schema ODD di progetto (castello-anima-odd) e compilazione in RELAX NG, ristretto al modello leggero (esclusione dell'annotazione interpretativa multiassiale e dello stand-off).</change>
+    <change when="2026-05-08" who="#editor" ana="#fase-trascrizione">Aggancio del lessico mistico al vocabolario controllato degli stati (term/@ref alla taxonomy <ref target="#stati-mistici">stati-mistici</ref>, layer 2) e codifica dell'intertesto (cit/quote/bibl e ref, layer 3).</change>
+    <change when="2026-04-10" who="#editor" ana="#fase-apparato">Codifica dell'apparato genetico d'autrice (app/lem/rdg con @varSeq; del/add/subst con @place, @hand, @resp) e dei guasti materiali (gap/supplied/unclear).</change>
+    <change when="2026-03-06" who="#editor" ana="#fase-trascrizione">Trascrizione diplomatico-conservativa a due livelli dei capp. I-V (choice: orig/reg, abbr/expan, sic/corr), con struttura div/head/argument/p e cartulazione (pb 158r-168r, fw).</change>
+    <change when="2026-02-05" who="#editor" ana="#fase-modellazione">Completamento del teiHeader leggero: dichiarazione dei sette testimoni (listWit, incluso il costituito <ref target="#txt-c">txt-c</ref>), delle cinque mani (handDesc), del vocabolario controllato dei diciassette stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>) e della tassonomia di lavoro fase; listBibl delle fonti.</change>
+    <change when="2026-01-14" who="#editor" ana="#fase-modellazione">Definizione dei criteri ecdotici (trascrizione diplomatico-conservativa a due livelli, apparato genetico) e impostazione del teiHeader sull'autografo unico, Palermo, Biblioteca Comunale, ms. 2 Qq E 29.</change>
+    <change when="2026-01-10" who="#editor" ana="#fase-modellazione">Avvio del progetto di edizione critica digitale del Libro III del Castello dell'anima.</change>
+</revisionDesc>
     </teiHeader>
     <text xml:lang="it">
         <front>
@@ -2306,8 +2308,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
             </div>
         </body>
     </text>
-</TEI>
-</script>
+</TEI></script>
 
 <nav class="sidebar">
   <div class="sb-head">
