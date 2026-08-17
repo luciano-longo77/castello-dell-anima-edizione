@@ -15,7 +15,7 @@ Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni
 - diplomatica ⇄ interpretativa, con la lezione conservativa e la sua regolarizzazione affiancate da `<choice>` (`<orig>`/`<reg>`, `<abbr>`/`<expan>`, `<sic>`/`<corr>`), senza che l'una sostituisca l'altra; focalizzata sulle correzioni autografe e le glosse marginali.
 
 * **Modellazione TEI su tre layer:**
-  - **(1)** filologico‑grafico - struttura (con `<lb>` per i cambi-riga, `@break="no"` a metà parola), trascrizione a due livelli (punteggiatura del ms su entrambi) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, con `<del>`/`<add>`/`<subst>` dentro l'apparato; `@varSeq` solo con più letture concorrenti);
+  - **(1)** filologico‑grafico - struttura (con `<lb>` per i cambi-riga, `@break="no"` a metà parola), trascrizione a due livelli (punteggiatura del ms su entrambi) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, con `<del>`/`<add>`/`<subst>` dentro l'apparato; correzioni immediate «currente calamo» in una sola `<rdg>`, `@varSeq` solo con più letture concorrenti). Il ripasso a inchiostro che non muta la lezione è reso *inline* con `<retrace>` (mano T3), fuori apparato;
   - **(2)** mistico‑dottrinale - lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
   - **(3)** intertestuale - `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
 
@@ -29,7 +29,7 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 | ID | Capitoli | Focus Tematico | Stato |
 | :--- | :--- | :--- | :--- |
-| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🟡 Completato · release candidate |
+| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🟢 Completato · validato (jing 0 errori · guardia 172 id) |
 | **MC2** | III.6–10 | **Stabilizzazione**: otio e annichilimento. | 📅 Programmato |
 | **MC3** | III.11–15 | **Matrice sponsale I**: pace e quiete. | 📅 Programmato |
 | **MC4** | III.16–20 | **Matrice sponsale II**: liquefazione e bacio mistico. | 📅 Programmato |

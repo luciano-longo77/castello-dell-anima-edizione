@@ -187,6 +187,7 @@
           <tagUsage gi="add"/>
           <tagUsage gi="del"/>
           <tagUsage gi="subst"/>
+          <tagUsage gi="retrace"/>
           <tagUsage gi="unclear"/>
           <tagUsage gi="gap"/>
           <tagUsage gi="supplied"/>

@@ -89,6 +89,7 @@ La codifica si articola in **tre layer** — filologico‑grafico, mistico‑dot
 <add>        aggiunte marginali o interlineari
 <del>        cancellazioni
 <subst>      sostituzione (del + add come evento unico)
+<retrace>    rivergatura / ripasso a inchiostro, testo invariato (mano T3, #ink_3-dark)
 <unclear>    grafia indecifrabile
 <gap>        lacune o abrasioni
 <supplied>   integrazioni su guasto meccanico
@@ -164,6 +165,8 @@ Le mani descritte sono **cinque**: quattro autografe di Teresa
 
 Le `witness` dichiarate sono **sette**: i sei livelli genetici (Tb0, Tb1, T1–T4) più il livello costituito **Tc** (`txt-c`, `@resp="#editor"`), che `<lem wit="#txt-c">` richiama come lezione dell'edizione.
 
+Il ripasso a inchiostro (mano T3, `#ink_3-dark`), che rivergà porzioni di testo **senza alterarne la lezione**, è registrato *inline* con `<retrace>` e non entra in apparato: non è una variante, ma un fatto materiale d'inchiostro (18 occorrenze in MC-1).
+
 ### Strutturazione del testo
 
 ```xml
@@ -205,11 +208,12 @@ L’edizione include:
 ## Analisi delle correzioni e aggiunte
 Le modifiche testuali sono classificate come:
 
-* varianti sostitutive;
-* aggiunte marginali o interlineari;
-* cancellazioni.
+* varianti sostitutive (`<subst>`: `<del>` + `<add>`);
+* aggiunte marginali o interlineari (`<add>`);
+* cancellazioni (`<del>`);
+* rivergature a inchiostro (`<retrace>`): testo **invariato**, ripassato con inchiostro diverso (mano T3, `#ink_3-dark`) — registrate fuori dall'apparato, poiché non introducono una lezione nuova e non vanno confuse con `<add>` né con `<subst>`.
 
-La posizione materiale delle modifiche è indicata tramite attributi di localizzazione e correlata alla foliazione originale.
+Le correzioni immediate «currente calamo» sono rese con una sola `<rdg>` contenente `<subst>`, senza `@varSeq`; `@varSeq` interviene solo quando concorrono più letture di campagne distinte. La posizione materiale delle modifiche è indicata tramite attributi di localizzazione e correlata alla foliazione originale.
 
 ## Pubblicazione open access
 L’edizione è pubblicata in open access nei seguenti formati:

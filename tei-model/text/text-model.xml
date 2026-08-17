@@ -38,7 +38,8 @@
 
       <!-- Libro III: focus dell'edizione -->
       <div type="book" n="3">
-        <pb n="000r" xml:id="f000r" facs="images/f000r.jpg"/>
+        <!-- pb facs-free: @facs è ammesso dallo schema ma non usato in questa edizione -->
+        <pb n="000r" xml:id="f000r"/>
         <fw/>
         <head/>
 
@@ -54,7 +55,7 @@
           <argument>
             <p/>
           </argument>
-          <pb n="000v" xml:id="f000v" facs="images/f000v.jpg"/>
+          <pb n="000v" xml:id="f000v"/>
           <fw/>
 
           <!-- Unità di riferimento = il paragrafo <p n="…" xml:id="…">; dentro, i tre layer -->
@@ -66,19 +67,25 @@
             <choice><abbr/><expan/></choice>
             <choice><sic/><corr/></choice>
 
-            <!-- fenomeni materiali e correzioni autoriali (@place/@hand/@resp/@type) -->
-            <add place="margin" hand="#ink_1" resp="#s-teresa" type="integration"/>
-            <del/>
-            <subst><del/><add/></subst>
+            <!-- fenomeni materiali e lacune (fuori dall'apparato) -->
             <unclear/>
             <gap/>
             <supplied/>
 
-            <!-- apparato genetico (parallel segmentation) -->
+            <!-- retrace: ripasso a inchiostro (mano T3, #ink_3-dark); testo INVARIATO,
+                 ≠ add (aggiunta) e ≠ subst (correzione), NON va in <app> -->
+            <retrace hand="#ink_3-dark" resp="#s-teresa"/>
+
+            <!-- apparato genetico currente calamo (parallel segmentation):
+                 del/add/subst stanno DENTRO l'apparato; @varSeq solo con ≥2 rdg concorrenti -->
             <app>
               <lem wit="#txt-c"/>
-              <rdg wit="#txt-b0" varSeq="1"/>
-              <rdg wit="#txt-1" varSeq="2"/>
+              <rdg wit="#txt-b0">
+                <subst>
+                  <del hand="#ink_1" resp="#s-teresa"/>
+                  <add hand="#ink_1" resp="#s-teresa"/>
+                </subst>
+              </rdg>
             </app>
 
             <!-- layer 2: mistico-dottrinale -->

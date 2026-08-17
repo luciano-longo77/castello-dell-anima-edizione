@@ -17,7 +17,7 @@
 
 Il corpo testuale adotta lo **stesso profilo leggero del `teiHeader`**, articolato in tre layer:
 
-1. **Filologico-grafico** — struttura (`div`/`head`/`argument`/`p`, `pb`/`fw`), trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, `<add>`/`<del>`/`<subst>`, `<unclear>`/`<gap>`/`<supplied>`).
+1. **Filologico-grafico** — struttura (`div`/`head`/`argument`/`p`, `pb`/`fw`), trascrizione a due livelli (`<choice>`) e apparato genetico (`<app>`/`<lem>`/`<rdg>`, `<add>`/`<del>`/`<subst>`, `<retrace>` per il ripasso a inchiostro, `<unclear>`/`<gap>`/`<supplied>`).
 2. **Mistico-dottrinale** — lessico agganciato via `<term ref="…">` al **vocabolario controllato degli stati** dichiarato nel `teiHeader` (`taxonomy xml:id="stati-mistici"`).
 3. **Intertestuale** — citazioni e rimandi alle fonti (`<cit>`/`<quote>`/`<foreign>`/`<bibl>`, `<ref target="…">`).
 
@@ -79,14 +79,30 @@ La lezione diplomatica e la sua regolarizzazione coesistono, senza che l'una sos
 ### Fenomeni materiali e correzioni autoriali
 `<add>` (aggiunte marginali/interlineari, con `@place`/`@hand`/`@resp`/`@type`), `<del>` (cancellature), `<subst>` (sostituzione come evento unico), `<unclear>`, `<gap>`, `<supplied>`.
 
-### Apparato genetico (parallel segmentation)
+Distinto dalle correzioni è `<retrace>` (`@hand`/`@resp`): registra il **ripasso a inchiostro** — testo *rivergato* con inchiostro diverso (mano T3, `#ink_3-dark`) — in cui la lezione resta **invariata**. Non è né `<add>` (aggiunta genuina) né `<subst>` (correzione di lettera) e **non** compare dentro `<app>`: è un elemento inline che segnala solo il ripasso materiale.
+
+### Apparato genetico (parallel segmentation, *currente calamo*)
+Nel caso ordinario l'apparato registra la lezione costituita e un'unica variante genetica; `del`/`add`/`subst` stanno **dentro** l'apparato (correzione *currente calamo*), e **senza** `@varSeq`:
+
 ```xml
 <app>
-  <lem wit="#txt-c">…</lem>          <!-- testo critico costituito (lemma) -->
+  <lem wit="#txt-c">LEZIONE FINALE</lem>          <!-- testo critico costituito (lemma) -->
+  <rdg wit="#txt-b0">                              <!-- Tb0, prima stesura -->
+    <subst>
+      <del hand="#ink_1" resp="#s-teresa">X</del>
+      <add hand="#ink_1" resp="#s-teresa">Y</add>
+    </subst>
+  </rdg>
+</app>
+```
+
+`@varSeq` è **opzionale** e va usato **solo** quando concorrono **≥2 `<rdg>`**, per ordinarne la sequenza genetica; non è un tratto ordinario dell'apparato:
+
+```xml
+<app>
+  <lem wit="#txt-c">…</lem>
   <rdg wit="#txt-b0" varSeq="1">…</rdg>  <!-- Tb0, prima stesura -->
   <rdg wit="#txt-1"  varSeq="2">…</rdg>  <!-- T1, riscrittura autoriale -->
-  <rdg wit="#txt-2"  varSeq="3">…</rdg>  <!-- T2, intervento correttivo-glossativo -->
-  <rdg wit="#txt-3"  varSeq="4">…</rdg>  <!-- T3, intervento successivo -->
 </app>
 ```
 
@@ -138,7 +154,7 @@ I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiara
 1. **Unità di riferimento = paragrafo**: il testo è strutturato in `<p n="…">`; non si usa `<seg>` come unità di annotazione interpretativa.
 2. **Trascrizione diplomatico-conservativa**: nessuna normalizzazione oltre quella dichiarata e reversibile via `<choice>`.
 3. **Apparato in situ**: le varianti genetiche sono codificate nel flusso testuale (parallel segmentation).
-4. **Fedeltà materiale**: posizione, mano e fase sono preservate tramite `@place`/`@hand`/`@resp` su `<add>`/`<del>`/`<subst>` e tramite `<pb>`/`<fw>` (`@facs` per i facsimili).
+4. **Fedeltà materiale**: posizione, mano e fase sono preservate tramite `@place`/`@hand`/`@resp` su `<add>`/`<del>`/`<subst>`/`<retrace>` e tramite `<pb>`/`<fw>`. L'attributo `@facs` (aggancio ai facsimili) è **ammesso dallo schema** ma **non usato** in questa edizione: i `<pb>` sono resi *facs-free* (`<pb n="158r" xml:id="f158r"/>`).
 5. **Aggancio controllato**: `term/@ref` e `ref/@target` puntano solo a identificatori dichiarati nel `teiHeader`.
 
 ---
