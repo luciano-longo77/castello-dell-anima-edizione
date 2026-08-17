@@ -1,7 +1,7 @@
 # Edizione Critica Digitale Modulare (Micro-commits) 
 ## *Il Castello dell'anima* - Libro III
 
-[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) [![Castello dell'anima](https://img.shields.io/badge/Castello%20dell%27anima-7b2d3b)](https://github.com/luciano-longo77/castello-anima-TEI-IA)
+[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b)
 
 Progetto di edizione critica digitale del **III libro** del *Castello dell’anima* (1692–1694) di **suor Teresa di San Geronimo** (Anna La Longa), basato sul manoscritto autografo conservato presso la Biblioteca Comunale di Palermo (ms. 2 Qq E 29).
 
@@ -19,7 +19,7 @@ Il progetto adotta una strategia di **rilascio granulare (Micro-commits)**. Ogni
   - **(2)** mistico‑dottrinale - lessico agganciato via `<term ref>` a un vocabolario controllato degli stati;
   - **(3)** intertestuale - `<cit>`/`<quote>`/`<bibl>` e `<ref>` per fonti e rimandi. Documenta la genesi del testo e le strategie prudenziali dell'autrice.
 
-* **Digital Philology (progetto separato):** la preparazione dei dati per analisi computazionali (NLP), l'annotazione interpretativa multiassiale e l'intertestualità assistita da IA sono sviluppate nel repository dedicato `castello-anima-TEI-IA`, distinto da questa edizione critica.
+* **Fuori scope:** la preparazione dei dati per analisi computazionali (NLP), l'annotazione interpretativa multiassiale e l'intertestualità assistita da IA non rientrano in questa edizione critica, che adotta un modello leggero.
 
 ---
 
@@ -29,7 +29,7 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 | ID | Capitoli | Focus Tematico | Stato |
 | :--- | :--- | :--- | :--- |
-| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🏗️ In preparazione |
+| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🟡 Completato · release candidate |
 | **MC2** | III.6–10 | **Stabilizzazione**: otio e annichilimento. | 📅 Programmato |
 | **MC3** | III.11–15 | **Matrice sponsale I**: pace e quiete. | 📅 Programmato |
 | **MC4** | III.16–20 | **Matrice sponsale II**: liquefazione e bacio mistico. | 📅 Programmato |
