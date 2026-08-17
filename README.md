@@ -89,6 +89,7 @@ La codifica si articola in **tre layer** — filologico‑grafico, mistico‑dot
 <add>        aggiunte marginali o interlineari
 <del>        cancellazioni
 <subst>      sostituzione (del + add come evento unico)
+<retrace>    rivergatura a inchiostro (ripasso di una lezione già presente; testo invariato, ≠ add/subst)
 <unclear>    grafia indecifrabile
 <gap>        lacune o abrasioni
 <supplied>   integrazioni su guasto meccanico
@@ -177,18 +178,19 @@ Le `witness` dichiarate sono **sette**: i sei livelli genetici (Tb0, Tb1, T1–T
         </p>
     </argument>
 
-    <p n="1" xml:id="III-cap1-p1">Quando più un'anima è ragionata di
-      <term>croce</term> e <term>travagli</term>,
+    <p n="3" xml:id="III-cap1-p3">Quando più un'anima è ragionata di
+      <term><choice><orig>Croce</orig><reg resp="#editor">croce</reg></choice></term>,
+      e <term>travagli</term>
         <choice>
           <orig>altri tanto</orig>
-          <reg>altritanto</reg>
+          <reg resp="#editor">altritanto</reg>
         </choice>
         è più sicuro lo stato suo (...)</p>
   </div>
 </div>
 ```
 
-L'unità testuale di riferimento è il paragrafo **`<p n="…">`**, mentre il lessico mistico è isolato da **`<term ref="…">`**.
+L'unità testuale di riferimento è il paragrafo **`<p n="…">`**, mentre il lessico mistico è isolato da **`<term ref="…">`**. La numerazione dei paragrafi è **continua d'autrice** lungo tutto il micro-commit (proemio §§ 1–2, cap. I §§ 3–12, …): il primo paragrafo del cap. I è perciò `n="3"`, non `n="1"`.
 
 ### Note filologiche
 L’edizione include:
@@ -196,8 +198,8 @@ L’edizione include:
 * note filologiche ed esplicative:
   
   ```xml
-  <note type="critical">...</note>
-  <note type="contextual">...</note>
+  <note type="material">...</note>
+  <note type="source">...</note>
   ```
 * identificazione delle mani scriventi (@hand);
 * analisi delle strategie di mitigazione dottrinale.
@@ -207,7 +209,8 @@ Le modifiche testuali sono classificate come:
 
 * varianti sostitutive;
 * aggiunte marginali o interlineari;
-* cancellazioni.
+* cancellazioni;
+* rivergature a inchiostro (`<retrace>`): ripasso di una lezione già presente (testo invariato), distinto dalle aggiunte e dalle sostituzioni.
 
 La posizione materiale delle modifiche è indicata tramite attributi di localizzazione e correlata alla foliazione originale.
 
@@ -223,7 +226,7 @@ L’edizione è pubblicata in open access nei seguenti formati:
 2. Trascrizione diplomatico‑conservativa
 3. Definizione delle mani (`<handDesc>`)
 4. Strutturazione del testo (`<div>`, `<p>`) e trascrizione a due livelli (`<choice>`)
-5. Codifica delle varianti d'autrice in apparato (`<app>`, `<lem>`, `<rdg>` con `<subst>`)
+5. Codifica delle varianti d'autrice in apparato (`<app>`, `<lem>`, `<rdg>` con `<subst>`) e delle rivergature a inchiostro (`<retrace>`)
 6. Segnaletica materiale: foliazione e cambi-riga (`<pb>`, `<lb>`, `<fw>`) — senza `@facs` (immagini non autorizzate)
 7. Revisione filologica e validazione XML
 8. Pubblicazione e documentazione metodologica
