@@ -7,11 +7,13 @@ on:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
+      - "tei-model/**"
       - ".github/workflows/**"
   pull_request:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
+      - "tei-model/**"
       - ".github/workflows/**"
   workflow_dispatch:
 
@@ -51,3 +53,17 @@ jobs:
           done
           test "$found" = 1 || { echo "::error::nessun Micro-commits/*/data/castello-anima-text.xml trovato"; exit 1; }
           echo "Validazione completata."
+      - name: Verifica i modelli generici (tei-model, sola forma)
+        run: |
+          set -e
+          # I modelli generici NON sono validati contro l'ODD di progetto (contengono
+          # scheletri/placeholder): se ne verifica solo forma NFC e buona formazione XML.
+          n=0
+          while IFS= read -r XML; do
+            n=$((n+1))
+            echo "::group::$XML"
+            python3 -c "import sys,unicodedata; s=open(sys.argv[1],encoding='utf-8').read(); ok=(s==unicodedata.normalize('NFC',s)); print(('NFC ok: ' if ok else '::error::non in forma NFC: ')+sys.argv[1]); sys.exit(0 if ok else 1)" "$XML"
+            xmllint --noout "$XML"
+            echo "::endgroup::"
+          done < <(find tei-model -name '*.xml')
+          echo "Modelli tei-model verificati ($n file): NFC + ben formato."
