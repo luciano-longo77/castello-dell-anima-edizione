@@ -96,7 +96,7 @@ Sotto l'etichetta «due livelli» convivono in realtà **quattro operazioni filo
 | `<orig>` / `<reg>` | regolarizzazione grafica (diacritici, univerbazioni, maiuscole) | livello editoriale; non tocca la sostanza linguistica |
 | `<abbr>` / `<expan>` | scioglimento di abbreviazione materiale | livello editoriale; espansione, non normalizzazione linguistica |
 | `<sic>` / `<corr>` | **emendatio**: correzione di un errore materiale del testimone | **giudizio editoriale sul testo** (`@resp="#editor"`, `@cert`) |
-| `<app>` / `<lem>` / `<rdg>` | variante genetica d'autrice | fase del processo di scrittura (`@varSeq`); non è errore né normalizzazione |
+| `<app>` / `<lem>` / `<rdg>` | variante genetica d'autrice | fase del processo di scrittura; `@varSeq` solo con ≥2 `<rdg>`; non è errore né normalizzazione |
 
 La distinzione è dirimente: `<orig>/<reg>` e `<abbr>/<expan>` sono trasformazioni reversibili di *rappresentazione*; `<sic>/<corr>` è l'unica operazione in cui l'editore **corregge** il testo, e va perciò riservata agli errori materiali genuini, tenendola distinta dalle forme d'autrice o regionali (che restano tali, non emendate).
 
@@ -125,16 +125,16 @@ L'**interpunzione originale** del manoscritto è conservata nel testo base dell'
 La **foliazione** originale del manoscritto è indicata con precisione:
 
 - nella trascrizione, tramite indicazioni esplicite di carta;
-- nella codifica TEI, mediante: `<pb n="158r" facs="images/f158r.jpg" xml:id="f158r"/>`.
+- nella codifica TEI, mediante: `<pb n="158r" xml:id="f158r"/>`.
 
 #### 3.7. Guasti, lacune, incertezze
-Le porzioni di **testo illeggibili, lacunose o meccanicamente danneggiate** sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear/>`, `<gap reason="illegible"/>`, `<supplied reason="conjecture"/>`.
+Le porzioni di **testo illeggibili, lacunose o meccanicamente danneggiate** sono segnalate senza interventi arbitrari. In TEI vengono utilizzati: `<unclear reason="abrasion"/>`, `<gap reason="illegible"/>` (o `reason="hole"`), `<supplied reason="hole"/>`.
 
 #### 3.8. Cancellature, aggiunte, ripensamenti
-Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate **dati genetici primari**. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI: `<del>...</del>`, `<add place="margin">...</add>`, `<subst>...</subst>`.
+Le cancellature, le aggiunte marginali o interlineari e le riscritture autoriali sono considerate **dati genetici primari**. Nel testo editoriale esse sono rappresentate e distinte attraverso la codifica TEI: `<del>`, `<add>`, `<subst>` (collocati dentro l'apparato `<app>`) e, per il testo rivergato a inchiostro senza modifica di lezione, `<retrace hand="#ink_3-dark">`.
 
 #### 3.9. Glosse
-Il Libro III include fasi in cui l'autrice aggiunge chiarificazioni successive. In TEI: `<note type="glossa" subtype="corrigenda">`.
+Il Libro III include fasi in cui l'autrice aggiunge chiarificazioni successive (glosse prudenziali, mano T3 `#ink_3-dark`). In codifica sono rese come aggiunte d'autrice nell'apparato (`<rdg>` con `<add hand="#ink_3-dark">`) o, se si tratta di solo ripasso a inchiostro senza modifica di lezione, con `<retrace hand="#ink_3-dark">`; le note editoriali usano invece `<note type="material">` / `<note type="source">`.
 
 #### 3.10. Struttura TEI prevista
 La versione finale TEI comprenderà:
@@ -144,12 +144,12 @@ La versione finale TEI comprenderà:
  <teiHeader> … </teiHeader>
  <text>
    <body>
-      <div type="book" n="III">
-        <div type="chapter" n="I"> … </div>
-        <div type="chapter" n="II"> … </div>
-        <div type="chapter" n="III"> … </div>
-        <div type="chapter" n="IV"> … </div>
-       <div type="chapter" n="V"> … </div>
+      <div type="book" n="3">
+        <div type="chapter" n="1"> … </div>
+        <div type="chapter" n="2"> … </div>
+        <div type="chapter" n="3"> … </div>
+        <div type="chapter" n="4"> … </div>
+       <div type="chapter" n="5"> … </div>
       </div>
    </body>
  </text>
@@ -168,7 +168,8 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<head>` — nessun attributo
 - `<argument>` — nessun attributo
 - `<p>` — `@n`; `@xml:id`
-- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@xml:id` (es. `f158r`); `@facs` (es. `images/f158r.jpg`)
+- `<pb>` — `@n` (foliazione, es. `158r`/`158v`); `@xml:id` (es. `f158r`) — edizione facs-free: `@facs` è previsto dallo schema ma non usato in MC-1
+- `<lb>` — `@break` (`no` a metà parola)
 - `<fw>` — `@type` (`header`, `catch`, `sig`); `@place` (`top`, `bottom-right`, `bottom`)
 
 *Trascrizione a due livelli.* La coppia diplomatico ⇄ interpretativo è resa con `<choice>`, che affianca la lezione conservativa e la sua regolarizzazione senza sostituire l'una all'altra:
@@ -182,16 +183,17 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 - `<app>` — nessun attributo
 - `<lem>` — `@wit` (`#txt-c`, lezione costituita)
-- `<rdg>` — `@wit` (`#txt-b0`…); `@varSeq` (ordine cronologico delle varianti d'autrice, non gerarchico)
+- `<rdg>` — `@wit` (`#txt-b0`; in MC-1 sempre a lettura singola); `@varSeq` solo con ≥2 `<rdg>` concorrenti (ordine cronologico, non gerarchico; 0 casi in MC-1)
 - `<subst>` — contenitore di `<del>`+`<add>` per la sostituzione come evento unico
-- `<del>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`)
-- `<add>` — `@place` (`interlinear`, `margin`, `inline`); `@hand`; `@resp`; `@type` (`correction`, `substitution`, `integration`)
+- `<del>` — `@hand`; `@resp` (dentro `<app>`)
+- `<add>` — `@place` (`above`, `supralinear`, `margin-left`); `@hand`; `@resp` (dentro `<app>`)
+- `<retrace>` — `@hand` (`#ink_3-dark`); `@resp` — ripasso a inchiostro, testo invariato (fuori `<app>`)
 
 *Incertezze e guasti materiali.*
 
-- `<unclear>` — `@reason`; `@unit` (char, word, line)
-- `<gap>` — `@reason` (`illegible`, `hole`); `@unit`; `@quantity`
-- `<supplied>` — `@reason` (`hole`, `conjecture`); `@resp`
+- `<unclear>` — `@reason` (`abrasion`)
+- `<gap>` — `@reason` (`illegible`, `hole`)
+- `<supplied>` — `@reason` (`hole`); `@resp`
 
 **Layer 2 — mistico‑dottrinale**
 
@@ -213,12 +215,12 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 - `<idno>` — `@type` (`VIAF`) — autorità per persone e fonti dottrinali
 - `<listBibl>` — `@type` (`fontes`); `<bibl>` — `@xml:id`; `<title>` — `@level`; `<author>`
 - `<titlePage>` / `<docTitle>` / `<titlePart>` (`@type`) / `<docAuthor>` (`@resp`)
-- `<note>` — `@type` (`glossa`); `@subtype`; `@corresp`; `@hand`; `@place` (`margin`)
+- `<note>` — `@type` (`material`, `source`); `@corresp`
 
 
 #### 3.12. Giustificazione critica del tag set adottato
 
-**Struttura.** L'articolazione `<div type="book">` → `<div type="chapter">` riproduce la partizione originale dell'opera in tre libri, ciascuno diviso in capitoli numerati dall'autrice stessa; l'uso di `@n` accanto a `@type` permette di distinguere il livello gerarchico (libro vs. capitolo) dalla sua posizione numerica, requisito necessario per un'opera dove capitolo e libro condividono lo stesso schema di numerazione romana/araba. `<pb>` con `@n`, `@facs` e `@xml:id` ancora ogni carta sia alla foliazione originale sia all'immagine digitale corrispondente: nel caso di un autografo unico, questo è l'unico modo di garantire che ogni affermazione testuale sia verificabile contro il supporto materiale. `<fw>` registra le segnature a piè di pagina che nel manoscritto guidano la legatura dei fascicoli.
+**Struttura.** L'articolazione `<div type="book">` → `<div type="chapter">` riproduce la partizione originale dell'opera in tre libri, ciascuno diviso in capitoli numerati dall'autrice stessa; l'uso di `@n` accanto a `@type` permette di distinguere il livello gerarchico (libro vs. capitolo) dalla sua posizione numerica, requisito necessario per un'opera dove capitolo e libro condividono lo stesso schema di numerazione romana/araba. `<pb>` con `@n` e `@xml:id` ancora ogni carta alla foliazione originale: nel caso di un autografo unico, questo garantisce che ogni affermazione testuale sia verificabile contro il supporto materiale. L'edizione è facs-free (`@facs` è previsto dallo schema ma non usato: le riproduzioni digitali non sono incluse). `<fw>` registra le segnature a piè di pagina che nel manoscritto guidano la legatura dei fascicoli.
 
 **Front matter — witness e persone.** 
 
@@ -234,15 +236,15 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 `<term>` isola il lessico tecnico mistico dell'autrice (*silentio*, *scordanza*, *indifferenza*, *sposalitio*, *notte*, *purga*, *unione*, *quiete*) e — questa è la novità del commit 1 — lo àncora, tramite `@ref`, a una categoria del **vocabolario controllato degli stati** dichiarato nel `<classDecl>` del `teiHeader` (`#silentio`, `#unione`, `#notte`, `#contemplazione-infusa`…). L'aggancio sostituisce la vecchia classificazione via `@ana`: rende il lessico mistico interrogabile per *stato* con un solo puntatore verificabile a schema, senza importare l'apparato multiassiale a otto tassonomie. I termini di lessico non‑stato (etico, teologico, sicilianismi) restano `<term>` nudi.
 
-`<ref target="#avila-castello">`/`<ref target="#molinos-guida">` con `@type="intertext"` rendono esplicito, a livello di markup, un dato che nel testo resta implicito: il rapporto di dipendenza strutturale tra quest'opera e i suoi modelli, in particolare con Molinos, la cui *Guida spirituale* fu condannata nel 1687, un collegamento che ha peso interpretativo diretto sulla comprensione del rischio dottrinale corso dall'autrice.
+`<ref target="#avila-castello">`/`<ref target="#molinos-guida">` rendono esplicito, a livello di markup, un dato che nel testo resta implicito: il rapporto di dipendenza strutturale tra quest'opera e i suoi modelli, in particolare con Molinos, la cui *Guida spirituale* fu condannata nel 1687, un collegamento che ha peso interpretativo diretto sulla comprensione del rischio dottrinale corso dall'autrice.
 
-`<note type="glossa" subtype="corrigenda">` con `@hand` e `@place="margin"` distingue le glosse marginali con cui l'autrice, in un secondo momento, precisa o attenua un'affermazione già scritta, da qualunque altra nota di natura diversa, fenomeno materiale specifico e ricorrente nel Libro III, dove tali glosse costituiscono la principale traccia visibile della sua auto-censura dottrinale.
+Le **glosse prudenziali** con cui l'autrice, in un secondo momento, precisa o attenua un'affermazione già scritta sono un fenomeno materiale specifico e ricorrente nel Libro III, principale traccia visibile della sua auto-censura dottrinale. In codifica sono rese come aggiunte d'autrice nell'apparato (`<rdg>` con `<add hand="#ink_3-dark">`) oppure, se si tratta di solo ripasso a inchiostro senza modifica di lezione, con `<retrace hand="#ink_3-dark">`; le note editoriali di commento usano invece `<note type="material">`/`<note type="source">`.
 
-**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione dell'edizione critica, le lezioni alternative sono ancorate ai testimoni dichiarati in `<listWit>` tramite `@wit`. Le varianti d'autrice sono **ordinate cronologicamente** con `@varSeq` sul `<rdg>` e non gerarchizzate: `@varSeq` registra la successione delle stesure senza stabilire fra esse un rapporto di subordinazione, coerentemente con la natura genetica (e non stemmatica) dell'apparato. All'interno di ciascun `<rdg>`, `<del>` e `<add>` — con `@place` (`inline`/`margin`), `@hand`, `@resp` e `@type` (`correction`/`substitution`/`integration`), permettono di specificare non solo che una variante esiste, ma la sua natura materiale precisa: una cancellatura interlineare di mano dell'autrice non ha lo stesso peso filologico di un'aggiunta marginale di mano esterna, e il tag set core li rende entrambi tracciabili distintamente. `<subst>` è previsto per le sostituzioni che comportano insieme una cancellatura e un'aggiunta come evento unico, distinguendole dai casi in cui le due operazioni sono invece disgiunte nel tempo.
+**Apparato critico.** `<app>`/`<lem wit="#txt-c">`/`<rdg wit="#txt-b0">` costituiscono il nucleo dell'apparato genetico: il lemma riporta la lezione costituita dell'edizione, la lettura genetica è ancorata al testimone-base `#txt-b0` dichiarato in `<listWit>` tramite `@wit`. In MC-1 l'apparato è « currente calamo »: ogni `<app>` ha **una sola** `<rdg wit="#txt-b0">` che contiene, **al proprio interno**, `<del>`/`<add>`/`<subst>`; `@varSeq` è riservato ai soli casi in cui concorrono ≥2 `<rdg>` di campagne distinte (0 casi in MC-1) e registra la successione delle stesure senza subordinazione, coerentemente con la natura genetica (e non stemmatica) dell'apparato. `<del>` porta `@hand` e `@resp`; `<add>` porta `@place` (`above`/`supralinear`/`margin-left`), `@hand`, `@resp`: così una cancellatura di mano dell'autrice e un'aggiunta marginale restano tracciabili distintamente. `<subst>` rende le sostituzioni che comportano insieme cancellatura e aggiunta come evento unico; i blocchi marginali sono una `<rdg>` con `<add>` senza `<subst>`.
 
-`<unclear>`, `<gap reason="illegible">` e `<supplied reason="conjecture">` completano l'apparato per le porzioni di testo materialmente compromesse, coerenti con quanto dichiarato nella descrizione fisica del manoscritto, dove si segnalano abrasioni, scolorimenti e guasti meccanici marginali.
+`<unclear reason="abrasion">`, `<gap reason="illegible">` (o `reason="hole"`) e `<supplied reason="hole">` completano l'apparato per le porzioni di testo materialmente compromesse, coerenti con quanto dichiarato nella descrizione fisica del manoscritto, dove si segnalano abrasioni, scolorimenti e guasti meccanici marginali.
 
-**Citazioni.** `<cit type="bible">`/`<cit type="liturgy">` con `<quote xml:lang="la">` e `<foreign xml:lang="la">` isolano le citazioni bibliche e liturgiche che l'autrice inserisce come suggello di autorità nei punti dottrinalmente più esposti, un uso retorico specifico e ricorrente nella prefazione e nei capitoli codificati, dove ogni protesta di ortodossia è quasi sempre accompagnata da una citazione scritturale a sostegno.
+**Citazioni.** Il modello prevede `<cit>` con `<quote xml:lang="la">`, `<bibl>` e `<foreign xml:lang="la">` per isolare le citazioni bibliche e liturgiche che l'autrice inserisce come suggello di autorità nei punti dottrinalmente più esposti. Nei capp. I–V l'intertesto esplicito è però minimo (una sola forma latina, `<foreign>` «mirabilia magna»; un solo `<ref>` interno a `#msItem-II`): il meccanismo resta predisposto per i micro-commit successivi, dove le proteste di ortodossia sono accompagnate da citazioni scritturali.
 
 ### 4. Modellizzazione descrittiva dei capitoli (struttura interna)
 
@@ -267,20 +269,20 @@ I capitoli I–V mostrano:
 - **Autore:** Teresa di San Geronimo (Anna La Longa), 1670–post 1703
 - **Datazione:** 1692–1694 (Libro III)
 - **Manoscritto:** Palermo, Biblioteca Comunale, ms. 2 Qq E 29
-- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, modellata su **tre layer** (filologico‑grafico, mistico‑dottrinale, intertestuale) e **due livelli** di trascrizione via `<choice>`: apparato genetico `<app>`/`<lem>`/`<rdg>` con `@varSeq`, lessico mistico agganciato al vocabolario degli stati via `<term ref>`, intertesto via `<cit>`/`<quote>`/`<bibl>` e `<ref>`, autorità VIAF per persone e fonti dottrinali
+- **Descrizione:** Prima edizione critica digitale TEI dei capp. I–V, modellata su **tre layer** (filologico‑grafico, mistico‑dottrinale, intertestuale) e **due livelli** di trascrizione via `<choice>`: apparato genetico « currente calamo » `<app>`/`<lem>`/`<rdg>` (con `<del>`/`<add>`/`<subst>`/`<retrace>`), lessico mistico agganciato al vocabolario degli stati via `<term ref>`, intertesto via `<cit>`/`<quote>`/`<bibl>` e `<ref>`, autorità VIAF per persone e fonti dottrinali
 - **Parole chiave:** Castello dell'anima; mistica secentesca; contemplazione infusa; TEI; edizione critica digitale
 
 ### 7. Risultati attesi
 
 - Base critica per la marcatura TEI;
 - Definizione del blocco ascensionale del Libro III;
-- Preparazione del terreno per MC2 (capp. VI–VIII).
+- Preparazione del terreno per MC2 (capp. VI–X).
 
 ### 8. Roadmap
 
 - **MC1:** Capp. III.1–5 (avvio della contemplazione infusa: silentio e sonno spirituale).
 - **MC2:** Capp. III.6–10 (stabilizzazione: otio e annichilimento).
-- **MC3:** Capp. III.11–15 (matrice sponsale I: pace e indifferenza).
+- **MC3:** Capp. III.11–15 (matrice sponsale I: pace e quiete).
 - **MC4:** Capp. III.16–20 (matrice sponsale II: liquefazione e bacio mistico).
 - **MC5:** Capp. III.21–24 (purificazioni passive: aridità e "purghe").
 - **MC6:** Capp. III.25–29 (croce e trasformazione: conformazione al Crocifisso).
