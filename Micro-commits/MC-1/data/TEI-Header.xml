@@ -455,7 +455,7 @@
                                     quietismo, nuova mistica e indebita direzione di coscienze;
                                     venne condannata nell’autodafé del <date when="1703-06-04">4
                                         giugno 1703</date>. </note> Dal punto di vista dottrinale,
-                                l’opera si inserisce nella tradizione della <term xml:lang="la"
+                                l’opera si inserisce nella tradizione della <term xml:lang="lat"
                                     >theologia mystica</term>, con riferimenti espliciti a <persName
                                     ref="#p-avila" role="source">Santa Teresa d’Ávila</persName> e
                                     <persName ref="#p-john" role="source">San Juan de la
@@ -475,7 +475,7 @@
                                     italiano regionale siciliano,
                                 caratterizzato da forte interferenza dialettale, da sintassi
                                 semicolta e da lessico influenzato sia dalla tradizione devozionale
-                                sia dall’uso liturgico latino (<quote xml:lang="la">teologia
+                                sia dall’uso liturgico latino (<quote xml:lang="lat">teologia
                                     mistica</quote>; citazioni bibliche in latino). La tradizione
                                 diretta è limitata al solo testimone autografo conservato a Palermo,
                                 mentre gli atti inquisitoriali in italiano andarono distrutti
@@ -582,7 +582,8 @@
             <editorialDecl>
 
                 <p> Questo documento utilizza il sistema di codifica definito dalle linee guida
-                    della TEI P5. La trascrizione è semidiplomatica: conserva grafie, fenomeni
+                    della TEI P5. La trascrizione è diplomatico-conservativa, a due livelli
+                    (diplomatico ⇄ interpretativo): conserva grafie, fenomeni
                     materiali, aggiunte, cancellature e abbreviazioni presenti nel manoscritto, con
                     normalizzazione minima dichiarata tramite &lt;orig&gt;/&lt;reg&gt;,
                     &lt;abbr&gt;/&lt;expan&gt;, &lt;sic&gt;/&lt;corr&gt;, &lt;unclear&gt;,
@@ -638,6 +639,8 @@
                     <tagUsage gi="argument">Argomento/sommario introduttivo di capitolo.</tagUsage>
                     <tagUsage gi="p">Unità minima del discorso.</tagUsage>
                     <tagUsage gi="pb">Foliazione originale recto/verso.</tagUsage>
+                    <tagUsage gi="lb">Cambio di rigo del livello diplomatico (@break="no" a
+                        metà parola).</tagUsage>
                     <tagUsage gi="fw">Segnatura/richiamo a piè di pagina.</tagUsage>
 
                     <!-- FRONT MATTER -->
@@ -672,6 +675,9 @@
                     <tagUsage gi="add">Aggiunte interlineari/marginali.</tagUsage>
                     <tagUsage gi="del">Cancellature.</tagUsage>
                     <tagUsage gi="subst">Sostituzioni articolate (del+add come evento unico).</tagUsage>
+                    <tagUsage gi="retrace">Rivergatura: ripasso a inchiostro a testo invariato
+                        (mano #ink_3-dark, T3); elemento inline, fuori apparato, distinto da add e
+                        subst.</tagUsage>
                     <tagUsage gi="abbr">Abbreviazioni.</tagUsage>
                     <tagUsage gi="expan">Scioglimenti.</tagUsage>
                     <tagUsage gi="sic">Errori materiali.</tagUsage>
@@ -774,7 +780,7 @@
                     nell'uso di "h", alternanza "si/sì" e uso di "j" per il suono /i/. Contesto
                     sociolinguistico: Palermo, fine XVII secolo. Registro semicolto con influenze
                     del siciliano volgare e del latino ecclesiastico. </language>
-                <language ident="la" xml:id="la"> Latino liturgico e biblico (citazioni e formule
+                <language ident="lat" xml:id="lat"> Latino liturgico e biblico (citazioni e formule
                     dottrinali). </language>
 
             </langUsage>
