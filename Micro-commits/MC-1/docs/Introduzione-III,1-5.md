@@ -203,7 +203,7 @@ Il tag set minimo adottato per la codifica del testo (elemento `<text>`) compren
 
 - `<ref>` — `@target` (rimando interno, es. `#msItem-II`, o a una voce di `<listBibl>`, es. `#avila-castello`)
 - `<cit>` — contenitore di citazione (`<quote>`+`<bibl>`)
-- `<quote>` — `@xml:lang` (`la`) per le citazioni latine
+- `<quote>` — `@xml:lang` (`lat`) per le citazioni latine
 - `<bibl>` — riferimento alla fonte in `<listBibl>`; `<biblScope>` per capitolo/versetto (l'uso di `@cRef` è subordinato a un `refsDecl`: cfr. §3.12 e verifica TEI P5)
 - `<foreign>` — `@xml:lang`
 - `<sic>` / `<corr>` — impiegati anche per le citazioni tràdite con errore
@@ -244,7 +244,7 @@ Le **glosse prudenziali** con cui l'autrice, in un secondo momento, precisa o at
 
 `<unclear reason="abrasion">`, `<gap reason="illegible">` (o `reason="hole"`) e `<supplied reason="hole">` completano l'apparato per le porzioni di testo materialmente compromesse, coerenti con quanto dichiarato nella descrizione fisica del manoscritto, dove si segnalano abrasioni, scolorimenti e guasti meccanici marginali.
 
-**Citazioni.** Il modello prevede `<cit>` con `<quote xml:lang="la">`, `<bibl>` e `<foreign xml:lang="la">` per isolare le citazioni bibliche e liturgiche che l'autrice inserisce come suggello di autorità nei punti dottrinalmente più esposti. Nei capp. I–V l'intertesto esplicito è però minimo (una sola forma latina, `<foreign>` «mirabilia magna»; un solo `<ref>` interno a `#msItem-II`): il meccanismo resta predisposto per i micro-commit successivi, dove le proteste di ortodossia sono accompagnate da citazioni scritturali.
+**Citazioni.** Il modello prevede `<cit>` con `<quote xml:lang="lat">`, `<bibl>` e `<foreign xml:lang="lat">` per isolare le citazioni bibliche e liturgiche che l'autrice inserisce come suggello di autorità nei punti dottrinalmente più esposti. Nei capp. I–V l'intertesto esplicito è però minimo (una sola forma latina, `<foreign>` «mirabilia magna»; un solo `<ref>` interno a `#msItem-II`): il meccanismo resta predisposto per i micro-commit successivi, dove le proteste di ortodossia sono accompagnate da citazioni scritturali.
 
 ### 4. Modellizzazione descrittiva dei capitoli (struttura interna)
 
