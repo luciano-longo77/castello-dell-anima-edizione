@@ -145,11 +145,12 @@ La versione finale TEI comprenderà:
  <text>
    <body>
       <div type="book" n="3">
+        <div type="preface"> … </div>   <!-- proemio del III libro-->
         <div type="chapter" n="1"> … </div>
         <div type="chapter" n="2"> … </div>
         <div type="chapter" n="3"> … </div>
         <div type="chapter" n="4"> … </div>
-       <div type="chapter" n="5"> … </div>
+        <div type="chapter" n="5"> … </div>
       </div>
    </body>
  </text>
