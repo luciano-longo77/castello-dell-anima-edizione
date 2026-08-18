@@ -16,7 +16,7 @@ Nel pacchetto del micro‑commit i piani restano separati:
 | Cartella | Contenuto | Ruolo |
 |---|---|---|
 | `data/` | `TEI-Header.xml`, `castello-anima-text.xml`, `castello-anima-odd.odd`/`.rng` | **fonte autorevole** (TEI validato a schema) |
-| **`docs/`** | i tre documenti descritti qui sotto | **documentazione** (descrive, non normativa) |
+| **`docs/`** | i quattro documenti descritti qui sotto | **documentazione** (descrive, non normativa) |
 | `output/` · `tool/` | viewer e schema-carte HTML | **artefatti derivati** (visualizzazione) |
 
 In caso di divergenza fa fede il TEI conforme allo schema ODD in `data/`; questi documenti lo *descrivono*.
@@ -28,8 +28,9 @@ In caso di divergenza fa fede il TEI conforme allo schema ODD in `data/`; questi
 | [`Introduzione-III,1-5.md`](Introduzione-III,1-5.md) | **Presentazione del MC1.** Contesto storico‑spirituale e profilo dell'opera; analisi capitolo per capitolo (I–V); politiche editoriali (trascrizione diplomatico‑conservativa a due livelli); **tag set core** con giustificazione critica; metadati e roadmap MC1–MC8. |
 | [`Struttura-cartulazione.md`](Struttura-cartulazione.md) | **Autorità sulla cartulazione.** Fascia materiale **158r–168r**, struttura capitolare dettagliata, tabella topografica; **numerazione continua d'autrice §§1–72** e carte condivise ai confini di capitolo (162r fra II e III, 164v fra III e IV). |
 | [`Header-README.md`](Header-README.md) | **Guida al `teiHeader`.** Che cosa contiene e come è organizzato (`fileDesc`/`encodingDesc`/`profileDesc`/`revisionDesc`); tag set core, vocabolario controllato degli stati e fonti; validazione e schema. |
+| [`teiText-README.md`](teiText-README.md) | **Guida al `<text>`.** Come è codificato il testo trascritto (`castello-anima-text.xml`): struttura `div`/`head`/`argument`/`p`/`pb`/`lb`/`fw`, trascrizione a due livelli con `<choice>`, apparato genetico « currente calamo », `term/@ref` agli stati e intertesto; complementare di `Header-README.md`. |
 
-## Il modello in breve (comune ai tre documenti)
+## Il modello in breve (comune ai quattro documenti)
 
 - **Edizione leggera**: tre layer (filologico‑grafico, mistico‑dottrinale, intertestuale) su **due livelli** di trascrizione resi con `<choice>`; unità di riferimento il paragrafo `<p n="…">`, non il `<seg>`. Fuori scope l'annotazione interpretativa multiassiale (`seg/@ana`, indice d'impatto, standOff), che vive nel progetto gemello.
 - **Apparato genetico « currente calamo »**: `<lem wit="#txt-c">` e un'unica `<rdg wit="#txt-b0">` con `<del>`/`<add>`/`<subst>` **dentro** l'apparato; `@varSeq` solo quando concorrono ≥2 `<rdg>`. Le rivergature a inchiostro (mano T3 `#ink_3-dark`) sono rese con `<retrace>`, fuori apparato.
