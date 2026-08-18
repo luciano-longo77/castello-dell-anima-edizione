@@ -459,7 +459,7 @@
                                     quietismo, nuova mistica e indebita direzione di coscienze;
                                     venne condannata nell’autodafé del <date when="1703-06-04">4
                                         giugno 1703</date>. </note> Dal punto di vista dottrinale,
-                                l’opera si inserisce nella tradizione della <term xml:lang="la"
+                                l’opera si inserisce nella tradizione della <term xml:lang="lat"
                                     >theologia mystica</term>, con riferimenti espliciti a <persName
                                     ref="#p-avila" role="source">Santa Teresa d’Ávila</persName> e
                                     <persName ref="#p-john" role="source">San Juan de la
@@ -479,7 +479,7 @@
                                     italiano regionale siciliano,
                                 caratterizzato da forte interferenza dialettale, da sintassi
                                 semicolta e da lessico influenzato sia dalla tradizione devozionale
-                                sia dall’uso liturgico latino (<quote xml:lang="la">teologia
+                                sia dall’uso liturgico latino (<quote xml:lang="lat">teologia
                                     mistica</quote>; citazioni bibliche in latino). La tradizione
                                 diretta è limitata al solo testimone autografo conservato a Palermo,
                                 mentre gli atti inquisitoriali in italiano andarono distrutti
@@ -588,7 +588,8 @@
             <editorialDecl>
 
                 <p> Questo documento utilizza il sistema di codifica definito dalle linee guida
-                    della TEI P5. La trascrizione è semidiplomatica: conserva grafie, fenomeni
+                    della TEI P5. La trascrizione è diplomatico-conservativa, a due livelli
+                    (diplomatico ⇄ interpretativo): conserva grafie, fenomeni
                     materiali, aggiunte, cancellature e abbreviazioni presenti nel manoscritto, con
                     normalizzazione minima dichiarata tramite &lt;orig&gt;/&lt;reg&gt;,
                     &lt;abbr&gt;/&lt;expan&gt;, &lt;sic&gt;/&lt;corr&gt;, &lt;unclear&gt;,
@@ -654,6 +655,8 @@
                     <tagUsage gi="argument">Argomento/sommario introduttivo di capitolo.</tagUsage>
                     <tagUsage gi="p">Unità minima del discorso.</tagUsage>
                     <tagUsage gi="pb">Foliazione originale recto/verso.</tagUsage>
+                    <tagUsage gi="lb">Cambio di rigo del livello diplomatico (@break="no" a
+                        metà parola).</tagUsage>
                     <tagUsage gi="fw">Segnatura/richiamo a piè di pagina.</tagUsage>
 
                     <!-- FRONT MATTER -->
@@ -688,6 +691,9 @@
                     <tagUsage gi="add">Aggiunte interlineari/marginali.</tagUsage>
                     <tagUsage gi="del">Cancellature.</tagUsage>
                     <tagUsage gi="subst">Sostituzioni articolate (del+add come evento unico).</tagUsage>
+                    <tagUsage gi="retrace">Rivergatura: ripasso a inchiostro a testo invariato
+                        (mano #ink_3-dark, T3); elemento inline, fuori apparato, distinto da add e
+                        subst.</tagUsage>
                     <tagUsage gi="abbr">Abbreviazioni.</tagUsage>
                     <tagUsage gi="expan">Scioglimenti.</tagUsage>
                     <tagUsage gi="sic">Errori materiali.</tagUsage>
@@ -794,7 +800,7 @@
                     nell'uso di "h", alternanza "si/sì" e uso di "j" per il suono /i/. Contesto
                     sociolinguistico: Palermo, fine XVII secolo. Registro semicolto con influenze
                     del siciliano volgare e del latino ecclesiastico. </language>
-                <language ident="la" xml:id="la"> Latino liturgico e biblico (citazioni e formule
+                <language ident="lat" xml:id="lat"> Latino liturgico e biblico (citazioni e formule
                     dottrinali). </language>
 
             </langUsage>
@@ -1002,6 +1008,7 @@
         </profileDesc>
 
 <revisionDesc status="candidate">
+    <change when="2026-08-18" who="#editor" ana="#fase-modellazione">Rifinitura documentaria del teiHeader in chiusura di MC-1, a testo e schema invariati: integrazione in tagsDecl delle voci &lt;lb&gt; (cambio-riga del livello diplomatico, @break="no" a metà parola) e &lt;retrace&gt; (rivergatura a inchiostro a testo invariato, mano #ink_3-dark), già ammesse da ODD e schema; armonizzazione della resa della lingua latina in langUsage e nei &lt;term&gt;/&lt;quote&gt; interni («la» → «lat», coerente con l'unico &lt;foreign&gt; del testo); qualifica della trascrizione in editorialDecl riportata alla dicitura canonica dell'edizione («diplomatico-conservativa a due livelli»); allineamento del changelog dell'ODD. Nessuna modifica allo schemaSpec: lo schema RELAX NG di progetto resta invariato e valido (jing 0 errori, guardia dei puntatori, NFC).</change>
     <change when="2026-08-17" who="#editor" ana="#fase-apparato">Stabilizzazione del testo di MC-1 (proemio + capp. I-V): introduzione dell'elemento retrace per le 18 rivergature «inchiostro diverso» (mano T3, #ink_3-dark; ripasso a inchiostro di porzioni già scritte, a testo invariato, distinto da add e subst e fuori dall'apparato); adozione dell'apparato «currente calamo» (lem wit="#txt-c", rdg wit="#txt-b0"; @varSeq riservato ai soli casi di più letture concorrenti); normalizzazioni assestate (perché, diffirenze e termino lasciati piani); blocchi marginali resi entro app; edizione facs-free (pb senza @facs); validazione finale (jing 0 errori, guardia dei puntatori, NFC, foliazione 158r-168r).</change>
     <change when="2026-08-13" who="#editor" ana="#fase-modellazione">Riallineamento dei dati di MC-1 al modello leggero a 3 layer dell'edizione: sostituzione delle tassonomie analitiche con il vocabolario controllato degli stati mistici (taxonomy <ref target="#stati-mistici">stati-mistici</ref>), integrazione del testimone costituito <ref target="#txt-c">txt-c</ref> in listWit, rimozione del blocco indice-d'impatto, aggancio allo schema ODD di progetto (castello-anima-odd.rng).</change>
     <change when="2026-08-11" who="#editor" ana="#fase-revisione">Ristrutturazione del repository e allineamento della documentazione Markdown del micro-commit MC-1 (capp. I-V).</change>

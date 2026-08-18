@@ -38,6 +38,7 @@
             Schema</hi>, oppure <hi rend="italic">romajs</hi>/<hi rend="italic">oddc</hi>).</p>
       </encodingDesc>
       <revisionDesc status="draft">
+         <change when="2026-08-18" who="#editor">Allineamento documentario col <ref target="TEI-Header.xml">teiHeader</ref> in chiusura di MC-1: registrate ora in <gi>tagsDecl</gi> dell'header le voci <gi>lb</gi> e <gi>retrace</gi> (già descritte qui in §2–§3 e ammesse dallo schema) e armonizzata la resa della lingua latina («la» → «lat»). Lo <gi>schemaSpec</gi> non cambia: lo schema RELAX NG resta invariato e il testo continua a validare senza errori.</change>
          <change when="2026-08-17" who="#editor">Documentata in prosa la registrazione delle
             rivergature a inchiostro diverso con <gi>retrace</gi> (elemento inline del modulo
             <ident>transcr</ident>, mano #ink_3-dark, testo invariato, con <att>hand</att>/<att>resp</att>,
