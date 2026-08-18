@@ -150,7 +150,10 @@ I bersagli (`#bible-vulgate`, `#molinos-guida`, `#avila-castello`) sono dichiara
 ## Validazione
 
 ```bash
+# buona formazione
 xmllint --noout text-model.xml
+# validazione contro lo schema ODD di progetto (RELAX NG + Schematron)
+java -jar jing.jar ../../Micro-commits/MC-1/data/castello-anima-odd.rng text-model.xml
 ```
 
 ---
