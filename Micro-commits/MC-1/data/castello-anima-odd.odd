@@ -103,7 +103,7 @@
                   nomi e tratti biografici.</item>
                <label>transcr</label>
                <item>fenomeni della trascrizione documentaria: <gi>subst</gi>, <gi>supplied</gi>,
-                  <gi>fw</gi>, <gi>sourceDoc</gi>, attributo <att>facs</att>.</item>
+                  <gi>retrace</gi>, <gi>fw</gi>, <gi>sourceDoc</gi>, attributo <att>facs</att>.</item>
                <label>textcrit</label>
                <item>apparato critico: <gi>app</gi>, <gi>lem</gi>, <gi>rdg</gi>,
                   <gi>variantEncoding</gi>.</item>
@@ -151,7 +151,12 @@
                ignorato nella ricostruzione del livello interpretativo. <gi>seg</gi> resta ammesso
                perché usato nell'accezione standard dentro <gi>incipit</gi>/<gi>explicit</gi> del
                <gi>msDesc</gi>, non come unità di segmentazione interpretativa del testo;
-               <att>ana</att> resta ammesso perché usato solo su <gi>change</gi> (vincolo 2).</p>
+               <att>ana</att> resta ammesso perché usato solo su <gi>change</gi> (vincolo 2).
+               <gi>retrace</gi> (modulo <ident>transcr</ident>) è ammesso e riservato al ripasso a
+               inchiostro di porzioni già scritte, a <hi rend="italic">testo invariato</hi> (mano
+               #ink_3-dark, T3): elemento inline con <att>hand</att>/<att>resp</att>, distinto da
+               <gi>add</gi> (aggiunta genuina) e da <gi>subst</gi> (correzione di lettera), fuori
+               dall'apparato <gi>app</gi>.</p>
          </div>
 
          <div xml:id="vincoli">
