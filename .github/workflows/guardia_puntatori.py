@@ -7,8 +7,10 @@ verifica tre invarianti, che corrispondono ai vincoli Schematron dichiarati nell
 (jing non esegue lo Schematron incorporato, perciò li ricontrolliamo qui):
 
   1. Integrità referenziale: ogni puntatore '#…' in
-     @wit/@hand/@resp/@ref/@target/@corresp/@ana/@scribeRef/@sameAs
+     @wit/@hand/@resp/@ref/@target/@corresp/@ana/@scribeRef/@sameAs/@who/@select/@source
      risolve a un xml:id realmente dichiarato nel documento.
+     (Insieme = unione dei vincoli Schematron rule 1 dell'ODD — @who/@select/@source —
+      più @wit/@hand, propri dell'apparato genetico e non coperti dallo Schematron.)
   2. Layer 2: ogni term/@ref è una categoria del vocabolario #stati-mistici.
   3. revisionDesc: ogni change/@ana è una categoria della tassonomia di lavoro #fase.
 
@@ -22,7 +24,8 @@ from lxml import etree
 
 NS = "http://www.tei-c.org/ns/1.0"
 XMLID = "{http://www.w3.org/XML/1998/namespace}id"
-POINTER_ATTRS = ["wit", "hand", "resp", "ref", "target", "corresp", "ana", "scribeRef", "sameAs"]
+POINTER_ATTRS = ["wit", "hand", "resp", "ref", "target", "corresp", "ana", "scribeRef", "sameAs",
+                 "who", "select", "source"]
 
 TEXT = sys.argv[1] if len(sys.argv) > 1 else "Micro-commits/MC-1/data/castello-anima-text.xml"
 
