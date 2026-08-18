@@ -33,3 +33,13 @@ keywords:
   - "critica genetica"
   - "mistica secentesca"
   - "ms. 2 Qq E 29"
+references:
+  - type: book
+    title: "Il Castello dell'anima"
+    authors:
+      - family-names: Casapullo
+        given-names: Rosa
+    year: 2015
+    publisher:
+      name: "Edizioni dell'Orso"
+    notes: "Edizione a stampa di riferimento (Alessandria, 2015); L. Longo per il Libro III, S. Mondino per il Libro II, R. Sciovè per il Libro I."
