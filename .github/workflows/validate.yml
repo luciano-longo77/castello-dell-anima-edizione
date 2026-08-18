@@ -58,12 +58,16 @@ jobs:
           set -e
           # I modelli generici NON sono validati contro l'ODD di progetto (contengono
           # scheletri/placeholder): se ne verifica solo forma NFC e buona formazione XML.
+          # NFC con lo STESSO guardia_nfc.py usato per i dati (niente logica NFC duplicata).
+          for d in $(find tei-model -name '*.xml' -exec dirname {} \; | sort -u); do
+            python3 .github/workflows/guardia_nfc.py "$d"
+          done
+          # buona formazione per ogni modello
           n=0
           while IFS= read -r XML; do
             n=$((n+1))
             echo "::group::$XML"
-            python3 -c "import sys,unicodedata; s=open(sys.argv[1],encoding='utf-8').read(); ok=(s==unicodedata.normalize('NFC',s)); print(('NFC ok: ' if ok else '::error::non in forma NFC: ')+sys.argv[1]); sys.exit(0 if ok else 1)" "$XML"
             xmllint --noout "$XML"
             echo "::endgroup::"
           done < <(find tei-model -name '*.xml')
-          echo "Modelli tei-model verificati ($n file): NFC + ben formato."
+          echo "Modelli tei-model verificati ($n file): NFC (guardia_nfc.py) + ben formato."
