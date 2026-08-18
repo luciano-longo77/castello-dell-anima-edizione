@@ -149,7 +149,7 @@ Questo file descrive il **modello del `teiHeader`**: non il testo trascritto cap
 xmllint --noout teiHeader-model.xml
 
 # Validazione contro lo schema ODD di progetto (RELAX NG + Schematron)
-java -jar jing.jar castello-anima-odd.rng teiHeader-model.xml
+java -jar jing.jar ../../Micro-commits/MC-1/data/castello-anima-odd.rng teiHeader-model.xml
 ```
 
 ### Query esempio (XPath)
