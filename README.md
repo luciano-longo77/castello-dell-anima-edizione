@@ -1,7 +1,7 @@
 # Edizione Critica Digitale *Il Castello dell'anima* (Libro III)
 ## Introduzione
 
-[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b)
+[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b) [![Validate MC](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml)
 
 **Autrice**: Teresa di San Geronimo (Anna La Longa, 1670–post 1703)  
 **Editor**: Luciano Longo  
@@ -214,11 +214,22 @@ Le modifiche testuali sono classificate come:
 
 La posizione materiale delle modifiche è indicata tramite attributi di localizzazione e correlata alla foliazione originale.
 
-## Pubblicazione open access
-L’edizione è pubblicata in open access nei seguenti formati:
+## Pubblicazione open access, archiviazione e citazione
+L’edizione è pubblicata in **open access** nei seguenti formati:
 
 * XML/TEI (dati primari)
 * HTML (interfaccia di consultazione)
+
+**Archiviazione (Zenodo, DOI).** Ogni release a micro-commit (MC-1, MC-2, …) è archiviata su **Zenodo**, che le assegna un **DOI** citabile e versionato (un DOI per versione, più un *concept DOI* per l’insieme dell’opera). I metadati di citazione sono in [`CITATION.cff`](CITATION.cff) e [`.zenodo.json`](.zenodo.json).
+
+<!-- Dopo il primo deposito su Zenodo, sostituire ZENODO_ID col DOI reale e attivare il badge:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.ZENODO_ID.svg)](https://doi.org/10.5281/zenodo.ZENODO_ID) -->
+
+**Come citare (citazione consigliata):**
+
+> Longo, Luciano (a cura di), *Il Castello dell’anima, Libro III — Edizione critica digitale TEI (MC-1)*, 2026, CC BY 4.0. DOI: 10.5281/zenodo.ZENODO_ID.
+
+L’edizione digitale si fonda sull’autografo unico (Palermo, BCP, ms. 2 Qq E 29) e si affianca all’edizione a stampa di riferimento: R. Casapullo (a cura di), *Il Castello dell’anima*, Alessandria, Edizioni dell’Orso, 2015 (L. Longo per il Libro III).
 
 
 ## Workflow TEI
