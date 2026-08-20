@@ -24,6 +24,12 @@ Per ogni `Micro-commits/*/data/castello-anima-text.xml`, in sequenza:
    (perimetro = Schematron *rule 1* dell'ODD — `@who/@select/@source` — **più** `@wit/@hand`, propri
    dell'apparato genetico e non coperti dallo Schematron),
    `term/@ref` → categoria di `#stati-mistici`, `change/@ana` → categoria di `#fase`.
+5. **Guardia apparato** (`guardia_apparato.py`) — controlli *filologico-strutturali* del modello
+   genetico che né `jing` né la guardia puntatori coprono: ogni `<retrace>` con `@hand="#ink_3-dark"`,
+   `@resp="#s-teresa"` e fuori da `<app>`; `@varSeq` solo in un `<app>` con ≥2 `<rdg>`; ogni `<corr>`
+   con `@resp`; sequenza `<pb>/@n` = 158r…168r (21 facciate, monotòna, senza salti), coerente con
+   `docs/Struttura-cartulazione.md`. **Nota:** resta un controllo *strutturale*, non di correttezza
+   filologica (un `corr` opinabile ma ben formato passa comunque).
 
 > **Perché sul documento risolto.** Header e testo sono file separati uniti via XInclude: la
 > validazione (schema e puntatori) ha senso solo dopo la risoluzione dell'include, quando i
