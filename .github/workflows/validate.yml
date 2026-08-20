@@ -49,6 +49,8 @@ jobs:
             jing "$RNG" /tmp/resolved.xml
             # 4) guardia puntatori (integrità referenziale + term/@ref + change/@ana)
             python3 .github/workflows/guardia_puntatori.py "$TEXT"
+            # 5) guardia apparato (retrace @hand/@resp, @varSeq, corr@resp, cartulazione)
+            python3 .github/workflows/guardia_apparato.py "$TEXT"
             echo "::endgroup::"
           done
           test "$found" = 1 || { echo "::error::nessun Micro-commits/*/data/castello-anima-text.xml trovato"; exit 1; }
