@@ -12,7 +12,7 @@
                     <name type="secular">Anna La Longa</name>
                 </author>
                 <respStmt>
-                    <resp>Modellazione TEI, annotazione intertestuale</resp>
+                    <resp>Modellazione e annotazione TEI</resp>
                     <name ref="#editor">Luciano Longo</name>
                 </respStmt>
             </titleStmt>
@@ -543,13 +543,23 @@
                 </listBibl>
 
                 <listWit>
-                    <witness xml:id="txt-b0" resp="#s-teresa">Tb0, testo base</witness>
-                    <witness xml:id="txt-b1" resp="#s-teresa">Tb1, interventi immediati</witness>
-                    <witness xml:id="txt-1" resp="#s-teresa">T1, riscrittura su testo base</witness>
-                    <witness xml:id="txt-2" resp="#s-teresa">T2, interventi correttivi-glossativi</witness>
-                    <witness xml:id="txt-3" resp="#s-teresa">T3, interventi correttivi-glossativi successivi con medium diverso</witness>
-                    <witness xml:id="txt-4" resp="#esterno">T4, interventi glossativi esterni</witness>
-                    <witness xml:id="txt-c" resp="#editor">Tc, testo critico costituito (lemma dell’edizione)</witness>
+                    <head>La tradizione diretta è l'autografo unico: Tb0–T4 non sono testimoni di
+                        una tradizione plurima, ma <term>stati genetici</term> (campagne scrittorie)
+                        del medesimo documento; Tc è invece il testo critico <term>costituito
+                        dall'editore</term>, non un ulteriore stato materiale del manoscritto.</head>
+                    <listWit n="authorial-genetic">
+                        <head>Stati genetici dell'autografo (fenomeni materiali)</head>
+                        <witness xml:id="txt-b0" resp="#s-teresa">Tb0, testo base</witness>
+                        <witness xml:id="txt-b1" resp="#s-teresa">Tb1, interventi immediati</witness>
+                        <witness xml:id="txt-1" resp="#s-teresa">T1, riscrittura su testo base</witness>
+                        <witness xml:id="txt-2" resp="#s-teresa">T2, interventi correttivi-glossativi</witness>
+                        <witness xml:id="txt-3" resp="#s-teresa">T3, interventi correttivi-glossativi successivi con medium diverso</witness>
+                        <witness xml:id="txt-4" resp="#esterno">T4, interventi glossativi esterni</witness>
+                    </listWit>
+                    <listWit n="editorial">
+                        <head>Livello editoriale (costituzione del testo)</head>
+                        <witness xml:id="txt-c" resp="#editor">Tc, testo critico costituito dall'editore (lemma dell'edizione); non è uno stato materiale del manoscritto ma la lezione scelta come testo da leggere.</witness>
+                    </listWit>
                 </listWit>
             </sourceDesc>
         </fileDesc>
