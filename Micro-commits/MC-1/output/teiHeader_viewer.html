@@ -622,6 +622,15 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
 
                     <!-- EDIZIONI E STUDI SPECIFICI SULL'OPERA -->
                 </listBibl>
+                <listBibl type="studi">
+                    <head>Bibliografia critica di riferimento</head>
+                    <bibl><author>R. Casapullo</author>, <title level="a">Il Castello dell'anima di suor Teresa di San Geronimo</title>, in <title level="j">Studi di lessicografia italiana</title>, <biblScope unit="volume">XXII</biblScope> (<date>2004</date>), <biblScope unit="page">79–115</biblScope>.</bibl>
+                    <bibl><author>R. Casapullo</author> (a cura di), <title level="m">Il Castello dell'anima</title>, <pubPlace>Alessandria</pubPlace>, <publisher>Edizioni dell'Orso</publisher>, <date>2015</date> (in collaborazione con L. Longo, Libro III; S. Mondino, Libro II; R. Sciovè, Libro I).</bibl>
+                    <bibl><author>Romano Canosa</author>, <title level="m">Sessualità e Inquisizione in Italia tra Seicento e Settecento</title>, <pubPlace>Roma</pubPlace>, <publisher>Sapere 2000</publisher>, <date>1998</date>.</bibl>
+                    <bibl><author>R. Canosa</author>, <author>I. Colonnello</author>, <title level="m">L'ultima eresia</title>, <pubPlace>Palermo</pubPlace>, <publisher>Sellerio</publisher>, <date>1996</date>.</bibl>
+                    <bibl><author>M. Modica</author>, <title level="m">«L'infetta dottrina». Misticismo e Quietismo nella seconda metà del Seicento</title>, <pubPlace>Catania</pubPlace>, <publisher>Università di Catania, Dipartimento di Scienze Umane</publisher>, <date>2001</date>.</bibl>
+                    <bibl><author>E. Marchetti</author>, <title level="m">Le prime traduzioni italiane delle opere di Teresa di Gesù nel quadro dell'impegno papale post-tridentino</title>, <pubPlace>Bologna</pubPlace>, <publisher>Lo Scarabeo</publisher>, <date>2001</date>.</bibl>
+                </listBibl>
 
                 <listWit>
                     <head>La tradizione diretta è l'autografo unico: Tb0–T4 non sono testimoni di
@@ -1253,6 +1262,15 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
     let h='<table><thead><tr><th>xml:id</th><th>Autore</th><th>Titolo</th><th>Data</th></tr></thead><tbody>';
     bs.forEach(b=>{h+=`<tr id="${esc(attr(b,'xml:id'))}"><td class="id">${esc(attr(b,'xml:id'))}</td><td>${esc(txt(first(b,'author')))}</td><td class="serif">${esc(txt(first(b,'title')))}</td><td>${esc(txt(first(b,'date')))}</td></tr>`;});
     section('fonti','Fonti intertestuali',bs.length,h+'</tbody></table>','Bersagli di ref/@target e delle bibl nelle citazioni (layer 3).');
+  })();
+
+  /* 6b. BIBLIOGRAFIA CRITICA (listBibl type=studi) */
+  (function(){
+    const lb=all(fileDesc,'listBibl').find(x=>attr(x,'type')==='studi'); if(!lb)return;
+    const bs=all(lb,'bibl'); if(!bs.length)return;
+    const biblToHtml=b=>{let o='';for(const ch of b.childNodes){if(ch.nodeType===3)o+=esc(ch.nodeValue);else if(ch.nodeType===1){const t=esc(ch.textContent);o+=(ch.localName==='title')?`<em>${t}</em>`:t;}}return o.replace(/\s+/g,' ').trim();};
+    const h='<ol class="bibl-list">'+bs.map(b=>`<li class="serif">${biblToHtml(b)}</li>`).join('')+'</ol>';
+    section('studi','Bibliografia critica di riferimento',bs.length,h,'Studi ed edizioni sull’opera e sul contesto (non citati come fonti nel testo).');
   })();
 
   /* 7. CODIFICA: tag set + tassonomie */
