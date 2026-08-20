@@ -36,14 +36,14 @@ I livelli 1–2 sono **conservativi** (il dato non è mai soppresso); i livelli 
 | `orig` (in `choice`) | grafia originale | **dato documentario** | — |
 | `abbr` (in `choice`) | abbreviazione materiale | **dato documentario** | — |
 | `sic` (in `choice`) | lezione del testimone *così com'è* | **dato documentario** | — |
-| `add` · `del` · `subst` | aggiunta, cancellatura, sostituzione d'autrice | **fenomeno materiale** (osservazione) | `@hand` + `@resp` (`#s-teresa`/`#esterno`) |
+| `add` · `del` · `subst` | aggiunta, cancellatura, sostituzione d'autrice | **fenomeno materiale** (osservazione) | `@hand` + `@resp` su `add`/`del` (`#s-teresa`; `#esterno` riservato a mani non autoriali) |
 | `retrace` | rivergatura: ripasso a inchiostro, **testo invariato** | **fenomeno materiale** (osservazione) | `@hand="#ink_3-dark"` + `@resp="#s-teresa"` |
 | `gap` · `unclear` | guasto / illeggibilità | **dato materiale** (osservazione) | — |
-| `reg` (in `choice`) | regolarizzazione grafica | **normalizzazione editoriale** | `#editor` |
+| `reg` (in `choice`) | regolarizzazione grafica; o ricostruzione di lezione guasta | **normalizzazione editoriale** | `#editor` (+ `@cert` se congetturale) |
 | `expan` (in `choice`) | scioglimento di abbreviazione | **intervento editoriale** (espansione) | `#editor` |
 | `corr` (in `choice`) | correzione di errore materiale | **intervento editoriale** (*emendatio*) | `#editor` (+ `@cert`) |
 | `supplied` | integrazione di lacuna | **integrazione editoriale** | `#editor` (+ `@cert`) |
-| `lem` (`@wit="#txt-c"`) | lezione accolta | **costituzione dell'edizione** | `#editor` |
+| `lem` (`@wit="#txt-c"`) | lezione accolta | **costituzione dell'edizione** | `#editor` (indiretto, via `@wit="#txt-c"`) |
 | `term` (`@ref`) | aggancio a uno stato mistico | **annotazione interpretativa** | progetto |
 | `ref` · `cit` · `quote` · `bibl` | rimando a fonte | **annotazione intertestuale** | progetto |
 
