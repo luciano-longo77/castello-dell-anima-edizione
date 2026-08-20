@@ -93,7 +93,7 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
                     <name type="secular">Anna La Longa</name>
                 </author>
                 <respStmt>
-                    <resp>Modellazione TEI, annotazione intertestuale</resp>
+                    <resp>Modellazione e annotazione TEI</resp>
                     <name ref="#editor">Luciano Longo</name>
                 </respStmt>
             </titleStmt>
@@ -624,13 +624,23 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
                 </listBibl>
 
                 <listWit>
-                    <witness xml:id="txt-b0" resp="#s-teresa">Tb0, testo base</witness>
-                    <witness xml:id="txt-b1" resp="#s-teresa">Tb1, interventi immediati</witness>
-                    <witness xml:id="txt-1" resp="#s-teresa">T1, riscrittura su testo base</witness>
-                    <witness xml:id="txt-2" resp="#s-teresa">T2, interventi correttivi-glossativi</witness>
-                    <witness xml:id="txt-3" resp="#s-teresa">T3, interventi correttivi-glossativi successivi con medium diverso</witness>
-                    <witness xml:id="txt-4" resp="#esterno">T4, interventi glossativi esterni</witness>
-                    <witness xml:id="txt-c" resp="#editor">Tc, testo critico costituito (lemma dell’edizione)</witness>
+                    <head>La tradizione diretta è l'autografo unico: Tb0–T4 non sono testimoni di
+                        una tradizione plurima, ma <term>stati genetici</term> (campagne scrittorie)
+                        del medesimo documento; Tc è invece il testo critico <term>costituito
+                        dall'editore</term>, non un ulteriore stato materiale del manoscritto.</head>
+                    <listWit n="authorial-genetic">
+                        <head>Stati genetici dell'autografo (fenomeni materiali)</head>
+                        <witness xml:id="txt-b0" resp="#s-teresa">Tb0, testo base</witness>
+                        <witness xml:id="txt-b1" resp="#s-teresa">Tb1, interventi immediati</witness>
+                        <witness xml:id="txt-1" resp="#s-teresa">T1, riscrittura su testo base</witness>
+                        <witness xml:id="txt-2" resp="#s-teresa">T2, interventi correttivi-glossativi</witness>
+                        <witness xml:id="txt-3" resp="#s-teresa">T3, interventi correttivi-glossativi successivi con medium diverso</witness>
+                        <witness xml:id="txt-4" resp="#esterno">T4, interventi glossativi esterni</witness>
+                    </listWit>
+                    <listWit n="editorial">
+                        <head>Livello editoriale (costituzione del testo)</head>
+                        <witness xml:id="txt-c" resp="#editor">Tc, testo critico costituito dall'editore (lemma dell'edizione); non è uno stato materiale del manoscritto ma la lezione scelta come testo da leggere.</witness>
+                    </listWit>
                 </listWit>
             </sourceDesc>
         </fileDesc>
@@ -663,7 +673,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
             <editorialDecl>
 
                 <p> Questo documento utilizza il sistema di codifica definito dalle linee guida
-                    della TEI P5. La trascrizione è diplomatico-conservativa, a due livelli (diplomatico ⇄ interpretativo): conserva grafie, fenomeni
+                    della TEI P5. La trascrizione è diplomatico-conservativa, a due livelli
+                    (diplomatico ⇄ interpretativo): conserva grafie, fenomeni
                     materiali, aggiunte, cancellature e abbreviazioni presenti nel manoscritto, con
                     normalizzazione minima dichiarata tramite &lt;orig&gt;/&lt;reg&gt;,
                     &lt;abbr&gt;/&lt;expan&gt;, &lt;sic&gt;/&lt;corr&gt;, &lt;unclear&gt;,
@@ -719,7 +730,8 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
                     <tagUsage gi="argument">Argomento/sommario introduttivo di capitolo.</tagUsage>
                     <tagUsage gi="p">Unità minima del discorso.</tagUsage>
                     <tagUsage gi="pb">Foliazione originale recto/verso.</tagUsage>
-                    <tagUsage gi="lb">Cambio di rigo del livello diplomatico (@break="no" a metà parola).</tagUsage>
+                    <tagUsage gi="lb">Cambio di rigo del livello diplomatico (@break="no" a
+                        metà parola).</tagUsage>
                     <tagUsage gi="fw">Segnatura/richiamo a piè di pagina.</tagUsage>
 
                     <!-- FRONT MATTER -->
@@ -754,7 +766,9 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
                     <tagUsage gi="add">Aggiunte interlineari/marginali.</tagUsage>
                     <tagUsage gi="del">Cancellature.</tagUsage>
                     <tagUsage gi="subst">Sostituzioni articolate (del+add come evento unico).</tagUsage>
-                    <tagUsage gi="retrace">Rivergatura: ripasso a inchiostro a testo invariato (mano #ink_3-dark, T3); elemento inline, fuori apparato, distinto da add e subst.</tagUsage>
+                    <tagUsage gi="retrace">Rivergatura: ripasso a inchiostro a testo invariato
+                        (mano #ink_3-dark, T3); elemento inline, fuori apparato, distinto da add e
+                        subst.</tagUsage>
                     <tagUsage gi="abbr">Abbreviazioni.</tagUsage>
                     <tagUsage gi="expan">Scioglimenti.</tagUsage>
                     <tagUsage gi="sic">Errori materiali.</tagUsage>
@@ -1210,12 +1224,26 @@ mark{background:var(--accent);color:#fff;padding:0 2px;border-radius:2px}
     section('mani','Mani scriventi',hands.length,h+'</tbody></table>');
   })();
 
-  /* 5. TESTIMONI (listWit) */
+  /* 5. TESTIMONI (listWit) — due gruppi: stati genetici dell'autografo vs livello editoriale */
   (function(){
     const w=all(fileDesc,'witness'); if(!w.length)return;
-    let h='<table><thead><tr><th>xml:id</th><th>@resp</th><th>Descrizione</th></tr></thead><tbody>';
-    w.forEach(x=>{h+=`<tr id="${esc(attr(x,'xml:id'))}"><td class="id">${esc(attr(x,'xml:id'))}</td><td class="mono">${esc(attr(x,'resp')||'')}</td><td class="serif">${esc(txt(x))}</td></tr>`;});
-    section('testimoni','Testimoni genetici',w.length,h+'</tbody></table>','Sei strati genetici (Tb0–T4) + testo critico costituito (Tc).');
+    const row=x=>`<tr id="${esc(attr(x,'xml:id'))}"><td class="id">${esc(attr(x,'xml:id'))}</td><td class="mono">${esc(attr(x,'resp')||'')}</td><td class="serif">${esc(txt(x))}</td></tr>`;
+    const table=wits=>'<table><thead><tr><th>xml:id</th><th>@resp</th><th>Descrizione</th></tr></thead><tbody>'+wits.map(row).join('')+'</tbody></table>';
+    let body;
+    try{
+      const lws=all(fileDesc,'listWit');
+      const groups=lws.filter(x=>attr(x,'n'));
+      const outer=lws.find(x=>!attr(x,'n'));
+      const intro=(outer&&first(outer,'head'))?`<p class="hint">${esc(txt(first(outer,'head')))}</p>`:'';
+      if(groups.length){
+        body=intro+groups.map(g=>{
+          const head=first(g,'head');
+          const wits=Array.from(g.children).filter(c=>c.localName==='witness');
+          return `<h3 class="subh">${esc(head?txt(head):attr(g,'n'))}</h3>`+table(wits);
+        }).join('');
+      } else { body=table(w); }
+    }catch(e){ body=table(w); }
+    section('testimoni','Testimoni genetici',w.length,body,'Stati genetici dell’autografo (Tb0–T4) e testo critico costituito (Tc), distinti nei due gruppi dichiarati in listWit.');
   })();
 
   /* 6. FONTI (listBibl type=fontes) */
