@@ -70,6 +70,11 @@ Il micro‑commit comprende integralmente le carte:
 * **Paragrafi:** §§ 56–72 (17 paragrafi)
 
 ---
+## 📖 Leggi l'edizione (MC-1)
+
+- **[Testo dell'edizione](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-lettura.html)** — lettura a fronte (diplomatico ⇄ interpretativo), apparato genetico, stati mistici, ricerca.
+- **[Descrizione dell'edizione (teiHeader)](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-teiHeader.html)** — metadati completi del `teiHeader`.
+---
 
 ## 4. Tabella topografica completa
 
