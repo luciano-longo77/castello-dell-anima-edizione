@@ -98,6 +98,8 @@ Un `<term ref="#unione">unione</term>` nel testo risolve così a una categoria d
 
 Accanto al vocabolario, il `<listBibl type="fontes">` dichiara le **fonti** richiamate dall'intertesto — la Vulgata (`#bible-vulgate`), la *Guida spirituale* di Molinos (`#molinos-guida`), il *Castello interiore* di Ávila (`#avila-castello`) — bersagli dei rimandi `<ref target="…">` e delle `<bibl>` interne alle citazioni `<cit>`.
 
+Il `teiHeader` dichiara inoltre un `<listBibl type="studi">` con la **bibliografia critica di riferimento** dell'edizione, distinta dalle fonti dottrinali: R. Casapullo, «Il Castello dell'anima di suor Teresa di San Geronimo», in *Studi di lessicografia italiana*, XXII (2004), pp. 79–115; R. Casapullo (a cura di), *Il Castello dell'anima*, Alessandria, Edizioni dell'Orso, 2015 (edizione a stampa di riferimento); R. Canosa, *Sessualità e Inquisizione in Italia tra Seicento e Settecento*, Roma, Sapere 2000, 1998; R. Canosa, I. Colonnello, *L'ultima eresia*, Palermo, Sellerio, 1996; M. Modica, *«L'infetta dottrina». Misticismo e Quietismo nella seconda metà del Seicento*, Catania, Università di Catania, 2001; E. Marchetti, *Le prime traduzioni italiane delle opere di Teresa di Gesù nel quadro dell'impegno papale post-tridentino*, Bologna, Lo Scarabeo, 2001.
+
 Resta distinta da tutto ciò la tassonomia di lavoro `fase`, che non descrive il testo ma il **lavoro editoriale**: è il vocabolario controllato con cui `revisionDesc` traccia la cronologia degli interventi.
 
 ## Validazione e schema
