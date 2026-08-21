@@ -16,7 +16,7 @@ Nel pacchetto del micro‑commit i piani restano separati:
 | Cartella | Contenuto | Ruolo |
 |---|---|---|
 | `data/` | `TEI-Header.xml`, `castello-anima-text.xml`, `castello-anima-odd.odd`/`.rng` | **fonte autorevole** (TEI validato a schema) |
-| **`docs/`** | i cinque documenti descritti qui sotto | **documentazione** (descrive, non normativa) |
+| **`docs/`** | i sei documenti descritti qui sotto | **documentazione** (descrive, non normativa) |
 | `output/` · `tool/` | viewer e schema-carte HTML | **artefatti derivati** (visualizzazione) |
 
 In caso di divergenza fa fede il TEI conforme allo schema ODD in `data/`; questi documenti lo *descrivono*.
@@ -30,8 +30,9 @@ In caso di divergenza fa fede il TEI conforme allo schema ODD in `data/`; questi
 | [`Header-README.md`](Header-README.md) | **Guida al `teiHeader`.** Che cosa contiene e come è organizzato (`fileDesc`/`encodingDesc`/`profileDesc`/`revisionDesc`); tag set core, vocabolario controllato degli stati e fonti; validazione e schema. |
 | [`teiText-README.md`](teiText-README.md) | **Guida al `<text>`.** Come è codificato il testo trascritto (`castello-anima-text.xml`): struttura `div`/`head`/`argument`/`p`/`pb`/`lb`/`fw`, trascrizione a due livelli con `<choice>`, apparato genetico « currente calamo », `term/@ref` agli stati e intertesto; complementare di `Header-README.md`. |
 | [`Autorita-editoriali.md`](Autorita-editoriali.md) | **Mappa delle autorità editoriali.** Lo *statuto* di ogni marcatura — dato materiale / trascrizione / interpretazione / costituzione / annotazione; i cinque livelli di autorità; il prospetto elemento→statuto→`@resp`; stati genetici ≠ testimoni e Tc = costituzione editoriale; validazione tecnica ≠ filologica. |
+| [`Decisioni-editoriali.md`](Decisioni-editoriali.md) | **Registro delle decisioni editoriali** (*Editorial Decision Log*). Le scelte sostanziali del MC1 con motivazione, luogo (§) e riscontro esterno: correzioni di refusi `orig`/`reg`, membri vuoti risolti, ricostruzione di §64 con `@cert`, attribuzione dei 25 `supplied`, espunzioni `sic`/`corr`, `listWit` a due gruppi, bibliografia critica. |
 
-## Il modello in breve (comune ai cinque documenti)
+## Il modello in breve (comune ai sei documenti)
 
 - **Edizione leggera**: tre layer (filologico‑grafico, mistico‑dottrinale, intertestuale) su **due livelli** di trascrizione resi con `<choice>`; unità di riferimento il paragrafo `<p n="…">`, non il `<seg>`. Fuori scope l'annotazione interpretativa multiassiale (`seg/@ana`, indice d'impatto, standOff), che vive nel progetto gemello.
 - **Apparato genetico « currente calamo »**: `<lem wit="#txt-c">` e un'unica `<rdg wit="#txt-b0">` con `<del>`/`<add>`/`<subst>` **dentro** l'apparato; `@varSeq` solo quando concorrono ≥2 `<rdg>`. Le rivergature a inchiostro (mano T3 `#ink_3-dark`) sono rese con `<retrace>`, fuori apparato.
