@@ -34,6 +34,16 @@ keywords:
   - "mistica secentesca"
   - "ms. 2 Qq E 29"
 references:
+  - type: article
+    title: "Il Castello dell'anima di suor Teresa di San Geronimo"
+    authors:
+      - family-names: Casapullo
+        given-names: Rosa
+    journal: "Studi di lessicografia italiana"
+    year: 2004
+    start: 79
+    end: 115
+    notes: "vol. XXII"
   - type: book
     title: "Il Castello dell'anima"
     authors:
@@ -43,3 +53,41 @@ references:
     publisher:
       name: "Edizioni dell'Orso"
     notes: "Edizione a stampa di riferimento (Alessandria, 2015); L. Longo per il Libro III, S. Mondino per il Libro II, R. Sciovè per il Libro I."
+  - type: book
+    title: "Sessualità e Inquisizione in Italia tra Seicento e Settecento"
+    authors:
+      - family-names: Canosa
+        given-names: Romano
+    year: 1998
+    publisher:
+      name: "Sapere 2000"
+    notes: "Roma"
+  - type: book
+    title: "L'ultima eresia"
+    authors:
+      - family-names: Canosa
+        given-names: Romano
+      - family-names: Colonnello
+        given-names: I.
+    year: 1996
+    publisher:
+      name: "Sellerio"
+    notes: "Palermo"
+  - type: book
+    title: "«L'infetta dottrina». Misticismo e Quietismo nella seconda metà del Seicento"
+    authors:
+      - family-names: Modica
+        given-names: M.
+    year: 2001
+    publisher:
+      name: "Università di Catania, Dipartimento di Scienze Umane"
+    notes: "Catania"
+  - type: book
+    title: "Le prime traduzioni italiane delle opere di Teresa di Gesù nel quadro dell'impegno papale post-tridentino"
+    authors:
+      - family-names: Marchetti
+        given-names: E.
+    year: 2001
+    publisher:
+      name: "Lo Scarabeo"
+    notes: "Bologna"
