@@ -7,11 +7,6 @@
 **Editor**: Luciano Longo  
 **Licenza**: CC BY 4.0 
 
-## 📖 Leggi l'edizione (MC-1)
-
-- **[Testo dell'edizione](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-lettura.html)** — lettura a fronte (diplomatico ⇄ interpretativo), apparato genetico, stati mistici, ricerca.
-- **[Descrizione dell'edizione (teiHeader)](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-teiHeader.html)** — metadati completi del `teiHeader`.
-
 ## Indice
 
 - [Obiettivo principale](#obiettivo-principale)
@@ -277,6 +272,13 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
         ├── output/               #     prototipi di visualizzazione (viewer, cartulazione)
         └── tool/                 #     viewer-stati-mistici.html (ricerca degli stati mistici)
 ```
+
+## 📖 Leggi l'edizione (MC-1)
+
+- **[Testo dell'edizione](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-lettura.html)** — lettura a fronte (diplomatico ⇄ interpretativo), apparato genetico, stati mistici, ricerca.
+- **[Descrizione dell'edizione (teiHeader)](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-teiHeader.html)** — metadati completi del `teiHeader`.
+
+---
 
 ## Licenza
 Creative Commons Attribution 4.0 International (**CC BY 4.0**).  
