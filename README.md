@@ -254,10 +254,17 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 ```text
 .
 ├── README.md                     # Questo documento: edizione critica + guida al repository
+├── LICENSE                       # Creative Commons Attribution 4.0 (CC BY 4.0)
+├── CITATION.cff                  # Metadati di citazione (autore, ORCID, versione)
+├── .zenodo.json                  # Metadati per il deposito Zenodo (DOI)
+├── .nojekyll                     # Pubblicazione via GitHub Pages senza Jekyll
+├── scripts/                      # Utilità del repository
+│   └── validate.sh               #   validazione + regressione in un comando (CI in locale)
 ├── .github/workflows/            # CI di validazione del modello leggero
-│   ├── validate.yml              #   NFC → XInclude → jing → guardia puntatori
+│   ├── validate.yml              #   NFC → XInclude → jing → guardie → regressione → artefatti
 │   ├── guardia_nfc.py
 │   ├── guardia_puntatori.py
+│   ├── guardia_apparato.py
 │   └── README.md
 ├── tei-model/                    # Modelli TEI generici dell'edizione (3 layer, 2 livelli)
 │   ├── README.md                 #   modello a 3 layer + diagramma d'insieme
@@ -267,9 +274,11 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
     ├── README.md                 #   piano editoriale e roadmap
     └── MC-1/                     #   Commit 1 — Libro III, capp. I–V
         ├── README.md             #     introduzione sintetica e cartulazione del MC
-        ├── data/                 #     TEI-Header.xml, castello-anima-text.xml, ODD/RNG
-        ├── docs/                 #     Introduzione, Struttura-cartulazione, Header-README
-        ├── output/               #     prototipi di visualizzazione (viewer, cartulazione)
+        ├── data/                 #     fonte autorevole: TEI-Header.xml, castello-anima-text.xml, ODD/RNG
+        │   └── release/          #       master risolto (XInclude), XSLT di pubblicazione, checksum
+        ├── docs/                 #     documentazione critica (introduzione, cartulazione, autorità e decisioni editoriali)
+        ├── tests/                #     suite di regressione (gli input errati devono essere respinti)
+        ├── output/               #     prototipi di visualizzazione (lettura, teiHeader, cartulazione)
         └── tool/                 #     viewer-stati-mistici.html (ricerca degli stati mistici)
 ```
 
