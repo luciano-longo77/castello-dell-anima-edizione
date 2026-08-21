@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-# =====================================================================
-# validate.sh — validazione locale completa dell'edizione (un comando).
-# Esegue gli stessi controlli della CI + la suite di regressione, e
-# stampa le versioni degli strumenti (riproducibilità).
-#
-# Uso:   ./validate.sh [DIR_MC]        (default: Micro-commits/MC-1)
-# Richiede: python3 + lxml, xmllint (libxml2-utils), jing.
-# =====================================================================
 set -euo pipefail
+
+# Radice del repo dedotta dalla posizione dello script (scripts/ -> ..):
+# così i percorsi restano corretti da qualunque cwd.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$ROOT"
 
 MC="${1:-Micro-commits/MC-1}"
 DATA="$MC/data"
