@@ -35,6 +35,7 @@
 
         <nav class="chapnav" aria-label="Capitoli">
           <a href="#scheda" class="nav-sch">Scheda ▾</a>
+          <a href="castello-anima-teiHeader.html" class="nav-hdr">🗂 teiHeader ↗</a>
           <xsl:for-each select="//tei:body//tei:div[@type='preface' or @type='chapter']">
             <a href="#{generate-id()}"><xsl:value-of select="normalize-space(tei:head)"/></a>
           </xsl:for-each>
