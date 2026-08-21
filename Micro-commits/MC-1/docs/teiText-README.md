@@ -69,7 +69,7 @@ In MC‑1 il `<body>` contiene **solo il Libro III** (i Libri I–II non sono tr
 ## Layer 1 — filologico-grafico
 
 ### Trascrizione a due livelli (`<choice>`)
-La lezione diplomatica e la sua regolarizzazione coesistono, senza che l’una sostituisca l’altra (in MC‑1 se ne contano ~682 coppie: ~593 `orig`/`reg`, 30 `abbr`/`expan`, 59 `sic`/`corr`):
+La lezione diplomatica e la sua regolarizzazione coesistono, senza che l’una sostituisca l’altra (in MC‑1 se ne contano 670 coppie: 581 `orig`/`reg`, 30 `abbr`/`expan`, 59 `sic`/`corr`):
 
 ```xml
 <choice>
