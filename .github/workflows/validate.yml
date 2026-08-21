@@ -7,12 +7,14 @@ on:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
+      - "Micro-commits/**/tests/**"
       - "tei-model/**"
       - ".github/workflows/**"
   pull_request:
     branches: [main]
     paths:
       - "Micro-commits/**/data/**"
+      - "Micro-commits/**/tests/**"
       - "tei-model/**"
       - ".github/workflows/**"
   workflow_dispatch:
@@ -55,6 +57,15 @@ jobs:
           done
           test "$found" = 1 || { echo "::error::nessun Micro-commits/*/data/castello-anima-text.xml trovato"; exit 1; }
           echo "Validazione completata."
+      - name: Regressione (gli input errati devono essere respinti)
+        run: |
+          set -e
+          shopt -s nullglob
+          for T in Micro-commits/*/tests/run_regression.py; do
+            echo "::group::regressione $T"
+            python3 "$T"
+            echo "::endgroup::"
+          done
       - name: Verifica i modelli generici (tei-model, sola forma)
         run: |
           set -e
@@ -73,3 +84,19 @@ jobs:
             echo "::endgroup::"
           done < <(find tei-model -name '*.xml')
           echo "Modelli tei-model verificati ($n file): NFC (guardia_nfc.py) + ben formato."
+      - name: Report ambiente + artifact di validazione
+        if: always()
+        run: |
+          mkdir -p _validation
+          {
+            python3 --version
+            python3 -c "import lxml.etree as e; print('lxml', e.__version__, '| libxml2', '.'.join(map(str,e.LIBXML_VERSION)), '| libxslt', '.'.join(map(str,e.LIBXSLT_VERSION)))"
+            xmllint --version 2>&1 | head -1
+          } > _validation/versions.txt || true
+          cp -f /tmp/resolved.xml _validation/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-report
+          path: _validation/
+          if-no-files-found: ignore
