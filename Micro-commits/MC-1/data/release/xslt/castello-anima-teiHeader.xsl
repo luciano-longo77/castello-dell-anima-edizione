@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ===================================================================
-     castello-anima-teiHeader.xsl  —  XSLT 1.0
-     Master risolto TEI del MC-1  ->  pagina HTML del teiHeader COMPLETO,
-     strutturata ad accordion con indice laterale (esclusa la cronologia
-     redazionale revisionDesc). Pagina autonoma, collegata alla pagina del
-     testo (castello-anima-lettura.html).
-
-     Uso:  xsltproc castello-anima-teiHeader.xsl castello-anima-MC1-completed.xml > castello-anima-teiHeader.html
-     Fonte autorevole = i dati in ../data/. File di sola presentazione.
-     =================================================================== -->
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
