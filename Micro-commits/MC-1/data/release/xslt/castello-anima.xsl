@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ===================================================================
-     castello-anima.xsl  —  XSLT 1.0
-     Master risolto TEI (teiHeader + text) del MC-1  ->  pagina HTML di
-     lettura autoconsistente (CSS + JS inclusi, theme-aware).
-
-     · Scheda dell'edizione (metadati del teiHeader) in testa, collassabile.
-     · Tre viste: Interpretativo (default) · A fronte · Diplomatico.
-     · Apparato genetico come MARCATORE in-testo (numero in apice sul lemma):
-       al clic un popover «Testo (Tc) … / Stato genetico (Tb0) …».
-     · Interventi editoriali (sic/corr, abbr/expan) evidenziati e spiegati al clic.
-     · Stati mistici (term/@ref) con popover-definizione (dal catDesc) e legenda.
-     · Note materiali come richiami cliccabili (popover), non blocco a fondo pagina.
-
-     Uso:  xsltproc castello-anima.xsl castello-anima-MC1-completed.xml > out.html
-     Fonte autorevole = i dati in ../data/. File di sola presentazione.
-     =================================================================== -->
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
