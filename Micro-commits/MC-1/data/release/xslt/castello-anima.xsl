@@ -36,6 +36,7 @@
         <nav class="chapnav" aria-label="Capitoli">
           <a href="#scheda" class="nav-sch">Scheda ▾</a>
           <a href="castello-anima-teiHeader.html" class="nav-hdr">🗂 teiHeader ↗</a>
+          <a href="../../../vocab/" class="nav-hdr">🔖 Vocabolario ↗</a>
           <xsl:for-each select="//tei:body//tei:div[@type='preface' or @type='chapter']">
             <a href="#{generate-id()}"><xsl:value-of select="normalize-space(tei:head)"/></a>
           </xsl:for-each>
@@ -234,7 +235,7 @@
 
   <xsl:template match="tei:div[@type='book']">
     <div class="book">
-      <p class="incipit"><xsl:value-of select="normalize-space(tei:head)"/></p>
+      <p class="incipit"><xsl:apply-templates select="tei:head/node()" mode="inc"/></p>
       <xsl:apply-templates select="*[not(self::tei:head)]"/>
     </div>
   </xsl:template>
@@ -308,6 +309,14 @@
   <xsl:template match="tei:lb|tei:pb|tei:fw|tei:note" mode="plain"/>
   <xsl:template match="tei:term" mode="plain"><xsl:apply-templates mode="plain"/></xsl:template>
   <xsl:template match="text()" mode="plain"><xsl:value-of select="."/></xsl:template>
+
+  <!-- modalità "incipit": testo interpretativo con spazi corretti dai cambi-riga -->
+  <xsl:template match="tei:choice" mode="inc"><xsl:apply-templates select="tei:reg/node()|tei:expan/node()|tei:corr/node()" mode="inc"/></xsl:template>
+  <xsl:template match="tei:app" mode="inc"><xsl:apply-templates select="tei:lem/node()" mode="inc"/></xsl:template>
+  <xsl:template match="tei:term" mode="inc"><xsl:apply-templates mode="inc"/></xsl:template>
+  <xsl:template match="tei:lb[@break='no']|tei:pb|tei:fw|tei:note" mode="inc"/>
+  <xsl:template match="tei:lb" mode="inc"><xsl:text> </xsl:text></xsl:template>
+  <xsl:template match="text()" mode="inc"><xsl:value-of select="."/></xsl:template>
 
   <!-- ===================== FENOMENI (nell'apparato / rdg) ===================== -->
   <xsl:template match="tei:del"><del class="del"><xsl:apply-templates/></del></xsl:template>
