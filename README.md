@@ -251,6 +251,8 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 
 **Gerarchia di autorità.** La fonte autorevole dell'edizione è il **TEI conforme allo schema ODD** (`data/*.xml` validati); lo schema (`.odd` → `.rng`) è normativo, la documentazione lo *descrive*, e i viewer HTML in `output/`/`tool/` sono **artefatti derivati**, non rappresentazioni normative del testo.
 
+**Consultazione.** Una **piattaforma web** unica (`site/`, con barra di navigazione condivisa) raccoglie tutte le viste — testo dell'edizione, teiHeader, cartulazione, stati mistici, vocabolario SKOS, modelli e sorgenti TEI — e rende consultabili in linea tutti i documenti `.md` del repository. La radice di GitHub Pages (`index.html`) reindirizza alla piattaforma; resta un punto d'accesso di sola consultazione, mentre la fonte autorevole rimane il TEI.
+
 ```text
 .
 ├── README.md                     # Questo documento: edizione critica + guida al repository
@@ -258,6 +260,13 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 ├── CITATION.cff                  # Metadati di citazione (autore, ORCID, versione)
 ├── .zenodo.json                  # Metadati per il deposito Zenodo (DOI)
 ├── .nojekyll                     # Pubblicazione via GitHub Pages senza Jekyll
+├── index.html                    # Reindirizzamento alla piattaforma (radice di GitHub Pages)
+├── site/                         # Piattaforma web di consultazione (barra di navigazione unica)
+│   ├── index.html                #   frontespizio e indice delle viste
+│   ├── docs.html                 #   lettore dei documenti .md del repository
+│   ├── sources.html              #   visualizzatore dei sorgenti TEI/ODD/RNG
+│   ├── platform.css              #   foglio di stile condiviso
+│   └── platform.js               #   navigazione, parser Markdown, evidenziatore XML
 ├── scripts/                      # Utilità del repository
 │   └── validate.sh               #   validazione + regressione in un comando (CI in locale)
 ├── .github/workflows/            # CI di validazione del modello leggero
