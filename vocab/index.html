@@ -58,18 +58,20 @@ function renderConcept(id){
     <a href="https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl">alignments-castello-anima-edizione.ttl</a>.</div>`;
 }
 function renderIndex(q){
-  q=(q||"").toLowerCase();
   const out=document.getElementById("out");
-  let html=`<input type="search" id="q" placeholder="Cerca…" value="${esc(q)}"><div class="sub" style="margin-bottom:8px">${D.concepts.length} concetti · 1 schema · <a href="./castello-edizione-vocab.ttl">Turtle</a></div><div class="list">`;
-  const cs=D.concepts.filter(c=>!q||[c.pref,c.notation,c.def,c.id].some(v=>(v||"").toLowerCase().includes(q)));
-  cs.forEach(c=>{html+=`<a href="?c=${encodeURIComponent(c.id)}">${esc(c.pref)} <span class="notn">${esc(c.notation)}</span></a>`});
-  html+=`</div>
+  let qi=document.getElementById("q");
+  if(!qi){                       // costruisci l'input UNA sola volta (non ad ogni tasto)
+    out.innerHTML=`<input type="search" id="q" placeholder="Cerca…" value="${esc(q||"")}"><div class="sub" style="margin-bottom:8px">${D.concepts.length} concetti · 1 schema · <a href="./castello-edizione-vocab.ttl">Turtle</a></div><div class="list" id="clist"></div>
     <div class="xref">Vocabolario gemello (assi interpretativi, 60 concetti):
     <a href="https://luciano-longo77.github.io/castello-anima-TEI-IA/vocab/site/">castello-anima-vocab</a> ·
     allineamenti: <a href="https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl">alignments-castello-anima-edizione.ttl</a>.</div>`;
-  out.innerHTML=html;
-  const qi=document.getElementById("q"); qi.focus();
-  qi.addEventListener("input",e=>renderIndex(e.target.value));
+    qi=document.getElementById("q");
+    qi.addEventListener("input",()=>renderIndex(qi.value));   // aggiorna SOLO la lista
+    qi.focus();
+  }
+  const query=(q||"").toLowerCase();
+  const cs=D.concepts.filter(c=>!query||[c.pref,c.notation,c.def,c.id].some(v=>(v||"").toLowerCase().includes(query)));
+  document.getElementById("clist").innerHTML=cs.map(c=>`<a href="?c=${encodeURIComponent(c.id)}">${esc(c.pref)} <span class="notn">${esc(c.notation)}</span></a>`).join("");
 }
 function route(){
   const p=new URLSearchParams(location.search); const c=p.get("c");
