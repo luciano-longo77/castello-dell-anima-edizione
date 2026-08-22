@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentazione — Il Castello dell'anima</title>
+<link rel="stylesheet" href="platform.css">
+</head>
+<body>
+<div class="wrap" style="padding-top:1.4rem">
+  <div class="doclayout">
+    <aside class="docside" id="side">
+      <h3>Generale</h3>
+      <a href="?f=README.md">Panoramica del repository</a>
+      <h3>Micro-commit</h3>
+      <a href="?f=Micro-commits/README.md">Piano editoriale (roadmap)</a>
+      <a href="?f=Micro-commits/MC-1/README.md">Micro-commit MC-1</a>
+      <h3>Documentazione critica (MC-1)</h3>
+      <a href="?f=Micro-commits/MC-1/docs/README.md">Indice della documentazione</a>
+      <a href="?f=Micro-commits/MC-1/docs/Introduzione-III,1-5.md">Introduzione (III, I–V)</a>
+      <a href="?f=Micro-commits/MC-1/docs/Struttura-cartulazione.md">Struttura e cartulazione</a>
+      <a href="?f=Micro-commits/MC-1/docs/Header-README.md">Guida al teiHeader</a>
+      <a href="?f=Micro-commits/MC-1/docs/teiText-README.md">Guida al &lt;text&gt;</a>
+      <a href="?f=Micro-commits/MC-1/docs/Autorita-editoriali.md">Autorità editoriali</a>
+      <a href="?f=Micro-commits/MC-1/docs/Decisioni-editoriali.md">Decisioni editoriali</a>
+      <h3>Modelli di codifica</h3>
+      <a href="?f=tei-model/README.md">Modelli — panoramica</a>
+      <a href="?f=tei-model/header/README.md">Modello teiHeader — guida</a>
+      <a href="?f=tei-model/header/model-Header-diagramma.md">Modello teiHeader — diagramma</a>
+      <a href="?f=tei-model/text/README.md">Modello &lt;text&gt; — guida</a>
+      <a href="?f=tei-model/text/model-text-diagramma.md">Modello &lt;text&gt; — diagramma</a>
+      <h3>Validazione</h3>
+      <a href="?f=.github/workflows/README.md">Validazione (CI)</a>
+      <a href="?f=Micro-commits/MC-1/tests/README.md">Suite di regressione</a>
+      <h3>Vocabolario</h3>
+      <a href="?f=w3id/README.md">URI permanenti w3id</a>
+    </aside>
+    <main class="docmain">
+      <p class="crumb" id="crumb"></p>
+      <div class="md" id="doc">Caricamento…</div>
+    </main>
+  </div>
+</div>
+
+<footer class="pfoot">
+  <div class="wrap"><p>I documenti sono resi dai file <code>.md</code> reali del repository. In caso di divergenza fa fede il TEI conforme allo schema ODD. · <a href="index.html">Home</a></p></div>
+</footer>
+
+<script src="platform.js"></script>
+<script>
+Platform.buildNav("docs");
+const KNOWN=[...document.querySelectorAll("#side a")].map(a=>decodeURIComponent(a.getAttribute("href").slice(3)));
+function currentF(){
+  const p=new URLSearchParams(location.search); let f=p.get("f")||"README.md";
+  return KNOWN.includes(f)?f:"README.md";
+}
+function markActive(f){
+  document.querySelectorAll("#side a").forEach(a=>{
+    a.classList.toggle("active", decodeURIComponent(a.getAttribute("href").slice(3))===f);
+  });
+}
+function load(){
+  const f=currentF(); markActive(f);
+  const doc=document.getElementById("doc"), crumb=document.getElementById("crumb");
+  crumb.textContent=f;
+  doc.textContent="Caricamento…";
+  fetch("../"+f).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}).then(t=>{
+    doc.innerHTML=Platform.mdToHtml(t,f);
+    if(location.hash){const el=document.getElementById(location.hash.slice(1)); if(el)el.scrollIntoView();}
+  }).catch(e=>{doc.innerHTML='<p class="err">Impossibile caricare <code>'+f+'</code> ('+e.message+'). La piattaforma va servita via HTTP (GitHub Pages), non aperta da file://.</p>';});
+}
+window.addEventListener("popstate",load);
+load();
+</script>
+</body>
+</html>

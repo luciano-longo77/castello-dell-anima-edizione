@@ -1,0 +1,107 @@
+/* ============================================================
+   Piattaforma web — Il Castello dell'anima (edizione digitale)
+   Foglio di stile condiviso · sobrio, accademico, senza emoji
+   ============================================================ */
+:root{
+  --bg:#fbfaf7;--panel:#ffffff;--side:#f4f1e9;--text:#252017;--muted:#6a6154;
+  --accent:#6b2737;--accent2:#5a4632;--rule:#e2ddce;--navbg:#2a231c;--navtx:#efe7d8;--navac:#d8b98c;
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --tag:#6b2737;--att:#5a4632;--val:#3f6152;--com:#948a79;--pi:#6a6154;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1b1813;--panel:#221f19;--side:#1f1c16;--text:#e7e1d5;--muted:#a69c8b;
+  --accent:#cf9aa4;--accent2:#cdb389;--rule:#3a342a;--navbg:#14110d;--navtx:#e7e1d5;--navac:#cdb389;
+  --tag:#cf9aa4;--att:#cdb389;--val:#93c1ac;--com:#8b8171;--pi:#a69c8b;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.3rem}
+
+/* ---- Barra di navigazione ---- */
+.pnav{position:sticky;top:0;z-index:50;background:var(--navbg);color:var(--navtx);
+  display:flex;align-items:center;flex-wrap:wrap;gap:.2rem 1rem;padding:.55rem 1.3rem;
+  border-bottom:1px solid rgba(0,0,0,.2)}
+.pnav .brand{color:var(--navtx);font-family:var(--serif);font-weight:600;font-size:1.02rem;margin-right:auto}
+.pnav .brand span{color:var(--navac);font-weight:400;font-style:italic;font-size:.9rem}
+.pnav a,.pnav button{color:var(--navtx);font-family:var(--sans);font-size:.9rem;background:none;border:0;
+  cursor:pointer;padding:.35rem .55rem;border-radius:4px}
+.pnav a:hover,.pnav button:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.pnav a.active{color:var(--navac);font-weight:600}
+.pnav .menu{position:relative}
+.pnav .menu>button::after{content:"";display:inline-block;margin-left:.4em;border:.3em solid transparent;
+  border-top-color:currentColor;border-bottom:0;vertical-align:middle;opacity:.7}
+.pnav .drop{position:absolute;top:100%;left:0;min-width:230px;background:var(--panel);color:var(--text);
+  border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.18);
+  padding:.35rem;display:none}
+.pnav .menu.open .drop{display:block}
+.pnav .drop a{display:block;color:var(--text);padding:.45rem .6rem;border-radius:4px;font-size:.9rem}
+.pnav .drop a:hover{background:var(--side);text-decoration:none}
+
+/* ---- Frontespizio (home) ---- */
+.masthead{text-align:center;padding:3rem 1.3rem 2rem;border-bottom:1px solid var(--rule)}
+.masthead .kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);margin-bottom:1rem}
+.masthead h1{font-family:var(--serif);font-weight:600;font-size:2.6rem;line-height:1.1;margin:0 0 .5rem}
+.masthead .work{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--muted);margin:.2rem 0 1.2rem}
+.masthead .meta{font-size:.9rem;margin:.15rem 0}
+.masthead .imprint{font-size:.8rem;color:var(--muted);margin-top:1rem}
+
+.lead{font-family:var(--serif);font-size:1.05rem;margin:2rem 0 1rem;text-align:justify}
+section{margin:2.2rem 0}
+h2.sec{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:0 0 .2rem}
+.sechint{color:var(--muted);font-size:.86rem;margin:0 0 1rem}
+
+ul.index{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+ul.index li{border-bottom:1px solid var(--rule);padding:.8rem 0}
+ul.index a.tt{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--accent)}
+ul.index .num{display:inline-block;width:2.1em;color:var(--muted);font-variant-numeric:tabular-nums;font-size:.9rem}
+ul.index p{margin:.2rem 0 0 2.1em;color:var(--muted);font-size:.9rem}
+
+/* ---- Sorgenti XML ---- */
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.6rem 0 1rem}
+select,.raw{font-family:var(--sans);font-size:.9rem;padding:.5rem .65rem;border:1px solid var(--rule);border-radius:4px;background:var(--panel);color:var(--text)}
+.raw{color:var(--accent);text-decoration:none}
+.filemeta{color:var(--muted);font-size:.84rem}
+.xmlbox{background:var(--side);border:1px solid var(--rule);border-radius:4px;overflow:auto;max-height:72vh}
+pre.code{margin:0;padding:.9rem 1rem;font-family:var(--mono);font-size:.8rem;line-height:1.55;white-space:pre;tab-size:2}
+pre.code .ln{display:inline-block;width:3em;color:var(--com);text-align:right;padding-right:1.1em;user-select:none}
+.tg{color:var(--tag)}.at{color:var(--att)}.vl{color:var(--val)}.cm{color:var(--com);font-style:italic}.pi{color:var(--pi)}
+.err{color:var(--accent)}
+
+/* ---- Documentazione (layout con sidebar) ---- */
+.doclayout{display:grid;grid-template-columns:260px 1fr;gap:1.6rem;align-items:start}
+.docside{position:sticky;top:3.4rem;max-height:calc(100vh - 4rem);overflow:auto;border-right:1px solid var(--rule);padding-right:1rem}
+.docside h3{font-family:var(--serif);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);margin:1rem 0 .3rem}
+.docside a{display:block;color:var(--text);font-size:.88rem;padding:.28rem .4rem;border-radius:4px;line-height:1.35}
+.docside a:hover{background:var(--side);text-decoration:none}
+.docside a.active{background:var(--side);color:var(--accent);font-weight:600}
+.docmain{min-width:0}
+@media(max-width:760px){.doclayout{grid-template-columns:1fr}.docside{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--rule);padding:0 0 1rem}}
+
+/* ---- Markdown reso ---- */
+.md{font-size:1rem;line-height:1.65}
+.md h1,.md h2,.md h3,.md h4{font-family:var(--serif);font-weight:600;line-height:1.2;margin:1.6rem 0 .6rem}
+.md h1{font-size:1.9rem;border-bottom:1px solid var(--rule);padding-bottom:.2rem}
+.md h2{font-size:1.45rem;border-bottom:1px solid var(--rule);padding-bottom:.15rem}
+.md h3{font-size:1.2rem}.md h4{font-size:1.05rem}
+.md p{margin:.7rem 0}
+.md a{color:var(--accent)}
+.md ul,.md ol{margin:.6rem 0;padding-left:1.5rem}
+.md li{margin:.25rem 0}
+.md blockquote{margin:.8rem 0;padding:.4rem 1rem;border-left:3px solid var(--accent2);background:var(--side);color:var(--muted)}
+.md code{font-family:var(--mono);font-size:.88em;background:var(--side);padding:.1em .35em;border-radius:3px}
+.md pre{background:var(--side);border:1px solid var(--rule);border-radius:5px;padding:.8rem 1rem;overflow:auto}
+.md pre code{background:none;padding:0;font-size:.82rem;line-height:1.5}
+.md table{border-collapse:collapse;width:100%;margin:.9rem 0;font-size:.92rem;display:block;overflow-x:auto}
+.md th,.md td{border:1px solid var(--rule);padding:.4rem .6rem;text-align:left;vertical-align:top}
+.md th{background:var(--side);font-weight:600}
+.md img{max-width:100%;height:auto;vertical-align:middle}
+.md hr{border:0;border-top:1px solid var(--rule);margin:1.4rem 0}
+.crumb{color:var(--muted);font-size:.85rem;margin:0 0 .6rem}
+
+footer.pfoot{border-top:1px solid var(--rule);margin-top:3rem;padding:1.6rem 0 2.6rem;color:var(--muted);font-size:.85rem}
+footer.pfoot .cite{font-family:var(--serif);color:var(--text);margin:0 0 .6rem}

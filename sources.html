@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorgenti TEI — Il Castello dell'anima</title>
+<link rel="stylesheet" href="platform.css">
+</head>
+<body>
+<div class="wrap">
+  <h1 style="font-family:Georgia,serif;font-weight:600;margin:1.6rem 0 .2rem">Sorgenti TEI</h1>
+  <p class="sechint">File XML dell’edizione e dello schema, resi con evidenziazione. La fonte autorevole è il TEI conforme allo schema ODD.</p>
+  <div class="controls">
+    <select id="pick" aria-label="Seleziona un file TEI">
+      <optgroup label="MC-1 · dati">
+        <option value="../Micro-commits/MC-1/data/TEI-Header.xml">TEI-Header.xml — intestazione</option>
+        <option value="../Micro-commits/MC-1/data/castello-anima-text.xml">castello-anima-text.xml — testo</option>
+        <option value="../Micro-commits/MC-1/data/release/castello-anima-MC1-completed.xml">castello-anima-MC1-completed.xml — master risolto</option>
+        <option value="../Micro-commits/MC-1/data/castello-anima-odd.odd">castello-anima-odd.odd — specifica ODD</option>
+        <option value="../Micro-commits/MC-1/data/castello-anima-odd.rng">castello-anima-odd.rng — schema RELAX NG</option>
+      </optgroup>
+      <optgroup label="Modelli generici">
+        <option value="../tei-model/header/teiHeader-model.xml">teiHeader-model.xml</option>
+        <option value="../tei-model/text/text-model.xml">text-model.xml</option>
+      </optgroup>
+    </select>
+    <a class="raw" id="raw" href="#" target="_blank" rel="noopener">apri file grezzo</a>
+    <span class="filemeta" id="meta"></span>
+  </div>
+  <div class="xmlbox"><pre class="code" id="code">Seleziona un file per visualizzarlo.</pre></div>
+</div>
+
+<footer class="pfoot">
+  <div class="wrap"><p>Fonte autorevole: TEI conforme allo schema ODD in <code>Micro-commits/MC-1/data/</code>. · <a href="index.html">Torna alla home</a></p></div>
+</footer>
+
+<script src="platform.js"></script>
+<script>
+Platform.buildNav("sources");
+const MAX=600000;
+const code=document.getElementById("code"),pick=document.getElementById("pick"),
+      raw=document.getElementById("raw"),meta=document.getElementById("meta");
+const withLines=h=>h.split("\n").map((l,i)=>`<span class="ln">${i+1}</span>${l}`).join("\n");
+function load(path){
+  raw.href=path;code.textContent="Caricamento…";meta.textContent="";
+  fetch(path).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}).then(t=>{
+    const kb=(t.length/1024).toFixed(0),lines=t.split("\n").length;
+    let body=t,trunc=false; if(t.length>MAX){body=t.slice(0,MAX);trunc=true}
+    code.innerHTML=withLines(Platform.highlightXML(Platform.esc(body)))+(trunc?'\n<span class="cm">… (file troncato per la visualizzazione: usa «apri file grezzo» per il testo completo)</span>':"");
+    meta.textContent=`${lines} righe · ${kb} KB`;
+  }).catch(e=>{code.innerHTML=`<span class="err">Impossibile caricare il file (${e.message}). Questa pagina va servita via HTTP (GitHub Pages), non aperta da file://.</span>`;});
+}
+pick.addEventListener("change",()=>load(pick.value));
+load(pick.value);
+</script>
+</body>
+</html>
