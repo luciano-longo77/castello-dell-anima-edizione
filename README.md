@@ -270,6 +270,10 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 │   ├── README.md                 #   modello a 3 layer + diagramma d'insieme
 │   ├── header/                   #   teiHeader-model.xml + README + diagramma + output/
 │   └── text/                     #   text-model.xml + README + diagramma + output/
+├── vocab/                        # Vocabolario SKOS degli stati mistici (17 stati)
+│   └── castello-edizione-vocab.ttl   #   base w3id/castello-edizione-vocab
+├── w3id/                         # URI permanenti w3id (guida alla pubblicazione)
+│   └── README.md
 └── Micro-commits/                # I micro-commit dell'edizione (MC-1…MC-8)
     ├── README.md                 #   piano editoriale e roadmap
     └── MC-1/                     #   Commit 1 — Libro III, capp. I–V
