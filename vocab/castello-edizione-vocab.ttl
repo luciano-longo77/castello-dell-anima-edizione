@@ -1,0 +1,126 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix ed:   <https://w3id.org/castello-edizione-vocab/> .
+
+<https://w3id.org/castello-edizione-vocab/> a skos:ConceptScheme ;
+    dct:title "Castello dell'anima — vocabolario dell'edizione (stati mistici)"@it ;
+    dct:description "SKOS dei 17 stati-mistici del repo castello-dell-anima-edizione (MC-1); gemello di castello-anima-vocab."@it .
+
+ed:silentio a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "silentio" ;
+    skos:prefLabel "silentio"@it ;
+    skos:definition "Primo stato d’unione: quiete delle potenze e cessazione del discorso interiore."@it .
+
+ed:otio a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "otio" ;
+    skos:prefLabel "otio"@it ;
+    skos:definition "Otio delle potenze: sospensione dell’operare attivo dell’anima nell’unione."@it .
+
+ed:annichilimento a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "annichilimento" ;
+    skos:prefLabel "annichilimento"@it ;
+    skos:definition "Annichilazione dell’anima: azzeramento del proprio volere nell’unione con Dio."@it .
+
+ed:oblivione-sonno a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "oblivione-sonno" ;
+    skos:prefLabel "oblivione sonno"@it ;
+    skos:definition "Oblio e sonno mistico: dimenticanza di sé e del creato nella contemplazione."@it .
+
+ed:scordanza a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "scordanza" ;
+    skos:prefLabel "scordanza"@it ;
+    skos:definition "Scordanza: perdita della memoria di sé propria degli stati avanzati."@it .
+
+ed:indifferenza a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "indifferenza" ;
+    skos:prefLabel "indifferenza"@it ;
+    skos:definition "Indifferenza: conformità piena al volere divino, senza desiderio proprio."@it .
+
+ed:nudita-anima a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "nudita-anima" ;
+    skos:prefLabel "nudita anima"@it ;
+    skos:definition "Nudità dell’anima: spoliazione di immagini, affetti e appigli sensibili."@it .
+
+ed:bacio a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "bacio" ;
+    skos:prefLabel "bacio"@it ;
+    skos:definition "Bacio spirituale: immagine sponsale dell’unione affettiva con Dio."@it .
+
+ed:matrimonio-spirituale a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "matrimonio-spirituale" ;
+    skos:prefLabel "matrimonio spirituale"@it ;
+    skos:definition "Matrimonio spirituale: grado supremo dell’unione trasformante."@it .
+
+ed:cella-secreta a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "cella-secreta" ;
+    skos:prefLabel "cella secreta"@it ;
+    skos:definition "Cella secreta: luogo interiore recondito dell’incontro con Dio."@it .
+
+ed:contemplazione-infusa a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "contemplazione-infusa" ;
+    skos:prefLabel "contemplazione infusa"@it ;
+    skos:definition "Contemplazione infusa: conoscenza e amore ricevuti passivamente da Dio."@it .
+
+ed:trasformazione a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "trasformazione" ;
+    skos:prefLabel "trasformazione"@it ;
+    skos:definition "Trasformazione dell’anima in Dio per partecipazione."@it .
+
+ed:deificazione a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "deificazione" ;
+    skos:prefLabel "deificazione"@it ;
+    skos:definition "Deificazione: vivere nella medesima vita di Dio, per grazia."@it .
+
+ed:notte a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "notte" ;
+    skos:prefLabel "notte"@it ;
+    skos:definition "Notte dello spirito: purificazione passiva che dispone all’unione."@it .
+
+ed:purga a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "purga" ;
+    skos:prefLabel "purga"@it ;
+    skos:definition "Purga: purificazione dell’anima da macchie e passioni."@it .
+
+ed:unione a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "unione" ;
+    skos:prefLabel "unione"@it ;
+    skos:definition "Unione mistica: stato controllato dell’incontro dell’anima con Dio."@it .
+
+ed:quiete a skos:Concept ;
+    skos:topConceptOf <https://w3id.org/castello-edizione-vocab/> ;
+    skos:inScheme <https://w3id.org/castello-edizione-vocab/> ;
+    skos:notation "quiete" ;
+    skos:prefLabel "quiete"@it ;
+    skos:definition "Quiete: pace e riposo delle potenze nella presenza divina."@it .
