@@ -271,7 +271,8 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 │   ├── header/                   #   teiHeader-model.xml + README + diagramma + output/
 │   └── text/                     #   text-model.xml + README + diagramma + output/
 ├── vocab/                        # Vocabolario SKOS degli stati mistici (17 stati)
-│   └── castello-edizione-vocab.ttl   #   base w3id/castello-edizione-vocab
+│   ├── castello-edizione-vocab.ttl   #   base w3id/castello-edizione-vocab
+│   └── index.html                    #   viewer navigabile (.../vocab/)
 ├── w3id/                         # URI permanenti w3id (guida alla pubblicazione)
 │   └── README.md
 └── Micro-commits/                # I micro-commit dell'edizione (MC-1…MC-8)
@@ -289,6 +290,8 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
 ## Vocabolario SKOS degli stati mistici
 
 I 17 stati-mistici dell'edizione sono pubblicati in **SKOS** in [`vocab/castello-edizione-vocab.ttl`](vocab/castello-edizione-vocab.ttl) (base URI `https://w3id.org/castello-edizione-vocab/`, dereferenziabile via w3id — vedi [`w3id/README.md`](w3id/README.md)). Sono allineati al repo gemello **[`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA)**: le corrispondenze SKOS (`closeMatch`/`narrowMatch`/`relatedMatch`) sono in [`vocab/alignments-castello-anima-edizione.ttl`](https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl) del gemello.
+
+📖 **[Sfoglia il vocabolario](https://luciano-longo77.github.io/castello-dell-anima-edizione/vocab/)** — viewer navigabile dei 17 stati: indice con ricerca, scheda per concetto (URI, definizione, ruolo) e rimando agli allineamenti col vocabolario gemello.
 
 ## 📖 Leggi l'edizione (MC-1)
 
