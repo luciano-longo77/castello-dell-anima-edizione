@@ -22,6 +22,7 @@
             <button id="exp" class="btn" type="button">Espandi tutto</button>
             <button id="col" class="btn" type="button">Comprimi tutto</button>
             <a class="btn primary" href="castello-anima-lettura.html">📖 Testo dell'edizione →</a>
+            <a class="btn" href="../../../vocab/">🔖 Vocabolario →</a>
           </div>
         </header>
 
