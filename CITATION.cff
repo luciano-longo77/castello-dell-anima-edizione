@@ -22,6 +22,14 @@ date-released: "2026-08-23"
 license: CC-BY-4.0
 repository-code: "https://github.com/luciano-longo77/castello-dell-anima-edizione"
 url: "https://github.com/luciano-longo77/castello-dell-anima-edizione"
+doi: "10.5281/zenodo.22058562"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22058562"
+    description: "Concept DOI (tutte le versioni; risolve sempre all'ultima)"
+  - type: doi
+    value: "10.5281/zenodo.22058563"
+    description: "DOI della versione MC-1"
 keywords:
   - "Castello dell'anima"
   - "Teresa di San Geronimo"
