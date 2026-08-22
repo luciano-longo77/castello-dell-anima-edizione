@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vocabolario SKOS — Castello dell'anima (edizione)</title>
+<link rel="alternate" type="text/turtle" href="../castello-edizione-vocab.ttl">
+<style>
+:root{--ink:#1f2933;--mut:#6b7280;--line:#e5e7eb;--accent:#2d5b7b;--bg:#fff;--card:#f7f9fa;--code:#eef2f4}
+*{box-sizing:border-box}body{margin:0;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header{padding:20px;border-bottom:1px solid var(--line)}h1{margin:0;font-size:19px}.sub{color:var(--mut);font-size:13px;margin-top:3px}
+main{max-width:820px;margin:0 auto;padding:18px 20px 60px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.crumb{font-size:13px;margin-bottom:14px}
+.notn{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--code);padding:2px 7px;border-radius:6px}
+.uri{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mut);word-break:break-all}
+.k{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-top:16px}
+.def{margin:6px 0 0;font-size:15px}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:3px 10px;margin:3px 4px 0 0;font-size:13px;background:var(--card)}
+.list{columns:2;column-gap:26px}@media(max-width:640px){.list{columns:1}}
+.list a{display:block;font-size:13.5px;padding:2px 0;break-inside:avoid}
+input[type=search]{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-size:14px;margin-bottom:6px}
+.xref{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+.err{color:#b91c1c}
+</style></head><body>
+<header><h1><a href="?" style="color:inherit">Vocabolario SKOS — <em>Il Castello dell'anima</em> (edizione)</a></h1>
+<div class="sub">17 stati mistici · vocabolario controllato dell'edizione · gemello di <a href="https://luciano-longo77.github.io/castello-anima-TEI-IA/vocab/site/">castello-anima-vocab</a></div></header>
+<main id="out">Carico il vocabolario…</main>
+<script>
+const BASE="https://w3id.org/castello-edizione-vocab/";
+const esc=s=>(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+function parseTTL(t){
+  const cs=[];
+  t.split(/\n\s*\n/).forEach(b=>{ if(!/a skos:Concept\s*;/.test(b))return;
+    const g=re=>{const x=b.match(re);return x?x[1]:null};
+    cs.push({
+      id:g(/(?:ed:|vocab\/)([^\s>]+)\s+a skos:Concept/),
+      top:/skos:topConceptOf/.test(b),
+      notation:(g(/skos:notation\s+"((?:[^"\\]|\\.)*)"/)||"").replace(/\\"/g,'"'),
+      pref:(g(/skos:prefLabel\s+"((?:[^"\\]|\\.)*)"/)||"").replace(/\\"/g,'"'),
+      def:(g(/skos:definition\s+"((?:[^"\\]|\\.)*)"/)||"").replace(/\\"/g,'"')});
+  });
+  cs.sort((a,b)=>(a.pref||"").localeCompare(b.pref||"","it"));
+  return {concepts:cs};
+}
+let D=null;
+function link(id){return `<a href="?c=${encodeURIComponent(id)}">${esc(id)}</a>`}
+function renderConcept(id){
+  const c=D.concepts.find(x=>x.id===id);
+  const out=document.getElementById("out");
+  if(!c){out.innerHTML=`<p class="err">Concetto «${esc(id)}» non trovato.</p><p><a href="?">↑ Indice</a></p>`;return}
+  document.title=c.pref+" — Vocabolario SKOS (edizione)";
+  out.innerHTML=`<div class="crumb"><a href="?">Indice</a> › stati mistici</div>
+    <h2 style="margin:0">${esc(c.pref)} <span class="notn">${esc(c.notation)}</span></h2>
+    <div class="uri">${esc(BASE+c.id)}</div>
+    ${c.top?'<div class="k">Ruolo</div><span class="chip">▲ top concept dello schema</span>':''}
+    <div class="k">Definizione</div><p class="def">${esc(c.def)}</p>
+    <div class="k">Schema</div><span class="chip">inScheme: castello-edizione-vocab</span>
+    <div class="k">Formati</div><span class="chip"><a href="../castello-edizione-vocab.ttl">tutto il vocabolario (Turtle)</a></span>
+    <div class="xref">Allineamenti <code>skos:*Match</code> verso gli assi interpretativi del gemello:
+    <a href="https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl">alignments-castello-anima-edizione.ttl</a>.</div>`;
+}
+function renderIndex(q){
+  q=(q||"").toLowerCase();
+  const out=document.getElementById("out");
+  let html=`<input type="search" id="q" placeholder="Cerca…" value="${esc(q)}"><div class="sub" style="margin-bottom:8px">${D.concepts.length} concetti · 1 schema · <a href="../castello-edizione-vocab.ttl">Turtle</a></div><div class="list">`;
+  const cs=D.concepts.filter(c=>!q||[c.pref,c.notation,c.def,c.id].some(v=>(v||"").toLowerCase().includes(q)));
+  cs.forEach(c=>{html+=`<a href="?c=${encodeURIComponent(c.id)}">${esc(c.pref)} <span class="notn">${esc(c.notation)}</span></a>`});
+  html+=`</div>
+    <div class="xref">Vocabolario gemello (assi interpretativi, 60 concetti):
+    <a href="https://luciano-longo77.github.io/castello-anima-TEI-IA/vocab/site/">castello-anima-vocab</a> ·
+    allineamenti: <a href="https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl">alignments-castello-anima-edizione.ttl</a>.</div>`;
+  out.innerHTML=html;
+  const qi=document.getElementById("q"); qi.focus();
+  qi.addEventListener("input",e=>renderIndex(e.target.value));
+}
+function route(){
+  const p=new URLSearchParams(location.search); const c=p.get("c");
+  if(c) renderConcept(c); else renderIndex("");
+}
+fetch("../castello-edizione-vocab.ttl").then(r=>{if(!r.ok)throw 0;return r.text()})
+  .then(t=>{D=parseTTL(t);route();window.addEventListener("popstate",route);})
+  .catch(()=>{document.getElementById("out").innerHTML='<p class="err">Impossibile caricare <code>../castello-edizione-vocab.ttl</code>. Questo sito va servito via HTTP (GitHub Pages), non aperto da file://.</p>';});
+</script></body></html>
