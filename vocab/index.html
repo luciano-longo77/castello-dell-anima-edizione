@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vocabolario SKOS — Castello dell'anima (edizione)</title>
-<link rel="alternate" type="text/turtle" href="../castello-edizione-vocab.ttl">
+<link rel="alternate" type="text/turtle" href="./castello-edizione-vocab.ttl">
 <style>
 :root{--ink:#1f2933;--mut:#6b7280;--line:#e5e7eb;--accent:#2d5b7b;--bg:#fff;--card:#f7f9fa;--code:#eef2f4}
 *{box-sizing:border-box}body{margin:0;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
@@ -53,14 +53,14 @@ function renderConcept(id){
     ${c.top?'<div class="k">Ruolo</div><span class="chip">▲ top concept dello schema</span>':''}
     <div class="k">Definizione</div><p class="def">${esc(c.def)}</p>
     <div class="k">Schema</div><span class="chip">inScheme: castello-edizione-vocab</span>
-    <div class="k">Formati</div><span class="chip"><a href="../castello-edizione-vocab.ttl">tutto il vocabolario (Turtle)</a></span>
+    <div class="k">Formati</div><span class="chip"><a href="./castello-edizione-vocab.ttl">tutto il vocabolario (Turtle)</a></span>
     <div class="xref">Allineamenti <code>skos:*Match</code> verso gli assi interpretativi del gemello:
     <a href="https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl">alignments-castello-anima-edizione.ttl</a>.</div>`;
 }
 function renderIndex(q){
   q=(q||"").toLowerCase();
   const out=document.getElementById("out");
-  let html=`<input type="search" id="q" placeholder="Cerca…" value="${esc(q)}"><div class="sub" style="margin-bottom:8px">${D.concepts.length} concetti · 1 schema · <a href="../castello-edizione-vocab.ttl">Turtle</a></div><div class="list">`;
+  let html=`<input type="search" id="q" placeholder="Cerca…" value="${esc(q)}"><div class="sub" style="margin-bottom:8px">${D.concepts.length} concetti · 1 schema · <a href="./castello-edizione-vocab.ttl">Turtle</a></div><div class="list">`;
   const cs=D.concepts.filter(c=>!q||[c.pref,c.notation,c.def,c.id].some(v=>(v||"").toLowerCase().includes(q)));
   cs.forEach(c=>{html+=`<a href="?c=${encodeURIComponent(c.id)}">${esc(c.pref)} <span class="notn">${esc(c.notation)}</span></a>`});
   html+=`</div>
@@ -75,7 +75,7 @@ function route(){
   const p=new URLSearchParams(location.search); const c=p.get("c");
   if(c) renderConcept(c); else renderIndex("");
 }
-fetch("../castello-edizione-vocab.ttl").then(r=>{if(!r.ok)throw 0;return r.text()})
+fetch("./castello-edizione-vocab.ttl").then(r=>{if(!r.ok)throw 0;return r.text()})
   .then(t=>{D=parseTTL(t);route();window.addEventListener("popstate",route);})
-  .catch(()=>{document.getElementById("out").innerHTML='<p class="err">Impossibile caricare <code>../castello-edizione-vocab.ttl</code>. Questo sito va servito via HTTP (GitHub Pages), non aperto da file://.</p>';});
+  .catch(()=>{document.getElementById("out").innerHTML='<p class="err">Impossibile caricare <code>./castello-edizione-vocab.ttl</code>. Questo sito va servito via HTTP (GitHub Pages), non aperto da file://.</p>';});
 </script></body></html>
