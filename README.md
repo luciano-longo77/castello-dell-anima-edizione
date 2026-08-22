@@ -1,7 +1,7 @@
 # Edizione Critica Digitale *Il Castello dell'anima* (Libro III)
 ## Introduzione
 
-[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b) [![Validate MC](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml)
+[![TEI P5](https://img.shields.io/badge/TEI-P5-334155)](https://tei-c.org/) ![DSE](https://img.shields.io/badge/DSE-Digital_Scholarly_Editing-8B0000) ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-7b2d3b) [![Validate MC](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luciano-longo77/castello-dell-anima-edizione/actions/workflows/validate.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22058562.svg)](https://doi.org/10.5281/zenodo.22058562)
 
 **Autrice**: Teresa di San Geronimo (Anna La Longa, 1670–post 1703)  
 **Editor**: Luciano Longo  
