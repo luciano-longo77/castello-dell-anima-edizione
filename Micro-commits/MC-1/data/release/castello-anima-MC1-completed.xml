@@ -1083,8 +1083,8 @@
                   prendo tutta fidata in voi mio Dio.</p>
                <p n="2" xml:id="III-proem-p2">Anche padre mi protesto, che<lb/>se dirò qualche cosa
                   che <choice>
-                     <sic>contra di chi</sic>
-                     <corr resp="#editor">contradichi</corr>
+                     <orig>contra di chi</orig>
+                     <reg resp="#editor">contradichi</reg>
                   </choice> la <choice>
                      <orig>Santa</orig>
                      <reg resp="#editor">santa</reg>
@@ -1135,7 +1135,7 @@
                      <reg resp="#editor">a</reg>
                   </choice><lb/><fw type="catch" place="bottom-right">godere</fw><note place="foot" type="material" n="2">«godere»: richiamo aggiunto in calce a destra.</note><pb n="158v" xml:id="f158v"/>godere la vera <term ref="#quiete">pace</term>, se
                   prima non si passa per lunga guerra; e <choice>
-                     <orig>per<lb/>ciò</orig>
+                     <orig>per<lb break="no"/>ciò</orig>
                      <reg resp="#editor">perciò</reg>
                   </choice> non vi sia anima, che <choice>
                      <orig>rinuncij</orig>
@@ -1449,7 +1449,7 @@
                   <choice><orig>Vostra</orig><reg resp="#editor">vostra</reg></choice> mio Dio,
                         <choice><orig>à</orig><reg resp="#editor">a</reg></choice> poter fare
                   compitamente<lb/>l'obedienza, ch'è tanto grata alla
-                        <choice><orig>Maestà</orig><reg resp="#editor">Maesta</reg></choice>
+                        <choice><orig>Maesta</orig><reg resp="#editor">Maestà</reg></choice>
                   vostra.</p>
 
                <p n="14" xml:id="III-cap2-p14">Dico <choice><abbr>dunq</abbr><expan resp="#editor">dunque</expan></choice>, che in questo<lb/>stato cessano le
@@ -1558,7 +1558,7 @@
                   perfetta, e <choice><orig>per ciò</orig><reg resp="#editor">perciò</reg></choice>
                   ci<lb/>vogliono unguenti più pretiosi, per disponire la sposa, per celebrare il
                      <term ref="#matrimonio-spirituale"><choice><orig>Divi<lb break="no"/>no</orig><reg resp="#editor">divino</reg></choice> matrimonio</term>
-                  <choice><orig>sì</orig><reg resp="#editor">sì</reg></choice> come in questo libro
+                  sì come in questo libro
                         <choice><orig>sì</orig><reg resp="#editor">si</reg></choice> dirà con
                   l'agiuto di Dio.</p>
 
@@ -1928,7 +1928,7 @@
                      <orig>cossi</orig>
                      <reg resp="#editor">cossì</reg>
                   </choice> s'adormenta, e <choice>
-                     <orig>per<lb/>ciò</orig>
+                     <orig>per<lb break="no"/>ciò</orig>
                      <reg resp="#editor">perciò</reg>
                   </choice> come fuor <choice>
                      <orig>de'i</orig>
@@ -2264,10 +2264,7 @@
                   </app> gli communica nella sua sostanza, nascostamente <choice>
                      <orig>de'i</orig>
                      <reg resp="#editor">dei</reg>
-                  </choice><lb/>sensi, talmente, che ciò che intende non può <choice>
-                     <orig>in</orig>
-                     <reg resp="#editor">im</reg>
-                  </choice> modo alcuno ridirlo, <choice>
+                  </choice><lb/>sensi, talmente, che ciò che intende non può in modo alcuno ridirlo, <choice>
                      <orig>ne</orig>
                      <reg resp="#editor">né</reg>
                   </choice> trova<lb/>termini per poter dire cosa alcuna, e quanto più cresce
@@ -2343,10 +2340,7 @@
                      <orig>à</orig>
                      <reg resp="#editor">a</reg>
                   </choice> bondanza di <retrace hand="#ink_3-dark" resp="#s-teresa">q</retrace>uel
-                  medesimo fondo<lb/>dell'anima, e <choice>
-                     <orig>vedesi</orig>
-                     <reg resp="#editor">vedesì</reg>
-                  </choice> come una cisterna piena d'acqua senza veder di don<lb break="no"/>de
+                  medesimo fondo<lb/>dell'anima, e vedesi come una cisterna piena d'acqua senza veder di don<lb break="no"/>de
                   sorge. <choice>
                      <orig>Ò</orig>
                      <reg resp="#editor">O</reg>
@@ -2814,8 +2808,11 @@
                      <orig>poiche</orig>
                      <reg resp="#editor">poiché</reg>
                   </choice> è opera totalmente fatta da Dio, <choice>
-                     <orig>ed'è totalmete</orig>
-                     <reg resp="#editor">ed è totalmente</reg>
+                     <orig>ed'è</orig>
+                     <reg resp="#editor">ed è</reg>
+                  </choice> <choice>
+                     <sic>totalmete</sic>
+                     <corr resp="#editor">totalmente</corr>
                   </choice> supernaturale: e cossì padre viene l'anima <choice>
                      <orig>à</orig>
                      <reg resp="#editor">a</reg>
