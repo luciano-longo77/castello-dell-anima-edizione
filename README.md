@@ -282,6 +282,10 @@ Il repository è organizzato su due piani: i **modelli TEI generici** dell'edizi
         └── tool/                 #     viewer-stati-mistici.html (ricerca degli stati mistici)
 ```
 
+## Vocabolario SKOS degli stati mistici
+
+I 17 stati-mistici dell'edizione sono pubblicati in **SKOS** in [`vocab/castello-edizione-vocab.ttl`](vocab/castello-edizione-vocab.ttl) (base URI `https://w3id.org/castello-edizione-vocab/`, dereferenziabile via w3id — vedi [`w3id/README.md`](w3id/README.md)). Sono allineati al repo gemello **[`castello-anima-TEI-IA`](https://github.com/luciano-longo77/castello-anima-TEI-IA)**: le corrispondenze SKOS (`closeMatch`/`narrowMatch`/`relatedMatch`) sono in [`vocab/alignments-castello-anima-edizione.ttl`](https://github.com/luciano-longo77/castello-anima-TEI-IA/blob/main/vocab/alignments-castello-anima-edizione.ttl) del gemello.
+
 ## 📖 Leggi l'edizione (MC-1)
 
 - **[Testo dell'edizione](https://luciano-longo77.github.io/castello-dell-anima-edizione/Micro-commits/MC-1/output/castello-anima-lettura.html)** — lettura a fronte (diplomatico ⇄ interpretativo), apparato genetico, stati mistici, ricerca.
