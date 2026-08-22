@@ -29,7 +29,7 @@ L'edizione è suddivisa in 8 Micro-Commits (MC) tematici:
 
 | ID | Capitoli | Focus Tematico | Stato |
 | :--- | :--- | :--- | :--- |
-| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🟢 Completato · validato (jing 0 · guardia 172 id · NFC) · **pubblicato** (DOI 10.5281/zenodo.22058563) |
+| **MC1** | III.1–5 | **Primi stati d'unione**: disposizione post‑notte, silentio, oblivione/sonno, scordanza, indifferenza. | 🟢 Completato · validato (jing 0 · guardia 172 id · NFC) · **pubblicato** ([DOI 10.5281/zenodo.22058563](https://zenodo.org/records/22058563)) |
 | **MC2** | III.6–10 | **Stabilizzazione**: otio e annichilimento. | 📅 Programmato |
 | **MC3** | III.11–15 | **Matrice sponsale I**: pace e quiete. | 📅 Programmato |
 | **MC4** | III.16–20 | **Matrice sponsale II**: liquefazione e bacio mistico. | 📅 Programmato |
