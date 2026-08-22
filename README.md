@@ -222,12 +222,11 @@ L’edizione è pubblicata in **open access** nei seguenti formati:
 
 **Archiviazione (Zenodo, DOI).** Ogni release a micro-commit (MC-1, MC-2, …) è archiviata su **Zenodo**, che le assegna un **DOI** citabile e versionato (un DOI per versione, più un *concept DOI* per l’insieme dell’opera). I metadati di citazione sono in [`CITATION.cff`](CITATION.cff) e [`.zenodo.json`](.zenodo.json).
 
-<!-- Dopo il primo deposito su Zenodo, sostituire ZENODO_ID col DOI reale e attivare il badge:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.ZENODO_ID.svg)](https://doi.org/10.5281/zenodo.ZENODO_ID) -->
+Per questa edizione: **concept DOI** (rimanda sempre all’ultima versione) `10.5281/zenodo.22058562`; **DOI della versione MC-1** `10.5281/zenodo.22058563`.
 
 **Come citare (citazione consigliata):**
 
-> Longo, Luciano (a cura di), *Il Castello dell’anima, Libro III — Edizione critica digitale TEI (MC-1)*, 2026, CC BY 4.0. DOI: 10.5281/zenodo.ZENODO_ID.
+> Longo, Luciano (a cura di), *Il Castello dell’anima, Libro III — Edizione critica digitale TEI (MC-1)*, 2026, CC BY 4.0. DOI: 10.5281/zenodo.22058563.
 
 L’edizione digitale si fonda sull’autografo unico (Palermo, BCP, ms. 2 Qq E 29) e si affianca all’edizione a stampa di riferimento: R. Casapullo (a cura di), *Il Castello dell’anima*, Alessandria, Edizioni dell’Orso, 2015 (L. Longo per il Libro III).
 
