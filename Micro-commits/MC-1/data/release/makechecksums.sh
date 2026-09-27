@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-# =====================================================================
-# make-checksums.sh — genera SHA256SUMS.txt degli asset di release MC-1.
-# Da eseguire al momento del deposito Zenodo, per fissare l'impronta
-# crittografica degli artefatti archiviati (riproducibilità/integrità).
-#
-# Uso:  cd Micro-commits/MC-1/release && ./make-checksums.sh
-# =====================================================================
 set -euo pipefail
 cd "$(dirname "$0")"
 
