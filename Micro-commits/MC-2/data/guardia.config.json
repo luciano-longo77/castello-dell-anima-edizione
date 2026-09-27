@@ -1,0 +1,5 @@
+{
+  "cartulazione": { "from": "168r", "to": "183v" },
+  "retrace_hands": ["#ink_3-dark"],
+  "retrace_resp":  ["#s-teresa"]
+}
