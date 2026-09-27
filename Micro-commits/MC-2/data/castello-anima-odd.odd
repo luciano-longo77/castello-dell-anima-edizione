@@ -277,6 +277,45 @@
                   </constraint>
                </constraintSpec>
 
+               <!-- ============ VINCOLO 3: term/@ref ∈ tassonomia 'stati-mistici' ============ -->
+               <constraintSpec ident="stati-in-term" scheme="schematron">
+                  <desc>Nel testo, ogni term/@ref deve puntare a una categoria della tassonomia 'stati-mistici'.</desc>
+                  <constraint>
+                     <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="tei"
+                        uri="http://www.tei-c.org/ns/1.0"/>
+                     <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="stati-taxonomy">
+                        <sch:rule context="tei:text//tei:term[@ref]">
+                           <sch:let name="stati"
+                              value="/tei:TEI//tei:taxonomy[@xml:id='stati-mistici']//tei:category/@xml:id"/>
+                           <sch:report role="error"
+                              test="(for $p in tokenize(normalize-space(@ref),' ')[starts-with(.,'#')] return (if (substring($p,2) = $stati) then () else $p))">
+                              term/@ref deve puntare a una categoria della tassonomia 'stati-mistici'.
+                           </sch:report>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+
+               <!-- ============ VINCOLO 4: disciplina di <retrace> ============ -->
+               <constraintSpec ident="disciplina-retrace" scheme="schematron">
+                  <desc>retrace: sempre con @hand e @resp, e sempre FUORI da &lt;app&gt;.</desc>
+                  <constraint>
+                     <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="tei"
+                        uri="http://www.tei-c.org/ns/1.0"/>
+                     <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="retrace-discipline">
+                        <sch:rule context="tei:retrace">
+                           <sch:assert role="error" test="@hand and @resp">
+                              &lt;retrace&gt; deve portare sia @hand sia @resp.
+                           </sch:assert>
+                           <sch:report role="error" test="ancestor::tei:app">
+                              &lt;retrace&gt; non può stare dentro &lt;app&gt;: il ripasso senza variante
+                              testuale va fuori dall'apparato.
+                           </sch:report>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+
             </schemaSpec>
          </div>
       </body>
