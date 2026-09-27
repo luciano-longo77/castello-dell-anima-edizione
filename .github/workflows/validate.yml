@@ -53,6 +53,14 @@ jobs:
             python3 .github/workflows/guardia_puntatori.py "$TEXT"
             # 5) guardia apparato (retrace @hand/@resp, @varSeq, corr@resp, cartulazione)
             python3 .github/workflows/guardia_apparato.py "$TEXT"
+            # 6) master di release (l'artefatto archiviato con il DOI): stesso schema RNG
+            #    + integrità referenziale. Chiude il gate anche sul file citabile.
+            for MASTER in "$DIR"/release/*completed.xml; do
+              test -s "$MASTER" || continue
+              echo "-- release: $MASTER"
+              jing "$RNG" "$MASTER"
+              python3 .github/workflows/guardia_puntatori.py "$MASTER"
+            done
             echo "::endgroup::"
           done
           test "$found" = 1 || { echo "::error::nessun Micro-commits/*/data/castello-anima-text.xml trovato"; exit 1; }
