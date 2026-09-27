@@ -1,0 +1,6 @@
+608d8418b960e53fbdc2b35371d2cd365d633d758a391cbea785c28d25f2b364  castello-anima-MC1-completed.xml
+81e1c7305f5e1a10a17a673c0a136c981fcb84a536fdbe7047a83a33611ae58c  ../../output/castello-anima-lettura.html
+b869845b56681d923e13a1c65ef0f8126e8274070f05d97dba023cd44a110520  ../../output/castello-anima-teiHeader.html
+320c78f678386c9559140dd0cbd28970fb40063505772fda21b759961fbf726b  ../../output/teiHeader_viewer.html
+d27c5addb97372836deb89528a7eff170c712723cc5e1b8fa8cdcf4081695cba  ../../output/cartulazione/schema-carte.html
+a98e6cac2ddb603bd903ce109f2cf28ab6ea2cf5c1728efd5e1779647a8476cf  ../../tool/viewer-stati-mistici.html
